@@ -941,7 +941,7 @@ begin
     end if;
   end process;
 
-  DSP_FU_ENABLER_SYNC : process(clk_i, rst_ni)
+  DSP_FU_ENABLER_SYNC : process(clk_i, rst_ni) -- remoce the pending signals as they are all used only inside the FU_Handler_MT and create a new component to be imported inside the FU_Handler_MT
   begin
     if rst_ni = '0' then
       shift_en(h)         <= '0'; 
