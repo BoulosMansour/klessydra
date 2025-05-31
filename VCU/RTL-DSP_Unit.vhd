@@ -1538,7 +1538,8 @@ end generate;
 --FU_IN_MAPPER  : if (multithreaded_accl_en = 0 or (multithreaded_accl_en = 1 and f = 0)) generate
 
 FU_replicated : for f in fu_range generate
-
+-- if multithreaded_accl_en = 0, then fu_range = accl_range
+-- if multithreaded_accl_en = 1, then FU_NUM = 1, fu_range = 0 always so f = 0 always
   DSP_MAPPING_IN_UNIT_comb : process(all)
   variable h : integer;
   begin
@@ -1552,6 +1553,8 @@ FU_replicated : for f in fu_range generate
     dsp_in_cmp_operands(f)         <= (others => '0');
 
     for g in 0 to (ACCL_NUM - FU_NUM) loop
+    -- if multithreaded_accl_en = 1, then g in 0 to ACCL_NUM - 1
+    -- if multithreaded_accl_en = 0, then g = 0 always
 
       if multithreaded_accl_en = 1 then
         h := g;  -- set the spm rd/wr ports equal to the "for-loop"
