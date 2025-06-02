@@ -33,6 +33,7 @@ entity DSP_Exec_Unit is
         rd_to_sc                        : in  std_logic_vector(SPM_ADDR_WID-1 downto 0);
         --CSR Signals
         MVSIZE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(Addr_Width downto 0);
+        MVSIZE_h                        : in  std_logic_vector(Addr_Width downto 0);
         MVTYPE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
         MPSCLFAC                        : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(4 downto 0);
         -- ID_Stage Signals
@@ -107,6 +108,7 @@ component DSP_Exec_Unit_stage_init is
         rd_to_sc                        : in  std_logic_vector(SPM_ADDR_WID-1 downto 0);
         --CSR Signals
         MVSIZE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(Addr_Width downto 0);
+        MVSIZE_h                        : in  std_logic_vector(Addr_Width downto 0);
         MVTYPE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
         MPSCLFAC                        : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(4 downto 0);
         -- ID_Stage Signals
@@ -232,6 +234,7 @@ init_stage: DSP_Exec_Unit_stage_init
         rd_to_sc                        => rd_to_sc,
         --CSR Signals
         MVSIZE                          => MVSIZE,
+        MVSIZE_h                        => MVSIZE_h,
         MVTYPE                          => MVTYPE,
         MPSCLFAC                        => MPSCLFAC,
         -- ID_Stage Signals

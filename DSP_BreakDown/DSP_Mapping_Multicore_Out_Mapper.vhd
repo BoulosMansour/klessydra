@@ -11,7 +11,6 @@ use work.riscv_klessydra.all;
 
 entity DSP_Mapping_Multicore_Out_Mapper is
     generic (
-        THREAD_POOL_SIZE      : integer;
         SIMD                  : natural;
         --------------------------------
         Data_Width            : natural;
@@ -20,7 +19,7 @@ entity DSP_Mapping_Multicore_Out_Mapper is
     );
     port(
         -- CSR Signals
-        MVTYPE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
+        MVTYPE                          : in  std_logic_vector(3 downto 0);
         -- ID_Stage Signals
         dsp_instr_req                   : in  std_logic;
         decoded_instruction_DSP         : in  std_logic_vector(DSP_UNIT_INSTR_SET_SIZE-1 downto 0);

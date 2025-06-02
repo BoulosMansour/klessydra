@@ -23,21 +23,21 @@ entity DSP_Multipliers is
     -- Core Signals
     clk_i, rst_ni                   : in std_logic;
     -- inputs from DSP_Exec_Unit
-    FUNCT_SELECT_MASK               : array_2d(accl_range)(31 downto 0); -- when the mask is set to "FFFFFFFF" we enable KDOTP32 execution using the 16-bit muls
-    MVTYPE_DSP                      : array_2d(accl_range)(1 downto 0);
+    FUNCT_SELECT_MASK               : array_2d(ACCL_NUM-1 downto 0)(31 downto 0); -- when the mask is set to "FFFFFFFF" we enable KDOTP32 execution using the 16-bit muls
+    MVTYPE_DSP                      : array_2d(ACCL_NUM-1 downto 0)(1 downto 0);
     -- inputs DSP_Excpt_Unit
-    recover_state_wires             : std_logic_vector(accl_range);
+    recover_state_wires             : std_logic_vector(ACCL_NUM - 1 downto 0);
     -- inputs from DSP_pipeline_controller
-    halt_dsp_lat                    : std_logic_vector(accl_range);
-    mul_stage_1_en                  : std_logic_vector(accl_range);
-    mul_stage_2_en                  : std_logic_vector(accl_range);
+    halt_dsp_lat                    : std_logic_vector(ACCL_NUM - 1 downto 0);
+    mul_stage_1_en                  : std_logic_vector(ACCL_NUM - 1 downto 0);
+    mul_stage_2_en                  : std_logic_vector(ACCL_NUM - 1 downto 0);
     -- inputs from DSP_FU_Handler
-    mul_en                          : std_logic_vector(accl_range);  -- enables the use of the multipliers
+    mul_en                          : std_logic_vector(ACCL_NUM - 1 downto 0);  -- enables the use of the multipliers
     -- inputs from DSP_Mapping
-    dsp_in_mul_operands             : array_3d(fu_range)(1 downto 0)(SIMD_Width-1 downto 0);
+    dsp_in_mul_operands             : array_3d(FU_NUM-1 downto 0)(1 downto 0)(SIMD_Width-1 downto 0);
   
     --outputs for DSP_Mapping
-    dsp_out_mul_results             : out array_2d(fu_range)(SIMD_Width-1 downto 0)
+    dsp_out_mul_results             : out array_2d(FU_NUM-1 downto 0)(SIMD_Width-1 downto 0)
   );
 end entity DSP_Multipliers;
 

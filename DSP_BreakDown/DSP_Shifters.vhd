@@ -22,22 +22,22 @@ entity DSP_Shifters is
     -- Core Signals
     clk_i, rst_ni                   : in std_logic;
     -- inputs from DSP_pipeline_controller
-    shifter_stage_1_en              : in std_logic_vector(accl_range);
-    shifter_stage_2_en              : in std_logic_vector(accl_range);
-    halt_dsp_lat                    : in std_logic_vector(accl_range);
+    shifter_stage_1_en              : in std_logic_vector(ACCL_NUM - 1 downto 0);
+    shifter_stage_2_en              : in std_logic_vector(ACCL_NUM - 1 downto 0);
+    halt_dsp_lat                    : in std_logic_vector(ACCL_NUM - 1 downto 0);
     -- inputs from DSP_Exec_Unit
-    MVTYPE_DSP                      : in array_2d(accl_range)(1 downto 0);
-    decoded_instruction_DSP_lat     : in array_2d(accl_range)(DSP_UNIT_INSTR_SET_SIZE -1 downto 0);
+    MVTYPE_DSP                      : in array_2d(ACCL_NUM - 1 downto 0)(1 downto 0);
+    decoded_instruction_DSP_lat     : in array_2d(ACCL_NUM - 1 downto 0)(DSP_UNIT_INSTR_SET_SIZE -1 downto 0);
     -- inputs from DSP_Excpt_Unit
-    recover_state_wires             : in std_logic_vector(accl_range);
+    recover_state_wires             : in std_logic_vector(ACCL_NUM - 1 downto 0);
     -- inputs from DSP_FU_Handler
-    shift_en                        : in std_logic_vector(accl_range);  -- enables the use of the shifters
+    shift_en                        : in std_logic_vector(ACCL_NUM - 1 downto 0);  -- enables the use of the shifters
     -- inputs from DSP_Mapping
-    dsp_in_shifter_operand          : in array_2d(fu_range)(SIMD_Width-1 downto 0);
-    dsp_in_shift_amount             : in array_2d(accl_range)(4 downto 0);
+    dsp_in_shifter_operand          : in array_2d(FU_NUM-1 downto 0)(SIMD_Width-1 downto 0);
+    dsp_in_shift_amount             : in array_2d(ACCL_NUM - 1 downto 0)(4 downto 0);
 
     --outputs for DSP_Mapping
-    dsp_out_shifter_results         : out array_2d(fu_range)(SIMD_Width-1 downto 0)
+    dsp_out_shifter_results         : out array_2d(FU_NUM-1 downto 0)(SIMD_Width-1 downto 0)
   );
 end entity DSP_Shifters;
 

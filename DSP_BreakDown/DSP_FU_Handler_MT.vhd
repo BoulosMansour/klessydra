@@ -155,33 +155,21 @@ component DSP_FU_Issue_Buffer_Sync is --this component should not be repicated, 
 end component DSP_FU_Issue_Buffer_Sync;
 
 component DSP_FU_Issue_Buffer_Comb is
-    generic (
-        THREAD_POOL_SIZE      : integer;
-        --------------------------------
-        TPS_CEIL              : natural;
-        TPS_BUF_CEIL          : natural  
-    );
     port(
-        --inputs from DSP_pipeline_controller
-        state_DSP                       : in std_logic_vector(1 downto 0);
         --inputs from DSP_FU_Handler
-        busy_add_wire                   : in std_logic;  -- busy signal active only when the FU is shared and currently in use 
-        busy_mul_wire                   : in std_logic;  -- busy signal active only when the FU is shared and currently in use 
-        busy_shf_wire                   : in std_logic;  -- busy signal active only when the FU is shared and currently in use 
-        busy_acc_wire                   : in std_logic;  -- busy signal active only when the FU is shared and currently in use 
-        busy_cmp_wire                   : in std_logic;  -- busy signal active only when the FU is shared and currently in use 
+        busy_add_wire                   : std_logic;  -- busy signal active only when the FU is shared and currently in use 
+        busy_mul_wire                   : std_logic;  -- busy signal active only when the FU is shared and currently in use 
+        busy_shf_wire                   : std_logic;  -- busy signal active only when the FU is shared and currently in use 
+        busy_acc_wire                   : std_logic;  -- busy signal active only when the FU is shared and currently in use 
+        busy_cmp_wire                   : std_logic;  -- busy signal active only when the FU is shared and currently in use 
         --inputs from DSP_FU_Enabler_comb
-        add_en_pending_wire             : in std_logic;  -- signal to preserve the request to access the adder "multhithreaded mode" only
-        shift_en_pending_wire           : in std_logic;  -- signal to preserve the request to access the shifter "multhithreaded mode" only
-        mul_en_pending_wire             : in std_logic;  -- signal to preserve the request to access the multiplier "multhithreaded mode" only
-        accum_en_pending_wire           : in std_logic;  -- signal to preserve the request to access the accumulator "multhithreaded mode" only
-        cmp_en_pending_wire             : in std_logic;  -- signal to preserve the request to access the ReLU "multhithreaded mode" only
-        --inputs from DSP_FU_Issue_Buffer_Sync
-        fu_issue_buffer                 : in array_3D(4 downto 0)(THREAD_POOL_SIZE-2 downto 0)(TPS_CEIL-1 downto 0);
-        fu_rd_ptr                       : in array_2D(4 downto 0)(TPS_BUF_CEIL-1 downto 0); -- five rd pointers each has a number of bits equal to ceil(log2(THREAD_POOL_SIZE-1))
+        add_en_pending_wire             : std_logic;  -- signal to preserve the request to access the adder "multhithreaded mode" only
+        shift_en_pending_wire           : std_logic;  -- signal to preserve the request to access the shifter "multhithreaded mode" only
+        mul_en_pending_wire             : std_logic;  -- signal to preserve the request to access the multiplier "multhithreaded mode" only
+        accum_en_pending_wire           : std_logic;  -- signal to preserve the request to access the accumulator "multhithreaded mode" only
+        cmp_en_pending_wire             : std_logic;  -- signal to preserve the request to access the ReLU "multhithreaded mode" only
 
         --output for DSP_FU_Issue_Buffer_Sync
-        fu_gnt_wire                     : out std_logic_vector(4 downto 0); -- Each threa has grant bits equal to the total number of FUs
         fu_gnt_en                       : out std_logic_vector(4 downto 0) -- Enable the giving of the grant to the thread pointed at by the issue buffer
     );
 end component DSP_FU_Issue_Buffer_Comb;
@@ -303,14 +291,7 @@ begin
 
     DSP_FU_Issue_Buffer_Comb_replicated: for h in accl_range generate
         DSP_FU_Issue_Buffer_Comb_inst: DSP_FU_Issue_Buffer_Comb
-        generic map(
-            THREAD_POOL_SIZE        => THREAD_POOL_SIZE,
-            TPS_CEIL                => TPS_CEIL,
-            TPS_BUF_CEIL            => TPS_BUF_CEIL
-        )
         port map(
-            --inputs from DSP_pipeline_controller
-            state_DSP               => state_DSP(h),
             --inputs from DSP_FU_Handler
             busy_add_wire               => busy_add_wire, 
             busy_mul_wire               => busy_mul_wire, 
@@ -323,12 +304,8 @@ begin
             mul_en_pending_wire         => mul_en_pending_wire(h),
             accum_en_pending_wire       => accum_en_pending_wire(h),
             cmp_en_pending_wire         => cmp_en_pending_wire(h),
-            --inputs from DSP_FU_Issue_Buffer_Sync
-            fu_issue_buffer             => fu_issue_buffer,
-            fu_rd_ptr                   => fu_rd_ptr,
 
             --output for DSP_FU_Issue_Buffer_Sync
-            fu_gnt_wire                 => fu_gnt_wire(h),
             fu_gnt_en                   => fu_gnt_en(h)    
         );
     end generate DSP_FU_Issue_Buffer_Comb_replicated;
@@ -380,6 +357,23 @@ begin
     busy_shf_wire <= '1' when shift_en_wire /= (accl_range => '0') else '0';
     busy_acc_wire <= '1' when accum_en_wire /= (accl_range => '0') else '0';
     busy_cmp_wire <= '1' when cmp_en_wire   /= (accl_range => '0') else '0';
+
+    fu_gnt_wire_process: process(all)
+    begin
+        for h in accl_range loop
+            fu_gnt_wire(h) <= (others => '0');
+            case state_DSP(h) is
+                when dsp_halt_hart =>
+                    for i in 0 to 4 loop 
+                        if fu_gnt_en(h)(i) = '1' then
+                            fu_gnt_wire(to_integer(unsigned(fu_issue_buffer(i)(to_integer(unsigned(fu_rd_ptr(i)))))))(i) <= '1'; -- give a grant to fu_gnt(h)(i), such that the 'h' index points to the thread in "fu_issue_buffer"
+                        end if;
+                    end loop;
+                when others =>
+                    null;
+            end case;
+        end loop;
+    end process fu_gnt_wire_process;
 
 
 end architecture DSP_FU_Handler_MT_arch;

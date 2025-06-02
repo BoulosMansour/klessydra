@@ -209,6 +209,7 @@ architecture RTL_DSP_TOP_arch of RTL_DSP_TOP is
       rd_to_sc                        : in  std_logic_vector(SPM_ADDR_WID-1 downto 0);
       --CSR Signals
       MVSIZE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(Addr_Width downto 0);
+      MVSIZE_h                        : in  std_logic_vector(Addr_Width downto 0);
       MVTYPE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
       MPSCLFAC                        : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(4 downto 0);
       -- ID_Stage Signals
@@ -344,6 +345,7 @@ architecture RTL_DSP_TOP_arch of RTL_DSP_TOP is
       nextstate_DSP                   : in std_logic_vector(1 downto 0);
       dotp                            : in std_logic;  -- indicator used in the pipeline handler to switch functional units
       dotpps                          : in std_logic;  -- indicator used in the pipeline handler to switch functional units
+      slt                             : in std_logic;  -- indicator used in the pipeline handler to switch functional units
       -- input from mapping
       SIMD_RD_BYTES_wire              : in integer;
       --input from DSP_Excpt_Cntrl_Unit
@@ -641,6 +643,7 @@ busy_dsp <= busy_dsp_internal;
         rs2_to_sc                         => rs2_to_sc,
         rd_to_sc                          => rd_to_sc,
         MVSIZE                            => MVSIZE,
+        MVSIZE_h                          => MVSIZE(h),
         MVTYPE                            => MVTYPE,
         MPSCLFAC                          => MPSCLFAC,
         harc_EXEC                         => harc_EXEC,
@@ -760,10 +763,11 @@ busy_dsp <= busy_dsp_internal;
       port map(
         clk_i                             => clk_i,
         rst_ni                            => rst_ni,
-        dsp_data_gnt_i                    => dsp_data_gnt_i,
+        dsp_data_gnt_i                    => dsp_data_gnt_i(h),
         nextstate_DSP                     => nextstate_DSP(h),
         dotp                              => dotp(h),  
         dotpps                            => dotpps(h),
+        slt                               => slt(h),
         SIMD_RD_BYTES_wire                => SIMD_RD_BYTES_wire(h),
         dsp_except_data_wire              => dsp_except_data_wire(h),
         halt_dsp                          => halt_dsp(h),
@@ -774,7 +778,7 @@ busy_dsp <= busy_dsp_internal;
         mul_en                            => mul_en(h),
         accum_en                          => accum_en(h),
 
-        dsp_data_gnt_i_lat                => dsp_data_gnt_i_lat,
+        dsp_data_gnt_i_lat                => dsp_data_gnt_i_lat(h),
         adder_stage_1_en                  => adder_stage_1_en(h),
         adder_stage_2_en                  => adder_stage_2_en(h),
         adder_stage_3_en                  => adder_stage_3_en(h),

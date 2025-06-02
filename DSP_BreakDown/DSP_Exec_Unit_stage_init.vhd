@@ -27,6 +27,7 @@ entity DSP_Exec_Unit_stage_init is
         rd_to_sc                        : in  std_logic_vector(SPM_ADDR_WID-1 downto 0);
         --CSR Signals
         MVSIZE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(Addr_Width downto 0);
+        MVSIZE_h                        : in  std_logic_vector(Addr_Width downto 0);
         MVTYPE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
         MPSCLFAC                        : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(4 downto 0);
         -- ID_Stage Signals
@@ -220,8 +221,8 @@ architecture DSP_Exec_Unit_stage_init_arch of DSP_Exec_Unit_stage_init is
                     RS2_Data_IE_lat <= RS2_Data_IE;
                 end if;
                 -- Decrement the vector elements that have already been operated on
-                if unsigned(MVSIZE) >= SIMD_RD_BYTES_wire then
-                    MVSIZE_READ <= std_logic_vector(unsigned(MVSIZE) - SIMD_RD_BYTES_wire);  -- decrement by SIMD_BYTE Execution Capability
+                if unsigned(MVSIZE_h) >= SIMD_RD_BYTES_wire then
+                    MVSIZE_READ <= std_logic_vector(unsigned(MVSIZE_h) - SIMD_RD_BYTES_wire);  -- decrement by SIMD_BYTE Execution Capability
                 else
                     MVSIZE_READ <= (others => '0');                                                     -- decrement the remaining bytes
                 end if;

@@ -86,7 +86,6 @@ subtype fu_range   is integer range FU_NUM - 1 downto 0;
 
 component DSP_Mapping_Multicore_Out_Mapper is
     generic (
-        THREAD_POOL_SIZE      : integer;
         SIMD                  : natural;
         --------------------------------
         Data_Width            : natural;
@@ -95,7 +94,7 @@ component DSP_Mapping_Multicore_Out_Mapper is
     );
     port(
         -- CSR Signals
-        MVTYPE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
+        MVTYPE                          : in  std_logic_vector(3 downto 0);
         -- ID_Stage Signals
         dsp_instr_req                   : in  std_logic;
         decoded_instruction_DSP         : in  std_logic_vector(DSP_UNIT_INSTR_SET_SIZE-1 downto 0);
@@ -179,7 +178,6 @@ end component DSP_Mapping_IN_Unit_Multicore;
 
 component DSP_Mapping_Multithread_Out_Mapper is
     generic(
-        THREAD_POOL_SIZE      : integer;
         SIMD                  : natural;
         --------------------------------
         Data_Width            : natural;
@@ -187,7 +185,7 @@ component DSP_Mapping_Multithread_Out_Mapper is
     );
     port(-- IN THE TOP ENTITY CONNECT ONLY INDEX (0) FOR ALL SIGNALS HAVING SIZE OF fu_range
         -- CSR Signals
-        MVTYPE                          : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
+        MVTYPE                          : in  std_logic_vector(3 downto 0);
         -- ID_Stage Signals
         dsp_instr_req                   : in  std_logic;
         decoded_instruction_DSP         : in  std_logic_vector(DSP_UNIT_INSTR_SET_SIZE-1 downto 0);
@@ -273,7 +271,6 @@ MAPPING_MULTICORE: if multithreaded_accl_en = 0 generate
     MAPPING_OUT_UNIT_replicated: for h in fu_range generate
         MAPPING_OUT_UNIT: DSP_Mapping_Multicore_Out_Mapper
             generic map (
-                THREAD_POOL_SIZE => THREAD_POOL_SIZE,
                 SIMD => SIMD,
                 Data_Width => Data_Width,
                 SIMD_Width => SIMD_Width
@@ -342,7 +339,6 @@ MAPPING_MULTITHREAD: if multithreaded_accl_en = 1 generate
     MAPPING_OUT_UNIT_replicated: for h in accl_range generate
         MAPPING_OUT_UNIT: DSP_Mapping_Multithread_Out_Mapper
             generic map (
-                THREAD_POOL_SIZE => THREAD_POOL_SIZE,
                 SIMD => SIMD,
                 Data_Width => Data_Width,
                 SIMD_Width => SIMD_Width

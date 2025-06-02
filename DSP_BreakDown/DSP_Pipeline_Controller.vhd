@@ -19,6 +19,7 @@ entity DSP_pipeline_controller is
     nextstate_DSP                   : in std_logic_vector(1 downto 0);
     dotp                            : in std_logic;  -- indicator used in the pipeline handler to switch functional units
     dotpps                          : in std_logic;  -- indicator used in the pipeline handler to switch functional units
+    slt                             : in std_logic;  -- indicator used in the pipeline handler to switch functional units
     -- input from mapping
     SIMD_RD_BYTES_wire              : in integer;
     --input from DSP_Excpt_Cntrl_Unit
