@@ -20,87 +20,62 @@ entity DSP_Excpt_Cntrl_unit is
         SIMD_BITS             : natural
     );
     port(
-        RD_Data_IE_lat              : in std_logic_vector(Addr_Width -1 downto 0);
-        MVSIZE_WRITE                : in std_logic_vector(Addr_Width downto 0);  -- Bytes remaining to write
-
-        --output signals
-        nextstate_DSP               : out std_logic_vector(1 downto 0);
-        busy_dsp_internal           : out std_logic;
-        wb_ready                    : out std_logic;
-        dsp_sci_we                  : out std_logic_vector(SPM_NUM-1 downto 0);
-        dsp_sc_write_addr           : out std_logic_vector(Addr_Width-1 downto 0);    
-    
-        -- input from DSP_Exec_Unit
-        vec_read_rs2_DSP                : in std_logic;  -- Indicates whether the operand being read is a vector or a scalar
-        vec_write_rd_DSP                : in std_logic;  -- Indicates whether the result being written is a vector or a scalar
-        recover_state                   : in std_logic;
-        dsp_rs1_to_sc                   : in std_logic_vector(SPM_ADDR_WID-1 downto 0);
-        dsp_rs2_to_sc                   : in std_logic_vector(SPM_ADDR_WID-1 downto 0);
-        dsp_rd_to_sc                    : in std_logic_vector(SPM_ADDR_WID-1 downto 0);
-        RS1_Data_IE_lat                 : in std_logic_vector(31 downto 0);
-        RS2_Data_IE_lat                 : in std_logic_vector(31 downto 0);
-        MVSIZE_READ                     : in std_logic_vector(Addr_Width downto 0);  -- Bytes remaining to read
-        -- input from pipeline controller
-        accum_stage_3_en                : in std_logic;
-        
-        --OUTPUTS
-        dsp_sc_read_addr                : out array_2d(1 downto 0)(Addr_Width-1 downto 0);
-        dsp_sci_req                     : out std_logic_vector(SPM_NUM-1 downto 0);
-        dsp_to_sc                       : out array_2d(SPM_NUM-1 downto 0)(1 downto 0);
-        halt_dsp                        : out std_logic;
-        recover_state_wires             : out std_logic;
-        dsp_except_data_wire            : out std_logic_vector(31 downto 0);
-        -- Scratchpad Interface Signals
-        dsp_we_word                     : out std_logic_vector(SIMD-1 downto 0);
-        dsp_sci_wr_gnt                  : in  std_logic;
-
-        --inputs from pipeline controller
-        mul_stage_3_en                  : in std_logic;
-        adder_stage_3_en                : in std_logic;
-        dsp_except_data                 : in std_logic_vector(31 downto 0);
-        busy_DSP_internal_lat           : in std_logic;
-        state_DSP                       : in std_logic_vector(1 downto 0); -- tracer signals
-        SIMD_RD_BYTES                   : in integer;
-        --input from DSP_Exec_Unit
-        rf_rs2                          : in std_logic;
-        decoded_instruction_DSP_lat     : in std_logic_vector(DSP_UNIT_INSTR_SET_SIZE -1 downto 0);
-    
-
-        --INPUTS
-        cmp_stage_2_en              : in std_logic;
-
-
-        --INPUTS
-        shifter_stage_3_en              : in std_logic;
-    
-
-        -- Processing Pipeline Signals
-        rs1_to_sc                  : in  std_logic_vector(SPM_ADDR_WID-1 downto 0);
-        rs2_to_sc                  : in  std_logic_vector(SPM_ADDR_WID-1 downto 0);
-        rd_to_sc                   : in  std_logic_vector(SPM_ADDR_WID-1 downto 0);
-        -- CSR Signals
-        MVSIZE                     : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(Addr_Width downto 0);
-        MVTYPE                     : in  array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
-        -- Program Counter Signals
-        dsp_except_condition       : out std_logic;
-        dsp_taken_branch           : out std_logic;
-        -- ID_Stage Signals
-        harc_EXEC                  : in  integer range THREAD_POOL_SIZE-1 downto 0;
-        RS1_Data_IE                : in  std_logic_vector(31 downto 0);
-        RS2_Data_IE                : in  std_logic_vector(31 downto 0);
-        RD_Data_IE                 : in  std_logic_vector(Addr_Width -1 downto 0);
-        spm_rs1                    : in  std_logic;
-        spm_rs2                    : in  std_logic;
-        vec_read_rs1_ID            : in  std_logic;
-        vec_read_rs2_ID            : in  std_logic;
-        vec_write_rd_ID            : in  std_logic;
-        dsp_instr_req              : in  std_logic;
-        -- input from FU access handler
-        halt_hart                       : std_logic -- halts the thread when the requested functional unit is in use
-        
-        
-    
-
+      -- INPUTS
+      RD_Data_IE_lat                  : in std_logic_vector(Addr_Width -1 downto 0);
+      MVSIZE_WRITE                    : in std_logic_vector(Addr_Width downto 0);  -- Bytes remaining to write
+      vec_read_rs2_DSP                : in std_logic;  -- Indicates whether the operand being read is a vector or a scalar
+      vec_write_rd_DSP                : in std_logic;  -- Indicates whether the result being written is a vector or a scalar
+      recover_state                   : in std_logic;
+      dsp_rs1_to_sc                   : in std_logic_vector(SPM_ADDR_WID-1 downto 0);
+      dsp_rs2_to_sc                   : in std_logic_vector(SPM_ADDR_WID-1 downto 0);
+      dsp_rd_to_sc                    : in std_logic_vector(SPM_ADDR_WID-1 downto 0);
+      RS1_Data_IE_lat                 : in std_logic_vector(31 downto 0);
+      RS2_Data_IE_lat                 : in std_logic_vector(31 downto 0);
+      MVSIZE_READ                     : in std_logic_vector(Addr_Width downto 0);  -- Bytes remaining to read
+      accum_stage_3_en                : in std_logic;
+      dsp_sci_wr_gnt                  : in std_logic;
+      mul_stage_3_en                  : in std_logic;
+      adder_stage_3_en                : in std_logic;
+      dsp_except_data                 : in std_logic_vector(31 downto 0);
+      busy_DSP_internal_lat           : in std_logic;
+      state_DSP                       : in std_logic_vector(1 downto 0); -- tracer signals
+      SIMD_RD_BYTES                   : in integer;
+      rf_rs2                          : in std_logic;
+      decoded_instruction_DSP_lat     : in std_logic_vector(DSP_UNIT_INSTR_SET_SIZE -1 downto 0);
+      cmp_stage_2_en                  : in std_logic;
+      shifter_stage_3_en              : in std_logic;
+      rs1_to_sc                       : in std_logic_vector(SPM_ADDR_WID-1 downto 0);
+      rs2_to_sc                       : in std_logic_vector(SPM_ADDR_WID-1 downto 0);
+      rd_to_sc                        : in std_logic_vector(SPM_ADDR_WID-1 downto 0);
+      MVSIZE                          : in array_2d(THREAD_POOL_SIZE-1 downto 0)(Addr_Width downto 0);
+      MVTYPE                          : in array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
+      harc_EXEC                       : in integer range THREAD_POOL_SIZE-1 downto 0;
+      RS1_Data_IE                     : in std_logic_vector(31 downto 0);
+      RS2_Data_IE                     : in std_logic_vector(31 downto 0);
+      RD_Data_IE                      : in std_logic_vector(Addr_Width -1 downto 0);
+      spm_rs1                         : in std_logic;
+      spm_rs2                         : in std_logic;
+      vec_read_rs1_ID                 : in std_logic;
+      vec_read_rs2_ID                 : in std_logic;
+      vec_write_rd_ID                 : in std_logic;
+      dsp_instr_req                   : in std_logic;
+      halt_hart                       : in std_logic; -- halts the thread when the requested functional unit is in use
+  
+      -- output signals
+      nextstate_DSP                   : out std_logic_vector(1 downto 0);
+      busy_dsp_internal               : out std_logic;
+      wb_ready                        : out std_logic;
+      dsp_sci_we                      : out std_logic_vector(SPM_NUM-1 downto 0);
+      dsp_sc_write_addr               : out std_logic_vector(Addr_Width-1 downto 0);
+      dsp_sc_read_addr                : out array_2d(1 downto 0)(Addr_Width-1 downto 0);
+      dsp_sci_req                     : out std_logic_vector(SPM_NUM-1 downto 0);
+      dsp_to_sc                       : out array_2d(SPM_NUM-1 downto 0)(1 downto 0);
+      halt_dsp                        : out std_logic;
+      recover_state_wires             : out std_logic;
+      dsp_except_data_wire            : out std_logic_vector(31 downto 0);
+      dsp_except_condition            : out std_logic;
+      dsp_we_word                     : out std_logic_vector(SIMD-1 downto 0);
+      dsp_taken_branch                : out std_logic   
     );
 end entity DSP_Excpt_Cntrl_unit;
 

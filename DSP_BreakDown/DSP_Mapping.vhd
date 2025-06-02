@@ -76,7 +76,6 @@ entity DSP_Mapping is
         dsp_in_cmp_operands             : out array_2d(FU_NUM-1 downto 0)(SIMD_Width-1 downto 0);
         -- output for multiplier stage 1
         dsp_in_mul_operands             : out array_3d(FU_NUM-1 downto 0)(1 downto 0)(SIMD_Width-1 downto 0)
-
     );
 end entity DSP_Mapping;
 
