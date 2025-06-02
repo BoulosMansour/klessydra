@@ -81,7 +81,10 @@ entity DSP_Exec_Unit is
         MVSIZE_WRITE                    : out std_logic_vector(Addr_Width downto 0);   -- Bytes remaining to write
         MVSIZE_READ                     : out std_logic_vector(Addr_Width downto 0);   -- Bytes remaining to read
         RS1_Data_IE_lat                 : out std_logic_vector(31 downto 0);
-        RS2_Data_IE_lat                 : out std_logic_vector(31 downto 0)
+        RS2_Data_IE_lat                 : out std_logic_vector(31 downto 0);
+        vec_read_rs1_DSP                : out std_logic;  -- Indicates whether the operand being read is a vector or a scalar
+        vec_read_rs2_DSP                : out std_logic;  -- Indicates whether the operand being read is a vector or a scalar
+        vec_write_rd_DSP                : out std_logic  -- Indicates whether the result being written is a vector or a scalar
     );
 end entity DSP_Exec_Unit;
 
@@ -206,9 +209,6 @@ signal MVSIZE_READ_s                   : std_logic_vector(Addr_Width downto 0); 
 signal RS1_Data_IE_lat_s               : std_logic_vector(31 downto 0);
 signal RS2_Data_IE_lat_s               : std_logic_vector(31 downto 0);
 signal MVSIZE_READ_MASK_s              : std_logic_vector(Addr_Width downto 0);  -- Bytes remaining to read
-signal vec_read_rs1_DSP_s              : std_logic;  -- Indicates whether the operand being read is a vector or a scalar
-signal vec_read_rs2_DSP_s              : std_logic;  -- Indicates whether the operand being read is a vector or a scalar
-signal vec_write_rd_DSP_s              : std_logic;  -- Indicates whether the result being written is a vector or a scalar
 
 begin
 enable_exec_stage_s <= '1' when (state_DSP = dsp_init and busy_DSP_internal_lat = '1' and dsp_instr_req = '1') else '0';
@@ -265,9 +265,9 @@ init_stage: DSP_Exec_Unit_stage_init
         dsp_rd_to_sc                    => dsp_rd_to_sc,
 
         -- common signals with stage exec
-        vec_write_rd_DSP                => vec_write_rd_DSP_s,  -- Indicates whether the result being written is a vector or a scalar
-        vec_read_rs1_DSP                => vec_read_rs1_DSP_s,  -- Indicates whether the operand being read is a vector or a scalar
-        vec_read_rs2_DSP                => vec_read_rs2_DSP_s,  -- Indicates whether the operand being read is a vector or a scalar
+        vec_write_rd_DSP                => vec_write_rd_DSP,  -- Indicates whether the result being written is a vector or a scalar
+        vec_read_rs1_DSP                => vec_read_rs1_DSP,  -- Indicates whether the operand being read is a vector or a scalar
+        vec_read_rs2_DSP                => vec_read_rs2_DSP,  -- Indicates whether the operand being read is a vector or a scalar
         MVSIZE_READ_MASK                => MVSIZE_READ_MASK_s,  -- Bytes remaining to read
         MVSIZE_WRITE                    => MVSIZE_WRITE_s,  -- Bytes remaining to write
         RD_Data_IE_lat                  => RD_Data_IE_lat_s,
@@ -318,9 +318,9 @@ exec_stage: DSP_Exec_Unit_stage_exec
         RS2_Data_IE_lat_i               => RS2_Data_IE_lat_s,
         RS2_Data_IE_lat_o               => RS2_Data_IE_lat,
         MVSIZE_READ_MASK_i              => MVSIZE_READ_MASK_s,  -- Bytes remaining to read
-        vec_write_rd_DSP                => vec_write_rd_DSP_s,  -- Indicates whether the result being written is a vector or a scalar
-        vec_read_rs1_DSP                => vec_read_rs1_DSP_s,  -- Indicates whether the operand being read is a vector or a scalar
-        vec_read_rs2_DSP                => vec_read_rs2_DSP_s  -- Indicates whether the operand being read is a vector or a scalar
+        vec_write_rd_DSP                => vec_write_rd_DSP,  -- Indicates whether the result being written is a vector or a scalar
+        vec_read_rs1_DSP                => vec_read_rs1_DSP,  -- Indicates whether the operand being read is a vector or a scalar
+        vec_read_rs2_DSP                => vec_read_rs2_DSP  -- Indicates whether the operand being read is a vector or a scalar
         );
 
 end architecture DSP_Exec_Unit_arch;
