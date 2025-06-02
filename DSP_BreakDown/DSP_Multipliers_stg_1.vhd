@@ -9,35 +9,6 @@ use std.textio.all;
 use work.riscv_klessydra.all;
 --use work.klessydra_parameters.all;
 
--- entity DSP_Multipliers_stg_1 is
---   generic (
---     SIMD                  : natural;
---     --------------------------------
---     SIMD_Width            : natural
---   );
---   port(
---     -- Core Signals
---     clk_i, rst_ni              : in std_logic;
---     -- inputs from DSP_Exec_Unit
---     FUNCT_SELECT_MASK               : array_2d(accl_range)(31 downto 0); -- when the mask is set to "FFFFFFFF" we enable KDOTP32 execution using the 16-bit muls
---     -- inputs DSP_Excpt_Unit
---     recover_state_wires             : std_logic_vector(accl_range);
---     -- inputs from DSP_pipeline_controller
---     halt_dsp_lat                    : std_logic_vector(accl_range);
---     mul_stage_1_en                  : std_logic_vector(accl_range);
---     -- inputs from DSP_FU_Handler
---     mul_en                          : std_logic_vector(accl_range);  -- enables the use of the multipliers
---     -- inputs from DSP_Mapping
---     dsp_in_mul_operands             : array_3d(fu_range)(1 downto 0)(SIMD_Width-1 downto 0);
-  
---     -- outputs for multipliers
---     dsp_mul_a                       : out array_2d(fu_range)(SIMD_Width -1 downto 0); --  Contains the results of the 16-bit multipliers
---     dsp_mul_b                       : out array_2d(fu_range)(SIMD_Width -1 downto 0); --  Contains the results of the 16-bit multipliers
---     dsp_mul_c                       : out array_2d(fu_range)(SIMD_Width -1 downto 0); --  Contains the results of the 16-bit multipliers
---     dsp_mul_d                       : out array_2d(fu_range)(SIMD_Width -1 downto 0) --  Contains the results of the 16-bit multipliers
---   );
--- end entity DSP_Multipliers_stg_1;
-
 entity DSP_Multipliers_stg_1 is
   generic (
     SIMD                  : natural;

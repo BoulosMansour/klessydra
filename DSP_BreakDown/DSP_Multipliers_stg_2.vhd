@@ -9,34 +9,6 @@ use std.textio.all;
 use work.riscv_klessydra.all;
 --use work.klessydra_parameters.all;
 
--- entity DSP_Multipliers_stg_2 is
---   generic(
---     SIMD                  : natural;
---     --------------------------------
---     Data_Width            : natural;
---     SIMD_Width            : natural
---   );
---   port(
---     -- Core Signals
---     clk_i, rst_ni              : in std_logic;
---     -- inputs from DSP_Excpt_Unit
---     recover_state_wires             : std_logic_vector(accl_range);
---     -- inputs from DSP_pipeline_controller
---     mul_stage_2_en                  : std_logic_vector(accl_range);
---     halt_dsp_lat                    : std_logic_vector(accl_range);
---     -- inputs from DSP_FU_Handler
---     mul_en                          : std_logic_vector(accl_range);  -- enables the use of the multipliers
---     -- inputs from multipliers
---     mul_tmp_a                       : array_3d(fu_range)(SIMD-1 downto 0)(Data_Width-1 downto 0);
---     mul_tmp_b                       : array_3d(fu_range)(SIMD-1 downto 0)(Data_Width-1 downto 0);
---     mul_tmp_c                       : array_3d(fu_range)(SIMD-1 downto 0)(Data_Width-1 downto 0);
---     mul_tmp_d                       : array_3d(fu_range)(SIMD-1 downto 0)(Data_Width-1 downto 0);
-
---     --outputs for DSP_Mapping
---     dsp_out_mul_results             : out array_2d(fu_range)(SIMD_Width-1 downto 0)
---   );
--- end entity DSP_Multipliers_stg_2;
-
 entity DSP_Multipliers_stg_2 is
   generic(
     SIMD                  : natural;

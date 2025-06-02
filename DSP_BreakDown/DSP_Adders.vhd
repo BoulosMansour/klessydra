@@ -149,7 +149,7 @@ architecture DSP_Adders_arch of DSP_Adders is
   end component  DSP_Adders_Sync;
 
 begin
-  ADDER_MULTICORE: if multithreaded_accl_en = '0' generate
+  ADDER_MULTICORE: if multithreaded_accl_en = 0 generate
     DSP_Adders_replicated: for h in accl_range generate
       DSP_Adders_stg_1_inst: DSP_Adders_stg_1
         generic map (
@@ -213,7 +213,7 @@ begin
     end generate DSP_Adders_replicated;
   end generate ADDER_MULTICORE;
 
-  ADDER_MULTITHREAD: if multithreaded_accl_en = '1' generate
+  ADDER_MULTITHREAD: if multithreaded_accl_en = 1 generate
     DSP_Adders_replicated: for h in accl_range generate
       DSP_Adders_stg_1_inst: DSP_Adders_stg_1
         generic map (

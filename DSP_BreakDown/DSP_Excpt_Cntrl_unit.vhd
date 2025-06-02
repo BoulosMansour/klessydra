@@ -105,7 +105,6 @@ entity DSP_Excpt_Cntrl_unit is
 end entity DSP_Excpt_Cntrl_unit;
 
 architecture DSP_Excpt_Cntrl_unit_arch of DSP_Excpt_Cntrl_unit is
-subtype harc_range is integer range THREAD_POOL_SIZE - 1 downto 0;
 
 begin
 ------------ Combinational Stage of DSP Unit ----------------------------------------------------------------------

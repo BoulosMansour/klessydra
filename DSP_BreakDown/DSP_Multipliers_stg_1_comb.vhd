@@ -9,35 +9,6 @@ use std.textio.all;
 use work.riscv_klessydra.all;
 --use work.klessydra_parameters.all;
 
--- entity DSP_Multipliers_stg_1_comb is
---   generic(
---     SIMD                  : natural;
---     --------------------------------
---     SIMD_Width            : natural
---   );
---   port(
---     -- inputs from DSP_Exec_Unit
---     MVTYPE_DSP                      : array_2d(accl_range)(1 downto 0);
---     -- inputs from DSP_pipeline_controller
---     mul_stage_2_en                  : std_logic_vector(accl_range);
---     -- inputs form DSP_Excpt_Unit
---     recover_state_wires             : std_logic_vector(accl_range);
---     -- inputs from DSP_FU_Handler
---     mul_en                          : std_logic_vector(accl_range);  -- enables the use of the multipliers
---     -- inputs from multipliers
---     dsp_mul_a                       : array_2d(fu_range)(SIMD_Width -1 downto 0); --  Contains the results of the 16-bit multipliers
---     dsp_mul_b                       : array_2d(fu_range)(SIMD_Width -1 downto 0); --  Contains the results of the 16-bit multipliers
---     dsp_mul_c                       : array_2d(fu_range)(SIMD_Width -1 downto 0); --  Contains the results of the 16-bit multipliers
---     dsp_mul_d                       : array_2d(fu_range)(SIMD_Width -1 downto 0); --  Contains the results of the 16-bit multipliers
-
---     -- outputs for multipliers
---     mul_tmp_a                       : out array_3d(fu_range)(SIMD-1 downto 0)(Data_Width-1 downto 0);
---     mul_tmp_b                       : out array_3d(fu_range)(SIMD-1 downto 0)(Data_Width-1 downto 0);
---     mul_tmp_c                       : out array_3d(fu_range)(SIMD-1 downto 0)(Data_Width-1 downto 0);
---     mul_tmp_d                       : out array_3d(fu_range)(SIMD-1 downto 0)(Data_Width-1 downto 0)
---   );
--- end entity DSP_Multipliers_stg_1_comb;
-
 entity DSP_Multipliers_stg_1_comb is
   generic(
     SIMD                  : natural;
