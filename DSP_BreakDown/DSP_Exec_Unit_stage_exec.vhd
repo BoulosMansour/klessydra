@@ -63,58 +63,60 @@ architecture DSP_Exec_Unit_stage_exec_arch of DSP_Exec_Unit_stage_exec is
         begin
             if rst_ni = '0' then
                 recover_state <= '0';  --out
-            elsif rising_edge(clk_i) and enable_i = '1' then
-                recover_state <= recover_state_wires;
-                if halt_dsp = '1' and halt_dsp_lat = '0' then
-                    dsp_sc_data_write_int <= dsp_sc_data_write_wire_int;
-                end if;
+            elsif rising_edge(clk_i) then
+                if enable_i = '1' then
+                    recover_state <= recover_state_wires;
+                    if halt_dsp = '1' and halt_dsp_lat = '0' then
+                        dsp_sc_data_write_int <= dsp_sc_data_write_wire_int;
+                    end if;
 
-                --------------------------------------------------------------------------
-                --  ██╗  ██╗██╗    ██╗      ██╗      ██████╗  ██████╗ ██████╗ ███████╗  --
-                --  ██║  ██║██║    ██║      ██║     ██╔═══██╗██╔═══██╗██╔══██╗██╔════╝  --
-                --  ███████║██║ █╗ ██║█████╗██║     ██║   ██║██║   ██║██████╔╝███████╗  --
-                --  ██╔══██║██║███╗██║╚════╝██║     ██║   ██║██║   ██║██╔═══╝ ╚════██║  --
-                --  ██║  ██║╚███╔███╔╝      ███████╗╚██████╔╝╚██████╔╝██║     ███████║  --
-                --  ╚═╝  ╚═╝ ╚══╝╚══╝       ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝     ╚══════╝  --            
-                --------------------------------------------------------------------------
+                    --------------------------------------------------------------------------
+                    --  ██╗  ██╗██╗    ██╗      ██╗      ██████╗  ██████╗ ██████╗ ███████╗  --
+                    --  ██║  ██║██║    ██║      ██║     ██╔═══██╗██╔═══██╗██╔══██╗██╔════╝  --
+                    --  ███████║██║ █╗ ██║█████╗██║     ██║   ██║██║   ██║██████╔╝███████╗  --
+                    --  ██╔══██║██║███╗██║╚════╝██║     ██║   ██║██║   ██║██╔═══╝ ╚════██║  --
+                    --  ██║  ██║╚███╔███╔╝      ███████╗╚██████╔╝╚██████╔╝██║     ███████║  --
+                    --  ╚═╝  ╚═╝ ╚══╝╚══╝       ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝     ╚══════╝  --            
+                    --------------------------------------------------------------------------
 
-                if halt_dsp = '0' then
-                    -- Increment the write address when we have a result as a vector
-                    if vec_write_rd_DSP = '1' and wb_ready = '1' then
-                        RD_Data_IE_lat_o  <= std_logic_vector(unsigned(RD_Data_IE_lat_o)  + SIMD_RD_BYTES_wire); -- destination address increment
-                    end if;
-                    if wb_ready = '1' then
-                        if to_integer(unsigned(MVSIZE_WRITE_o)) >= SIMD_RD_BYTES_wire then
-                            MVSIZE_WRITE_o <= std_logic_vector(unsigned(MVSIZE_WRITE_o) - SIMD_RD_BYTES_wire);       -- decrement by SIMD_BYTE Execution Capability 
-                        else
-                            MVSIZE_WRITE_o <= (others => '0');                                                -- decrement the remaining bytes
+                    if halt_dsp = '0' then
+                        -- Increment the write address when we have a result as a vector
+                        if vec_write_rd_DSP = '1' and wb_ready = '1' then
+                            RD_Data_IE_lat_o  <= std_logic_vector(unsigned(RD_Data_IE_lat_o)  + SIMD_RD_BYTES_wire); -- destination address increment
                         end if;
-                    end if;
-                    -- Increment the read addresses
-                    if to_integer(unsigned(MVSIZE_READ_o)) >= SIMD_RD_BYTES and dsp_data_gnt_i = '1' then -- Increment the addresses untill all the vector elements are operated fetched
-                        if vec_read_rs1_DSP = '1' then
-                            RS1_Data_IE_lat_o <= std_logic_vector(unsigned(RS1_Data_IE_lat_o) + SIMD_RD_BYTES_wire);   -- source 1 address increment
+                        if wb_ready = '1' then
+                            if to_integer(unsigned(MVSIZE_WRITE_o)) >= SIMD_RD_BYTES_wire then
+                                MVSIZE_WRITE_o <= std_logic_vector(unsigned(MVSIZE_WRITE_o) - SIMD_RD_BYTES_wire);       -- decrement by SIMD_BYTE Execution Capability 
+                            else
+                                MVSIZE_WRITE_o <= (others => '0');                                                -- decrement the remaining bytes
+                            end if;
                         end if;
-                        if vec_read_rs2_DSP = '1' then
-                            RS2_Data_IE_lat_o <= std_logic_vector(unsigned(RS2_Data_IE_lat_o) + SIMD_RD_BYTES_wire); -- source 2 address increment
+                        -- Increment the read addresses
+                        if to_integer(unsigned(MVSIZE_READ_o)) >= SIMD_RD_BYTES and dsp_data_gnt_i = '1' then -- Increment the addresses untill all the vector elements are operated fetched
+                            if vec_read_rs1_DSP = '1' then
+                                RS1_Data_IE_lat_o <= std_logic_vector(unsigned(RS1_Data_IE_lat_o) + SIMD_RD_BYTES_wire);   -- source 1 address increment
+                            end if;
+                            if vec_read_rs2_DSP = '1' then
+                                RS2_Data_IE_lat_o <= std_logic_vector(unsigned(RS2_Data_IE_lat_o) + SIMD_RD_BYTES_wire); -- source 2 address increment
+                            end if;
                         end if;
-                    end if;
-                    -- Decrement the vector elements that have already been operated on
-                    if dsp_data_gnt_i = '1' then
-                        if to_integer(unsigned(MVSIZE_READ_o)) >= SIMD_RD_BYTES then
-                            MVSIZE_READ_o <= std_logic_vector(unsigned(MVSIZE_READ_o) - SIMD_RD_BYTES_wire); -- decrement by SIMD_BYTE Execution Capability
-                        else
-                            MVSIZE_READ_o <= (others => '0');                                               -- decrement the remaining bytes
+                        -- Decrement the vector elements that have already been operated on
+                        if dsp_data_gnt_i = '1' then
+                            if to_integer(unsigned(MVSIZE_READ_o)) >= SIMD_RD_BYTES then
+                                MVSIZE_READ_o <= std_logic_vector(unsigned(MVSIZE_READ_o) - SIMD_RD_BYTES_wire); -- decrement by SIMD_BYTE Execution Capability
+                            else
+                                MVSIZE_READ_o <= (others => '0');                                               -- decrement the remaining bytes
+                            end if;
                         end if;
-                    end if;
-                    dsp_sc_data_read_mask <= (others => '0');
-                    if dsp_data_gnt_i_lat = '1' then
-                        if to_integer(unsigned(MVSIZE_READ_MASK_s)) >= SIMD_RD_BYTES then
-                            dsp_sc_data_read_mask <= (others => '1');
-                            MVSIZE_READ_MASK_s <= std_logic_vector(unsigned(MVSIZE_READ_MASK_s) - SIMD_RD_BYTES_wire); -- decrement by SIMD_BYTE Execution Capability 
-                        else
-                            MVSIZE_READ_MASK_s <= (others => '0');
-                            dsp_sc_data_read_mask(to_integer(unsigned(MVSIZE_READ_MASK_s))*8 - 1 downto 0) <= (others => '1');
+                        dsp_sc_data_read_mask <= (others => '0');
+                        if dsp_data_gnt_i_lat = '1' then
+                            if to_integer(unsigned(MVSIZE_READ_MASK_s)) >= SIMD_RD_BYTES then
+                                dsp_sc_data_read_mask <= (others => '1');
+                                MVSIZE_READ_MASK_s <= std_logic_vector(unsigned(MVSIZE_READ_MASK_s) - SIMD_RD_BYTES_wire); -- decrement by SIMD_BYTE Execution Capability 
+                            else
+                                MVSIZE_READ_MASK_s <= (others => '0');
+                                dsp_sc_data_read_mask(to_integer(unsigned(MVSIZE_READ_MASK_s))*8 - 1 downto 0) <= (others => '1');
+                            end if;
                         end if;
                     end if;
                 end if;

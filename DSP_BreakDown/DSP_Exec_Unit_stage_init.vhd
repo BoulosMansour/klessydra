@@ -83,155 +83,157 @@ architecture DSP_Exec_Unit_stage_init_arch of DSP_Exec_Unit_stage_init is
                 dotpps     <= '0';     --out
                 dotp       <= '0';     --out
                 slt        <= '0';     --out
-            elsif rising_edge(clk_i) and enable_i = '1' then
-                -------------------------------------------------------------
-                --  ██╗███╗   ██╗██╗████████╗    ██████╗ ███████╗██████╗   --
-                --  ██║████╗  ██║██║╚══██╔══╝    ██╔══██╗██╔════╝██╔══██╗  --
-                --  ██║██╔██╗ ██║██║   ██║       ██║  ██║███████╗██████╔╝  --
-                --  ██║██║╚██╗██║██║   ██║       ██║  ██║╚════██║██╔═══╝   --
-                --  ██║██║ ╚████║██║   ██║       ██████╔╝███████║██║       --
-                --  ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝       ╚═════╝ ╚══════╝╚═╝       -- 
-                -------------------------------------------------------------
+            elsif rising_edge(clk_i) then
+                if enable_i = '1' then
+                    -------------------------------------------------------------
+                    --  ██╗███╗   ██╗██╗████████╗    ██████╗ ███████╗██████╗   --
+                    --  ██║████╗  ██║██║╚══██╔══╝    ██╔══██╗██╔════╝██╔══██╗  --
+                    --  ██║██╔██╗ ██║██║   ██║       ██║  ██║███████╗██████╔╝  --
+                    --  ██║██║╚██╗██║██║   ██║       ██║  ██║╚════██║██╔═══╝   --
+                    --  ██║██║ ╚████║██║   ██║       ██████╔╝███████║██║       --
+                    --  ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝       ╚═════╝ ╚══════╝╚═╝       -- 
+                    -------------------------------------------------------------
 
-                FUNCT_SELECT_MASK <= (others => '0');  --out
-                twos_complement   <= (others => '0');  --out
-                relu_instr <= '0'; --out
-                rf_rs2     <= '0'; --out
-                dotpps     <= '0'; --out
-                dotp       <= '0'; --out
-                slt        <= '0'; --out
-                -- Set signals to enable correct virtual parallelism operation
-                if (decoded_instruction_DSP(KADDV_bit_position)    = '1'  or 
-                    decoded_instruction_DSP(KSVADDSC_bit_position) = '1') and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "10" then
-                carry_pass <= "111";  -- pass all carry_outs
-                elsif decoded_instruction_DSP(KSVADDRF_bit_position) = '1' and 
-                    MVTYPE(harc_EXEC)(3 downto 2) = "10" then
-                carry_pass <= "111";  -- pass all carry_outs
-                rf_rs2 <= '1';
-                elsif (decoded_instruction_DSP(KADDV_bit_position)    = '1'  or
-                    decoded_instruction_DSP(KSVADDSC_bit_position) = '1') and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "01" then
-                carry_pass <= "101";  -- pass carrries 9, and 25
-                elsif decoded_instruction_DSP(KSVADDRF_bit_position) = '1' and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "01" then
-                carry_pass <= "101";  -- pass carrries 9, and 25
-                rf_rs2 <= '1';
-                elsif (decoded_instruction_DSP(KADDV_bit_position)     = '1'  or
-                    decoded_instruction_DSP(KSVADDSC_bit_position)  = '1') and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "00" then
-                carry_pass <= "000";  -- don't pass carry_outs and keep addition 8-bit
-                elsif decoded_instruction_DSP(KSVADDRF_bit_position)  = '1' and 
-                    MVTYPE(harc_EXEC)(3 downto 2) = "00" then
-                carry_pass <= "000";  -- don't pass carry_outs and keep addition 8-bit
-                rf_rs2 <= '1';
-                elsif (decoded_instruction_DSP(KSUBV_bit_position)  = '1') and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "10" then
-                carry_pass <= "111";  -- pass all carry_outs
-                twos_complement <= "00010001000100010001000100010001";
-                elsif (decoded_instruction_DSP(KSUBV_bit_position)  = '1') and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "01" then
-                carry_pass <= "101";  -- pass carrries 9, and 25
-                twos_complement <= "01010101010101010101010101010101";
-                elsif (decoded_instruction_DSP(KSUBV_bit_position)  = '1') and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "00" then
-                carry_pass <= "000";  -- don't pass carry_outs and keep addition 8-bit
-                twos_complement <= "11111111111111111111111111111111";
-                elsif (decoded_instruction_DSP(KVSLT_bit_position)  = '1'  or
-                    decoded_instruction_DSP(KSVSLT_bit_position) = '1') and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "10" then
-                carry_pass <= "111";  -- pass all carry_outs
-                twos_complement <= "00010001000100010001000100010001";
-                slt <= '1';
-                elsif (decoded_instruction_DSP(KVSLT_bit_position)  = '1'  or
-                    decoded_instruction_DSP(KSVSLT_bit_position) = '1') and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "01" then
-                carry_pass <= "101";  -- pass carrries 9, and 25
-                twos_complement <= "01010101010101010101010101010101";
-                slt <= '1';
-                elsif (decoded_instruction_DSP(KVSLT_bit_position)  = '1'  or
-                    decoded_instruction_DSP(KSVSLT_bit_position) = '1') and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "00" then
-                carry_pass <= "000";  -- don't pass carry_outs and keep addition 8-bit
-                twos_complement <= "11111111111111111111111111111111";
-                slt <= '1';
-                elsif decoded_instruction_DSP(KDOTP_bit_position) = '1' and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "10" then
-                -- KDOTP32 does not use the adders of KADDV instructions but rather adds the mul_acc results using it's own adders
-                FUNCT_SELECT_MASK <= (others => '1');  -- This enables 32-bit multiplication with the 16-bit multipliers
-                dotp <= '1';
-                elsif decoded_instruction_DSP(KDOTP_bit_position) = '1' and 
-                    MVTYPE(harc_EXEC)(3 downto 2) = "01" then
-                dotp <= '1';
-                elsif decoded_instruction_DSP(KDOTP_bit_position) = '1' and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "00" then
-                dotp <= '1';
-                elsif decoded_instruction_DSP(KDOTPPS_bit_position) = '1' and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "10" then
-                FUNCT_SELECT_MASK <= (others => '1');  -- This enables 32-bit multiplication with the 16-bit multipliers
-                dotpps <= '1';
-                elsif decoded_instruction_DSP(KDOTPPS_bit_position) = '1' and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "01" then
-                dotpps <= '1';
-                elsif decoded_instruction_DSP(KDOTPPS_bit_position)  = '1' and 
-                    MVTYPE(harc_EXEC)(3 downto 2) = "00" then
-                dotpps <= '1';
-                elsif decoded_instruction_DSP(KSVMULRF_bit_position) = '1' and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "10" then
-                FUNCT_SELECT_MASK <= (others => '1');
-                rf_rs2 <= '1';
-                elsif decoded_instruction_DSP(KSVMULRF_bit_position) = '1' and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "01" then
-                rf_rs2 <= '1';
-                elsif decoded_instruction_DSP(KSVMULRF_bit_position)  = '1' and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "00" then
-                rf_rs2  <= '1';
-                elsif (decoded_instruction_DSP(KVMUL_bit_position)    = '1'  or
-                    decoded_instruction_DSP(KSVMULSC_bit_position) = '1') and
-                    MVTYPE(harc_EXEC)(3 downto 2) = "10" then
-                FUNCT_SELECT_MASK <= (others => '1');
-                elsif decoded_instruction_DSP(KRELU_bit_position) = '1' then
-                relu_instr <= '1';
-                end if;
+                    FUNCT_SELECT_MASK <= (others => '0');  --out
+                    twos_complement   <= (others => '0');  --out
+                    relu_instr <= '0'; --out
+                    rf_rs2     <= '0'; --out
+                    dotpps     <= '0'; --out
+                    dotp       <= '0'; --out
+                    slt        <= '0'; --out
+                    -- Set signals to enable correct virtual parallelism operation
+                    if (decoded_instruction_DSP(KADDV_bit_position)    = '1'  or 
+                        decoded_instruction_DSP(KSVADDSC_bit_position) = '1') and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "10" then
+                    carry_pass <= "111";  -- pass all carry_outs
+                    elsif decoded_instruction_DSP(KSVADDRF_bit_position) = '1' and 
+                        MVTYPE(harc_EXEC)(3 downto 2) = "10" then
+                    carry_pass <= "111";  -- pass all carry_outs
+                    rf_rs2 <= '1';
+                    elsif (decoded_instruction_DSP(KADDV_bit_position)    = '1'  or
+                        decoded_instruction_DSP(KSVADDSC_bit_position) = '1') and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "01" then
+                    carry_pass <= "101";  -- pass carrries 9, and 25
+                    elsif decoded_instruction_DSP(KSVADDRF_bit_position) = '1' and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "01" then
+                    carry_pass <= "101";  -- pass carrries 9, and 25
+                    rf_rs2 <= '1';
+                    elsif (decoded_instruction_DSP(KADDV_bit_position)     = '1'  or
+                        decoded_instruction_DSP(KSVADDSC_bit_position)  = '1') and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "00" then
+                    carry_pass <= "000";  -- don't pass carry_outs and keep addition 8-bit
+                    elsif decoded_instruction_DSP(KSVADDRF_bit_position)  = '1' and 
+                        MVTYPE(harc_EXEC)(3 downto 2) = "00" then
+                    carry_pass <= "000";  -- don't pass carry_outs and keep addition 8-bit
+                    rf_rs2 <= '1';
+                    elsif (decoded_instruction_DSP(KSUBV_bit_position)  = '1') and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "10" then
+                    carry_pass <= "111";  -- pass all carry_outs
+                    twos_complement <= "00010001000100010001000100010001";
+                    elsif (decoded_instruction_DSP(KSUBV_bit_position)  = '1') and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "01" then
+                    carry_pass <= "101";  -- pass carrries 9, and 25
+                    twos_complement <= "01010101010101010101010101010101";
+                    elsif (decoded_instruction_DSP(KSUBV_bit_position)  = '1') and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "00" then
+                    carry_pass <= "000";  -- don't pass carry_outs and keep addition 8-bit
+                    twos_complement <= "11111111111111111111111111111111";
+                    elsif (decoded_instruction_DSP(KVSLT_bit_position)  = '1'  or
+                        decoded_instruction_DSP(KSVSLT_bit_position) = '1') and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "10" then
+                    carry_pass <= "111";  -- pass all carry_outs
+                    twos_complement <= "00010001000100010001000100010001";
+                    slt <= '1';
+                    elsif (decoded_instruction_DSP(KVSLT_bit_position)  = '1'  or
+                        decoded_instruction_DSP(KSVSLT_bit_position) = '1') and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "01" then
+                    carry_pass <= "101";  -- pass carrries 9, and 25
+                    twos_complement <= "01010101010101010101010101010101";
+                    slt <= '1';
+                    elsif (decoded_instruction_DSP(KVSLT_bit_position)  = '1'  or
+                        decoded_instruction_DSP(KSVSLT_bit_position) = '1') and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "00" then
+                    carry_pass <= "000";  -- don't pass carry_outs and keep addition 8-bit
+                    twos_complement <= "11111111111111111111111111111111";
+                    slt <= '1';
+                    elsif decoded_instruction_DSP(KDOTP_bit_position) = '1' and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "10" then
+                    -- KDOTP32 does not use the adders of KADDV instructions but rather adds the mul_acc results using it's own adders
+                    FUNCT_SELECT_MASK <= (others => '1');  -- This enables 32-bit multiplication with the 16-bit multipliers
+                    dotp <= '1';
+                    elsif decoded_instruction_DSP(KDOTP_bit_position) = '1' and 
+                        MVTYPE(harc_EXEC)(3 downto 2) = "01" then
+                    dotp <= '1';
+                    elsif decoded_instruction_DSP(KDOTP_bit_position) = '1' and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "00" then
+                    dotp <= '1';
+                    elsif decoded_instruction_DSP(KDOTPPS_bit_position) = '1' and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "10" then
+                    FUNCT_SELECT_MASK <= (others => '1');  -- This enables 32-bit multiplication with the 16-bit multipliers
+                    dotpps <= '1';
+                    elsif decoded_instruction_DSP(KDOTPPS_bit_position) = '1' and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "01" then
+                    dotpps <= '1';
+                    elsif decoded_instruction_DSP(KDOTPPS_bit_position)  = '1' and 
+                        MVTYPE(harc_EXEC)(3 downto 2) = "00" then
+                    dotpps <= '1';
+                    elsif decoded_instruction_DSP(KSVMULRF_bit_position) = '1' and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "10" then
+                    FUNCT_SELECT_MASK <= (others => '1');
+                    rf_rs2 <= '1';
+                    elsif decoded_instruction_DSP(KSVMULRF_bit_position) = '1' and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "01" then
+                    rf_rs2 <= '1';
+                    elsif decoded_instruction_DSP(KSVMULRF_bit_position)  = '1' and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "00" then
+                    rf_rs2  <= '1';
+                    elsif (decoded_instruction_DSP(KVMUL_bit_position)    = '1'  or
+                        decoded_instruction_DSP(KSVMULSC_bit_position) = '1') and
+                        MVTYPE(harc_EXEC)(3 downto 2) = "10" then
+                    FUNCT_SELECT_MASK <= (others => '1');
+                    elsif decoded_instruction_DSP(KRELU_bit_position) = '1' then
+                    relu_instr <= '1';
+                    end if;
 
-                -- We backup data from decode stage since they will get updated
+                    -- We backup data from decode stage since they will get updated
 
-                MVSIZE_READ_MASK <= MVSIZE(harc_EXEC);
-                MVSIZE_WRITE <= MVSIZE(harc_EXEC);
-                MPSCLFAC_DSP <= MPSCLFAC(harc_EXEC);
-                MVTYPE_DSP <= MVTYPE(harc_EXEC)(3 downto 2);
-                decoded_instruction_DSP_lat  <= decoded_instruction_DSP;
-                vec_write_rd_DSP <= vec_write_rd_ID;
-                vec_read_rs1_DSP <= vec_read_rs1_ID;
-                vec_read_rs2_DSP <= vec_read_rs2_ID;
-                dsp_rs1_to_sc <= rs1_to_sc;
-                dsp_rs2_to_sc <= rs2_to_sc;
-                dsp_rd_to_sc  <= rd_to_sc;
-                RD_Data_IE_lat <= RD_Data_IE;
-                -- Increment the read addresses
-                if dsp_data_gnt_i = '1' then
-                if vec_read_rs1_ID = '1' then
-                    RS1_Data_IE_lat <= std_logic_vector(unsigned(RS1_Data_IE) + SIMD_RD_BYTES_wire);   -- source 1 address increment
-                else
+                    MVSIZE_READ_MASK <= MVSIZE(harc_EXEC);
+                    MVSIZE_WRITE <= MVSIZE(harc_EXEC);
+                    MPSCLFAC_DSP <= MPSCLFAC(harc_EXEC);
+                    MVTYPE_DSP <= MVTYPE(harc_EXEC)(3 downto 2);
+                    decoded_instruction_DSP_lat  <= decoded_instruction_DSP;
+                    vec_write_rd_DSP <= vec_write_rd_ID;
+                    vec_read_rs1_DSP <= vec_read_rs1_ID;
+                    vec_read_rs2_DSP <= vec_read_rs2_ID;
+                    dsp_rs1_to_sc <= rs1_to_sc;
+                    dsp_rs2_to_sc <= rs2_to_sc;
+                    dsp_rd_to_sc  <= rd_to_sc;
+                    RD_Data_IE_lat <= RD_Data_IE;
+                    -- Increment the read addresses
+                    if dsp_data_gnt_i = '1' then
+                    if vec_read_rs1_ID = '1' then
+                        RS1_Data_IE_lat <= std_logic_vector(unsigned(RS1_Data_IE) + SIMD_RD_BYTES_wire);   -- source 1 address increment
+                    else
+                        RS1_Data_IE_lat <= RS1_Data_IE;
+                    end if;
+                    if vec_read_rs2_ID = '1' then
+                        RS2_Data_IE_lat <= std_logic_vector(unsigned(RS2_Data_IE) + SIMD_RD_BYTES_wire); -- source 2 address increment
+                    else
+                        RS2_Data_IE_lat <= RS2_Data_IE;
+                    end if;
+                    -- Decrement the vector elements that have already been operated on
+                    if unsigned(MVSIZE_h) >= SIMD_RD_BYTES_wire then
+                        MVSIZE_READ <= std_logic_vector(unsigned(MVSIZE_h) - SIMD_RD_BYTES_wire);  -- decrement by SIMD_BYTE Execution Capability
+                    else
+                        MVSIZE_READ <= (others => '0');                                                     -- decrement the remaining bytes
+                    end if;
+                    else
                     RS1_Data_IE_lat <= RS1_Data_IE;
-                end if;
-                if vec_read_rs2_ID = '1' then
-                    RS2_Data_IE_lat <= std_logic_vector(unsigned(RS2_Data_IE) + SIMD_RD_BYTES_wire); -- source 2 address increment
-                else
                     RS2_Data_IE_lat <= RS2_Data_IE;
+                    MVSIZE_READ <= MVSIZE(harc_EXEC);
+                    end if;
+                    -------------------------------------------------------------------------------
                 end if;
-                -- Decrement the vector elements that have already been operated on
-                if unsigned(MVSIZE_h) >= SIMD_RD_BYTES_wire then
-                    MVSIZE_READ <= std_logic_vector(unsigned(MVSIZE_h) - SIMD_RD_BYTES_wire);  -- decrement by SIMD_BYTE Execution Capability
-                else
-                    MVSIZE_READ <= (others => '0');                                                     -- decrement the remaining bytes
-                end if;
-                else
-                RS1_Data_IE_lat <= RS1_Data_IE;
-                RS2_Data_IE_lat <= RS2_Data_IE;
-                MVSIZE_READ <= MVSIZE(harc_EXEC);
-                end if;
-                -------------------------------------------------------------------------------
             end if;
         end process init_stage;
 end DSP_Exec_Unit_stage_init_arch;
