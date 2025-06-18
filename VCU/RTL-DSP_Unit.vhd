@@ -46,7 +46,7 @@ entity DSP_Unit is
     SIMD_Width            : natural
   );
   port (
-  -- Core Signals
+    -- Core Signals
     clk_i, rst_ni              : in std_logic;
     -- Processing Pipeline Signals
     rs1_to_sc                  : in  std_logic_vector(SPM_ADDR_WID-1 downto 0);
