@@ -185,7 +185,7 @@ begin
     );
 
   test_bench: process
-  file text_file : TEXT open READ_MODE is "./test/conv_matmul_shift_comp.txt";  -- check this address during importing
+  file text_file : TEXT open READ_MODE is "./test/conv_and_mul.txt";  -- check this address during importing
   variable text_line : line;
   variable ok : boolean;
   variable data_name: string_array(0 to 100);

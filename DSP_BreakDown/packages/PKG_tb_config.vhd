@@ -22,7 +22,7 @@ package tb_config is
   constant SIMD_BITS         : natural := integer(ceil(log2(real(SIMD))));
   constant Data_Width        : natural := 32;
   constant SIMD_Width        : natural := SIMD*Data_Width;
-  constant ACCL_NUM          : natural := (THREAD_POOL_SIZE - (THREAD_POOL_SIZE-1)*(1-replicate_accl_en));
+  constant ACCL_NUM          : natural := (THREAD_POOL_SIZE - ((THREAD_POOL_SIZE-1)*(1-replicate_accl_en)));
   constant FU_NUM            : natural := (ACCL_NUM - (ACCL_NUM-1)*(multithreaded_accl_en));
 
 
