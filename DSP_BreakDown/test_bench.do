@@ -62,8 +62,7 @@ vsim -voptargs=+acc work.tb_rtl_dsp_top
 # ----------------------------
 # Add signals to waveform
 # ----------------------------
-#add wave -r *
-add wave -r sim:/tb_rtl_dsp_top
+add wave sim:/tb_rtl_dsp_top/DUT/*
 
 # ----------------------------
 # Setup VCD dump
