@@ -59,8 +59,6 @@ signal dsp_sci_req_tb                : array_2d(ACCL_NUM-1 downto 0)(SPM_NUM-1 d
 -- tracer signals
 signal state_DSP_tb                  : array_2d(ACCL_NUM-1 downto 0)(1 downto 0);
 
-
-
 component RTL_DSP_TOP is
   generic(
     THREAD_POOL_SIZE      : integer;
@@ -185,7 +183,7 @@ begin
     );
 
   test_bench: process
-  file text_file : TEXT open READ_MODE is "./test/conv_and_mul.txt";  -- check this address during importing
+  file text_file : TEXT open READ_MODE is "./test/conv_and_mul_in.txt";  -- check this address during importing
   variable text_line : line;
   variable ok : boolean;
   variable data_name: string_array(0 to 100);
@@ -204,7 +202,6 @@ begin
   variable MVSIZE_var                     : array_2d(THREAD_POOL_SIZE-1 downto 0)(Addr_Width downto 0);
   variable MVTYPE_var                     : array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
   variable MPSCLFAC_var                   : array_2d(THREAD_POOL_SIZE-1 downto 0)(4 downto 0);
-  variable dsp_except_data_var                : array_2d(ACCL_NUM-1 downto 0)(31 downto 0);
   -- ID_Stage Signals
   variable decoded_instruction_DSP_var    : std_logic_vector(DSP_UNIT_INSTR_SET_SIZE-1 downto 0);
   variable harc_EXEC_var                  : unsigned(integer(ceil(log2(real(THREAD_POOL_SIZE-1)))) downto 0);
@@ -352,14 +349,6 @@ begin
                   severity failure;
                 report "read MPSCLFAC iteration" & integer'image(j) & ", arrived to: " & text_line.all;
               end loop;
-            elsif data_name(i)(1 to 15) = "dsp_except_data" then
-              for j in 0 to (ACCL_NUM-1) loop
-                hread(text_line, dsp_except_data_var(j), ok);
-                assert ok
-                  report "Read 'dsp_except_data' failed for index: " & integer'image(j)
-                  severity failure;
-                report "read dsp_except_data iteration" & integer'image(j) & ", arrived to: " & text_line.all;
-              end loop;
             --when "decoded_instruction_DSP" =>
             elsif data_name(i)(1 to 23) = "decoded_instruction_DSP" then
               hread(text_line, decoded_instruction_DSP_var, ok);
@@ -457,13 +446,6 @@ begin
             --when others =>
             --  report "Unknown/ouyput signal name, ignoring: " & data_name(i) severity note;
           --end case;
-            else 
-              while text_line.all(1) /= ' ' loop
-                read(text_line, char, ok);
-                assert ok
-                  report "Read 'char' failed for line: " & text_line.all
-                  severity failure;
-              end loop;
           end if;
         end loop;
       end if;
