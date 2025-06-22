@@ -204,6 +204,7 @@ begin
   variable MVSIZE_var                     : array_2d(THREAD_POOL_SIZE-1 downto 0)(Addr_Width downto 0);
   variable MVTYPE_var                     : array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
   variable MPSCLFAC_var                   : array_2d(THREAD_POOL_SIZE-1 downto 0)(4 downto 0);
+  variable dsp_except_data_var                : array_2d(ACCL_NUM-1 downto 0)(31 downto 0);
   -- ID_Stage Signals
   variable decoded_instruction_DSP_var    : std_logic_vector(DSP_UNIT_INSTR_SET_SIZE-1 downto 0);
   variable harc_EXEC_var                  : unsigned(integer(ceil(log2(real(THREAD_POOL_SIZE-1)))) downto 0);
@@ -350,6 +351,14 @@ begin
                   report "Read 'MPSCLFAC' failed for index: " & integer'image(j) & " with text: " & text_line.all
                   severity failure;
                 report "read MPSCLFAC iteration" & integer'image(j) & ", arrived to: " & text_line.all;
+              end loop;
+            elsif data_name(i)(1 to 18) = "dsp_except_data" then
+              for j in 0 to (ACCL_NUM-1) loop
+                hread(text_line, dsp_except_data_var(j), ok);
+                assert ok
+                  report "Read 'dsp_except_data' failed for index: " & integer'image(j)
+                  severity failure;
+                report "read dsp_except_data iteration" & integer'image(j) & ", arrived to: " & text_line.all;
               end loop;
             --when "decoded_instruction_DSP" =>
             elsif data_name(i)(1 to 23) = "decoded_instruction_DSP" then
