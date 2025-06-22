@@ -62,13 +62,14 @@ vsim -voptargs=+acc work.tb_rtl_dsp_top
 # ----------------------------
 # Add signals to waveform
 # ----------------------------
-add wave -r *
+#add wave -r *
+add wave -r sim:/tb_rtl_dsp_top
 
 # ----------------------------
 # Setup VCD dump
 # ----------------------------
-vcd file test/conv_16_s0.vcd
-vcd add /tb_rtl_dsp_top/*
+#vcd file test/conv_16_s0.vcd
+#vcd add /tb_rtl_dsp_top/*
 
 # ----------------------------
 # Run simulation
