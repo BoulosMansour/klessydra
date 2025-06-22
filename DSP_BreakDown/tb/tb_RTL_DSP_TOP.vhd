@@ -261,15 +261,15 @@ begin
 
       if collect_data then
         --get the current time from the first word in the line
-        read(text_line, new_time, ok);
-        assert ok
-          report "Read 'time' failed for line: " & text_line.all
-          severity failure;
-        wait for (new_time - current_time) * 1 ns;  -- wait for the time difference
-        current_time := new_time;
+        -- read(text_line, new_time, ok);
+        -- assert ok
+        --   report "Read 'time' failed for line: " & text_line.all
+        --   severity failure;
+        -- wait for (new_time - current_time) * 1 ns;  -- wait for the time difference
+        -- current_time := new_time;
 
         -- read the line and assign the values to the signals accordingly
-        for i in 2 to index loop
+        for i in 1 to index loop
           -- invalid_signal := false;  -- reset the invalid signal flag
           -- while text_line.all'length > 0 and (text_line.all(1) = 'X' or text_line.all(1) = 'U') loop
           --   invalid_signal := true;  -- mark the signal as invalid
@@ -463,6 +463,34 @@ begin
           --end case;
           end if;
         end loop;
+        clk_i_tb <= clk_i_var;
+        rst_ni_tb <= rst_ni_var;
+        rs1_to_sc_tb <= rs1_to_sc_var;
+        rs2_to_sc_tb <= rs2_to_sc_var;
+        rd_to_sc_tb <= rd_to_sc_var;
+        -- CSR Signals
+        MVSIZE_tb <= MVSIZE_var;
+        MVTYPE_tb <= MVTYPE_var;
+        MPSCLFAC_tb <= MPSCLFAC_var;
+        -- ID_Stage Signals
+        decoded_instruction_DSP_tb <= decoded_instruction_DSP_var;
+        harc_EXEC_tb <= integer(harc_EXEC_var);
+        pc_IE_tb <= pc_IE_var;
+        RS1_Data_IE_tb <= RS1_Data_IE_var;
+        RS2_Data_IE_tb <= RS2_Data_IE_var;
+        RD_Data_IE_tb <= RD_Data_IE_var;
+        dsp_instr_req_tb <= dsp_instr_req_var;
+        spm_rs1_tb <= spm_rs1_var;
+        spm_rs2_tb <= spm_rs2_var;
+        vec_read_rs1_ID_tb <= vec_read_rs1_ID_var;
+        vec_read_rs2_ID_tb <= vec_read_rs2_ID_var;
+        vec_write_rd_ID_tb <= vec_write_rd_ID_var;
+        -- Scratchpad Interface Signals
+        dsp_data_gnt_i_tb <= dsp_data_gnt_i_var;
+        dsp_sci_wr_gnt_tb <= dsp_sci_wr_gnt_var;
+        dsp_sc_data_read_tb <= dsp_sc_data_read_var;    
+
+        wait for 5 ns;  -- wait for 50 ns for the next clock cycle
       end if;
 
     end loop;
