@@ -190,11 +190,37 @@ begin
   variable ok : boolean;
   variable data_name: string_array(0 to 100);
   variable collect_data : boolean := false;  -- flag to collect data
-  variable signal_value : std_logic_vector(SIMD_Width downto 0);
+  variable signal_value : std_logic_vector((SIMD_Width-1)+4-(SIMD_Width mod 4) downto 0);
   variable index : integer := 0;
   variable current_time, new_time : integer := 0;  -- current time in ns
   variable char : character;
   variable invalid_signal : boolean := false;  -- flag to detect invalid signal
+
+  variable clk_i_var, rst_ni_var           : std_logic;
+  variable rs1_to_sc_var                  : std_logic_vector(SPM_ADDR_WID-1 downto 0);
+  variable rs2_to_sc_var                 : std_logic_vector(SPM_ADDR_WID-1 downto 0);
+  variable rd_to_sc_var                   : std_logic_vector(SPM_ADDR_WID-1 downto 0);
+  -- CSR Signals
+  variable MVSIZE_var                     : array_2d(THREAD_POOL_SIZE-1 downto 0)(Addr_Width downto 0);
+  variable MVTYPE_var                     : array_2d(THREAD_POOL_SIZE-1 downto 0)(3 downto 0);
+  variable MPSCLFAC_var                   : array_2d(THREAD_POOL_SIZE-1 downto 0)(4 downto 0);
+  -- ID_Stage Signals
+  variable decoded_instruction_DSP_var    : std_logic_vector(DSP_UNIT_INSTR_SET_SIZE-1 downto 0);
+  variable harc_EXEC_var                  : unsigned(integer(ceil(log2(real(THREAD_POOL_SIZE-1)))) downto 0);
+  variable pc_IE_var                      : std_logic_vector(31 downto 0);
+  variable RS1_Data_IE_var                : std_logic_vector(31 downto 0);
+  variable RS2_Data_IE_var                : std_logic_vector(31 downto 0);
+  variable RD_Data_IE_var                 : std_logic_vector(Addr_Width -1 downto 0);
+  variable dsp_instr_req_var              : std_logic_vector(ACCL_NUM-1 downto 0);
+  variable spm_rs1_var                    : std_logic;
+  variable spm_rs2_var                    : std_logic;
+  variable vec_read_rs1_ID_var            : std_logic;
+  variable vec_read_rs2_ID_var            : std_logic;
+  variable vec_write_rd_ID_var            : std_logic;
+  -- Scratchpad Interface Signals
+  variable dsp_data_gnt_i_var             : std_logic_vector(ACCL_NUM-1 downto 0);
+  variable dsp_sci_wr_gnt_var             : std_logic_vector(ACCL_NUM-1 downto 0);
+  variable dsp_sc_data_read_var           : array_3d(ACCL_NUM-1 downto 0)(1 downto 0)(SIMD_Width-1 downto 0);
 
   begin
     while not endfile(text_file) loop
@@ -246,19 +272,18 @@ begin
 
         -- read the line and assign the values to the signals accordingly
         for i in 2 to index loop
-          read(text_line, char, ok); -- skip the empty space
-          invalid_signal := false;  -- reset the invalid signal flag
-          while text_line.all'length > 0 and (text_line.all(1) = 'X' or text_line.all(1) = 'U') loop
-            invalid_signal := true;  -- mark the signal as invalid
-            read(text_line, char, ok);
-            assert ok
-              report "Read 'char' failed for line: " & text_line.all
-              severity failure;
-          end loop;
-          if invalid_signal then
-            report "Invalid signal detected, skipping: " & data_name(i) severity note;
-            next;  -- skip to the next signal
-          end if;
+          -- invalid_signal := false;  -- reset the invalid signal flag
+          -- while text_line.all'length > 0 and (text_line.all(1) = 'X' or text_line.all(1) = 'U') loop
+          --   invalid_signal := true;  -- mark the signal as invalid
+          --   read(text_line, char, ok);
+          --   assert ok
+          --     report "Read 'char' failed for line: " & text_line.all
+          --     severity failure;
+          -- end loop;
+          -- if invalid_signal then
+          --   report "Invalid signal detected, skipping: " & data_name(i) severity note;
+          --   next;  -- skip to the next signal
+          -- end if;
           --hread (text_line, signal_value, ok);
           --assert ok
           --  report "Read 'signal value' failed for line: " & text_line.all
@@ -266,173 +291,158 @@ begin
           --case data_name(i) is
             --when "clk_i" =>
             if data_name(i)(1 to 5) = "clk_i" then
-              hread(text_line, signal_value(3 downto 0), ok);
+              read(text_line, clk_i_var, ok);
               assert ok
                 report "Read 'clk_i' failed for line: " & text_line.all
                 severity failure;
-              clk_i_tb <= signal_value(0);
+              report "read clk_i, arrived to: " & text_line.all;
             --when "rst_ni" =>
             elsif data_name(i)(1 to 6) = "rst_ni" then
-              hread(text_line, signal_value(3 downto 0), ok);
+              read(text_line, rst_ni_var, ok);
               assert ok
                 report "Read 'rst_ni' failed for line: " & text_line.all
                 severity failure;
-              rst_ni_tb <= signal_value(0);
+              report "read rst_nit_tb arrived to: " & text_line.all;
             --when "rs1_to_sc" =>
             elsif data_name(i)(1 to 9) = "rs1_to_sc" then
-              hread(text_line, signal_value((SPM_ADDR_WID-1)+4-(SPM_ADDR_WID mod 4) downto 0), ok);
+              hread(text_line, rs1_to_sc_var, ok);
               assert ok
                 report "Read 'rs1_to_sc' failed for line: " & text_line.all
                 severity failure;
-              rs1_to_sc_tb <= signal_value(SPM_ADDR_WID-1 downto 0);
+              report "read rs1_to_sc arrived to: " & text_line.all;
             --when "rs2_to_sc" =>
             elsif data_name(i)(1 to 9) = "rs2_to_sc" then
-              hread(text_line, signal_value((SPM_ADDR_WID-1)+4-(SPM_ADDR_WID mod 4) downto 0), ok);
+              hread(text_line, rs2_to_sc_var, ok);
               assert ok
                 report "Read 'rs2_to_sc' failed for line: " & text_line.all
                 severity failure;
-              rs2_to_sc_tb <= signal_value(SPM_ADDR_WID-1 downto 0);
+              report "read rs2_to_sc, arrived to: " & text_line.all;
             --when "rd_to_sc" =>
             elsif data_name(i)(1 to 8) = "rd_to_sc" then  
-              hread(text_line, signal_value((SPM_ADDR_WID-1)+4-(SPM_ADDR_WID mod 4) downto 0), ok);
+              hread(text_line, rd_to_sc_var, ok);
               assert ok
                 report "Read 'rd_to_sc' failed for line: " & text_line.all
                 severity failure;
-              rd_to_sc_tb <= signal_value(SPM_ADDR_WID-1 downto 0);
+              report "read 'rd_to_sc', arrived to: " & text_line.all;
             --when "MVSIZE" =>
             elsif data_name(i)(1 to 6) = "MVSIZE" then
               for j in 0 to (THREAD_POOL_SIZE-1) loop
-                hread(text_line, signal_value((Addr_Width)+4-(Addr_Width+1 mod 4) downto 0), ok);
+                hread(text_line, MVSIZE_var(j), ok);
                 assert ok
                   report "Read 'MVSIZE' failed for index: " & integer'image(j)
                   severity failure;
-                MVSIZE_tb(j) <= signal_value(Addr_Width downto 0);
+                report "read MVSIZE iteration" & integer'image(j) & ", arrived to: " & text_line.all;
               end loop;
             --when "MVTYPE" =>
             elsif data_name(i)(1 to 6) = "MVTYPE" then
               for j in 0 to (THREAD_POOL_SIZE-1) loop
-                hread(text_line, signal_value(3 downto 0), ok);
+                hread(text_line, MVTYPE_var(j), ok);
                 assert ok
                   report "Read 'MVTYPE' failed for index: " & integer'image(j)
                   severity failure;
-                MVTYPE_tb(j) <= signal_value(3 downto 0);
+                report "read MVTYPE iteration" & integer'image(j) & ", arrived to: " & text_line.all;
               end loop;
             --when "MPSCLFAC" =>
             elsif data_name(i)(1 to 8) = "MPSCLFAC" then
               for j in 0 to (THREAD_POOL_SIZE-1) loop
-                hread(text_line, signal_value(7 downto 0), ok);
+                hread(text_line, MPSCLFAC_var(j), ok);
                 assert ok
                   report "Read 'MPSCLFAC' failed for index: " & integer'image(j) & " with text: " & text_line.all
                   severity failure;
-                MPSCLFAC_tb(j) <= signal_value(4 downto 0);
+                report "read MPSCLFAC iteration" & integer'image(j) & ", arrived to: " & text_line.all;
               end loop;
             --when "decoded_instruction_DSP" =>
             elsif data_name(i)(1 to 23) = "decoded_instruction_DSP" then
-              hread(text_line, signal_value((DSP_UNIT_INSTR_SET_SIZE-1)+4-(DSP_UNIT_INSTR_SET_SIZE mod 4) downto 0), ok);
+              hread(text_line, decoded_instruction_DSP_var, ok);
               assert ok
                 report "Read 'decoded_instruction_DSP' failed for line: " & text_line.all
                 severity failure;
-              decoded_instruction_DSP_tb <= signal_value(DSP_UNIT_INSTR_SET_SIZE-1 downto 0);
             --when "harc_EXEC" =>
             elsif data_name(i)(1 to 9) = "harc_EXEC" then
-              hread(text_line, signal_value(integer(ceil(log2(real(THREAD_POOL_SIZE+1))))+4-(integer(ceil(log2(real(THREAD_POOL_SIZE+1)))) mod 4) downto 0), ok);
+              hread(text_line, harc_EXEC_var, ok);
               assert ok------------------------------------------------------------------------------------------------------------------------------------------
                 report "Read 'harc_EXEC' failed for line: " & text_line.all
                 severity failure;
-              harc_EXEC_tb <= to_integer(unsigned(signal_value));
             --when "pc_IE" =>
             elsif data_name(i)(1 to 5) = "pc_IE" then
-              hread(text_line, signal_value(31 downto 0), ok);
+              hread(text_line, pc_IE_var, ok);
               assert ok
                 report "Read 'pc_IE' failed for line: " & text_line.all
                 severity failure;
-              pc_IE_tb <= signal_value(31 downto 0);
             --when "RS1_Data_IE" =>
             elsif data_name(i)(1 to 11) = "RS1_Data_IE" then
-              hread(text_line, signal_value(31 downto 0), ok);
+              hread(text_line, RS1_Data_IE_var, ok);
               assert ok
                 report "Read 'RS1_Data_IE' failed for line: " & text_line.all
                 severity failure;
-              RS1_Data_IE_tb <= signal_value(31 downto 0);
             --when "RS2_Data_IE" =>
             elsif data_name(i)(1 to 11) = "RS2_Data_IE" then
-              hread(text_line, signal_value(31 downto 0), ok);
+              hread(text_line, RS2_Data_IE_var, ok);
               assert ok
                 report "Read 'RS2_Data_IE' failed for line: " & text_line.all
                 severity failure;
-              RS2_Data_IE_tb <= signal_value(31 downto 0);
             --when "RD_Data_IE" =>
             elsif data_name(i)(1 to 10) = "RD_Data_IE" then
-              hread(text_line, signal_value((Addr_Width -1)+4-(Addr_Width mod 4) downto 0), ok);
+              hread(text_line, RD_Data_IE_var, ok);
               assert ok
                 report "Read 'RD_Data_IE' failed for line: " & text_line.all
                 severity failure;
-              RD_Data_IE_tb <= signal_value(Addr_Width -1 downto 0);
             --when "dsp_instr_req" =>
             elsif data_name(i)(1 to 13) = "dsp_instr_req" then
-              hread(text_line, signal_value((ACCL_NUM-1)+4-(ACCL_NUM mod 4) downto 0), ok);
+              hread(text_line, dsp_instr_req_var, ok);
               assert ok
                 report "Read 'dsp_instr_req' failed for line: " & text_line.all
                 severity failure;
-              dsp_instr_req_tb <= signal_value(ACCL_NUM-1 downto 0);
             --when "spm_rs1" =>
             elsif data_name(i)(1 to 7) = "spm_rs1" then
-              hread(text_line, signal_value(3 downto 0), ok);
+              read(text_line, spm_rs1_var, ok);
               assert ok
                 report "Read 'spm_rs1' failed for line: " & text_line.all
                 severity failure;
-              spm_rs1_tb <= signal_value(0);
             --when "spm_rs2" =>
             elsif data_name(i)(1 to 7) = "spm_rs2" then
-              hread(text_line, signal_value(3 downto 0), ok);
+              read(text_line, spm_rs2_var, ok);
               assert ok
                 report "Read 'spm_rs2' failed for line: " & text_line.all
                 severity failure;
-              spm_rs2_tb <= signal_value(0);
             --when "vec_read_rs1_ID" =>
             elsif data_name(i)(1 to 15) = "vec_read_rs1_ID" then
-              hread(text_line, signal_value(3 downto 0), ok);
+              read(text_line, vec_read_rs1_ID_var, ok);
               assert ok
                 report "Read 'vec_read_rs1_ID' failed for line: " & text_line.all
                 severity failure;
-              vec_read_rs1_ID_tb <= signal_value(0);
             --when "vec_read_rs2_ID" =>
             elsif data_name(i)(1 to 15) = "vec_read_rs2_ID" then
-              hread(text_line, signal_value(3 downto 0), ok);
+              read(text_line, vec_read_rs2_ID_var, ok);
               assert ok
                 report "Read 'vec_read_rs2_ID' failed for line: " & text_line.all
                 severity failure;
-              vec_read_rs2_ID_tb <= signal_value(0);
             --when "vec_write_rd_ID" =>
             elsif data_name(i)(1 to 15) = "vec_write_rd_ID" then
-              hread(text_line, signal_value(3 downto 0), ok);
+              read(text_line, vec_write_rd_ID_var, ok);
               assert ok
                 report "Read 'vec_write_rd_ID' failed for line: " & text_line.all
                 severity failure;
-              vec_write_rd_ID_tb <= signal_value(0);
             --when "dsp_data_gnt_i" =>
             elsif data_name(i)(1 to 14) = "dsp_data_gnt_i" then
-              hread(text_line, signal_value((ACCL_NUM-1)+4-(ACCL_NUM mod 4) downto 0), ok);
+              hread(text_line, dsp_data_gnt_i_var, ok);
               assert ok
                 report "Read 'dsp_data_gnt_i' failed for line: " & text_line.all
                 severity failure;
-              dsp_data_gnt_i_tb <= signal_value(ACCL_NUM-1 downto 0);
             --when "dsp_sci_wr_gnt" =>
             elsif data_name(i)(1 to 14) = "dsp_sci_wr_gnt" then
-              hread(text_line, signal_value((ACCL_NUM-1)+4-(ACCL_NUM mod 4) downto 0), ok);
+              hread(text_line, dsp_sci_wr_gnt_var, ok);
               assert ok
                 report "Read 'dsp_sci_wr_gnt' failed for line: " & text_line.all
                 severity failure;
-              dsp_sci_wr_gnt_tb <= signal_value(ACCL_NUM-1 downto 0);
             --when "dsp_sc_data_read" =>
             elsif data_name(i)(1 to 16) = "dsp_sc_data_read" then
               for j in 0 to (ACCL_NUM-1) loop
                 for k in 0 to 1 loop
-                  hread(text_line, signal_value((SIMD_Width-1)+4-(SIMD_Width mod 4) downto 0), ok);
+                  hread(text_line, dsp_sc_data_read_var(j)(k), ok);
                   assert ok
                     report "Read 'dsp_sc_data_read' failed for index: " & integer'image(j) & ", " & integer'image(k)
                     severity failure;
-                  dsp_sc_data_read_tb(j)(k) <= signal_value(SIMD_Width-1 downto 0);
                 end loop;
               end loop;
             --when others =>
