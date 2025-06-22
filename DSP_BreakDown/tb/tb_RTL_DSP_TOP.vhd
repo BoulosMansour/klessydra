@@ -355,84 +355,98 @@ begin
               assert ok
                 report "Read 'decoded_instruction_DSP' failed for line: " & text_line.all
                 severity failure;
+              report "read decoded_instruction_DSP, arrived to: " & text_line.all;
             --when "harc_EXEC" =>
             elsif data_name(i)(1 to 9) = "harc_EXEC" then
               hread(text_line, harc_EXEC_var, ok);
               assert ok------------------------------------------------------------------------------------------------------------------------------------------
                 report "Read 'harc_EXEC' failed for line: " & text_line.all
                 severity failure;
+              report "read harc_EXEC, arrived to: " & text_line.all;
             --when "pc_IE" =>
             elsif data_name(i)(1 to 5) = "pc_IE" then
               hread(text_line, pc_IE_var, ok);
               assert ok
                 report "Read 'pc_IE' failed for line: " & text_line.all
                 severity failure;
+              report "read pc_IE, arrived to: " & text_line.all;
             --when "RS1_Data_IE" =>
             elsif data_name(i)(1 to 11) = "RS1_Data_IE" then
               hread(text_line, RS1_Data_IE_var, ok);
               assert ok
                 report "Read 'RS1_Data_IE' failed for line: " & text_line.all
                 severity failure;
+              report "read RS1_Data_IE, arrived to: " & text_line.all;
             --when "RS2_Data_IE" =>
             elsif data_name(i)(1 to 11) = "RS2_Data_IE" then
               hread(text_line, RS2_Data_IE_var, ok);
               assert ok
                 report "Read 'RS2_Data_IE' failed for line: " & text_line.all
                 severity failure;
+              report "read RS2_Data_IE, arrived to: " & text_line.all;
             --when "RD_Data_IE" =>
             elsif data_name(i)(1 to 10) = "RD_Data_IE" then
               hread(text_line, RD_Data_IE_var, ok);
               assert ok
                 report "Read 'RD_Data_IE' failed for line: " & text_line.all
                 severity failure;
+              report "read RD_Data_IE, arrived to: " & text_line.all;
             --when "dsp_instr_req" =>
             elsif data_name(i)(1 to 13) = "dsp_instr_req" then
               hread(text_line, dsp_instr_req_var, ok);
               assert ok
                 report "Read 'dsp_instr_req' failed for line: " & text_line.all
                 severity failure;
+              report "read dsp_instr_req, arrived to: " & text_line.all;
             --when "spm_rs1" =>
             elsif data_name(i)(1 to 7) = "spm_rs1" then
               read(text_line, spm_rs1_var, ok);
               assert ok
                 report "Read 'spm_rs1' failed for line: " & text_line.all
                 severity failure;
+            report "read spm_rs1, arrived to: " & text_line.all;
             --when "spm_rs2" =>
             elsif data_name(i)(1 to 7) = "spm_rs2" then
               read(text_line, spm_rs2_var, ok);
               assert ok
                 report "Read 'spm_rs2' failed for line: " & text_line.all
                 severity failure;
+            report "read spm_rs2, arrived to: " & text_line.all;
             --when "vec_read_rs1_ID" =>
             elsif data_name(i)(1 to 15) = "vec_read_rs1_ID" then
               read(text_line, vec_read_rs1_ID_var, ok);
               assert ok
                 report "Read 'vec_read_rs1_ID' failed for line: " & text_line.all
                 severity failure;
+            report "read vec_read_rs1_ID, arrived to: " & text_line.all;
             --when "vec_read_rs2_ID" =>
             elsif data_name(i)(1 to 15) = "vec_read_rs2_ID" then
               read(text_line, vec_read_rs2_ID_var, ok);
               assert ok
                 report "Read 'vec_read_rs2_ID' failed for line: " & text_line.all
                 severity failure;
+            report "read vec_read_rs2_ID, arrived to: " & text_line.all;
             --when "vec_write_rd_ID" =>
             elsif data_name(i)(1 to 15) = "vec_write_rd_ID" then
               read(text_line, vec_write_rd_ID_var, ok);
               assert ok
                 report "Read 'vec_write_rd_ID' failed for line: " & text_line.all
                 severity failure;
+            report "read vec_write_rd_ID, arrived to: " & text_line.all;
             --when "dsp_data_gnt_i" =>
             elsif data_name(i)(1 to 14) = "dsp_data_gnt_i" then
               hread(text_line, dsp_data_gnt_i_var, ok);
               assert ok
                 report "Read 'dsp_data_gnt_i' failed for line: " & text_line.all
                 severity failure;
+            report "read dsp_data_gnt_i, arrived to: " & text_line.all;
             --when "dsp_sci_wr_gnt" =>
             elsif data_name(i)(1 to 14) = "dsp_sci_wr_gnt" then
               hread(text_line, dsp_sci_wr_gnt_var, ok);
               assert ok
                 report "Read 'dsp_sci_wr_gnt' failed for line: " & text_line.all
                 severity failure;
+            report "read dsp_sci_wr_gnt, arrived to: " & text_line.all;
             --when "dsp_sc_data_read" =>
             elsif data_name(i)(1 to 16) = "dsp_sc_data_read" then
               for j in 0 to (ACCL_NUM-1) loop
@@ -441,6 +455,7 @@ begin
                   assert ok
                     report "Read 'dsp_sc_data_read' failed for index: " & integer'image(j) & ", " & integer'image(k)
                     severity failure;
+                  report "read dsp_sc_data_read iteration " & integer'image(j) & ", " & integer'image(k) & ", arrived to: " & text_line.all;
                 end loop;
               end loop;
             --when others =>
