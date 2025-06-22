@@ -474,7 +474,7 @@ begin
         MPSCLFAC_tb <= MPSCLFAC_var;
         -- ID_Stage Signals
         decoded_instruction_DSP_tb <= decoded_instruction_DSP_var;
-        harc_EXEC_tb <= integer(harc_EXEC_var);
+        harc_EXEC_tb <= to_integer(harc_EXEC_var);
         pc_IE_tb <= pc_IE_var;
         RS1_Data_IE_tb <= RS1_Data_IE_var;
         RS2_Data_IE_tb <= RS2_Data_IE_var;
