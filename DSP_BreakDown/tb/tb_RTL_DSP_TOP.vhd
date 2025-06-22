@@ -352,7 +352,7 @@ begin
                   severity failure;
                 report "read MPSCLFAC iteration" & integer'image(j) & ", arrived to: " & text_line.all;
               end loop;
-            elsif data_name(i)(1 to 18) = "dsp_except_data" then
+            elsif data_name(i)(1 to 15) = "dsp_except_data" then
               for j in 0 to (ACCL_NUM-1) loop
                 hread(text_line, dsp_except_data_var(j), ok);
                 assert ok
