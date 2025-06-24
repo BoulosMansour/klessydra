@@ -63,9 +63,9 @@ vsim -voptargs=+acc work.tb_compare_DSP
 # ----------------------------
 # Add signals to waveform
 # ----------------------------
-add wave sim:/tb_compare_DSP/DUT/*
-add wave sim:/tb_compare_DSP/REF/*
-add wave sim:/tb_compare_DSP/CMP/CMP_ERR_FLAG
+# add wave sim:/tb_compare_DSP/DUT/*
+# add wave sim:/tb_compare_DSP/REF/*
+add wave sim:/tb_compare_DSP/CMP/*
 
 # ----------------------------
 # Run simulation
