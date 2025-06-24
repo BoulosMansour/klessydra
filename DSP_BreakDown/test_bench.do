@@ -41,8 +41,8 @@ vcom -2008 modules/DSP_FU_Handler_MT.vhd
 vcom -2008 modules/DSP_FU_Handler_MC.vhd
 vcom -2008 modules/DSP_FU_Handler.vhd
 vcom -2008 modules/DSP_FU_Enabler_Sync.vhd
-vcom -2008 modules/DSP_Exec_Unit_stage_init.vhd
-vcom -2008 modules/DSP_Exec_Unit_stage_exec.vhd
+#vcom -2008 modules/DSP_Exec_Unit_stage_init.vhd
+#vcom -2008 modules/DSP_Exec_Unit_stage_exec.vhd
 vcom -2008 modules/DSP_Exec_Unit.vhd
 vcom -2008 modules/DSP_Excpt_Cntrl_unit.vhd
 vcom -2008 modules/RTL-Accumulator.vhd
