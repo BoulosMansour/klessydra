@@ -80,28 +80,35 @@ entity DSP_Excpt_Cntrl_unit is
 end entity DSP_Excpt_Cntrl_unit;
 
 architecture DSP_Excpt_Cntrl_unit_arch of DSP_Excpt_Cntrl_unit is
-
+  signal overflow_rs1_sc                 : std_logic_vector(Addr_Width downto 0);
+  signal overflow_rs2_sc                 : std_logic_vector(Addr_Width downto 0);
+  signal overflow_rd_sc                  : std_logic_vector(Addr_Width downto 0);
+  
 begin
 ------------ Combinational Stage of DSP Unit ----------------------------------------------------------------------
   DSP_Excpt_Cntrl_Unit_comb : process(all)
 
-  variable overflow_rs1_sc                 : std_logic_vector(Addr_Width downto 0);
-  variable overflow_rs2_sc                 : std_logic_vector(Addr_Width downto 0);
-  variable overflow_rd_sc                  : std_logic_vector(Addr_Width downto 0);
+  variable busy_DSP_internal_wires : std_logic;
+  variable dsp_except_condition_wires : std_logic;
+  variable dsp_taken_branch_wires : std_logic; 
+
+  -- variable overflow_rs1_sc                 : std_logic_vector(Addr_Width downto 0);
+  -- variable overflow_rs2_sc                 : std_logic_vector(Addr_Width downto 0);
+  -- variable overflow_rd_sc                  : std_logic_vector(Addr_Width downto 0);
       
   begin
 
-    busy_DSP_internal           <= '0';  -- common internal, can be replaced with busy_DSP_internal
-    dsp_except_condition        <= '0';  -- excpt handling out internal, can be replaced with dsp_except_condition
-    dsp_taken_branch            <= '0';  -- excpt handling out internal, can be repalced with dsp_taken_branch
+    busy_DSP_internal_wires     := '0';  -- common internal, can be replaced with busy_DSP_internal_wires
+    dsp_except_condition_wires  := '0';  -- excpt handling out internal, can be replaced with dsp_except_condition_wires
+    dsp_taken_branch_wires      := '0';  -- excpt handling out internal, can be repalced with dsp_taken_branch_wires
     wb_ready                    <= '0';  -- cntrl handling signal & output
     halt_dsp                    <= '0';  -- cntrl handling out
     nextstate_DSP               <= dsp_init; --common out
     recover_state_wires         <= recover_state; --cntrl handling out
     dsp_except_data_wire        <= dsp_except_data; --excpt handling out
-    overflow_rs1_sc             := (others => '0');  --excpt handling, can be an internal variable
-    overflow_rs2_sc             := (others => '0');  --excpt handling, can be an internal variable
-    overflow_rd_sc              := (others => '0');  --excpt handling, can be an internal variable
+    overflow_rs1_sc             <= (others => '0');  --excpt handling, can be an internal variable
+    overflow_rs2_sc             <= (others => '0');  --excpt handling, can be an internal variable
+    overflow_rd_sc              <= (others => '0');  --excpt handling, can be an internal variable
     dsp_we_word                 <= (others => '0');  --cntrl handling out
     dsp_sci_req                 <= (others => '0');  --common out
     dsp_sci_we                  <= (others => '0');  --cntrl handling out
@@ -123,36 +130,36 @@ begin
           --  ╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝        ╚═╝       ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝   --
           ---------------------------------------------------------------------------------------------------------------------
 
-          overflow_rs1_sc := std_logic_vector('0' & unsigned(RS1_Data_IE(Addr_Width -1 downto 0)) + unsigned(MVSIZE(harc_EXEC)) -1);
-          overflow_rs2_sc := std_logic_vector('0' & unsigned(RS2_Data_IE(Addr_Width -1 downto 0)) + unsigned(MVSIZE(harc_EXEC)) -1);
-          overflow_rd_sc  := std_logic_vector('0' & unsigned(RD_Data_IE(Addr_Width  -1 downto 0)) + unsigned(MVSIZE(harc_EXEC)) -1);
+          overflow_rs1_sc <= std_logic_vector('0' & unsigned(RS1_Data_IE(Addr_Width -1 downto 0)) + unsigned(MVSIZE(harc_EXEC)) -1);
+          overflow_rs2_sc <= std_logic_vector('0' & unsigned(RS2_Data_IE(Addr_Width -1 downto 0)) + unsigned(MVSIZE(harc_EXEC)) -1);
+          overflow_rd_sc  <= std_logic_vector('0' & unsigned(RD_Data_IE(Addr_Width  -1 downto 0)) + unsigned(MVSIZE(harc_EXEC)) -1);
           if MVSIZE(harc_EXEC) = (0 to Addr_Width => '0') then
             null;
           elsif MVSIZE(harc_EXEC)(1 downto 0) /= "00" and MVTYPE(harc_EXEC)(3 downto 2) = "10" then  -- Set exception if the number of bytes are not divisible by four
-            dsp_except_condition <= '1';
-            dsp_taken_branch     <= '1';    
+            dsp_except_condition_wires := '1';
+            dsp_taken_branch_wires     := '1';    
             dsp_except_data_wire <= ILLEGAL_VECTOR_SIZE_EXCEPT_CODE;
           elsif MVSIZE(harc_EXEC)(0) /= '0' and MVTYPE(harc_EXEC)(3 downto 2) = "01" then            -- Set exception if the number of bytes are not divisible by two
-            dsp_except_condition <= '1';
-            dsp_taken_branch     <= '1';
+            dsp_except_condition_wires := '1';
+            dsp_taken_branch_wires     := '1';
             dsp_except_data_wire <= ILLEGAL_VECTOR_SIZE_EXCEPT_CODE;
           elsif (rs1_to_sc  = "100" and vec_read_rs1_ID = '1') or
             (rs2_to_sc  = "100" and vec_read_rs2_ID = '1') or
              rd_to_sc   = "100" then     -- Set exception for non scratchpad access
-            dsp_except_condition <= '1';
-            dsp_taken_branch     <= '1';    
+            dsp_except_condition_wires := '1';
+            dsp_taken_branch_wires     := '1';    
             dsp_except_data_wire <= ILLEGAL_ADDRESS_EXCEPT_CODE;
           elsif rs1_to_sc = rs2_to_sc and vec_read_rs1_ID = '1' and vec_read_rs2_ID = '1' then               -- Set exception for same read access
-            dsp_except_condition <= '1';
-            dsp_taken_branch     <= '1';    
+            dsp_except_condition_wires := '1';
+            dsp_taken_branch_wires     := '1';    
             dsp_except_data_wire <= READ_SAME_SCARTCHPAD_EXCEPT_CODE;    
           elsif (overflow_rs1_sc(Addr_Width) = '1' and vec_read_rs1_ID = '1') or (overflow_rs2_sc(Addr_Width) = '1' and  vec_read_rs2_ID = '1') then -- Set exception if reading overflows the scratchpad's address
-            dsp_except_condition <= '1';
-            dsp_taken_branch     <= '1';    
+            dsp_except_condition_wires := '1';
+            dsp_taken_branch_wires     := '1';    
             dsp_except_data_wire <= SCRATCHPAD_OVERFLOW_EXCEPT_CODE;
           elsif overflow_rd_sc(Addr_Width) = '1'  and vec_write_rd_ID = '1' then           -- Set exception if reading overflows the scratchpad's address, scalar writes are excluded
-            dsp_except_condition <= '1';
-            dsp_taken_branch     <= '1';    
+            dsp_except_condition_wires := '1';
+            dsp_taken_branch_wires     := '1';    
             dsp_except_data_wire <= SCRATCHPAD_OVERFLOW_EXCEPT_CODE;
           else
             if halt_hart = '0' then
@@ -160,7 +167,7 @@ begin
             else
               nextstate_DSP <= dsp_halt_hart;
             end if;
-            busy_DSP_internal <= '1';
+            busy_DSP_internal_wires := '1';
           end if;
 
           if rs1_to_sc /= "100" and spm_rs1 = '1' and halt_hart = '0' then
@@ -181,7 +188,7 @@ begin
            else
              nextstate_DSP <= dsp_halt_hart;
            end if;
-           busy_DSP_internal <= '1';
+           busy_DSP_internal_wires := '1';
 
          when dsp_exec =>
 
@@ -231,7 +238,7 @@ begin
              -- KBCAST signals are handeled here
              if MVSIZE_WRITE > (0 to Addr_Width => '0') then
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              end if;
              wb_ready <= '1';
              dsp_sci_we(to_integer(unsigned(dsp_rd_to_sc))) <= '1';
@@ -252,7 +259,7 @@ begin
              end if;
              if MVSIZE_WRITE > (0 to Addr_Width => '0') then
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              end if;
              if wb_ready = '1' then
                dsp_sci_we(to_integer(unsigned(dsp_rd_to_sc))) <= '1';
@@ -274,7 +281,7 @@ begin
              end if;
              if MVSIZE_WRITE > (0 to Addr_Width => '0') then
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              end if;
              if wb_ready = '1' then
                dsp_sci_we(to_integer(unsigned(dsp_rd_to_sc))) <= '1';
@@ -299,7 +306,7 @@ begin
              end if;
              if MVSIZE_WRITE > (0 to Addr_Width => '0') then
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              end if;
              if wb_ready = '1' then
                dsp_sci_we(to_integer(unsigned(dsp_rd_to_sc))) <= '1';
@@ -321,7 +328,7 @@ begin
              end if;
              if MVSIZE_WRITE > (0 to Addr_Width => '0') then
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              end if;
              if wb_ready = '1' then
                dsp_sci_we(to_integer(unsigned(dsp_rd_to_sc))) <= '1';
@@ -347,7 +354,7 @@ begin
              end if;
              if MVSIZE_WRITE > (0 to Addr_Width => '0') then
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              end if;
              if wb_ready = '1' then
                dsp_sci_we(to_integer(unsigned(dsp_rd_to_sc)))    <= '1';
@@ -371,7 +378,7 @@ begin
              end if;
              if MVSIZE_WRITE > (0 to Addr_Width => '0') then
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              end if;
              if wb_ready = '1' then
                dsp_sci_we(to_integer(unsigned(dsp_rd_to_sc))) <= '1';
@@ -398,12 +405,12 @@ begin
                dsp_to_sc(to_integer(unsigned(dsp_rs1_to_sc)))(0) <= '1';
                dsp_sc_read_addr(0)  <= RS1_Data_IE_lat(Addr_Width - 1 downto 0);
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              elsif MVSIZE_WRITE = (0 to Addr_Width => '0') then
                nextstate_DSP <= dsp_init;
              else
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              end if;
              if wb_ready = '1' then
                dsp_sci_we(to_integer(unsigned(dsp_rd_to_sc)))    <= '1';
@@ -432,12 +439,12 @@ begin
                dsp_to_sc(to_integer(unsigned(dsp_rs1_to_sc)))(0) <= '1';
                dsp_sc_read_addr(0)  <= RS1_Data_IE_lat(Addr_Width - 1 downto 0);
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              elsif MVSIZE_WRITE = (0 to Addr_Width => '0') then
                nextstate_DSP <= dsp_init;
              else
                nextstate_DSP <= dsp_exec;
-               busy_DSP_internal <= '1';
+               busy_DSP_internal_wires := '1';
              end if;
              if wb_ready = '1' then
                dsp_sci_we(to_integer(unsigned(dsp_rd_to_sc))) <= '1';
@@ -449,6 +456,8 @@ begin
            null;
        end case;
      end if;
-      
+    busy_DSP_internal    <= busy_DSP_internal_wires;
+    dsp_except_condition <= dsp_except_condition_wires;
+    dsp_taken_branch     <= dsp_taken_branch_wires;
   end process;
 end architecture DSP_Excpt_Cntrl_unit_arch;
