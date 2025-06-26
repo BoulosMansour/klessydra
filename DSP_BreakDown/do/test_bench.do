@@ -1,4 +1,5 @@
 # Create and map the work library
+cd ..
 vlib work
 vmap work work
 
