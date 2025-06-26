@@ -29,7 +29,7 @@ vcom -2008 modules/FU/comparators_stg/DSP_Comparators_Unit.vhd
 vcom -2008 modules/FU/DSP_Comparators.vhd
 vcom -2008 modules/pipeline/DSP_Pipeline_Controller.vhd
 vcom -2008 modules/mapping/mapping_multithread/DSP_Mapping_Multithread_Out_Mapper.vhd
-vcom -2008 modules/mapping/mapping_multitcore/DSP_Mapping_Multicore_Out_Mapper.vhd
+vcom -2008 modules/mapping/mapping_multicore/DSP_Mapping_Multicore_Out_Mapper.vhd
 vcom -2008 modules/mapping/mapping_multithread/DSP_Mapping_IN_Unit_Multithread.vhd
 vcom -2008 modules/mapping/mapping_multicore/DSP_Mapping_IN_Unit_Multicore.vhd
 vcom -2008 modules/mapping/DSP_Mapping.vhd
