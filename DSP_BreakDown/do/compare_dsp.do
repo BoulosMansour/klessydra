@@ -13,14 +13,16 @@ vcom -2008 packages/PKG_tb_config.vhd
 # ----------------------------
 # Compile RTL design files
 # ----------------------------
+vcom -2008 modules/hardening/DMR.vhd
+vcom -2008 modules/hardening/TMR.vhd
 vcom -2008 modules/FU/adders_stg/DSP_Adders_stg_1.vhd
 vcom -2008 modules/FU/adders_stg/DSP_Adders_stg_2.vhd
 vcom -2008 modules/FU/adders_stg/DSP_Adders_Sync.vhd
 vcom -2008 modules/FU/DSP_Adders.vhd
-vcom -2008 modules/FU/multipliers_stg/DSP_Multipliers_stg_1.vhd
-vcom -2008 modules/FU/multipliers_stg/DSP_Multipliers_stg_1_comb.vhd
-vcom -2008 modules/FU/multipliers_stg/DSP_Multipliers_stg_2.vhd
-vcom -2008 modules/FU/DSP_Multipliers.vhd
+vcom -2008 modules/FU/multipliers/multipliers_stg/DSP_Multipliers_stg_1.vhd
+vcom -2008 modules/FU/multipliers/multipliers_stg/DSP_Multipliers_stg_1_comb.vhd
+vcom -2008 modules/FU/multipliers/multipliers_stg/DSP_Multipliers_stg_2.vhd
+vcom -2008 modules/FU/multipliers/DSP_Multipliers_TMR.vhd
 vcom -2008 modules/FU/shifters_stg/DSP_Shifters_comb.vhd
 vcom -2008 modules/FU/shifters_stg/DSP_Shifters_stg_1.vhd
 vcom -2008 modules/FU/shifters_stg/DSP_Shifters_stg_2.vhd
