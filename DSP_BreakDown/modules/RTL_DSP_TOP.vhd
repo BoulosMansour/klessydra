@@ -553,7 +553,7 @@ architecture RTL_DSP_TOP_arch of RTL_DSP_TOP is
   );
   end component DSP_Shifters;
 
-  component DSP_Multipliers is
+  component DSP_Multipliers_TMR is
   generic(
     SIMD                  : natural;
     multithreaded_accl_en : natural;
@@ -583,7 +583,7 @@ architecture RTL_DSP_TOP_arch of RTL_DSP_TOP is
     --outputs for DSP_Mapping
     dsp_out_mul_results             : out array_2d(fu_range)(SIMD_Width-1 downto 0)
   );
-  end component DSP_Multipliers;
+  end component DSP_Multipliers_TMR;
 
   component DSP_Comparators is
   generic(
@@ -929,7 +929,7 @@ busy_dsp <= busy_dsp_internal;
       dsp_out_shifter_results           => dsp_out_shifter_results
     );
 
-  DSP_MULTIPLIERS_inst: DSP_Multipliers
+  DSP_MULTIPLIERS_inst: DSP_Multipliers_TMR
     generic map(
       SIMD                  => SIMD,
       multithreaded_accl_en => multithreaded_accl_en,

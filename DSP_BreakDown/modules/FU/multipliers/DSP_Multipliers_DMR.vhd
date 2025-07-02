@@ -111,8 +111,8 @@ begin
 			);
 	end generate DSP_Multipliers_replicated_DMR;
 
-	DMR_multipliers: for i in 0 to FU_NUM-1 generate
-		DMR_multipliers_: for j in 0 to SIMD_Width-1 generate
+	DMR_multipliers_i: for i in 0 to FU_NUM-1 generate
+		DMR_multipliers_j: for j in 0 to SIMD_Width-1 generate
 			DMR_inst: DMR
 				port map(
 					in1      => dsp_out_mul_results_DMR(0)(i)(j),
@@ -120,6 +120,6 @@ begin
 					err_flag => err_flag_DMR(i)(j),
 					result   => dsp_out_mul_results(i)(j)
 				);
-		end generate DMR_multipliers_;
-	end generate DMR_multipliers;					
+		end generate DMR_multipliers_j;
+	end generate DMR_multipliers_i;					
 end architecture DSP_Multipliers_DMR_arch;

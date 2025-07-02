@@ -109,8 +109,8 @@ begin
 			);
 	end generate DSP_Multipliers_replicated_TMR;
 
-	TMR_multipliers: for i in 0 to FU_NUM-1 generate
-		TMR_multipliers_: for j in 0 to SIMD_Width-1 generate
+	TMR_multipliers_i: for i in 0 to FU_NUM-1 generate
+		TMR_multipliers_j: for j in 0 to SIMD_Width-1 generate
 			TMR_inst: TMR
 				port map(
 					in1      => dsp_out_mul_results_TMR(0)(i)(j),
@@ -118,6 +118,6 @@ begin
 					in3      => dsp_out_mul_results_TMR(2)(i)(j),
 					result   => dsp_out_mul_results(i)(j)
 				);
-		end generate TMR_multipliers_;
-	end generate TMR_multipliers;					
+		end generate TMR_multipliers_j;
+	end generate TMR_multipliers_i;					
 end architecture DSP_Multipliers_TMR_arch;
