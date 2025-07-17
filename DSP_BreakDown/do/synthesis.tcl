@@ -60,7 +60,7 @@ set link_library [list $target_library $synthetic_library]
 foreach src $modules_src {
 	if [expr {[string first # $src] eq 0}] {puts $src} else {
 		#exec >@stdout 2>@stderr
-		read_file -format vhdl $src
+		vcom -2008 $src
 	}
 }
 
