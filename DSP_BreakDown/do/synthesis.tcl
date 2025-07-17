@@ -75,11 +75,11 @@ foreach src $modules_src {
 # elaborate STREAMING_MULTIPROCESSOR -architecture ARCH -library DEFAULT -parameters "STREAMING_MULTIPROCESSOR_ID = 00000000, GMEM_ADDR_SIZE = 18, CMEM_ADDR_SIZE = 13, SYSMEM_ADDR_SIZE = 18" -update
 
 
-elaborate multiplier_FP
+# elaborate multiplier_FP
 
-link
+# link
 
-check_design
+# check_design
 
 
 #Target clock frequency 500MHz. for 45nm tech lib (timeunit in ns)
