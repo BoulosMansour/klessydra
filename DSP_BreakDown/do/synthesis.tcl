@@ -9,8 +9,11 @@ set SYNTHESIS_PATH "../synthesis/15nm/CCS/NanGate_15nm_OCL_typical_conditional_c
 
 set NCORES __NCORES__
 
-# Enable VHDL-2008 parsing
-set hdlin_vhdl_2008 true
+# ----------------------------
+# Compile VHDL-2008 packages
+# ----------------------------
+vcom -2008 packages/PKG_RiscV_Klessydra.vhd
+vcom -2008 packages/PKG_tb_config.vhd
 
 set modules_src [list \
 	"$MODULES_ROOT/hardening/DMR.vhd" \
