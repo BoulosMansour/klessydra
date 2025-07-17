@@ -5,6 +5,7 @@
 
 set GPGPU_GENERIC_ROOT "../"
 set MODULES_ROOT "../modules/"
+set packages_root "../packages/"
 set SYNTHESIS_PATH "../synthesis/15nm/CCS/NanGate_15nm_OCL_typical_conditional_ccs.db"
 
 set NCORES __NCORES__
@@ -12,8 +13,8 @@ set NCORES __NCORES__
 # ----------------------------
 # Compile VHDL-2008 packages
 # ----------------------------
-vcom -2008 packages/PKG_RiscV_Klessydra.vhd
-vcom -2008 packages/PKG_tb_config.vhd
+vcom -2008 $packages_root/PKG_RiscV_Klessydra.vhd
+vcom -2008 $packages_root/PKG_tb_config.vhd
 
 set modules_src [list \
 	"$MODULES_ROOT/hardening/DMR.vhd" \
