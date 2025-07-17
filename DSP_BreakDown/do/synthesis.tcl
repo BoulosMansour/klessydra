@@ -5,16 +5,18 @@
 
 set GPGPU_GENERIC_ROOT "../"
 set MODULES_ROOT "../modules/"
-set packages_root "../packages/"
+set PACKAGES_ROOT "../packages/"
 set SYNTHESIS_PATH "../synthesis/15nm/CCS/NanGate_15nm_OCL_typical_conditional_ccs.db"
 
 set NCORES __NCORES__
 
-# ----------------------------
-# Compile VHDL-2008 packages
-# ----------------------------
-vcom -2008 $packages_root/PKG_RiscV_Klessydra.vhd
-vcom -2008 $packages_root/PKG_tb_config.vhd
+# Enable VHDL-2008 parsing
+set hdlin_vhdl_2008 true
+
+set pkg_src [list \
+	"$packages_root/PKG_RiscV_Klessydra.vhd"\
+	"$packages_root/PKG_tb_config.vhd"
+]
 
 set modules_src [list \
 	"$MODULES_ROOT/hardening/DMR.vhd" \
@@ -60,26 +62,32 @@ set target_library $SYNTHESIS_PATH
 
 set link_library [list $target_library $synthetic_library]
 
+foreach src $pkg_src {
+	if [expr {[string first # $src] eq 0}] {puts $src} else {
+		#exec >@stdout 2>@stderr
+		read_file -format vhdl $src
+	}
+}
 
 foreach src $modules_src {
 	if [expr {[string first # $src] eq 0}] {puts $src} else {
 		#exec >@stdout 2>@stderr
-		vcom -2008 $src
+		read_file -format vhdl $src
 	}
 }
 
 
 # Create black box for dp_reg to be replaced with behavioral
-#set_dont_touch dp_regfile
+set_dont_touch dp_regfile
 
 # elaborate STREAMING_MULTIPROCESSOR -architecture ARCH -library DEFAULT -parameters "STREAMING_MULTIPROCESSOR_ID = 00000000, GMEM_ADDR_SIZE = 18, CMEM_ADDR_SIZE = 13, SYSMEM_ADDR_SIZE = 18" -update
 
 
-# elaborate multiplier_FP
+elaborate RTL_DSP_TOP
 
-# link
+link
 
-# check_design
+check_design
 
 
 #Target clock frequency 500MHz. for 45nm tech lib (timeunit in ns)
@@ -91,8 +99,6 @@ create_clock -name clk -period 2 clk
 
 		# ###########COMPILE
 # ungroup -all -flatten
-
-ungroup -start_level 3 -all
 
 		# compile
 	
