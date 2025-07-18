@@ -65,14 +65,14 @@ set link_library [list $target_library $synthetic_library]
 foreach src $pkg_src {
 	if [expr {[string first # $src] eq 0}] {puts $src} else {
 		#exec >@stdout 2>@stderr
-		read_file -format vhdl8 $src
+		read_file -format vhdl08 $src
 	}
 }
 
 foreach src $modules_src {
 	if [expr {[string first # $src] eq 0}] {puts $src} else {
 		#exec >@stdout 2>@stderr
-		read_file -format vhdl8 $src
+		read_file -format vhdl08 $src
 	}
 }
 
