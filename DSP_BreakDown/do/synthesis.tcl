@@ -14,8 +14,8 @@ set NCORES __NCORES__
 set hdlin_vhdl_2008 true
 
 set pkg_src [list \
-	"$packages_root/PKG_RiscV_Klessydra.vhd"\
-	"$packages_root/PKG_tb_config.vhd"
+	"$PACKAGES_ROOT/PKG_RiscV_Klessydra.vhd"\
+	"$PACKAGES_ROOT/PKG_tb_config.vhd"
 ]
 
 set modules_src [list \
