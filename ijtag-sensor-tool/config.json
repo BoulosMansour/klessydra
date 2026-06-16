@@ -1,0 +1,122 @@
+{
+  "topLevelEntity": "RTL_DSP_TOP",
+  "workingDirectory": "../DSP_BreakDown/modules",
+  "sensorsDirectory": "sensors",
+  "designId": "rtl1",
+  "clockPort": "clk_i",
+  "clockPeriod": "10ns",
+  "ijtagPorts": {
+    "tck": "ijtag_tck",
+    "tdi": "ijtag_tdi",
+    "tms": "ijtag_tms",
+    "tdo": "ijtag_tdo"
+  },
+  "cellLibraryFiles": [
+    "../tech/tessent/ihp-sg13g2_stdcell.tcelllib",
+    "../tech/tessent/ihp-sg13g2_io.tcelllib"
+  ],
+  "packageFiles": [
+    "../DSP_BreakDown/packages/PKG_tb_config.vhd",
+    "../DSP_BreakDown/packages/PKG_RiscV_Klessydra.vhd"
+  ],
+  "synthesis": {
+    "clockPort": "clk_i",
+    "technologies": {
+      "15nm": {
+        "libraryPath": "../DSP_BreakDown/synthesis/15nm/CCS/NanGate_15nm_OCL_typical_conditional_ccs.db",
+        "clockPeriod": "2000"
+      },
+      "45nm": {
+        "libraryPath": "../DSP_BreakDown/synthesis/45nm/NangateOpenCellLibrary_typical_ccs.db",
+        "clockPeriod": "2"
+      },
+      "130nm": {
+        "libraryPath": "../DSP_BreakDown/synthesis/130nm/db/sg13g2_stdcell_typ_1p20V_25C.db",
+        "clockPeriod": "2"
+      }
+    },
+    "generics": {
+      "THREAD_POOL_SIZE": 3,
+      "accl_en": 1,
+      "replicate_accl_en": 1,
+      "multithreaded_accl_en": 0,
+      "SPM_NUM": 4,
+      "Addr_Width": 14,
+      "SIMD": 2,
+      "TPS_CEIL": 2,
+      "TPS_BUF_CEIL": 1,
+      "SPM_ADDR_WID": 3,
+      "SIMD_BITS": 1,
+      "Data_Width": 32,
+      "SIMD_Width": 64,
+      "ACCL_NUM": 3,
+      "FU_NUM": 3
+    }
+  },
+  "sensors": {
+    "activity_sensor": {
+      "vhdl_file_path": "activity_sensor.vhd",
+      "icl_ports": {
+        "tck": "ijtag_tck",
+        "reset": "ijtag_reset",
+        "select": "ijtag_sel",
+        "capture_en": "ijtag_ce",
+        "shift_en": "ijtag_se",
+        "scan_in": "ijtag_si",
+        "scan_out": "ijtag_so"
+      }
+    }
+  },
+  "instances": {
+    "act_sensor_top": {
+      "sensor_name": "activity_sensor",
+      "generic_maps": {
+        "SENSOR_ID": "0",
+        "WINDOW_WIDTH": "8"
+      },
+      "port_maps": {
+        "clk": "clk_i",
+        "rst_n": "rst_ni",
+        "signal_in": "busy_dsp_internal(0)",
+        "activity_count": "top_sensor_activity",
+        "alert": "top_sensor_alert"
+      },
+      "tessent_path": "/RTL_DSP_TOP/act_sensor_top"
+    },
+    "act_sensor_adders": {
+      "sensor_name": "activity_sensor",
+      "generic_maps": {
+        "SENSOR_ID": "1",
+        "WINDOW_WIDTH": "8"
+      },
+      "port_maps": {
+        "clk": "clk_i",
+        "rst_n": "rst_ni",
+        "signal_in": "add_en(0)",
+        "activity_count": "adders_sensor_activity",
+        "alert": "adders_sensor_alert"
+      },
+      "tessent_path": "/RTL_DSP_TOP/DSP_Adders/act_sensor_adders"
+    },
+    "act_sensor_adders_sync": {
+      "sensor_name": "activity_sensor",
+      "generic_maps": {
+        "SENSOR_ID": "2",
+        "WINDOW_WIDTH": "8"
+      },
+      "port_maps": {
+        "clk": "clk_i",
+        "rst_n": "rst_ni",
+        "signal_in": "add_en",
+        "activity_count": "sync_sensor_activity",
+        "alert": "sync_sensor_alert"
+      },
+      "tessent_path": "/RTL_DSP_TOP/DSP_Adders/DSP_Adders_Sync_inst/act_sensor_adders_sync"
+    }
+  },
+  "configurations": {
+    "1sensor": ["act_sensor_top"],
+    "2sensor": ["act_sensor_top", "act_sensor_adders"],
+    "3sensor": ["act_sensor_top", "act_sensor_adders", "act_sensor_adders_sync"]
+  }
+}

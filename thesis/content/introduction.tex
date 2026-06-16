@@ -1,0 +1,135 @@
+\chapter{Introduction}
+\label{ch:intro}
+
+\section{Motivation}
+
+The open RISC-V instruction set architecture (ISA)~\cite{riscv-isa} has moved, in less than a
+decade, from an academic teaching vehicle to a credible foundation for
+commercial silicon. Its modular, royalty-free nature allows designers to tailor
+a processor precisely to an application: a minimal microcontroller core for a
+deeply embedded sensor node, or a richly extended core with custom accelerators
+for signal processing and machine learning at the edge. This flexibility is
+precisely what makes RISC-V attractive in domains where general-purpose
+processors are either too power-hungry or too inflexible --- automotive
+electronics, avionics and space payloads, industrial control, and battery-powered
+edge artificial-intelligence (AI) devices.
+
+These same domains, however, are also the domains in which \emph{dependability}
+is not optional. A processor steering a vehicle, controlling an actuator, or
+running a perception network must continue to produce correct results even in
+the presence of transient and permanent faults. Such faults are no longer rare
+curiosities confined to space applications. As CMOS technology has scaled into
+the deep-nanometre regime, the electrical charge that distinguishes a logic
+\texttt{1} from a logic \texttt{0} has shrunk dramatically, so that a single
+energetic particle, a voltage glitch, or an ageing-induced threshold shift can
+now flip a bit or momentarily corrupt a combinational result even at terrestrial
+altitudes. Radiation-induced single-event effects (SEEs), supply-voltage noise,
+electromigration, and bias-temperature instability all conspire to make modern
+integrated circuits statistically more likely to err over their service life.
+
+Within a modern embedded core, the \emph{vector accelerator} is a particularly
+critical and particularly exposed component. Single-Instruction-Multiple-Data
+(SIMD) accelerators exist precisely because they pack a large amount of
+arithmetic into a small amount of control: wide datapaths of adders,
+multipliers, shifters, and comparators that operate in lockstep on many data
+elements at once. Consequently they tend to dominate both the silicon area and
+the dynamic activity of the core. A fault that strikes the accelerator datapath
+can silently corrupt every element of a vector result, and because the
+accelerator is so heavily exercised, the probability that a fault is actually
+\emph{activated} into an error is high. Protecting the vector accelerator is
+therefore one of the highest-leverage decisions a designer can make when
+hardening a RISC-V core for a critical application.
+
+\section{The Klessydra vector accelerator}
+
+This thesis works with the vector accelerator of \emph{Klessydra}, a family of
+RISC-V cores developed for research into interleaved-multithreading and
+SIMD acceleration. The Klessydra accelerator --- referred to throughout this
+document as the \emph{DSP} unit --- implements a configurable SIMD datapath that
+can be parameterised in its data width, the number of parallel SIMD lanes, the
+size of the scratchpad memory, and the number of hardware threads it serves.
+Internally it is organised around a small set of functional units: vector
+adders, vector multipliers, vector shifters, vector comparators, and an
+accumulation unit, fed by a mapping stage that distributes operands and gathers
+results.
+
+In its original form the accelerator was described as a largely monolithic block
+of VHDL. While functionally complete, this structure is awkward for reliability
+engineering: there is no clean boundary at which a redundancy mechanism can be
+attached to, say, ``just the multiplier'' without disturbing the surrounding
+logic. A central premise of this work is that \emph{fault tolerance is a
+structural property as much as a functional one} --- to harden a design
+selectively and to measure the cost of doing so, the design must first be
+decomposed into well-defined, independently instantiable units.
+
+\section{Problem statement}
+
+Given the Klessydra vector accelerator, this thesis addresses three closely
+related questions:
+
+\begin{enumerate}
+  \item \textbf{Structure.} How can the accelerator be re-engineered into a
+        modular, hierarchical form in which each functional unit is cleanly
+        isolated, so that redundancy can be inserted at arbitrary granularity ---
+        from a single functional unit up to the entire accelerator?
+  \item \textbf{Protection.} What reusable hardware redundancy mechanisms can be
+        built on top of this modular structure, and what is the \emph{quantified
+        cost} --- in area, power, and timing --- of applying them at different
+        granularities and across different technology nodes?
+  \item \textbf{Observability.} How can the hardened accelerator additionally be
+        made \emph{observable in the field}, so that its health can be monitored
+        at run time, and can this instrumentation be inserted automatically
+        rather than by error-prone manual editing of the HDL?
+\end{enumerate}
+
+\section{Contributions}
+
+In answering these questions, the thesis makes the following contributions.
+
+\begin{itemize}
+  \item \textbf{A modular re-engineering of the Klessydra DSP accelerator.}
+        The monolithic datapath is restructured into a clean hierarchy in which
+        adders, multipliers, shifters, comparators, and the accumulator are
+        separate VHDL entities with explicit interfaces, multi-stage pipelined
+        sub-blocks, and a mapping layer that is itself replication-aware.
+
+  \item \textbf{Reusable DMR and TMR redundancy primitives.} Two small,
+        technology-independent VHDL building blocks --- a Dual-Modular-Redundancy
+        comparator with an error flag, and a Triple-Modular-Redundancy majority
+        voter --- are designed and then wrapped around each functional unit and
+        around the full accelerator, yielding a complete family of hardened
+        configurations.
+
+  \item \textbf{An automated IEEE~1687 (IJTAG) sensor-insertion tool.} A
+        pragma-driven tool scans the VHDL hierarchy, inserts parameterisable
+        on-chip sensors (activity and thermal monitors), and generates the
+        Tessent scripts that extract the instrument connectivity and build the
+        IJTAG access network with the necessary Segment Insertion Bits (SIBs),
+        all without manual rewiring of the design.
+
+  \item \textbf{A cross-node design-space exploration.} Every configuration is
+        synthesised across three technology nodes spanning a mature, a
+        mainstream, and an advanced process, and the resulting area, power, and
+        timing data are reduced to a consistent set of comparisons, tables, and
+        design guidelines.
+\end{itemize}
+
+\section{Thesis outline}
+
+The remainder of this thesis is organised as follows.
+Chapter~\ref{ch:background} reviews the technical background: the RISC-V ISA and
+vector acceleration, the physics and modelling of faults in nanometre CMOS, the
+classical redundancy techniques, and the IEEE~1149.1 / IEEE~1687 test and
+monitoring standards.
+Chapter~\ref{ch:architecture} describes the Klessydra DSP accelerator and the
+modular re-engineering that underpins the rest of the work.
+Chapter~\ref{ch:framework} presents the DMR and TMR fault-tolerance framework
+and the two ways in which it is applied: per-functional-unit hardening and
+replication-based redundancy.
+Chapter~\ref{ch:ijtag} presents the automated IJTAG monitoring framework and the
+sensor-insertion tool.
+Chapter~\ref{ch:experiment} details the experimental setup: the synthesis flow,
+the technology nodes, the configuration matrix, and the metrics.
+Chapter~\ref{ch:results} reports and discusses the results of the design-space
+exploration.
+Chapter~\ref{ch:conclusion} concludes and outlines directions for future work.

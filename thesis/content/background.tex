@@ -1,0 +1,280 @@
+\chapter{Background and Related Work}
+\label{ch:background}
+
+This chapter establishes the technical foundations on which the thesis builds.
+Section~\ref{sec:riscv} introduces the RISC-V ISA and the rationale for vector
+acceleration. Section~\ref{sec:faults} reviews the physical origins and the
+abstract modelling of hardware faults. Section~\ref{sec:redundancy} surveys the
+classical hardware redundancy techniques, focusing on the duplication- and
+triplication-based schemes used in this work. Section~\ref{sec:ijtag-bg}
+introduces the IEEE~1149.1 and IEEE~1687 standards for test and in-field
+instrument access. Section~\ref{sec:related} positions the thesis with respect
+to related work.
+
+\section{RISC-V and vector acceleration}
+\label{sec:riscv}
+
+\subsection{The RISC-V instruction set architecture}
+
+RISC-V~\cite{riscv-isa} is an open, royalty-free instruction set architecture organised as a
+small mandatory base integer ISA (\texttt{RV32I} / \texttt{RV64I}) together with
+a set of optional standard extensions --- integer multiplication and division
+(\texttt{M}), atomics (\texttt{A}), single- and double-precision floating point
+(\texttt{F}/\texttt{D}), compressed instructions (\texttt{C}), and the vector
+extension (\texttt{V})~\cite{riscv-vector}, among others. Crucially, the ISA explicitly reserves
+encoding space for \emph{non-standard, custom extensions}. This is what makes
+RISC-V so attractive for domain-specific acceleration: a designer can add
+application-specific instructions and the hardware to execute them, while
+remaining within a coherent and well-documented architectural framework.
+
+The openness of the ISA has a second consequence that is directly relevant to
+this thesis. Because the architecture and many high-quality implementations are
+open, researchers can modify the microarchitecture freely --- inserting
+redundancy, instrumentation, or monitoring logic at any level of the hierarchy
+--- something that is simply impossible with the closed, encrypted RTL of most
+commercial cores.
+
+\subsection{Data-level parallelism and SIMD accelerators}
+
+A large fraction of the workloads that run on embedded and edge devices ---
+digital filtering, fast transforms, linear algebra, and the convolutions at the
+heart of neural networks --- are characterised by \emph{data-level parallelism}:
+the same operation is applied independently to many data elements. The natural
+hardware answer is the Single-Instruction-Multiple-Data (SIMD) paradigm, in
+which one instruction drives a wide datapath that processes many elements
+simultaneously.
+
+A SIMD vector accelerator amortises the cost of instruction fetch, decode, and
+control over a large amount of arithmetic, which is why such accelerators
+deliver excellent energy efficiency on suitable workloads. The flip side, and
+the reason this thesis focuses on them, is that the resulting wide arithmetic
+datapath --- arrays of adders, multipliers, shifters, and comparators ---
+typically dominates the area and the switching activity of the core. From a
+reliability standpoint the accelerator is therefore both the \emph{largest}
+target a fault can strike and the \emph{busiest}, so faults are activated into
+errors with high probability.
+
+\subsection{The Klessydra cores}
+
+Klessydra~\cite{klessydra,klessydra-dsp} is a family of RISC-V cores designed around interleaved hardware
+multithreading and configurable SIMD acceleration, intended for research and for
+embedded use. The cores implement the RISC-V base ISA together with custom
+vector instructions that are executed by a dedicated coprocessor, the DSP unit
+studied here. Key configuration parameters --- the SIMD width, the number of
+parallel accelerator lanes, the scratchpad-memory size, the data width, and the
+thread-pool size --- are exposed as VHDL generics and package constants, so that
+a single source base can be elaborated into a wide range of design points. This
+parameterisation is exploited heavily in the present work: the same accelerator
+source is synthesised under many different redundancy and replication settings.
+
+\section{Faults, errors, and failures}
+\label{sec:faults}
+
+\subsection{Terminology}
+
+It is useful to distinguish three levels following the classical dependability~\cite{avizienis}
+taxonomy. A \emph{fault} is the physical or logical defect --- a flipped storage
+bit, a stuck-at node, a momentary voltage glitch. An \emph{error} is the
+manifestation of a fault in the system state --- an incorrect value held in a
+register or propagating along a wire. A \emph{failure} occurs when an error
+propagates to the system output and the delivered service deviates from the
+specification. Fault tolerance is the art of breaking the chain from fault to
+failure: either by \emph{detecting} an error before it becomes a failure, or by
+\emph{masking} it so that it never reaches the output.
+
+\subsection{Physical origins}
+
+Several physical mechanisms produce faults in modern integrated circuits:
+
+\begin{itemize}
+  \item \textbf{Radiation-induced single-event effects (SEEs).} An energetic
+        particle --- a cosmic-ray secondary neutron at terrestrial altitude, or
+        a heavy ion in space --- deposits charge as it traverses the silicon. If
+        the collected charge exceeds a node's critical charge $Q_{crit}$, the
+        node's logic value is disturbed. When this disturbance flips a storage
+        element it is a \emph{single-event upset} (SEU)\footnote{See~\cite{baumann} for a survey of radiation-induced soft errors in advanced technologies.}; when it produces a
+        transient pulse in combinational logic that may be latched downstream it
+        is a \emph{single-event transient} (SET).
+  \item \textbf{Supply and timing noise.} Voltage droop, ground bounce, and
+        crosstalk can momentarily corrupt logic values or cause a path to miss
+        its timing, producing transient errors that are strongly workload- and
+        environment-dependent.
+  \item \textbf{Ageing and wear-out.} Bias-temperature instability,
+        hot-carrier injection, and electromigration slowly shift device
+        parameters over the service life, eventually turning marginal paths into
+        permanent timing failures or open/short defects.
+\end{itemize}
+
+As $Q_{crit}$ falls with each technology generation, the susceptibility of an
+individual node to transient upset tends to rise, even as the smaller node also
+presents a smaller cross-section to an incident particle. The net effect is that
+soft errors are a first-order reliability concern across the whole range of
+technology nodes considered in this thesis.
+
+\subsection{Fault models}
+
+For design and verification purposes the physical mechanisms above are abstracted
+into \emph{fault models}. The \emph{stuck-at} model, in which a node is
+permanently fixed at \texttt{0} or \texttt{1}, underpins most manufacturing
+test. The \emph{single-event-upset} model, a transient bit-flip of a storage
+element, is the workhorse for soft-error analysis. \emph{Transition} and
+\emph{path-delay} models capture timing-related and ageing faults. The
+redundancy mechanisms developed in this thesis are agnostic to the precise model:
+DMR detects any discrepancy between two copies, and TMR masks any single faulty
+copy, regardless of whether the underlying cause was a particle strike, a glitch,
+or a wear-out defect that has manifested in only one replica.
+
+\section{Hardware redundancy techniques}
+\label{sec:redundancy}
+
+Fault tolerance is achieved by adding \emph{redundancy} --- in hardware, in
+time~\cite{nicolaidis}, or in information. This thesis concentrates on \emph{spatial (hardware)
+redundancy}, the dominant choice for protecting high-throughput datapaths where
+re-execution in time would be too costly.
+
+\subsection{Information redundancy}
+
+Information redundancy adds check bits to data so that errors can be detected or
+corrected. Parity detects single-bit errors; single-error-correcting,
+double-error-detecting (SEC-DED) Hamming codes~\cite{ecc-hamming} are the standard protection for
+memories and register files. Information redundancy is extremely efficient for
+\emph{storage}, but it is awkward for arbitrary \emph{combinational arithmetic}:
+protecting a multiplier with an arithmetic residue code, for instance, requires
+a bespoke checker and does not generalise across functional units. For this
+reason information codes are complementary to, rather than a replacement for, the
+modular redundancy studied here.
+
+\subsection{Dual Modular Redundancy (DMR)}
+
+Dual Modular Redundancy duplicates a module and compares the two outputs
+bit-by-bit. If the copies agree, the result is forwarded and no error is
+flagged; if they disagree, an error flag is raised. DMR therefore provides
+\emph{error detection} but not correction: it cannot, on its own, decide which of
+the two copies is correct. Its appeal is its low cost --- roughly twice the logic
+of the protected module plus a thin comparison layer --- and its generality: the
+same comparator works for any module, regardless of its internal function. In a
+system context the DMR error flag can trigger a recovery action such as
+re-execution, rollback, or a transition to a safe state.
+
+\subsection{Triple Modular Redundancy (TMR)}
+
+Triple Modular Redundancy~\cite{vonneumann,koren} triplicates a module and feeds the three outputs into a
+bitwise majority voter, whose output equals the value produced by at least two of
+the three copies. As long as no more than one copy is faulty at any given bit,
+the voter \emph{masks} the fault completely: the error never reaches the output
+and no recovery action is required. The logic function of a single-bit
+three-input majority voter is
+\begin{equation}
+  v = (a \wedge b) \vee (b \wedge c) \vee (a \wedge c),
+  \label{eq:majority}
+\end{equation}
+where $a$, $b$, $c$ are the three replica outputs. TMR is the canonical choice
+for systems that must continue operating correctly through a fault without
+interruption, at the cost of roughly three times the logic of the protected
+module plus the voter. The voter itself is a single point of failure and in the
+most demanding applications is itself triplicated; in this work a single voter
+per output bit is used, which is the common practice at the datapath level.
+
+\subsection{Granularity and the cost of protection}
+
+A key design decision --- and a central theme of this thesis --- is the
+\emph{granularity} at which redundancy is applied. Redundancy can wrap a single
+functional unit, a group of units, or an entire accelerator. Finer granularity
+allows the designer to spend the area budget where it matters most (for example,
+protecting only the multiplier, which is both large and arithmetically
+intricate), while coarser granularity is simpler to deploy and protects more of
+the design. Because the functional units differ enormously in size, the cost of
+protection depends strongly on \emph{which} unit is hardened, not only on
+\emph{whether} DMR or TMR is used --- a point that the experimental results in
+Chapter~\ref{ch:results} make quantitatively explicit.
+
+\subsection{Replication for throughput versus replication for reliability}
+
+There is an important and often overlooked interaction between redundancy and
+\emph{performance} replication. A SIMD accelerator may already instantiate
+multiple parallel lanes to increase throughput. When such replication is already
+present, the incremental cost of \emph{also} using those lanes for reliability
+--- comparing or voting their results --- can be far smaller than building
+redundancy from scratch, because the expensive datapath copies already exist.
+This thesis evaluates both regimes: building redundancy around a single-lane
+accelerator (Scenario~A), and adding voting on top of an already-replicated
+multi-lane accelerator (Scenario~B).
+
+\section{Test and in-field monitoring: JTAG and IJTAG}
+\label{sec:ijtag-bg}
+
+\subsection{IEEE 1149.1 (JTAG)}
+
+The IEEE~1149.1 standard~\cite{jtag}, universally known as JTAG, defines a Test Access Port
+(TAP) and boundary-scan architecture originally created to test the
+interconnections of boards after assembly. A four- or five-wire serial interface
+(\texttt{TCK}, \texttt{TMS}, \texttt{TDI}, \texttt{TDO}, and optionally
+\texttt{TRST}) drives a finite-state machine that shifts data through scan
+registers. Over time JTAG became the de-facto standard not just for boundary
+scan but for debug access and on-chip instrument control.
+
+\subsection{IEEE 1687 (IJTAG)}
+
+As chips accumulated more and more embedded instruments --- built-in self-test
+controllers, sensors, trimming and configuration registers --- the flat,
+fixed JTAG data-register structure became unwieldy. IEEE~1687, or
+\emph{Internal JTAG} (IJTAG), standardises~\cite{ijtag} a \emph{reconfigurable, hierarchical}
+network for accessing these embedded instruments. Its central element is the
+\emph{Segment Insertion Bit} (SIB), a small controllable element that can switch
+a segment of the scan path --- and the instruments on it --- into or out of the
+active chain. By nesting SIBs, the access network can be reconfigured on the fly
+so that only the instruments of interest are included in the scan path, keeping
+access times short even when hundreds of instruments are present.
+
+IJTAG is accompanied by two description languages: the \emph{Instrument
+Connectivity Language} (ICL), which describes the structure of the network and
+the instruments, and the \emph{Procedural Description Language} (PDL), which
+describes how to operate them. Commercial tools --- in this work, Siemens~\cite{tessent}
+Tessent --- consume ICL to automatically synthesise the network hardware~\cite{ijtag-network} and the
+retargetable access patterns.
+
+\subsection{From manufacturing test to in-field monitoring}
+
+Although born for manufacturing test, the IJTAG network is equally a vehicle for
+\emph{in-field monitoring}. Embedded sensors --- thermal monitors, voltage and
+activity sensors, ageing monitors --- can be attached to the IJTAG network as
+instruments, and their readings retrieved at run time through the same standard
+interface. This makes IJTAG a natural complement to the structural redundancy of
+DMR and TMR: redundancy keeps the design \emph{correct} in the presence of
+faults, while IJTAG-attached sensors keep it \emph{observable}, allowing a system
+to track temperature, activity, and degradation over its service life. Combining
+the two on the same accelerator is one of the goals of this thesis.
+
+\section{Related work}
+\label{sec:related}
+
+Hardware redundancy for processors and accelerators is a mature field. TMR has
+been used for decades in aerospace and space-grade designs, and lockstep
+dual-core arrangements (a coarse form of DMR with comparison) are standard in
+automotive safety microcontrollers~\cite{lockstep}. Reliable-systems design is treated comprehensively in~\cite{siewiorek,koren}. At finer granularity, selective hardening
+--- protecting only the most vulnerable or most critical sub-blocks --- has been
+explored extensively as a way to trade reliability against area and power, often
+guided by fault-injection campaigns that rank sub-blocks by their contribution
+to the overall failure rate~\cite{mukherjee,riscv-hardening}.
+
+For RISC-V specifically, a growing body of work applies these techniques to open
+cores: lockstep and TMR variants of small cores, ECC-protected register files
+and memories~\cite{tmr-fpga}, and selectively hardened execution units. Vector and SIMD
+accelerators, however, have received comparatively less attention despite their
+outsized contribution to area and activity, and systematic, \emph{cross-node}
+cost characterisations at the granularity of individual functional units are
+scarce.
+
+On the monitoring side, IEEE~1687 has been studied primarily as a test-access
+mechanism, with more recent work using it to retarget access to in-field sensors
+and BIST engines. The automated insertion of sensors into an HDL hierarchy,
+coupled with automatic generation of the IJTAG network, is comparatively
+under-explored, particularly in combination with structural redundancy on the
+same design.
+
+This thesis contributes to both strands by treating a single, parameterised
+RISC-V vector accelerator as a common substrate on which (i) DMR and TMR are
+applied at controllable granularity and characterised consistently across three
+technology nodes, and (ii) an automated IJTAG sensor-insertion flow provides
+in-field observability --- bringing reliability and monitoring together in one
+reusable methodology.

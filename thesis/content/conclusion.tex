@@ -1,0 +1,112 @@
+\chapter{Conclusions and Future Work}
+\label{ch:conclusion}
+
+\section{Summary}
+
+This thesis set out to make the SIMD vector accelerator of the Klessydra RISC-V
+architecture both \emph{fault-tolerant} and \emph{observable in the field}, and
+to do so in a way that is reusable and automatable rather than bespoke. Three
+contributions delivered on that goal.
+
+First, the originally monolithic accelerator was \emph{re-engineered into a clean
+modular hierarchy} in which each functional unit --- adder, multiplier, shifter,
+comparator, and accumulator --- is an independently instantiable VHDL entity with
+an explicit interface. This restructuring is the enabling substrate for
+everything that follows: it is what allows redundancy and instrumentation to be
+attached at arbitrary granularity without disturbing the surrounding logic.
+
+Second, a \emph{reusable fault-tolerance framework} was built on top of this
+structure from two tiny, technology-independent primitives --- a DMR comparison
+cell that provides error detection through an error flag, and a TMR majority
+voter that provides error masking. Wrapping the functional units with these
+primitives produced a complete family of hardened configurations: each unit
+hardened individually, the full datapath hardened together, and an alternative
+replication-based scheme that votes already-existing parallel lanes.
+
+Third, an \emph{automated IEEE~1687 (IJTAG) instrumentation flow} was developed
+that inserts on-chip sensors into the VHDL hierarchy from pragma markers and a
+single JSON description, and generates the Tessent scripts that extract the
+instrument connectivity and build the hierarchical access network with Segment
+Insertion Bits --- giving in-field observability with no manual rewiring.
+
+Finally, every configuration was synthesised across three technology nodes
+spanning a mature, a mainstream, and an advanced process, and the resulting data
+were reduced to a consistent set of comparisons. The exploration produced several
+clear and actionable findings:
+
+\begin{itemize}
+  \item The cost of redundancy is dominated by \emph{which} functional unit is
+        hardened: the multiplier is by far the most expensive and the comparator
+        almost free, so fine-grained, selective hardening is highly effective.
+  \item Hardening only the datapath keeps full-accelerator DMR and TMR well below
+        the naive $2\times$ and $3\times$ factors, because the control, mapping,
+        and memory-interface logic remain single-copy.
+  \item Redundancy adds area and power but only a few percent of critical-path
+        delay (at most about $1.06\times$, at the mature node), because the
+        comparators and voters are shallow layers that rarely sit on the
+        critical path.
+  \item When the accelerator is already replicated for throughput, adding voting
+        on top is nearly free in area --- redundancy economics are
+        context-dependent.
+  \item The in-field monitoring instrumentation costs at most a couple of percent
+        and is independent of the redundancy choice.
+  \item All of these overhead factors are \emph{stable across the technology
+        range}, so the resulting design guidelines transfer between nodes.
+\end{itemize}
+
+Together, these results constitute a reusable, automatable methodology for
+hardening a RISC-V vector accelerator against faults while keeping it observable
+in the field, accompanied by quantitative guidelines for navigating the
+protection-versus-cost trade-off.
+
+\section{Limitations}
+
+Several limitations should be kept in mind when interpreting the results. The
+power figures are estimates from default switching activity rather than from
+gate-level activity captured on representative workloads, so they are most
+meaningful as ratios. Timing was characterised against a single aggressive clock
+target that no configuration meets, so the comparison rests on relative
+critical-path (data-arrival) delays rather than on closing timing at a realistic
+frequency. The fault-tolerance claims are \emph{structural}:
+DMR detects and TMR masks any single discrepancy by construction, but the study
+did not run an explicit fault-injection campaign to measure the resulting
+reduction in failure rate. Finally, the advanced-node replication runs collapsed
+to an identical netlist and were therefore not over-interpreted.
+
+\section{Future work}
+
+The framework opens several natural directions.
+
+\begin{itemize}
+  \item \textbf{Fault-injection validation.} Coupling the hardened
+        configurations with an RTL or gate-level fault-injection campaign would
+        turn the structural guarantees into measured reliability metrics (e.g.,
+        architectural vulnerability factor and failures-in-time), and would let
+        selective-hardening decisions be guided by measured per-unit
+        vulnerability rather than area alone.
+  \item \textbf{Constrained and gate-level-activity synthesis.} Repeating the
+        sweep with binding clock constraints and workload-derived switching
+        activity would refine the power and timing figures and reveal any
+        frequency penalty at aggressive targets.
+  \item \textbf{Richer redundancy.} Triplicated voters for the most critical
+        outputs, residue or parity checking for the multiplier, and selective
+        ECC on the scratchpad would broaden the protection palette and could be
+        evaluated within the same modular structure.
+  \item \textbf{Closed-loop monitoring.} The IJTAG activity and thermal sensors
+        could drive run-time adaptation --- throttling, voltage/frequency
+        scaling, or reconfiguration of the redundancy mode --- turning passive
+        observability into active in-field health management. Adding further
+        sensor types (thermal, ageing, voltage) to the existing tool is
+        straightforward given its sensor-agnostic interface.
+  \item \textbf{Broader design space.} Sweeping the SIMD width and lane count
+        together with the redundancy options would map how the cost structure
+        scales with accelerator size, and extending the flow to other Klessydra
+        cores or to other RISC-V accelerators would test the generality of the
+        methodology.
+\end{itemize}
+
+In bringing structural redundancy and standardised in-field monitoring together
+on one parameterised RISC-V vector accelerator, and characterising the result
+across three technology nodes, this thesis provides both a practical toolset and
+an empirical foundation for designing dependable RISC-V acceleration in
+safety- and mission-critical systems.

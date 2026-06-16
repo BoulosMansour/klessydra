@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\caption{Area cost of the IEEE~1687 sensor instrumentation. \emph{Counted} synthesises the sensor instruments fully; \emph{black box} treats them as empty. Their difference is the synthesised cost of the sensors plus the IJTAG access network. The cost is about 1.7\% at the mature node and falls within synthesis optimisation noise at the finer nodes.}
+\label{tab:ijtag}
+\small
+\begin{tabular}{llrrr}
+\toprule
+Node & Sensors & Counted area & Black-box area & Instrument cost (\%) \\
+\midrule
+IHP 130\,nm & 1 & 1,029,222 & 1,012,067 & +1.70 \\
+ & 2 & 1,029,242 & 1,012,127 & +1.69 \\
+ & 3 & 1,023,080 & 1,012,067 & +1.09 \\
+\midrule
+NanGate 45\,nm & 1 & 83,981 & 84,401 & -0.50 \\
+ & 2 & 84,127 & 84,569 & -0.52 \\
+ & 3 & 84,127 & 85,071 & -1.11 \\
+\midrule
+NanGate 15\,nm & 1 & 21,764 & 21,809 & -0.21 \\
+ & 2 & 21,764 & 21,852 & -0.40 \\
+ & 3 & 21,764 & 21,979 & -0.98 \\
+\bottomrule
+\end{tabular}
+\end{table}

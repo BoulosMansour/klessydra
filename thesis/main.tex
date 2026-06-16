@@ -1,0 +1,156 @@
+\documentclass[12pt, a4paper]{report}
+
+% ---- layout ---------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[american]{babel}
+\usepackage[margin=1in, top=1in, left=1.1in, right=1in, bottom=1in]{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{emptypage}
+
+% ---- tables & graphics ----------------------------------------------------
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{pdflscape}
+\usepackage{colortbl}
+\usepackage[dvipsnames,table]{xcolor}
+
+% ---- math -----------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+% ---- captions, links, refs ------------------------------------------------
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage[toc,page]{appendix}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,fit,backgrounds,calc,trees}
+
+% ---- code listings (no shell-escape needed; Overleaf-safe) ----------------
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0.0,0.5,0.0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0.0,0.82}
+\definecolor{backcolour}{rgb}{0.96,0.96,0.94}
+\definecolor{keywordblue}{rgb}{0.0,0.0,0.7}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{keywordblue}\bfseries,
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=6pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=lines,
+    tabsize=2
+}
+\lstset{style=mystyle}
+% VHDL language flavour
+\lstdefinelanguage{myvhdl}{
+  morekeywords={library,use,entity,architecture,component,port,generic,is,begin,
+    end,process,if,then,else,elsif,signal,in,out,inout,std_logic,std_logic_vector,
+    natural,downto,to,when,others,for,generate,map,of,type,array,record,and,or,not,
+    xor,nand,nor},
+  sensitive=false,
+  morecomment=[l]{--},
+  morestring=[b]"
+}
+\lstdefinelanguage{mypython}{
+  morekeywords={def,return,import,from,as,for,in,if,elif,else,while,with,try,except,
+    class,None,True,False,and,or,not,is,lambda,yield,raise,continue,break,pass},
+  sensitive=true,
+  morecomment=[l]{\#},
+  morestring=[b]",
+  morestring=[b]'
+}
+
+% ---- caption style --------------------------------------------------------
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\definecolor{headercolor}{RGB}{0,0,128}
+\definecolor{rowcolor}{RGB}{235,235,255}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{headercolor}}{\chaptertitlename\ \thechapter}{16pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{24pt}
+
+\setlength{\headheight}{16pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\onehalfspacing
+
+% ---- thesis metadata ------------------------------------------------------
+\newcommand{\reporttitle}{Design-Space Exploration of Fault-Tolerance and In-Field Monitoring Techniques for the Klessydra RISC-V Vector Accelerator}
+\newcommand{\reportname}{Tesi di Laurea Magistrale in Ingegneria Meccatronica}
+\newcommand{\studentname}{Boulos Mansour}
+\newcommand{\teachername}{Rodriguez Condia Josie Esteban (DAUIN) \\ Sonza Reorda Matteo (DAUIN) \\ Guerrero Balaguera Juan David \\ Vilar de Farias Gustavo}
+\newcommand{\repourl}{https://github.com/BoulosMansour/klessydra}
+
+\begin{document}
+\pagenumbering{roman}
+
+\input{content/title.tex}
+\cleardoublepage
+
+\input{content/abstract.tex}
+\cleardoublepage
+
+\input{content/ack.tex}
+\cleardoublepage
+
+\tableofcontents
+\listoffigures
+\listoftables
+\cleardoublepage
+
+\input{content/acronym}
+\cleardoublepage
+
+\pagenumbering{arabic}
+
+\input{content/introduction}
+\input{content/background}
+\input{content/architecture}
+\input{content/framework}
+\input{content/ijtag}
+\input{content/experiment}
+\input{content/results}
+\input{content/conclusion}
+
+\appendix
+\input{appendix/appendix}
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{thebibliography}{99}
+\input{ref/refs}
+\end{thebibliography}
+
+\end{document}

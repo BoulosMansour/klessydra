@@ -1,0 +1,1526 @@
+ 
+****************************************
+Report : reference
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Sat Jan 31 12:15:43 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64   961.855996       1   961.855996 h, n
+DSP_Adders_DMR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64  3551.897947       1  3551.897947 h, n
+DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64   485.449990       1   485.449990 h, n
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1   606.746004       1   606.746004 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64  3555.621951       1  3555.621951 h, n
+DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1    57.456001       1    57.456001 h, n
+DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64  2198.490012       1  2198.490012 h
+DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32 13333.249962       1 13333.249962 h, n
+DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64  2019.205969       1  2019.205969 h, n
+DSP_pipeline_controller         558.599991       1    558.599991  h, n
+-----------------------------------------------------------------------------
+Total 10 references                                 27328.573824
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_0   136.192001       1   136.192001 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_1    66.500001       1    66.500001 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_2    66.500001       1    66.500001 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_3    66.500001       1    66.500001 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_4   134.596001       1   134.596001 h
+AND3_X1            NangateOpenCellLibrary     1.330000       1     1.330000
+AOI22_X1           NangateOpenCellLibrary     1.330000      64    85.120003
+AOI211_X1          NangateOpenCellLibrary     1.330000       1     1.330000
+BUF_X1             NangateOpenCellLibrary     0.798000       9     7.182000
+DFF_X1             NangateOpenCellLibrary     4.522000      64   289.407990 n
+INV_X1             NangateOpenCellLibrary     0.532000      34    18.088000
+INV_X2             NangateOpenCellLibrary     0.798000       6     4.788000
+NAND2_X1           NangateOpenCellLibrary     0.798000      16    12.768000
+NOR2_X1            NangateOpenCellLibrary     0.798000      16    12.768000
+NOR2_X2            NangateOpenCellLibrary     1.330000       1     1.330000
+NOR3_X1            NangateOpenCellLibrary     1.064000       2     2.128000
+OAI21_X1           NangateOpenCellLibrary     1.064000      50    53.200001
+OR2_X1             NangateOpenCellLibrary     1.064000       2     2.128000
+-----------------------------------------------------------------------------
+Total 18 references                                   961.855996
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000      32   136.192001 r
+-----------------------------------------------------------------------------
+Total 1 references                                    136.192001
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      15    63.840001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 3 references                                     66.500001
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      15    63.840001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 3 references                                     66.500001
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      15    63.840001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 3 references                                     66.500001
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      31   131.936001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 3 references                                    134.596001
+
+****************************************
+Design: DSP_Adders_DMR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000       1     0.798000
+DMR_0                             1.596000       1      1.596000  h
+DMR_1                             1.596000       1      1.596000  h
+DMR_2                             1.596000       1      1.596000  h
+DMR_3                             1.596000       1      1.596000  h
+DMR_4                             1.596000       1      1.596000  h
+DMR_5                             1.596000       1      1.596000  h
+DMR_6                             1.596000       1      1.596000  h
+DMR_7                             1.596000       1      1.596000  h
+DMR_8                             1.596000       1      1.596000  h
+DMR_9                             1.596000       1      1.596000  h
+DMR_10                            1.596000       1      1.596000  h
+DMR_11                            1.596000       1      1.596000  h
+DMR_12                            1.596000       1      1.596000  h
+DMR_13                            1.596000       1      1.596000  h
+DMR_14                            1.596000       1      1.596000  h
+DMR_15                            1.596000       1      1.596000  h
+DMR_16                            1.596000       1      1.596000  h
+DMR_17                            1.596000       1      1.596000  h
+DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_0  1761.185974       1  1761.185974 h, n
+DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_1  1761.185974       1  1761.185974 h, n
+-----------------------------------------------------------------------------
+Total 21 references                                  3551.897947
+
+****************************************
+Design: DMR_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_14 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DMR_17 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 1 references                                      1.596000
+
+****************************************
+Design: DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Adders_Sync_SIMD2_SIMD_Width64_0  1206.575968       1  1206.575968 h, n
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0   294.462004       1   294.462004 h, n
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0   260.148002       1   260.148002 h, n
+-----------------------------------------------------------------------------
+Total 3 references                                   1761.185974
+
+****************************************
+Design: DSP_Adders_Sync_SIMD2_SIMD_Width64_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000      26    20.747999
+DFF_X1             NangateOpenCellLibrary     4.522000     182   823.003970 n
+INV_X1             NangateOpenCellLibrary     0.532000      34    18.088000
+INV_X4             NangateOpenCellLibrary     1.330000       1     1.330000
+INV_X8             NangateOpenCellLibrary     2.394000       1     2.394000
+MUX2_X1            NangateOpenCellLibrary     1.862000     182   338.883998
+NAND3_X1           NangateOpenCellLibrary     1.064000       1     1.064000
+OAI21_X1           NangateOpenCellLibrary     1.064000       1     1.064000
+-----------------------------------------------------------------------------
+Total 8 references                                   1206.575968
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       4     4.256000
+DLH_X1             NangateOpenCellLibrary     2.660000      40   106.400003 n
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_1_DW01_add_38    34.048000       1    34.048000 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_39    34.048000       1    34.048000 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_4_DW01_add_41    34.048000       1    34.048000 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_5_DW01_add_42    34.048000       1    34.048000 h
+INV_X1             NangateOpenCellLibrary     0.532000       6     3.192000
+NAND2_X1           NangateOpenCellLibrary     0.798000       6     4.788000
+NAND3_X1           NangateOpenCellLibrary     1.064000       4     4.256000
+NOR2_X1            NangateOpenCellLibrary     0.798000       4     3.192000
+NOR3_X1            NangateOpenCellLibrary     1.064000       2     2.128000
+OR2_X2             NangateOpenCellLibrary     1.330000       1     1.330000
+XNOR2_X1           NangateOpenCellLibrary     1.596000      12    19.151999
+XOR2_X1            NangateOpenCellLibrary     1.596000       6     9.576000
+-----------------------------------------------------------------------------
+Total 14 references                                   294.462004
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_1_DW01_add_38 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_39 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_4_DW01_add_41 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_5_DW01_add_42 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      20    21.280000
+DLH_X1             NangateOpenCellLibrary     2.660000      18    47.880002 n
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_0_DW01_add_31    34.048000       1    34.048000 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_33    34.048000       1    34.048000 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_3_DW01_add_34    34.048000       1    34.048000 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_5_DW01_add_36    34.048000       1    34.048000 h
+INV_X1             NangateOpenCellLibrary     0.532000       6     3.192000
+NAND2_X1           NangateOpenCellLibrary     0.798000       6     4.788000
+NAND3_X1           NangateOpenCellLibrary     1.064000       2     2.128000
+NOR2_X1            NangateOpenCellLibrary     0.798000      14    11.172000
+NOR2_X2            NangateOpenCellLibrary     1.330000       1     1.330000
+NOR2_X4            NangateOpenCellLibrary     2.394000       1     2.394000
+NOR3_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       7    11.172000
+XOR2_X1            NangateOpenCellLibrary     1.596000      11    17.556000
+-----------------------------------------------------------------------------
+Total 15 references                                   260.148002
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_0_DW01_add_31 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_33 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_3_DW01_add_34 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_5_DW01_add_36 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Adders_Sync_SIMD2_SIMD_Width64_1  1206.575968       1  1206.575968 h, n
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1   294.462004       1   294.462004 h, n
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1   260.148002       1   260.148002 h, n
+-----------------------------------------------------------------------------
+Total 3 references                                   1761.185974
+
+****************************************
+Design: DSP_Adders_Sync_SIMD2_SIMD_Width64_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000      26    20.747999
+DFF_X1             NangateOpenCellLibrary     4.522000     182   823.003970 n
+INV_X1             NangateOpenCellLibrary     0.532000      34    18.088000
+INV_X4             NangateOpenCellLibrary     1.330000       1     1.330000
+INV_X8             NangateOpenCellLibrary     2.394000       1     2.394000
+MUX2_X1            NangateOpenCellLibrary     1.862000     182   338.883998
+NAND3_X1           NangateOpenCellLibrary     1.064000       1     1.064000
+OAI21_X1           NangateOpenCellLibrary     1.064000       1     1.064000
+-----------------------------------------------------------------------------
+Total 8 references                                   1206.575968
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       4     4.256000
+DLH_X1             NangateOpenCellLibrary     2.660000      40   106.400003 n
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_1_DW01_add_26    34.048000       1    34.048000 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_27    34.048000       1    34.048000 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_4_DW01_add_29    34.048000       1    34.048000 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_5_DW01_add_30    34.048000       1    34.048000 h
+INV_X1             NangateOpenCellLibrary     0.532000       6     3.192000
+NAND2_X1           NangateOpenCellLibrary     0.798000       6     4.788000
+NAND3_X1           NangateOpenCellLibrary     1.064000       4     4.256000
+NOR2_X1            NangateOpenCellLibrary     0.798000       4     3.192000
+NOR3_X1            NangateOpenCellLibrary     1.064000       2     2.128000
+OR2_X2             NangateOpenCellLibrary     1.330000       1     1.330000
+XNOR2_X1           NangateOpenCellLibrary     1.596000      12    19.151999
+XOR2_X1            NangateOpenCellLibrary     1.596000       6     9.576000
+-----------------------------------------------------------------------------
+Total 14 references                                   294.462004
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_1_DW01_add_26 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_27 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_4_DW01_add_29 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_5_DW01_add_30 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      20    21.280000
+DLH_X1             NangateOpenCellLibrary     2.660000      18    47.880002 n
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_0_DW01_add_19    34.048000       1    34.048000 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_21    34.048000       1    34.048000 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_3_DW01_add_22    34.048000       1    34.048000 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_5_DW01_add_24    34.048000       1    34.048000 h
+INV_X1             NangateOpenCellLibrary     0.532000       6     3.192000
+NAND2_X1           NangateOpenCellLibrary     0.798000       6     4.788000
+NAND3_X1           NangateOpenCellLibrary     1.064000       2     2.128000
+NOR2_X1            NangateOpenCellLibrary     0.798000      14    11.172000
+NOR2_X2            NangateOpenCellLibrary     1.330000       1     1.330000
+NOR2_X4            NangateOpenCellLibrary     2.394000       1     2.394000
+NOR3_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       7    11.172000
+XOR2_X1            NangateOpenCellLibrary     1.596000      11    17.556000
+-----------------------------------------------------------------------------
+Total 15 references                                   260.148002
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_0_DW01_add_19 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_21 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_3_DW01_add_22 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_5_DW01_add_24 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000       8    34.048000 r
+-----------------------------------------------------------------------------
+Total 1 references                                     34.048000
+
+****************************************
+Design: DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Comparators_Unit_SIMD2_SIMD_Width64   485.449990       1   485.449990 h, n
+-----------------------------------------------------------------------------
+Total 1 references                                    485.449990
+
+****************************************
+Design: DSP_Comparators_Unit_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+AOI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+AOI22_X1           NangateOpenCellLibrary     1.330000       6     7.980000
+AOI211_X1          NangateOpenCellLibrary     1.330000       1     1.330000
+BUF_X1             NangateOpenCellLibrary     0.798000       9     7.182000
+DFF_X1             NangateOpenCellLibrary     4.522000      64   289.407990 n
+INV_X1             NangateOpenCellLibrary     0.532000      43    22.876000
+INV_X4             NangateOpenCellLibrary     1.330000       1     1.330000
+MUX2_X1            NangateOpenCellLibrary     1.862000       3     5.586000
+NAND2_X1           NangateOpenCellLibrary     0.798000      39    31.121999
+NAND3_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+NOR2_X1            NangateOpenCellLibrary     0.798000       7     5.586000
+NOR3_X1            NangateOpenCellLibrary     1.064000       3     3.192000
+OAI21_X1           NangateOpenCellLibrary     1.064000      40    42.560000
+OAI22_X1           NangateOpenCellLibrary     1.330000      23    30.590001
+OAI221_X1          NangateOpenCellLibrary     1.596000       8    12.768000
+OAI222_X1          NangateOpenCellLibrary     2.128000       1     2.128000
+OR2_X1             NangateOpenCellLibrary     1.064000       5     5.320000
+OR3_X1             NangateOpenCellLibrary     1.330000       2     2.660000
+-----------------------------------------------------------------------------
+Total 19 references                                   485.449990
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      33    35.112000
+AND3_X1            NangateOpenCellLibrary     1.330000       1     1.330000
+AND4_X1            NangateOpenCellLibrary     1.596000       2     3.192000
+AOI21_X1           NangateOpenCellLibrary     1.064000       8     8.512000
+AOI22_X1           NangateOpenCellLibrary     1.330000      32    42.560001
+AOI211_X1          NangateOpenCellLibrary     1.330000       1     1.330000
+AOI221_X1          NangateOpenCellLibrary     1.596000       2     3.192000
+AOI222_X1          NangateOpenCellLibrary     2.128000      16    34.048000
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_0_DW01_add_43    59.584000       1    59.584000 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_1_DW01_add_44    59.584000       1    59.584000 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_45    59.584000       1    59.584000 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_0    31.920000       1    31.920000 h
+INV_X1             NangateOpenCellLibrary     0.532000     114    60.648001
+MUX2_X1            NangateOpenCellLibrary     1.862000       5     9.310000
+NAND2_X1           NangateOpenCellLibrary     0.798000      27    21.545999
+NAND3_X1           NangateOpenCellLibrary     1.064000      12    12.768000
+NAND4_X1           NangateOpenCellLibrary     1.330000      11    14.630000
+NOR2_X1            NangateOpenCellLibrary     0.798000      27    21.545999
+NOR2_X2            NangateOpenCellLibrary     1.330000       2     2.660000
+NOR2_X4            NangateOpenCellLibrary     2.394000       1     2.394000
+NOR3_X1            NangateOpenCellLibrary     1.064000      20    21.280000
+NOR3_X2            NangateOpenCellLibrary     1.862000       1     1.862000
+NOR4_X1            NangateOpenCellLibrary     1.330000      17    22.610001
+OAI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+OAI22_X1           NangateOpenCellLibrary     1.330000       4     5.320000
+OAI33_X1           NangateOpenCellLibrary     1.862000       8    14.896000
+OAI211_X1          NangateOpenCellLibrary     1.330000       3     3.990000
+OAI221_X1          NangateOpenCellLibrary     1.596000      11    17.556000
+OAI222_X1          NangateOpenCellLibrary     2.128000       1     2.128000
+OR2_X1             NangateOpenCellLibrary     1.064000       7     7.448000
+OR3_X1             NangateOpenCellLibrary     1.330000       5     6.650000
+OR4_X1             NangateOpenCellLibrary     1.596000       1     1.596000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       2     3.192000
+XOR2_X1            NangateOpenCellLibrary     1.596000       4     6.384000
+-----------------------------------------------------------------------------
+Total 34 references                                   606.746004
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_0_DW01_add_43 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      13    55.328001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       2     3.192000
+-----------------------------------------------------------------------------
+Total 3 references                                     59.584000
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_1_DW01_add_44 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      13    55.328001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       2     3.192000
+-----------------------------------------------------------------------------
+Total 3 references                                     59.584000
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_45 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      13    55.328001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       2     3.192000
+-----------------------------------------------------------------------------
+Total 3 references                                     59.584000
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X1           NangateOpenCellLibrary     1.064000       5     5.320000
+INV_X1             NangateOpenCellLibrary     0.532000      12     6.384000
+NAND2_X1           NangateOpenCellLibrary     0.798000       5     3.990000
+NOR2_X1            NangateOpenCellLibrary     0.798000       7     5.586000
+OAI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 8 references                                     31.920000
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       6     6.384000
+AND2_X4            NangateOpenCellLibrary     2.394000       1     2.394000
+AND3_X1            NangateOpenCellLibrary     1.330000       3     3.990000
+AND3_X4            NangateOpenCellLibrary     2.926000       1     2.926000
+AND4_X1            NangateOpenCellLibrary     1.596000       2     3.192000
+AOI21_X1           NangateOpenCellLibrary     1.064000       5     5.320000
+AOI21_X2           NangateOpenCellLibrary     1.862000       3     5.586000
+AOI22_X1           NangateOpenCellLibrary     1.330000      13    17.290001
+AOI211_X1          NangateOpenCellLibrary     1.330000       1     1.330000
+AOI221_X1          NangateOpenCellLibrary     1.596000       9    14.364000
+AOI222_X1          NangateOpenCellLibrary     2.128000     101   214.928002
+BUF_X1             NangateOpenCellLibrary     0.798000      54    43.091999
+DFFR_X1            NangateOpenCellLibrary     5.320000       6    31.920001 n
+DFF_X1             NangateOpenCellLibrary     4.522000     354  1600.787942 n
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_0_DW01_add_46   136.192001       1   136.192001 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_1_DW01_add_47    59.584001       1    59.584001 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_2_DW01_add_48   136.192001       1   136.192001 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_3_DW01_add_49   131.936001       1   131.936001 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_50   131.936001       1   131.936001 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_0_DW01_sub_3    70.490001       1    70.490001 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_1_DW01_sub_4    71.820001       1    71.820001 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_2_DW01_sub_5    70.490001       1    70.490001 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_0_DW02_mult_8    32.984000       1    32.984000 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1_DW02_mult_9    32.984000       1    32.984000 h
+INV_X1             NangateOpenCellLibrary     0.532000     191   101.612001
+INV_X2             NangateOpenCellLibrary     0.798000       4     3.192000
+INV_X8             NangateOpenCellLibrary     2.394000       1     2.394000
+MUX2_X1            NangateOpenCellLibrary     1.862000     106   197.371999
+NAND2_X1           NangateOpenCellLibrary     0.798000      69    55.061998
+NAND2_X2           NangateOpenCellLibrary     1.330000       1     1.330000
+NAND3_X1           NangateOpenCellLibrary     1.064000       3     3.192000
+NAND4_X1           NangateOpenCellLibrary     1.330000       5     6.650000
+NAND4_X2           NangateOpenCellLibrary     2.394000       1     2.394000
+NOR2_X1            NangateOpenCellLibrary     0.798000       9     7.182000
+NOR2_X2            NangateOpenCellLibrary     1.330000       3     3.990000
+NOR2_X4            NangateOpenCellLibrary     2.394000       1     2.394000
+NOR3_X1            NangateOpenCellLibrary     1.064000       7     7.448000
+NOR4_X1            NangateOpenCellLibrary     1.330000       9    11.970000
+OAI21_X1           NangateOpenCellLibrary     1.064000     146   155.344002
+OAI21_X2           NangateOpenCellLibrary     1.862000       1     1.862000
+OAI21_X4           NangateOpenCellLibrary     3.458000       1     3.458000
+OAI22_X1           NangateOpenCellLibrary     1.330000      19    25.270001
+OAI211_X1          NangateOpenCellLibrary     1.330000       6     7.980000
+OAI221_X1          NangateOpenCellLibrary     1.596000      71   113.315997
+OR2_X1             NangateOpenCellLibrary     1.064000       5     5.320000
+OR3_X1             NangateOpenCellLibrary     1.330000       3     3.990000
+OR4_X1             NangateOpenCellLibrary     1.596000       3     4.788000
+-----------------------------------------------------------------------------
+Total 47 references                                  3555.621951
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_0_DW01_add_46 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000      32   136.192001 r
+-----------------------------------------------------------------------------
+Total 1 references                                    136.192001
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_1_DW01_add_47 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000      14    59.584001 r
+-----------------------------------------------------------------------------
+Total 1 references                                     59.584001
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_2_DW01_add_48 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000      32   136.192001 r
+-----------------------------------------------------------------------------
+Total 1 references                                    136.192001
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_3_DW01_add_49 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      30   127.680001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       2     3.192000
+-----------------------------------------------------------------------------
+Total 3 references                                    131.936001
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_50 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      30   127.680001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       2     3.192000
+-----------------------------------------------------------------------------
+Total 3 references                                    131.936001
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_0_DW01_sub_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000      14    59.584001 r
+INV_X1             NangateOpenCellLibrary     0.532000      16     8.512000
+NAND2_X1           NangateOpenCellLibrary     0.798000       1     0.798000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 4 references                                     70.490001
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_1_DW01_sub_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000      15    63.840001 r
+INV_X1             NangateOpenCellLibrary     0.532000      15     7.980000
+-----------------------------------------------------------------------------
+Total 2 references                                     71.820001
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_2_DW01_sub_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NangateOpenCellLibrary     4.256000      14    59.584001 r
+INV_X1             NangateOpenCellLibrary     0.532000      16     8.512000
+NAND2_X1           NangateOpenCellLibrary     0.798000       1     0.798000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 4 references                                     70.490001
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_0_DW02_mult_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      31    32.984000
+-----------------------------------------------------------------------------
+Total 1 references                                     32.984000
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1_DW02_mult_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      31    32.984000
+-----------------------------------------------------------------------------
+Total 1 references                                     32.984000
+
+****************************************
+Design: DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_FU_Handler_MC                30.856000       1     30.856000  h
+DSP_FU_enabler_sync              26.600001       1     26.600001  h, n
+-----------------------------------------------------------------------------
+Total 2 references                                     57.456001
+
+****************************************
+Design: DSP_FU_Handler_MC 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND4_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+AOI21_X1           NangateOpenCellLibrary     1.064000       3     3.192000
+AOI22_X1           NangateOpenCellLibrary     1.330000       1     1.330000
+INV_X1             NangateOpenCellLibrary     0.532000       7     3.724000
+NAND2_X1           NangateOpenCellLibrary     0.798000       5     3.990000
+NAND4_X1           NangateOpenCellLibrary     1.330000       3     3.990000
+NOR2_X1            NangateOpenCellLibrary     0.798000       4     3.192000
+NOR3_X1            NangateOpenCellLibrary     1.064000       2     2.128000
+OAI21_X1           NangateOpenCellLibrary     1.064000       5     5.320000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+OR3_X1             NangateOpenCellLibrary     1.330000       1     1.330000
+-----------------------------------------------------------------------------
+Total 11 references                                    30.856000
+
+****************************************
+Design: DSP_FU_enabler_sync 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DFFR_X1            NangateOpenCellLibrary     5.320000       5    26.600001 n
+-----------------------------------------------------------------------------
+Total 1 references                                     26.600001
+
+****************************************
+Design: DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64  1552.642009       1  1552.642009 h
+DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64   645.848003       1   645.848003 h
+-----------------------------------------------------------------------------
+Total 2 references                                   2198.490012
+
+****************************************
+Design: DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       6     6.384000
+AND3_X1            NangateOpenCellLibrary     1.330000      10    13.300000
+AND3_X4            NangateOpenCellLibrary     2.926000       1     2.926000
+AND4_X4            NangateOpenCellLibrary     3.458000       1     3.458000
+AOI21_X1           NangateOpenCellLibrary     1.064000     130   138.320001
+AOI21_X2           NangateOpenCellLibrary     1.862000       1     1.862000
+AOI22_X1           NangateOpenCellLibrary     1.330000     136   180.880006
+AOI211_X2          NangateOpenCellLibrary     2.394000       1     2.394000
+AOI221_X1          NangateOpenCellLibrary     1.596000       8    12.768000
+AOI222_X1          NangateOpenCellLibrary     2.128000      24    51.072001
+BUF_X2             NangateOpenCellLibrary     1.064000       1     1.064000
+CLKBUF_X1          NangateOpenCellLibrary     0.798000       1     0.798000
+INV_X1             NangateOpenCellLibrary     0.532000     393   209.076002
+INV_X2             NangateOpenCellLibrary     0.798000       6     4.788000
+INV_X4             NangateOpenCellLibrary     1.330000       3     3.990000
+MUX2_X1            NangateOpenCellLibrary     1.862000      72   134.063999
+NAND2_X1           NangateOpenCellLibrary     0.798000     123    98.153997
+NAND2_X2           NangateOpenCellLibrary     1.330000       3     3.990000
+NAND3_X1           NangateOpenCellLibrary     1.064000      19    20.216000
+NAND3_X2           NangateOpenCellLibrary     1.862000       2     3.724000
+NAND4_X1           NangateOpenCellLibrary     1.330000       1     1.330000
+NOR2_X1            NangateOpenCellLibrary     0.798000     105    83.789998
+NOR2_X2            NangateOpenCellLibrary     1.330000       3     3.990000
+NOR2_X4            NangateOpenCellLibrary     2.394000       1     2.394000
+NOR3_X1            NangateOpenCellLibrary     1.064000       8     8.512000
+NOR3_X4            NangateOpenCellLibrary     3.724000       3    11.172000
+OAI21_X1           NangateOpenCellLibrary     1.064000      71    75.544001
+OAI21_X2           NangateOpenCellLibrary     1.862000       2     3.724000
+OAI22_X1           NangateOpenCellLibrary     1.330000     113   150.290005
+OAI22_X2           NangateOpenCellLibrary     2.394000       5    11.970000
+OAI211_X1          NangateOpenCellLibrary     1.330000      41    54.530002
+OAI211_X2          NangateOpenCellLibrary     2.394000       1     2.394000
+OAI221_X1          NangateOpenCellLibrary     1.596000      96   153.215996
+OAI222_X1          NangateOpenCellLibrary     2.128000      40    85.120001
+OR2_X1             NangateOpenCellLibrary     1.064000       4     4.256000
+OR3_X1             NangateOpenCellLibrary     1.330000       2     2.660000
+OR3_X4             NangateOpenCellLibrary     2.926000       1     2.926000
+OR4_X1             NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 38 references                                  1552.642009
+
+****************************************
+Design: DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       3     3.192000
+AND3_X1            NangateOpenCellLibrary     1.330000       1     1.330000
+AND3_X4            NangateOpenCellLibrary     2.926000       1     2.926000
+AOI21_X1           NangateOpenCellLibrary     1.064000       9     9.576000
+AOI22_X1           NangateOpenCellLibrary     1.330000      48    63.840002
+AOI211_X1          NangateOpenCellLibrary     1.330000       1     1.330000
+AOI221_X1          NangateOpenCellLibrary     1.596000      32    51.071999
+AOI222_X1          NangateOpenCellLibrary     2.128000       8    17.024000
+INV_X1             NangateOpenCellLibrary     0.532000      28    14.896000
+INV_X2             NangateOpenCellLibrary     0.798000       4     3.192000
+INV_X4             NangateOpenCellLibrary     1.330000       2     2.660000
+MUX2_X1            NangateOpenCellLibrary     1.862000      65   121.029999
+NAND2_X1           NangateOpenCellLibrary     0.798000      11     8.778000
+NAND2_X2           NangateOpenCellLibrary     1.330000       4     5.320000
+NAND3_X1           NangateOpenCellLibrary     1.064000      25    26.600000
+NAND4_X1           NangateOpenCellLibrary     1.330000       1     1.330000
+NOR2_X1            NangateOpenCellLibrary     0.798000      67    53.465999
+NOR2_X4            NangateOpenCellLibrary     2.394000       2     4.788000
+NOR3_X1            NangateOpenCellLibrary     1.064000       6     6.384000
+NOR3_X4            NangateOpenCellLibrary     3.724000       1     3.724000
+OAI21_X1           NangateOpenCellLibrary     1.064000       9     9.576000
+OAI21_X2           NangateOpenCellLibrary     1.862000       1     1.862000
+OAI22_X1           NangateOpenCellLibrary     1.330000      48    63.840002
+OAI211_X1          NangateOpenCellLibrary     1.330000      32    42.560001
+OAI221_X1          NangateOpenCellLibrary     1.596000      24    38.303999
+OAI222_X1          NangateOpenCellLibrary     2.128000      16    34.048000
+OR2_X1             NangateOpenCellLibrary     1.064000      10    10.640000
+OR3_X1             NangateOpenCellLibrary     1.330000      20    26.600001
+OR4_X1             NangateOpenCellLibrary     1.596000       9    14.364000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 30 references                                   645.848003
+
+****************************************
+Design: DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000       1     0.798000
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64 11925.577964       1 11925.577964 h, n
+DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64   179.018002       1   179.018002 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64  1227.855996       1  1227.855996 h, n
+-----------------------------------------------------------------------------
+Total 4 references                                  13333.249962
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      32    34.048000
+AND3_X1            NangateOpenCellLibrary     1.330000       1     1.330000
+BUF_X1             NangateOpenCellLibrary     0.798000      74    59.051998
+DFF_X1             NangateOpenCellLibrary     4.522000     256  1157.631958 n
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_0  1274.406001       1  1274.406001 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_1  1274.406001       1  1274.406001 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_2  1274.406001       1  1274.406001 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_3  1274.406001       1  1274.406001 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_4  1274.406001       1  1274.406001 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_5  1274.406001       1  1274.406001 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6  1274.406001       1  1274.406001 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_7  1274.406001       1  1274.406001 h
+MUX2_X1            NangateOpenCellLibrary     1.862000     128   238.335999
+NAND2_X1           NangateOpenCellLibrary     0.798000     128   102.143997
+NOR2_X1            NangateOpenCellLibrary     0.798000       2     1.596000
+OAI21_X1           NangateOpenCellLibrary     1.064000     128   136.192001
+-----------------------------------------------------------------------------
+Total 16 references                                 11925.577964
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      30    31.920000
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_11    79.533999       1    79.533999 h
+FA_X1              NangateOpenCellLibrary     4.256000     210   893.760009 r
+INV_X1             NangateOpenCellLibrary     0.532000      32    17.024000
+NOR2_X1            NangateOpenCellLibrary     0.798000     256   204.287994
+XOR2_X1            NangateOpenCellLibrary     1.596000      30    47.879999
+-----------------------------------------------------------------------------
+Total 6 references                                   1274.406001
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       8     8.512000
+AOI21_X1           NangateOpenCellLibrary     1.064000       7     7.448000
+INV_X1             NangateOpenCellLibrary     0.532000      14     7.448000
+NAND2_X1           NangateOpenCellLibrary     0.798000      13    10.374000
+NOR2_X1            NangateOpenCellLibrary     0.798000      20    15.960000
+OAI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+XOR2_X1            NangateOpenCellLibrary     1.596000      13    20.747999
+-----------------------------------------------------------------------------
+Total 9 references                                     79.533999
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      30    31.920000
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_12    79.533999       1    79.533999 h
+FA_X1              NangateOpenCellLibrary     4.256000     210   893.760009 r
+INV_X1             NangateOpenCellLibrary     0.532000      32    17.024000
+NOR2_X1            NangateOpenCellLibrary     0.798000     256   204.287994
+XOR2_X1            NangateOpenCellLibrary     1.596000      30    47.879999
+-----------------------------------------------------------------------------
+Total 6 references                                   1274.406001
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       8     8.512000
+AOI21_X1           NangateOpenCellLibrary     1.064000       7     7.448000
+INV_X1             NangateOpenCellLibrary     0.532000      14     7.448000
+NAND2_X1           NangateOpenCellLibrary     0.798000      13    10.374000
+NOR2_X1            NangateOpenCellLibrary     0.798000      20    15.960000
+OAI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+XOR2_X1            NangateOpenCellLibrary     1.596000      13    20.747999
+-----------------------------------------------------------------------------
+Total 9 references                                     79.533999
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      30    31.920000
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_13    79.533999       1    79.533999 h
+FA_X1              NangateOpenCellLibrary     4.256000     210   893.760009 r
+INV_X1             NangateOpenCellLibrary     0.532000      32    17.024000
+NOR2_X1            NangateOpenCellLibrary     0.798000     256   204.287994
+XOR2_X1            NangateOpenCellLibrary     1.596000      30    47.879999
+-----------------------------------------------------------------------------
+Total 6 references                                   1274.406001
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       8     8.512000
+AOI21_X1           NangateOpenCellLibrary     1.064000       7     7.448000
+INV_X1             NangateOpenCellLibrary     0.532000      14     7.448000
+NAND2_X1           NangateOpenCellLibrary     0.798000      13    10.374000
+NOR2_X1            NangateOpenCellLibrary     0.798000      20    15.960000
+OAI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+XOR2_X1            NangateOpenCellLibrary     1.596000      13    20.747999
+-----------------------------------------------------------------------------
+Total 9 references                                     79.533999
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      30    31.920000
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_3_DW01_add_14    79.533999       1    79.533999 h
+FA_X1              NangateOpenCellLibrary     4.256000     210   893.760009 r
+INV_X1             NangateOpenCellLibrary     0.532000      32    17.024000
+NOR2_X1            NangateOpenCellLibrary     0.798000     256   204.287994
+XOR2_X1            NangateOpenCellLibrary     1.596000      30    47.879999
+-----------------------------------------------------------------------------
+Total 6 references                                   1274.406001
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_3_DW01_add_14 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       8     8.512000
+AOI21_X1           NangateOpenCellLibrary     1.064000       7     7.448000
+INV_X1             NangateOpenCellLibrary     0.532000      14     7.448000
+NAND2_X1           NangateOpenCellLibrary     0.798000      13    10.374000
+NOR2_X1            NangateOpenCellLibrary     0.798000      20    15.960000
+OAI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+XOR2_X1            NangateOpenCellLibrary     1.596000      13    20.747999
+-----------------------------------------------------------------------------
+Total 9 references                                     79.533999
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      30    31.920000
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_15    79.533999       1    79.533999 h
+FA_X1              NangateOpenCellLibrary     4.256000     210   893.760009 r
+INV_X1             NangateOpenCellLibrary     0.532000      32    17.024000
+NOR2_X1            NangateOpenCellLibrary     0.798000     256   204.287994
+XOR2_X1            NangateOpenCellLibrary     1.596000      30    47.879999
+-----------------------------------------------------------------------------
+Total 6 references                                   1274.406001
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       8     8.512000
+AOI21_X1           NangateOpenCellLibrary     1.064000       7     7.448000
+INV_X1             NangateOpenCellLibrary     0.532000      14     7.448000
+NAND2_X1           NangateOpenCellLibrary     0.798000      13    10.374000
+NOR2_X1            NangateOpenCellLibrary     0.798000      20    15.960000
+OAI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+XOR2_X1            NangateOpenCellLibrary     1.596000      13    20.747999
+-----------------------------------------------------------------------------
+Total 9 references                                     79.533999
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      30    31.920000
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_5_DW01_add_16    79.533999       1    79.533999 h
+FA_X1              NangateOpenCellLibrary     4.256000     210   893.760009 r
+INV_X1             NangateOpenCellLibrary     0.532000      32    17.024000
+NOR2_X1            NangateOpenCellLibrary     0.798000     256   204.287994
+XOR2_X1            NangateOpenCellLibrary     1.596000      30    47.879999
+-----------------------------------------------------------------------------
+Total 6 references                                   1274.406001
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_5_DW01_add_16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       8     8.512000
+AOI21_X1           NangateOpenCellLibrary     1.064000       7     7.448000
+INV_X1             NangateOpenCellLibrary     0.532000      14     7.448000
+NAND2_X1           NangateOpenCellLibrary     0.798000      13    10.374000
+NOR2_X1            NangateOpenCellLibrary     0.798000      20    15.960000
+OAI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+XOR2_X1            NangateOpenCellLibrary     1.596000      13    20.747999
+-----------------------------------------------------------------------------
+Total 9 references                                     79.533999
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      30    31.920000
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_6_DW01_add_17    79.533999       1    79.533999 h
+FA_X1              NangateOpenCellLibrary     4.256000     210   893.760009 r
+INV_X1             NangateOpenCellLibrary     0.532000      32    17.024000
+NOR2_X1            NangateOpenCellLibrary     0.798000     256   204.287994
+XOR2_X1            NangateOpenCellLibrary     1.596000      30    47.879999
+-----------------------------------------------------------------------------
+Total 6 references                                   1274.406001
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_6_DW01_add_17 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       8     8.512000
+AOI21_X1           NangateOpenCellLibrary     1.064000       7     7.448000
+INV_X1             NangateOpenCellLibrary     0.532000      14     7.448000
+NAND2_X1           NangateOpenCellLibrary     0.798000      13    10.374000
+NOR2_X1            NangateOpenCellLibrary     0.798000      20    15.960000
+OAI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+XOR2_X1            NangateOpenCellLibrary     1.596000      13    20.747999
+-----------------------------------------------------------------------------
+Total 9 references                                     79.533999
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      30    31.920000
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_7_DW01_add_18    79.533999       1    79.533999 h
+FA_X1              NangateOpenCellLibrary     4.256000     210   893.760009 r
+INV_X1             NangateOpenCellLibrary     0.532000      32    17.024000
+NOR2_X1            NangateOpenCellLibrary     0.798000     256   204.287994
+XOR2_X1            NangateOpenCellLibrary     1.596000      30    47.879999
+-----------------------------------------------------------------------------
+Total 6 references                                   1274.406001
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_7_DW01_add_18 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       8     8.512000
+AOI21_X1           NangateOpenCellLibrary     1.064000       7     7.448000
+INV_X1             NangateOpenCellLibrary     0.532000      14     7.448000
+NAND2_X1           NangateOpenCellLibrary     0.798000      13    10.374000
+NOR2_X1            NangateOpenCellLibrary     0.798000      20    15.960000
+OAI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+XNOR2_X1           NangateOpenCellLibrary     1.596000       1     1.596000
+XOR2_X1            NangateOpenCellLibrary     1.596000      13    20.747999
+-----------------------------------------------------------------------------
+Total 9 references                                     79.533999
+
+****************************************
+Design: DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000     160   170.240002
+AND3_X1            NangateOpenCellLibrary     1.330000       1     1.330000
+AOI21_X4           NangateOpenCellLibrary     3.458000       1     3.458000
+INV_X1             NangateOpenCellLibrary     0.532000       3     1.596000
+INV_X4             NangateOpenCellLibrary     1.330000       1     1.330000
+OAI21_X1           NangateOpenCellLibrary     1.064000       1     1.064000
+-----------------------------------------------------------------------------
+Total 6 references                                    179.018002
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND3_X4            NangateOpenCellLibrary     2.926000       1     2.926000
+BUF_X1             NangateOpenCellLibrary     0.798000       9     7.182000
+DFF_X1             NangateOpenCellLibrary     4.522000      64   289.407990 n
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_0_DW01_add_5   134.596001       1   134.596001 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_1_DW01_add_6   134.596001       1   134.596001 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_2_DW01_add_7   134.596001       1   134.596001 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_3_DW01_add_8   134.596001       1   134.596001 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_4_DW01_add_9   134.596001       1   134.596001 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_5_DW01_add_10   134.596001       1   134.596001 h
+MUX2_X1            NangateOpenCellLibrary     1.862000      64   119.167999
+NOR2_X1            NangateOpenCellLibrary     0.798000       2     1.596000
+-----------------------------------------------------------------------------
+Total 11 references                                  1227.855996
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_0_DW01_add_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      31   131.936001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 3 references                                    134.596001
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_1_DW01_add_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      31   131.936001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 3 references                                    134.596001
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_2_DW01_add_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      31   131.936001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 3 references                                    134.596001
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_3_DW01_add_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      31   131.936001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 3 references                                    134.596001
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_4_DW01_add_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      31   131.936001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 3 references                                    134.596001
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_5_DW01_add_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       1     1.064000
+FA_X1              NangateOpenCellLibrary     4.256000      31   131.936001 r
+XOR2_X1            NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 3 references                                    134.596001
+
+****************************************
+Design: DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X1             NangateOpenCellLibrary     0.798000       1     0.798000
+DSP_Shifters_comb_SIMD2_SIMD_Width64   186.200001       1   186.200001 h
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64  1275.469978       1  1275.469978 h, n
+DSP_Shifters_stg_2_SIMD2_SIMD_Width64   556.737989       1   556.737989 h, n
+-----------------------------------------------------------------------------
+Total 4 references                                   2019.205969
+
+****************************************
+Design: DSP_Shifters_comb_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000      66    70.224001
+AND3_X1            NangateOpenCellLibrary     1.330000       1     1.330000
+AOI21_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+AOI22_X1           NangateOpenCellLibrary     1.330000       2     2.660000
+INV_X1             NangateOpenCellLibrary     0.532000      29    15.428000
+NAND2_X1           NangateOpenCellLibrary     0.798000      29    23.141999
+NAND3_X1           NangateOpenCellLibrary     1.064000       6     6.384000
+NOR2_X1            NangateOpenCellLibrary     0.798000      18    14.364000
+OAI21_X1           NangateOpenCellLibrary     1.064000      15    15.960000
+OAI22_X1           NangateOpenCellLibrary     1.330000       4     5.320000
+OAI211_X1          NangateOpenCellLibrary     1.330000      18    23.940001
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+-----------------------------------------------------------------------------
+Total 12 references                                   186.200001
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND3_X1            NangateOpenCellLibrary     1.330000       1     1.330000
+AOI21_X1           NangateOpenCellLibrary     1.064000       1     1.064000
+BUF_X1             NangateOpenCellLibrary     0.798000      19    15.162000
+DFF_X1             NangateOpenCellLibrary     4.522000     128   578.815979 n
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_DW_rash_0   231.154000       1   231.154000 h
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_DW_rash_1   231.154000       1   231.154000 h
+INV_X1             NangateOpenCellLibrary     0.532000       4     2.128000
+INV_X4             NangateOpenCellLibrary     1.330000       2     2.660000
+MUX2_X1            NangateOpenCellLibrary     1.862000      70   130.339999
+NAND2_X1           NangateOpenCellLibrary     0.798000       6     4.788000
+NOR2_X1            NangateOpenCellLibrary     0.798000       5     3.990000
+OAI21_X1           NangateOpenCellLibrary     1.064000      64    68.096001
+OAI22_X1           NangateOpenCellLibrary     1.330000       2     2.660000
+OR2_X1             NangateOpenCellLibrary     1.064000       2     2.128000
+-----------------------------------------------------------------------------
+Total 14 references                                  1275.469978
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64_DW_rash_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       6     6.384000
+AOI22_X1           NangateOpenCellLibrary     1.330000      27    35.910001
+AOI221_X1          NangateOpenCellLibrary     1.596000      13    20.747999
+AOI222_X1          NangateOpenCellLibrary     2.128000      20    42.560000
+INV_X1             NangateOpenCellLibrary     0.532000      55    29.260000
+MUX2_X1            NangateOpenCellLibrary     1.862000       1     1.862000
+NAND2_X1           NangateOpenCellLibrary     0.798000       5     3.990000
+NOR2_X1            NangateOpenCellLibrary     0.798000      16    12.768000
+NOR2_X2            NangateOpenCellLibrary     1.330000       3     3.990000
+NOR3_X1            NangateOpenCellLibrary     1.064000       2     2.128000
+OAI22_X1           NangateOpenCellLibrary     1.330000       9    11.970000
+OAI221_X1          NangateOpenCellLibrary     1.596000      36    57.455998
+OAI222_X1          NangateOpenCellLibrary     2.128000       1     2.128000
+-----------------------------------------------------------------------------
+Total 13 references                                   231.154000
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64_DW_rash_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       6     6.384000
+AOI22_X1           NangateOpenCellLibrary     1.330000      27    35.910001
+AOI221_X1          NangateOpenCellLibrary     1.596000      13    20.747999
+AOI222_X1          NangateOpenCellLibrary     2.128000      20    42.560000
+INV_X1             NangateOpenCellLibrary     0.532000      55    29.260000
+MUX2_X1            NangateOpenCellLibrary     1.862000       1     1.862000
+NAND2_X1           NangateOpenCellLibrary     0.798000       5     3.990000
+NOR2_X1            NangateOpenCellLibrary     0.798000      16    12.768000
+NOR2_X2            NangateOpenCellLibrary     1.330000       3     3.990000
+NOR3_X1            NangateOpenCellLibrary     1.064000       2     2.128000
+OAI22_X1           NangateOpenCellLibrary     1.330000       9    11.970000
+OAI221_X1          NangateOpenCellLibrary     1.596000      36    57.455998
+OAI222_X1          NangateOpenCellLibrary     2.128000       1     2.128000
+-----------------------------------------------------------------------------
+Total 13 references                                   231.154000
+
+****************************************
+Design: DSP_Shifters_stg_2_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND3_X1            NangateOpenCellLibrary     1.330000       1     1.330000
+AOI21_X1           NangateOpenCellLibrary     1.064000      64    68.096001
+AOI211_X1          NangateOpenCellLibrary     1.330000       1     1.330000
+BUF_X1             NangateOpenCellLibrary     0.798000       9     7.182000
+DFF_X1             NangateOpenCellLibrary     4.522000      64   289.407990 n
+INV_X1             NangateOpenCellLibrary     0.532000      81    43.092000
+INV_X4             NangateOpenCellLibrary     1.330000       1     1.330000
+MUX2_X1            NangateOpenCellLibrary     1.862000      64   119.167999
+NAND2_X1           NangateOpenCellLibrary     0.798000       2     1.596000
+NOR2_X1            NangateOpenCellLibrary     0.798000       1     0.798000
+OAI21_X1           NangateOpenCellLibrary     1.064000       9     9.576000
+OAI221_X1          NangateOpenCellLibrary     1.596000       8    12.768000
+OR2_X1             NangateOpenCellLibrary     1.064000       1     1.064000
+-----------------------------------------------------------------------------
+Total 13 references                                   556.737989
+
+****************************************
+Design: DSP_pipeline_controller 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NangateOpenCellLibrary     1.064000       4     4.256000
+BUF_X1             NangateOpenCellLibrary     0.798000      11     8.778000
+DFFR_X1            NangateOpenCellLibrary     5.320000      16    85.120003 n
+DFFR_X2            NangateOpenCellLibrary     5.852000       1     5.852000 n
+DFF_X1             NangateOpenCellLibrary     4.522000      66   298.451989 n
+INV_X1             NangateOpenCellLibrary     0.532000      35    18.620000
+MUX2_X1            NangateOpenCellLibrary     1.862000      71   132.201999
+NAND2_X1           NangateOpenCellLibrary     0.798000       1     0.798000
+NAND4_X1           NangateOpenCellLibrary     1.330000       1     1.330000
+NOR2_X1            NangateOpenCellLibrary     0.798000       2     1.596000
+OAI221_X1          NangateOpenCellLibrary     1.596000       1     1.596000
+-----------------------------------------------------------------------------
+Total 11 references                                   558.599991
+1

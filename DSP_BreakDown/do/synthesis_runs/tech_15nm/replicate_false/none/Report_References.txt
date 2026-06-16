@@ -1,0 +1,1189 @@
+ 
+****************************************
+Report : reference
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Thu Jun  4 12:01:49 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64   308.379652       1   308.379652 h, n
+DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64   486.113277       1   486.113277 h, n
+DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64   136.200190       1   136.200190 h, n
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1   182.108165       1   182.108165 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64  1051.754491       1  1051.754491 h, n
+DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1    15.384576       1    15.384576 h, n
+DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64   707.395592       1   707.395592 h
+DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32  3657.646170       1  3657.646170 h, n
+DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64   562.839549       1   562.839549 h, n
+DSP_pipeline_controller         146.079741       1    146.079741  h, n
+-----------------------------------------------------------------------------
+Total 10 references                                  7253.901402
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_0    37.748737       1    37.748737 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_1    18.432001       1    18.432001 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_2    18.432001       1    18.432001 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_3    18.432001       1    18.432001 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_4    37.748737       1    37.748737 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_5    37.306369       1    37.306369 h
+AND4_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+AOI22_X1           NanGate_15nm_OCL     0.344064      64    22.020096
+BUF_X2             NanGate_15nm_OCL     0.245760      27     6.635520
+DFFSNQ_X1          NanGate_15nm_OCL     1.277952      64    81.788925 n
+INV_X1             NanGate_15nm_OCL     0.147456       6     0.884736
+NAND2_X1           NanGate_15nm_OCL     0.196608     128    25.165825
+NAND4_X1           NanGate_15nm_OCL     0.344064       1     0.344064
+NOR2_X1            NanGate_15nm_OCL     0.196608       4     0.786432
+NOR3_X1            NanGate_15nm_OCL     0.294912       2     0.589824
+NOR4_X1            NanGate_15nm_OCL     0.344064       1     0.344064
+OAI21_X1           NanGate_15nm_OCL     0.294912       3     0.884736
+OR3_X1             NanGate_15nm_OCL     0.393216       1     0.393216
+-----------------------------------------------------------------------------
+Total 18 references                                   308.379652
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      32    37.748737 r
+-----------------------------------------------------------------------------
+Total 1 references                                     37.748737
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+FA_X1              NanGate_15nm_OCL     1.179648      15    17.694721 r
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 3 references                                     18.432001
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+FA_X1              NanGate_15nm_OCL     1.179648      15    17.694721 r
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 3 references                                     18.432001
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+FA_X1              NanGate_15nm_OCL     1.179648      15    17.694721 r
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 3 references                                     18.432001
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      32    37.748737 r
+-----------------------------------------------------------------------------
+Total 1 references                                     37.748737
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+FA_X1              NanGate_15nm_OCL     1.179648      31    36.569089 r
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 3 references                                     37.306369
+
+****************************************
+Design: DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Adders_Sync_SIMD2_SIMD_Width64   333.348858       1   333.348858 h, n
+DSP_Adders_stg_1_SIMD2_SIMD_Width64    79.822849       1    79.822849 h, n
+DSP_Adders_stg_2_SIMD2_SIMD_Width64    72.941570       1    72.941570 h, n
+-----------------------------------------------------------------------------
+Total 3 references                                    486.113277
+
+****************************************
+Design: DSP_Adders_Sync_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NanGate_15nm_OCL     0.344064     118    40.599552
+BUF_X2             NanGate_15nm_OCL     0.245760      16     3.932160
+DFFSNQ_X1          NanGate_15nm_OCL     1.277952     182   232.587256 n
+INV_X1             NanGate_15nm_OCL     0.147456     164    24.182785
+NAND2_X1           NanGate_15nm_OCL     0.196608      64    12.582912
+NAND3_X1           NanGate_15nm_OCL     0.294912       1     0.294912
+OAI21_X1           NanGate_15nm_OCL     0.294912      65    19.169281
+-----------------------------------------------------------------------------
+Total 7 references                                    333.348858
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      18     5.308416
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_8     9.437184       1     9.437184 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_9     9.437184       1     9.437184 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_30     9.633792       1     9.633792 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_32     9.633792       1     9.633792 h
+FA_X1              NanGate_15nm_OCL     1.179648       2     2.359296 r
+LHQ_X1             NanGate_15nm_OCL     0.688128      40    27.525120 n
+OR2_X1             NanGate_15nm_OCL     0.294912       1     0.294912
+XOR2_X1            NanGate_15nm_OCL     0.442368      14     6.193152
+-----------------------------------------------------------------------------
+Total 9 references                                     79.822849
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648       8     9.437184 r
+-----------------------------------------------------------------------------
+Total 1 references                                      9.437184
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648       8     9.437184 r
+-----------------------------------------------------------------------------
+Total 1 references                                      9.437184
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_30 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648       7     8.257536 r
+INV_X1             NanGate_15nm_OCL     0.147456       2     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       1     0.196608
+XOR2_X1            NanGate_15nm_OCL     0.442368       2     0.884736
+-----------------------------------------------------------------------------
+Total 4 references                                      9.633792
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648       7     8.257536 r
+INV_X1             NanGate_15nm_OCL     0.147456       2     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       1     0.196608
+XOR2_X1            NanGate_15nm_OCL     0.442368       2     0.884736
+-----------------------------------------------------------------------------
+Total 4 references                                      9.633792
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      41    12.091392
+BUF_X2             NanGate_15nm_OCL     0.245760       5     1.228800
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_6     9.437184       1     9.437184 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_7     9.437184       1     9.437184 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_13     9.633792       1     9.633792 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_15     9.633792       1     9.633792 h
+FA_X1              NanGate_15nm_OCL     1.179648       2     2.359296 r
+INV_X1             NanGate_15nm_OCL     0.147456       1     0.147456
+LHQ_X1             NanGate_15nm_OCL     0.688128      18    12.386304 n
+NOR2_X1            NanGate_15nm_OCL     0.196608       2     0.393216
+XOR2_X1            NanGate_15nm_OCL     0.442368      14     6.193152
+-----------------------------------------------------------------------------
+Total 11 references                                    72.941570
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648       8     9.437184 r
+-----------------------------------------------------------------------------
+Total 1 references                                      9.437184
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648       8     9.437184 r
+-----------------------------------------------------------------------------
+Total 1 references                                      9.437184
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648       7     8.257536 r
+INV_X1             NanGate_15nm_OCL     0.147456       2     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       1     0.196608
+XOR2_X1            NanGate_15nm_OCL     0.442368       2     0.884736
+-----------------------------------------------------------------------------
+Total 4 references                                      9.633792
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648       7     8.257536 r
+INV_X1             NanGate_15nm_OCL     0.147456       2     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       1     0.196608
+XOR2_X1            NanGate_15nm_OCL     0.442368       2     0.884736
+-----------------------------------------------------------------------------
+Total 4 references                                      9.633792
+
+****************************************
+Design: DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Comparators_Unit_SIMD2_SIMD_Width64   136.200190       1   136.200190 h, n
+-----------------------------------------------------------------------------
+Total 1 references                                    136.200190
+
+****************************************
+Design: DSP_Comparators_Unit_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      11     3.244032
+AOI21_X1           NanGate_15nm_OCL     0.294912       2     0.589824
+AOI22_X1           NanGate_15nm_OCL     0.344064      68    23.396352
+BUF_X2             NanGate_15nm_OCL     0.245760       1     0.245760
+DFFSNQ_X1          NanGate_15nm_OCL     1.277952      64    81.788925 n
+INV_X1             NanGate_15nm_OCL     0.147456      82    12.091392
+NAND2_X1           NanGate_15nm_OCL     0.196608      21     4.128768
+NAND4_X1           NanGate_15nm_OCL     0.344064       1     0.344064
+NOR2_X1            NanGate_15nm_OCL     0.196608      11     2.162688
+NOR3_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+OAI21_X1           NanGate_15nm_OCL     0.294912       5     1.474560
+OAI22_X1           NanGate_15nm_OCL     0.344064      11     3.784704
+XOR2_X1            NanGate_15nm_OCL     0.442368       6     2.654208
+-----------------------------------------------------------------------------
+Total 13 references                                   136.200190
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      34    10.027008
+AND3_X1            NanGate_15nm_OCL     0.393216       1     0.393216
+AND4_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+AOI21_X1           NanGate_15nm_OCL     0.294912      11     3.244032
+AOI22_X1           NanGate_15nm_OCL     0.344064      69    23.740416
+BUF_X2             NanGate_15nm_OCL     0.245760      14     3.440640
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_0_DW01_add_17    12.288000       1    12.288000 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_1_DW01_add_18    12.288000       1    12.288000 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_19    12.288000       1    12.288000 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_0     8.552448       1     8.552448 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_1     9.289728       1     9.289728 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_2     9.289728       1     9.289728 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_3     9.289728       1     9.289728 h
+INV_X1             NanGate_15nm_OCL     0.147456      92    13.565952
+NAND2_X1           NanGate_15nm_OCL     0.196608      84    16.515073
+NAND3_X1           NanGate_15nm_OCL     0.294912      10     2.949120
+NAND4_X1           NanGate_15nm_OCL     0.344064      12     4.128768
+NOR2_X1            NanGate_15nm_OCL     0.196608      37     7.274496
+NOR3_X1            NanGate_15nm_OCL     0.294912      20     5.898240
+NOR4_X1            NanGate_15nm_OCL     0.344064       9     3.096576
+OAI21_X1           NanGate_15nm_OCL     0.294912       9     2.654208
+OAI22_X1           NanGate_15nm_OCL     0.344064      12     4.128768
+OR2_X1             NanGate_15nm_OCL     0.294912      19     5.603328
+OR3_X1             NanGate_15nm_OCL     0.393216       1     0.393216
+XNOR2_X1           NanGate_15nm_OCL     0.442368       3     1.327104
+-----------------------------------------------------------------------------
+Total 25 references                                   182.108165
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_0_DW01_add_17 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X1           NanGate_15nm_OCL     0.294912       9     2.654208
+AOI22_X1           NanGate_15nm_OCL     0.344064       1     0.344064
+FA_X1              NanGate_15nm_OCL     1.179648       1     1.179648 r
+INV_X1             NanGate_15nm_OCL     0.147456      23     3.391488
+OAI21_X1           NanGate_15nm_OCL     0.294912      16     4.718592
+-----------------------------------------------------------------------------
+Total 5 references                                     12.288000
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_1_DW01_add_18 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X1           NanGate_15nm_OCL     0.294912       9     2.654208
+AOI22_X1           NanGate_15nm_OCL     0.344064       1     0.344064
+FA_X1              NanGate_15nm_OCL     1.179648       1     1.179648 r
+INV_X1             NanGate_15nm_OCL     0.147456      23     3.391488
+OAI21_X1           NanGate_15nm_OCL     0.294912      16     4.718592
+-----------------------------------------------------------------------------
+Total 5 references                                     12.288000
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_19 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X1           NanGate_15nm_OCL     0.294912       9     2.654208
+AOI22_X1           NanGate_15nm_OCL     0.344064       1     0.344064
+FA_X1              NanGate_15nm_OCL     1.179648       1     1.179648 r
+INV_X1             NanGate_15nm_OCL     0.147456      23     3.391488
+OAI21_X1           NanGate_15nm_OCL     0.294912      16     4.718592
+-----------------------------------------------------------------------------
+Total 5 references                                     12.288000
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X1           NanGate_15nm_OCL     0.294912       5     1.474560
+INV_X1             NanGate_15nm_OCL     0.147456      12     1.769472
+NAND2_X1           NanGate_15nm_OCL     0.196608       5     0.983040
+NOR2_X1            NanGate_15nm_OCL     0.196608       7     1.376256
+OAI21_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+OR2_X1             NanGate_15nm_OCL     0.294912       1     0.294912
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 8 references                                      8.552448
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X1           NanGate_15nm_OCL     0.294912       4     1.179648
+INV_X1             NanGate_15nm_OCL     0.147456      19     2.801664
+NAND2_X1           NanGate_15nm_OCL     0.196608       3     0.589824
+NOR2_X1            NanGate_15nm_OCL     0.196608       9     1.769472
+OAI21_X1           NanGate_15nm_OCL     0.294912       9     2.654208
+OR2_X1             NanGate_15nm_OCL     0.294912       1     0.294912
+-----------------------------------------------------------------------------
+Total 6 references                                      9.289728
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X1           NanGate_15nm_OCL     0.294912       4     1.179648
+INV_X1             NanGate_15nm_OCL     0.147456      19     2.801664
+NAND2_X1           NanGate_15nm_OCL     0.196608       3     0.589824
+NOR2_X1            NanGate_15nm_OCL     0.196608       9     1.769472
+OAI21_X1           NanGate_15nm_OCL     0.294912       9     2.654208
+OR2_X1             NanGate_15nm_OCL     0.294912       1     0.294912
+-----------------------------------------------------------------------------
+Total 6 references                                      9.289728
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI21_X1           NanGate_15nm_OCL     0.294912       4     1.179648
+INV_X1             NanGate_15nm_OCL     0.147456      19     2.801664
+NAND2_X1           NanGate_15nm_OCL     0.196608       3     0.589824
+NOR2_X1            NanGate_15nm_OCL     0.196608       9     1.769472
+OAI21_X1           NanGate_15nm_OCL     0.294912       9     2.654208
+OR2_X1             NanGate_15nm_OCL     0.294912       1     0.294912
+-----------------------------------------------------------------------------
+Total 6 references                                      9.289728
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      10     2.949120
+AND3_X2            NanGate_15nm_OCL     0.393216       2     0.786432
+AND4_X1            NanGate_15nm_OCL     0.442368       3     1.327104
+AOI21_X1           NanGate_15nm_OCL     0.294912      15     4.423680
+AOI22_X1           NanGate_15nm_OCL     0.344064     216    74.317823
+BUF_X2             NanGate_15nm_OCL     0.245760      74    18.186240
+DFFRNQ_X1          NanGate_15nm_OCL     1.277952       6     7.667712 n
+DFFSNQ_X1          NanGate_15nm_OCL     1.277952     354   452.394992 n
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_0_DW01_add_10    37.748737       1    37.748737 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_1_DW01_add_11    37.748737       1    37.748737 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_2_DW01_add_12    16.515073       1    16.515073 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_3_DW01_add_20    36.765697       1    36.765697 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_21    36.765697       1    36.765697 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_0_DW01_sub_3    19.464193       1    19.464193 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_1_DW01_sub_4    19.906561       1    19.906561 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_2_DW01_sub_5    19.906561       1    19.906561 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_3_DW01_sub_6    19.464193       1    19.464193 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_0     9.142272       1     9.142272 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1     9.142272       1     9.142272 h
+INV_X1             NanGate_15nm_OCL     0.147456      84    12.386304
+MUX2_X1            NanGate_15nm_OCL     0.638976     106    67.731454
+NAND2_X1           NanGate_15nm_OCL     0.196608     526   103.415812
+NAND3_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+NAND4_X1           NanGate_15nm_OCL     0.344064       8     2.752512
+NOR2_X1            NanGate_15nm_OCL     0.196608      24     4.718592
+NOR3_X1            NanGate_15nm_OCL     0.294912       6     1.769472
+NOR4_X1            NanGate_15nm_OCL     0.344064      24     8.257536
+OAI21_X1           NanGate_15nm_OCL     0.294912      27     7.962624
+OR2_X1             NanGate_15nm_OCL     0.294912      54    15.925249
+OR4_X1             NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 30 references                                  1051.754491
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_0_DW01_add_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      32    37.748737 r
+-----------------------------------------------------------------------------
+Total 1 references                                     37.748737
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_1_DW01_add_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      32    37.748737 r
+-----------------------------------------------------------------------------
+Total 1 references                                     37.748737
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_2_DW01_add_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      14    16.515073 r
+-----------------------------------------------------------------------------
+Total 1 references                                     16.515073
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_3_DW01_add_20 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      30    35.389441 r
+INV_X1             NanGate_15nm_OCL     0.147456       2     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       1     0.196608
+XOR2_X1            NanGate_15nm_OCL     0.442368       2     0.884736
+-----------------------------------------------------------------------------
+Total 4 references                                     36.765697
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_21 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      30    35.389441 r
+INV_X1             NanGate_15nm_OCL     0.147456       2     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       1     0.196608
+XOR2_X1            NanGate_15nm_OCL     0.442368       2     0.884736
+-----------------------------------------------------------------------------
+Total 4 references                                     36.765697
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_0_DW01_sub_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      14    16.515073 r
+INV_X1             NanGate_15nm_OCL     0.147456      15     2.211840
+OR2_X1             NanGate_15nm_OCL     0.294912       1     0.294912
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 4 references                                     19.464193
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_1_DW01_sub_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      15    17.694721 r
+INV_X1             NanGate_15nm_OCL     0.147456      15     2.211840
+-----------------------------------------------------------------------------
+Total 2 references                                     19.906561
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_2_DW01_sub_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      15    17.694721 r
+INV_X1             NanGate_15nm_OCL     0.147456      15     2.211840
+-----------------------------------------------------------------------------
+Total 2 references                                     19.906561
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_3_DW01_sub_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      14    16.515073 r
+INV_X1             NanGate_15nm_OCL     0.147456      15     2.211840
+OR2_X1             NanGate_15nm_OCL     0.294912       1     0.294912
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 4 references                                     19.464193
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      31     9.142272
+-----------------------------------------------------------------------------
+Total 1 references                                      9.142272
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      31     9.142272
+-----------------------------------------------------------------------------
+Total 1 references                                      9.142272
+
+****************************************
+Design: DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_FU_Handler_MC                 8.994816       1      8.994816  h
+DSP_FU_enabler_sync               6.389760       1      6.389760  h, n
+-----------------------------------------------------------------------------
+Total 2 references                                     15.384576
+
+****************************************
+Design: DSP_FU_Handler_MC 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+AOI21_X1           NanGate_15nm_OCL     0.294912       1     0.294912
+INV_X1             NanGate_15nm_OCL     0.147456       7     1.032192
+NAND2_X1           NanGate_15nm_OCL     0.196608       9     1.769472
+NAND3_X1           NanGate_15nm_OCL     0.294912       1     0.294912
+NAND4_X1           NanGate_15nm_OCL     0.344064       2     0.688128
+NOR2_X1            NanGate_15nm_OCL     0.196608       6     1.179648
+NOR3_X1            NanGate_15nm_OCL     0.294912       2     0.589824
+NOR4_X1            NanGate_15nm_OCL     0.344064       1     0.344064
+OAI21_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+OR2_X1             NanGate_15nm_OCL     0.294912       1     0.294912
+OR4_X1             NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 12 references                                     8.994816
+
+****************************************
+Design: DSP_FU_enabler_sync 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DFFRNQ_X1          NanGate_15nm_OCL     1.277952       5     6.389760 n
+-----------------------------------------------------------------------------
+Total 1 references                                      6.389760
+
+****************************************
+Design: DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64   510.787591       1   510.787591 h
+DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64   196.608002       1   196.608002 h
+-----------------------------------------------------------------------------
+Total 2 references                                    707.395592
+
+****************************************
+Design: DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      32     9.437184
+AND3_X1            NanGate_15nm_OCL     0.393216       1     0.393216
+AND3_X2            NanGate_15nm_OCL     0.393216       1     0.393216
+AOI21_X1           NanGate_15nm_OCL     0.294912     105    30.965761
+AOI22_X1           NanGate_15nm_OCL     0.344064     480   165.150719
+BUF_X2             NanGate_15nm_OCL     0.245760     141    34.652159
+INV_X1             NanGate_15nm_OCL     0.147456     425    62.668802
+NAND2_X1           NanGate_15nm_OCL     0.196608     327    64.290818
+NAND3_X1           NanGate_15nm_OCL     0.294912      28     8.257536
+NOR2_X1            NanGate_15nm_OCL     0.196608     148    29.097985
+NOR3_X1            NanGate_15nm_OCL     0.294912       2     0.589824
+OAI21_X1           NanGate_15nm_OCL     0.294912     202    59.572226
+OAI22_X1           NanGate_15nm_OCL     0.344064     128    44.040192
+OR2_X1             NanGate_15nm_OCL     0.294912       3     0.884736
+OR3_X1             NanGate_15nm_OCL     0.393216       1     0.393216
+-----------------------------------------------------------------------------
+Total 15 references                                   510.787591
+
+****************************************
+Design: DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       3     0.884736
+AND3_X1            NanGate_15nm_OCL     0.393216       1     0.393216
+AOI21_X1           NanGate_15nm_OCL     0.294912      49    14.450689
+AOI22_X1           NanGate_15nm_OCL     0.344064     136    46.792704
+BUF_X2             NanGate_15nm_OCL     0.245760      75    18.432000
+INV_X1             NanGate_15nm_OCL     0.147456      94    13.860864
+NAND2_X1           NanGate_15nm_OCL     0.196608      31     6.094848
+NAND3_X1           NanGate_15nm_OCL     0.294912      37    10.911744
+NAND4_X1           NanGate_15nm_OCL     0.344064      32    11.010048
+NOR2_X1            NanGate_15nm_OCL     0.196608      92    18.087937
+NOR3_X1            NanGate_15nm_OCL     0.294912       8     2.359296
+NOR4_X1            NanGate_15nm_OCL     0.344064       1     0.344064
+OAI21_X1           NanGate_15nm_OCL     0.294912       9     2.654208
+OAI22_X1           NanGate_15nm_OCL     0.344064      89    30.621696
+OR2_X1             NanGate_15nm_OCL     0.294912      16     4.718592
+OR3_X1             NanGate_15nm_OCL     0.393216       1     0.393216
+OR4_X1             NanGate_15nm_OCL     0.442368      32    14.155776
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 18 references                                   196.608002
+
+****************************************
+Design: DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64  3264.184403       1  3264.184403 h, n
+DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64    53.379074       1    53.379074 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64   340.082693       1   340.082693 h, n
+-----------------------------------------------------------------------------
+Total 3 references                                   3657.646170
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      32     9.437184
+AOI22_X1           NanGate_15nm_OCL     0.344064     256    88.080383
+BUF_X2             NanGate_15nm_OCL     0.245760      18     4.423680
+DFFSNQ_X1          NanGate_15nm_OCL     1.277952     256   327.155701 n
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_0_DW02_mult_2   349.175820       1   349.175820 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_1_DW02_mult_3   349.175820       1   349.175820 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_2_DW02_mult_4   349.175820       1   349.175820 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_3_DW02_mult_5   349.175820       1   349.175820 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_4_DW02_mult_6   349.175820       1   349.175820 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_5_DW02_mult_7   349.175820       1   349.175820 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6_DW02_mult_8   349.175820       1   349.175820 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_7_DW02_mult_9   349.175820       1   349.175820 h
+INV_X1             NanGate_15nm_OCL     0.147456     278    40.992769
+NAND3_X1           NanGate_15nm_OCL     0.294912       1     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       2     0.393216
+-----------------------------------------------------------------------------
+Total 15 references                                  3264.184403
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_0_DW02_mult_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      15     4.423680
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_22    21.331969       1    21.331969 h
+FA_X1              NanGate_15nm_OCL     1.179648     210   247.726089 r
+INV_X1             NanGate_15nm_OCL     0.147456      62     9.142272
+NOR2_X1            NanGate_15nm_OCL     0.196608     271    53.280770
+XOR2_X1            NanGate_15nm_OCL     0.442368      30    13.271040
+-----------------------------------------------------------------------------
+Total 6 references                                    349.175820
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_22 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       7     2.064384
+AOI21_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+INV_X1             NanGate_15nm_OCL     0.147456      16     2.359296
+NAND2_X1           NanGate_15nm_OCL     0.196608      13     2.555904
+NOR2_X1            NanGate_15nm_OCL     0.196608      22     4.325376
+OAI21_X1           NanGate_15nm_OCL     0.294912       7     2.064384
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+XOR2_X1            NanGate_15nm_OCL     0.442368      13     5.750784
+-----------------------------------------------------------------------------
+Total 8 references                                     21.331969
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_1_DW02_mult_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      15     4.423680
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_23    21.331969       1    21.331969 h
+FA_X1              NanGate_15nm_OCL     1.179648     210   247.726089 r
+INV_X1             NanGate_15nm_OCL     0.147456      62     9.142272
+NOR2_X1            NanGate_15nm_OCL     0.196608     271    53.280770
+XOR2_X1            NanGate_15nm_OCL     0.442368      30    13.271040
+-----------------------------------------------------------------------------
+Total 6 references                                    349.175820
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_23 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       7     2.064384
+AOI21_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+INV_X1             NanGate_15nm_OCL     0.147456      16     2.359296
+NAND2_X1           NanGate_15nm_OCL     0.196608      13     2.555904
+NOR2_X1            NanGate_15nm_OCL     0.196608      22     4.325376
+OAI21_X1           NanGate_15nm_OCL     0.294912       7     2.064384
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+XOR2_X1            NanGate_15nm_OCL     0.442368      13     5.750784
+-----------------------------------------------------------------------------
+Total 8 references                                     21.331969
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_2_DW02_mult_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      15     4.423680
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_24    21.331969       1    21.331969 h
+FA_X1              NanGate_15nm_OCL     1.179648     210   247.726089 r
+INV_X1             NanGate_15nm_OCL     0.147456      62     9.142272
+NOR2_X1            NanGate_15nm_OCL     0.196608     271    53.280770
+XOR2_X1            NanGate_15nm_OCL     0.442368      30    13.271040
+-----------------------------------------------------------------------------
+Total 6 references                                    349.175820
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_24 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       7     2.064384
+AOI21_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+INV_X1             NanGate_15nm_OCL     0.147456      16     2.359296
+NAND2_X1           NanGate_15nm_OCL     0.196608      13     2.555904
+NOR2_X1            NanGate_15nm_OCL     0.196608      22     4.325376
+OAI21_X1           NanGate_15nm_OCL     0.294912       7     2.064384
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+XOR2_X1            NanGate_15nm_OCL     0.442368      13     5.750784
+-----------------------------------------------------------------------------
+Total 8 references                                     21.331969
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_3_DW02_mult_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      15     4.423680
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_3_DW01_add_25    21.331969       1    21.331969 h
+FA_X1              NanGate_15nm_OCL     1.179648     210   247.726089 r
+INV_X1             NanGate_15nm_OCL     0.147456      62     9.142272
+NOR2_X1            NanGate_15nm_OCL     0.196608     271    53.280770
+XOR2_X1            NanGate_15nm_OCL     0.442368      30    13.271040
+-----------------------------------------------------------------------------
+Total 6 references                                    349.175820
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_3_DW01_add_25 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       7     2.064384
+AOI21_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+INV_X1             NanGate_15nm_OCL     0.147456      16     2.359296
+NAND2_X1           NanGate_15nm_OCL     0.196608      13     2.555904
+NOR2_X1            NanGate_15nm_OCL     0.196608      22     4.325376
+OAI21_X1           NanGate_15nm_OCL     0.294912       7     2.064384
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+XOR2_X1            NanGate_15nm_OCL     0.442368      13     5.750784
+-----------------------------------------------------------------------------
+Total 8 references                                     21.331969
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_4_DW02_mult_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      15     4.423680
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_26    21.331969       1    21.331969 h
+FA_X1              NanGate_15nm_OCL     1.179648     210   247.726089 r
+INV_X1             NanGate_15nm_OCL     0.147456      62     9.142272
+NOR2_X1            NanGate_15nm_OCL     0.196608     271    53.280770
+XOR2_X1            NanGate_15nm_OCL     0.442368      30    13.271040
+-----------------------------------------------------------------------------
+Total 6 references                                    349.175820
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_26 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       7     2.064384
+AOI21_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+INV_X1             NanGate_15nm_OCL     0.147456      16     2.359296
+NAND2_X1           NanGate_15nm_OCL     0.196608      13     2.555904
+NOR2_X1            NanGate_15nm_OCL     0.196608      22     4.325376
+OAI21_X1           NanGate_15nm_OCL     0.294912       7     2.064384
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+XOR2_X1            NanGate_15nm_OCL     0.442368      13     5.750784
+-----------------------------------------------------------------------------
+Total 8 references                                     21.331969
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_5_DW02_mult_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      15     4.423680
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_5_DW01_add_27    21.331969       1    21.331969 h
+FA_X1              NanGate_15nm_OCL     1.179648     210   247.726089 r
+INV_X1             NanGate_15nm_OCL     0.147456      62     9.142272
+NOR2_X1            NanGate_15nm_OCL     0.196608     271    53.280770
+XOR2_X1            NanGate_15nm_OCL     0.442368      30    13.271040
+-----------------------------------------------------------------------------
+Total 6 references                                    349.175820
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_5_DW01_add_27 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       7     2.064384
+AOI21_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+INV_X1             NanGate_15nm_OCL     0.147456      16     2.359296
+NAND2_X1           NanGate_15nm_OCL     0.196608      13     2.555904
+NOR2_X1            NanGate_15nm_OCL     0.196608      22     4.325376
+OAI21_X1           NanGate_15nm_OCL     0.294912       7     2.064384
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+XOR2_X1            NanGate_15nm_OCL     0.442368      13     5.750784
+-----------------------------------------------------------------------------
+Total 8 references                                     21.331969
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6_DW02_mult_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      15     4.423680
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_6_DW01_add_28    21.331969       1    21.331969 h
+FA_X1              NanGate_15nm_OCL     1.179648     210   247.726089 r
+INV_X1             NanGate_15nm_OCL     0.147456      62     9.142272
+NOR2_X1            NanGate_15nm_OCL     0.196608     271    53.280770
+XOR2_X1            NanGate_15nm_OCL     0.442368      30    13.271040
+-----------------------------------------------------------------------------
+Total 6 references                                    349.175820
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_6_DW01_add_28 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       7     2.064384
+AOI21_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+INV_X1             NanGate_15nm_OCL     0.147456      16     2.359296
+NAND2_X1           NanGate_15nm_OCL     0.196608      13     2.555904
+NOR2_X1            NanGate_15nm_OCL     0.196608      22     4.325376
+OAI21_X1           NanGate_15nm_OCL     0.294912       7     2.064384
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+XOR2_X1            NanGate_15nm_OCL     0.442368      13     5.750784
+-----------------------------------------------------------------------------
+Total 8 references                                     21.331969
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_7_DW02_mult_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      15     4.423680
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_7_DW01_add_29    21.331969       1    21.331969 h
+FA_X1              NanGate_15nm_OCL     1.179648     210   247.726089 r
+INV_X1             NanGate_15nm_OCL     0.147456      62     9.142272
+NOR2_X1            NanGate_15nm_OCL     0.196608     271    53.280770
+XOR2_X1            NanGate_15nm_OCL     0.442368      30    13.271040
+-----------------------------------------------------------------------------
+Total 6 references                                    349.175820
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_7_DW01_add_29 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       7     2.064384
+AOI21_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+INV_X1             NanGate_15nm_OCL     0.147456      16     2.359296
+NAND2_X1           NanGate_15nm_OCL     0.196608      13     2.555904
+NOR2_X1            NanGate_15nm_OCL     0.196608      22     4.325376
+OAI21_X1           NanGate_15nm_OCL     0.294912       7     2.064384
+XNOR2_X1           NanGate_15nm_OCL     0.442368       1     0.442368
+XOR2_X1            NanGate_15nm_OCL     0.442368      13     5.750784
+-----------------------------------------------------------------------------
+Total 8 references                                     21.331969
+
+****************************************
+Design: DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912     161    47.480834
+BUF_X2             NanGate_15nm_OCL     0.245760      20     4.915200
+INV_X1             NanGate_15nm_OCL     0.147456       2     0.294912
+NAND2_X1           NanGate_15nm_OCL     0.196608       1     0.196608
+NOR2_X1            NanGate_15nm_OCL     0.196608       1     0.196608
+OAI21_X1           NanGate_15nm_OCL     0.294912       1     0.294912
+-----------------------------------------------------------------------------
+Total 6 references                                     53.379074
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI22_X1           NanGate_15nm_OCL     0.344064      64    22.020096
+BUF_X2             NanGate_15nm_OCL     0.245760       6     1.474560
+DFFSNQ_X1          NanGate_15nm_OCL     1.277952      64    81.788925 n
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_0_DW01_add_34    37.306369       1    37.306369 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_1_DW01_add_35    37.502977       1    37.502977 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_2_DW01_add_36    37.306369       1    37.306369 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_3_DW01_add_37    37.306369       1    37.306369 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_4_DW01_add_38    37.502977       1    37.502977 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_5_DW01_add_39    37.306369       1    37.306369 h
+INV_X1             NanGate_15nm_OCL     0.147456      67     9.879552
+NAND3_X1           NanGate_15nm_OCL     0.294912       1     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       2     0.393216
+-----------------------------------------------------------------------------
+Total 12 references                                   340.082693
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_0_DW01_add_34 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+FA_X1              NanGate_15nm_OCL     1.179648      31    36.569089 r
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 3 references                                     37.306369
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_1_DW01_add_35 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      31    36.569089 r
+INV_X1             NanGate_15nm_OCL     0.147456       2     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       1     0.196608
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 4 references                                     37.502977
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_2_DW01_add_36 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+FA_X1              NanGate_15nm_OCL     1.179648      31    36.569089 r
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 3 references                                     37.306369
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_3_DW01_add_37 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+FA_X1              NanGate_15nm_OCL     1.179648      31    36.569089 r
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 3 references                                     37.306369
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_4_DW01_add_38 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+FA_X1              NanGate_15nm_OCL     1.179648      31    36.569089 r
+INV_X1             NanGate_15nm_OCL     0.147456       2     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       1     0.196608
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 4 references                                     37.502977
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_5_DW01_add_39 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+FA_X1              NanGate_15nm_OCL     1.179648      31    36.569089 r
+XOR2_X1            NanGate_15nm_OCL     0.442368       1     0.442368
+-----------------------------------------------------------------------------
+Total 3 references                                     37.306369
+
+****************************************
+Design: DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUF_X2             NanGate_15nm_OCL     0.245760       1     0.245760
+DSP_Shifters_comb_SIMD2_SIMD_Width64    56.770562       1    56.770562 h
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64   363.577341       1   363.577341 h, n
+DSP_Shifters_stg_2_SIMD2_SIMD_Width64   142.245886       1   142.245886 h, n
+-----------------------------------------------------------------------------
+Total 4 references                                    562.839549
+
+****************************************
+Design: DSP_Shifters_comb_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      69    20.348929
+AND3_X1            NanGate_15nm_OCL     0.393216       1     0.393216
+AOI21_X1           NanGate_15nm_OCL     0.294912      31     9.142272
+AOI22_X1           NanGate_15nm_OCL     0.344064       5     1.720320
+INV_X1             NanGate_15nm_OCL     0.147456      30     4.423680
+NAND2_X1           NanGate_15nm_OCL     0.196608      33     6.488064
+NAND3_X1           NanGate_15nm_OCL     0.294912      12     3.538944
+NOR2_X1            NanGate_15nm_OCL     0.196608      24     4.718592
+NOR3_X1            NanGate_15nm_OCL     0.294912       3     0.884736
+NOR4_X1            NanGate_15nm_OCL     0.344064       1     0.344064
+OAI21_X1           NanGate_15nm_OCL     0.294912       8     2.359296
+OAI22_X1           NanGate_15nm_OCL     0.344064       7     2.408448
+-----------------------------------------------------------------------------
+Total 12 references                                    56.770562
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       2     0.589824
+AOI22_X1           NanGate_15nm_OCL     0.344064      66    22.708224
+BUF_X2             NanGate_15nm_OCL     0.245760       8     1.966080
+DFFSNQ_X1          NanGate_15nm_OCL     1.277952     128   163.577850 n
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_DW_rash_0    66.846721       1    66.846721 h
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_DW_rash_1    66.846721       1    66.846721 h
+INV_X1             NanGate_15nm_OCL     0.147456      77    11.354112
+NAND2_X1           NanGate_15nm_OCL     0.196608     133    26.148865
+NAND3_X1           NanGate_15nm_OCL     0.294912       1     0.294912
+NOR2_X1            NanGate_15nm_OCL     0.196608       2     0.393216
+OAI21_X1           NanGate_15nm_OCL     0.294912       3     0.884736
+OAI22_X1           NanGate_15nm_OCL     0.344064       4     1.376256
+OR2_X1             NanGate_15nm_OCL     0.294912       2     0.589824
+-----------------------------------------------------------------------------
+Total 13 references                                   363.577341
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64_DW_rash_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      12     3.538944
+AOI21_X1           NanGate_15nm_OCL     0.294912      11     3.244032
+AOI22_X1           NanGate_15nm_OCL     0.344064      94    32.342016
+BUF_X2             NanGate_15nm_OCL     0.245760       2     0.491520
+INV_X1             NanGate_15nm_OCL     0.147456      39     5.750784
+MUX2_X1            NanGate_15nm_OCL     0.638976       1     0.638976
+NAND2_X1           NanGate_15nm_OCL     0.196608      50     9.830400
+NAND3_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+NAND4_X1           NanGate_15nm_OCL     0.344064       1     0.344064
+NOR2_X1            NanGate_15nm_OCL     0.196608      17     3.342336
+NOR3_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+OAI21_X1           NanGate_15nm_OCL     0.294912       5     1.474560
+OAI22_X1           NanGate_15nm_OCL     0.344064      11     3.784704
+-----------------------------------------------------------------------------
+Total 13 references                                    66.846721
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64_DW_rash_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912      12     3.538944
+AOI21_X1           NanGate_15nm_OCL     0.294912      11     3.244032
+AOI22_X1           NanGate_15nm_OCL     0.344064      94    32.342016
+BUF_X2             NanGate_15nm_OCL     0.245760       2     0.491520
+INV_X1             NanGate_15nm_OCL     0.147456      39     5.750784
+MUX2_X1            NanGate_15nm_OCL     0.638976       1     0.638976
+NAND2_X1           NanGate_15nm_OCL     0.196608      50     9.830400
+NAND3_X1           NanGate_15nm_OCL     0.294912       6     1.769472
+NAND4_X1           NanGate_15nm_OCL     0.344064       1     0.344064
+NOR2_X1            NanGate_15nm_OCL     0.196608      17     3.342336
+NOR3_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+OAI21_X1           NanGate_15nm_OCL     0.294912       5     1.474560
+OAI22_X1           NanGate_15nm_OCL     0.344064      11     3.784704
+-----------------------------------------------------------------------------
+Total 13 references                                    66.846721
+
+****************************************
+Design: DSP_Shifters_stg_2_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+AOI21_X1           NanGate_15nm_OCL     0.294912       1     0.294912
+AOI22_X1           NanGate_15nm_OCL     0.344064      64    22.020096
+BUF_X2             NanGate_15nm_OCL     0.245760       7     1.720320
+DFFSNQ_X1          NanGate_15nm_OCL     1.277952      64    81.788925 n
+INV_X1             NanGate_15nm_OCL     0.147456      12     1.769472
+NAND2_X1           NanGate_15nm_OCL     0.196608     145    28.508161
+NAND3_X1           NanGate_15nm_OCL     0.294912       8     2.359296
+NAND4_X1           NanGate_15nm_OCL     0.344064       1     0.344064
+NOR2_X1            NanGate_15nm_OCL     0.196608       1     0.196608
+OAI21_X1           NanGate_15nm_OCL     0.294912       9     2.654208
+OR2_X1             NanGate_15nm_OCL     0.294912       1     0.294912
+-----------------------------------------------------------------------------
+Total 12 references                                   142.245886
+
+****************************************
+Design: DSP_pipeline_controller 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2_X1            NanGate_15nm_OCL     0.294912       2     0.589824
+AOI22_X1           NanGate_15nm_OCL     0.344064      69    23.740416
+BUF_X2             NanGate_15nm_OCL     0.245760       6     1.474560
+DFFRNQ_X1          NanGate_15nm_OCL     1.277952      17    21.725183 n
+DFFSNQ_X1          NanGate_15nm_OCL     1.277952      66    84.344829 n
+INV_X1             NanGate_15nm_OCL     0.147456      78    11.501568
+NAND2_X1           NanGate_15nm_OCL     0.196608       1     0.196608
+NAND3_X1           NanGate_15nm_OCL     0.294912       1     0.294912
+NAND4_X1           NanGate_15nm_OCL     0.344064       1     0.344064
+NOR2_X1            NanGate_15nm_OCL     0.196608       3     0.589824
+NOR3_X1            NanGate_15nm_OCL     0.294912       1     0.294912
+OAI21_X1           NanGate_15nm_OCL     0.294912       1     0.294912
+OAI22_X1           NanGate_15nm_OCL     0.344064       2     0.688128
+-----------------------------------------------------------------------------
+Total 13 references                                   146.079741
+1

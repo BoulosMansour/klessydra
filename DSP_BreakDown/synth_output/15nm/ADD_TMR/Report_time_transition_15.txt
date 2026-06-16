@@ -1,0 +1,76 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : RTL_DSP_TOP
+Version: U-2022.12
+Date   : Thu Dec 11 12:51:54 2025
+****************************************
+
+Operating Conditions: typical   Library: NanGate_15nm_OCL
+Wire Load Model Mode: top
+
+  Startpoint: DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[1]
+              (rising edge-triggered flip-flop)
+  Endpoint: dsp_sc_data_write_wire[0][55]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[1]/CLK (DFFSNQ_X1)     7.70     0.00     0.00 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[1]/Q (DFFSNQ_X1)    35.69    28.68      28.68 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP[1] (net)     22                   0.00      28.68 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP[1] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64)     0.00    28.68 r
+  MVTYPE_DSP[0][1] (net)                                            0.00      28.68 r
+  DSP_MAPPING_inst/MVTYPE_DSP[0][1] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00    28.68 r
+  DSP_MAPPING_inst/MVTYPE_DSP[0][1] (net)                           0.00      28.68 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/MVTYPE_DSP[1] (DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64)     0.00    28.68 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/MVTYPE_DSP[1] (net)           0.00      28.68 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U482/ZN (NOR2_X1)    12.95     8.27     36.95 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n217 (net)     4              0.00      36.95 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U409/ZN (NAND2_X1)    23.51    15.33    52.28 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n164 (net)    17              0.00      52.28 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U397/ZN (NAND2_X1)    25.14    16.73    69.01 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n122 (net)    11              0.00      69.01 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U396/ZN (INV_X1)    16.39    12.74      81.75 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n289 (net)     9              0.00      81.75 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U395/ZN (NAND2_X1)     9.16     6.69    88.43 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n339 (net)     3              0.00      88.43 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U383/ZN (NOR3_X1)   115.93    56.25    144.68 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n8 (net)    33                0.00     144.68 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U382/ZN (NAND2_X1)    86.47    59.79   204.47 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n226 (net)    32              0.00     204.47 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U340/ZN (OAI22_X1)    19.26    12.49   216.96 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n309 (net)     1              0.00     216.96 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U338/Z (OR4_X1)     3.67      6.81     223.77 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n511 (net)     1              0.00     223.77 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U546/ZN (NOR2_X1)    27.93     3.13    226.90 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/dsp_sc_data_write_wire_int[55] (net)     2     0.00   226.90 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U423/Z (MUX2_X1)     3.56     7.79     234.69 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/dsp_sc_data_write_wire[55] (net)     1     0.00   234.69 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/dsp_sc_data_write_wire[55] (DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64)     0.00   234.69 f
+  DSP_MAPPING_inst/dsp_sc_data_write_wire[0][55] (net)              0.00     234.69 f
+  DSP_MAPPING_inst/dsp_sc_data_write_wire[0][55] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00   234.69 f
+  dsp_sc_data_write_wire[0][55] (net)                               0.00     234.69 f
+  dsp_sc_data_write_wire[0][55] (out)                     3.56      0.00     234.69 f
+  data arrival time                                                          234.69
+  ---------------------------------------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

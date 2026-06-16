@@ -1,0 +1,66 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Sat Jan 31 13:21:26 2026
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: harc_EXEC[1]
+              (input port)
+  Endpoint: busy_dsp[0]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1 5K_hvratio_1_1 NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  harc_EXEC[1] (in)                                       0.00       0.00 r
+  DSP_EXCPT_CNTRL_UNIT_inst_0/harc_EXEC[1] (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1)     0.00     0.00 r
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U8/ZN (NOR2_X2)             0.10       0.10 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U362/ZN (AOI222_X1)         0.11       0.22 r
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U361/ZN (INV_X1)            0.07       0.28 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/B[0] (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_59)     0.00     0.28 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U2/ZN (AND2_X1)     0.06     0.34 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_1/CO (FA_X1)     0.09     0.43 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_2/CO (FA_X1)     0.09     0.52 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_3/CO (FA_X1)     0.09     0.62 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_4/CO (FA_X1)     0.09     0.71 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_5/CO (FA_X1)     0.09     0.80 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_6/CO (FA_X1)     0.09     0.90 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_7/CO (FA_X1)     0.09     0.99 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_8/CO (FA_X1)     0.09     1.08 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_9/CO (FA_X1)     0.09     1.18 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_10/CO (FA_X1)     0.09     1.27 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_11/CO (FA_X1)     0.09     1.36 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_12/CO (FA_X1)     0.09     1.45 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/U1_13/S (FA_X1)     0.11     1.56 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/add_1_root_sub_133/SUM[13] (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_59)     0.00     1.56 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U316/ZN (NOR4_X1)           0.07       1.63 r
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U315/ZN (NAND4_X1)          0.05       1.68 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U314/Z (XOR2_X1)            0.07       1.76 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U313/ZN (OAI22_X1)          0.08       1.83 r
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U312/ZN (NOR2_X1)           0.03       1.87 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U311/ZN (NAND4_X1)          0.05       1.92 r
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U277/ZN (OAI21_X1)          0.04       1.95 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U276/ZN (INV_X1)            0.04       1.99 r
+  DSP_EXCPT_CNTRL_UNIT_inst_0/U239/ZN (NAND2_X1)          0.06       2.05 f
+  DSP_EXCPT_CNTRL_UNIT_inst_0/busy_dsp_internal (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1)     0.00     2.05 f
+  busy_dsp[0] (out)                                       0.00       2.06 f
+  data arrival time                                                  2.06
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

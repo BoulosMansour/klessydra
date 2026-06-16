@@ -1,0 +1,95 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3
+Version: U-2022.12
+Date   : Sat Jan 31 19:15:43 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: sg13g2_stdcell_typ_1p20V_25C   Library: sg13g2_stdcell_typ_1p20V_25C
+Wire Load Model Mode: enclosed
+
+  Startpoint: harc_EXEC[0]
+              (input port)
+  Endpoint: busy_dsp[2]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3 200k sg13g2_stdcell_typ_1p20V_25C
+  DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0 1k sg13g2_stdcell_typ_1p20V_25C
+  DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0_DW01_add_0_DW01_add_99 0_5k sg13g2_stdcell_typ_1p20V_25C
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  harc_EXEC[0] (in)                                       0.00       0.00 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/harc_EXEC[0] (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0)     0.00     0.00 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U5/X (sg13g2_or2_2)         0.07       0.07 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U7/Y (sg13g2_inv_1)         0.07       0.14 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U357/Y (sg13g2_a22oi_1)     0.08       0.22 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U355/Y (sg13g2_nand2_1)     0.17       0.39 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U3/X (sg13g2_buf_1)         0.13       0.52 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/B[0] (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0_DW01_add_0_DW01_add_99)     0.00     0.52 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U71/Y (sg13g2_nand2_1)     0.05     0.56 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U12/Y (sg13g2_inv_1)     0.05     0.61 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U70/Y (sg13g2_o21ai_1)     0.09     0.70 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U69/Y (sg13g2_o21ai_1)     0.11     0.81 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U68/Y (sg13g2_o21ai_1)     0.10     0.91 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U11/Y (sg13g2_inv_1)     0.04     0.95 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U67/Y (sg13g2_a21oi_1)     0.11     1.07 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U10/Y (sg13g2_inv_1)     0.05     1.12 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U66/Y (sg13g2_o21ai_1)     0.08     1.20 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U65/Y (sg13g2_o21ai_1)     0.11     1.31 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U64/Y (sg13g2_o21ai_1)     0.10     1.41 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U9/Y (sg13g2_inv_1)     0.04     1.45 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U63/Y (sg13g2_a21oi_1)     0.11     1.57 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U8/Y (sg13g2_inv_1)     0.05     1.62 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U62/Y (sg13g2_o21ai_1)     0.08     1.70 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U61/Y (sg13g2_o21ai_1)     0.11     1.81 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U60/Y (sg13g2_o21ai_1)     0.10     1.91 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U7/Y (sg13g2_inv_1)     0.04     1.95 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U59/Y (sg13g2_a21oi_1)     0.11     2.07 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U6/Y (sg13g2_inv_1)     0.05     2.12 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U58/Y (sg13g2_o21ai_1)     0.08     2.20 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U57/Y (sg13g2_o21ai_1)     0.11     2.31 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U56/Y (sg13g2_o21ai_1)     0.10     2.41 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U5/Y (sg13g2_inv_1)     0.04     2.45 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U55/X (sg13g2_a21o_1)     0.12     2.58 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U54/Y (sg13g2_o21ai_1)     0.09     2.66 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U4/Y (sg13g2_inv_1)     0.04     2.70 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U53/Y (sg13g2_a21oi_1)     0.11     2.82 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U3/Y (sg13g2_inv_1)     0.05     2.87 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U50/Y (sg13g2_o21ai_1)     0.08     2.95 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U49/Y (sg13g2_o21ai_1)     0.11     3.06 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U46/Y (sg13g2_o21ai_1)     0.10     3.16 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U2/Y (sg13g2_inv_1)     0.04     3.20 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U45/Y (sg13g2_a21oi_1)     0.11     3.32 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U1/Y (sg13g2_inv_1)     0.05     3.37 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U42/Y (sg13g2_o21ai_1)     0.08     3.45 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U41/Y (sg13g2_o21ai_1)     0.10     3.55 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/U40/Y (sg13g2_xnor2_1)     0.11     3.66 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/add_1_root_sub_135/SUM[13] (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0_DW01_add_0_DW01_add_99)     0.00     3.66 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U312/Y (sg13g2_nor4_1)      0.15       3.82 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U311/Y (sg13g2_nand4_1)     0.15       3.97 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U310/Y (sg13g2_xnor2_1)     0.12       4.09 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U309/Y (sg13g2_nand2_1)     0.06       4.15 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U308/Y (sg13g2_nand4_1)     0.14       4.29 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U296/Y (sg13g2_o21ai_1)     0.11       4.40 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U295/Y (sg13g2_inv_1)       0.06       4.46 f
+  DSP_EXCPT_CNTRL_UNIT_inst_2/U260/Y (sg13g2_nand2_1)     0.13       4.59 r
+  DSP_EXCPT_CNTRL_UNIT_inst_2/busy_dsp_internal (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0)     0.00     4.59 r
+  busy_dsp[2] (out)                                       0.00       4.59 r
+  data arrival time                                                  4.59
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RTL_DSP_TOP
+Version: U-2022.12
+Date   : Thu Dec 11 13:05:57 2025
+****************************************
+
+Operating Conditions: typical   Library: NanGate_15nm_OCL
+Wire Load Model Mode: top
+
+  Startpoint: DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[1]
+              (rising edge-triggered flip-flop)
+  Endpoint: dsp_sc_data_write_wire[0][55]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[1]/CLK (DFFSNQ_X1)     0.00     0.00 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[1]/Q (DFFSNQ_X1)    44.27     44.27 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP[1] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64)     0.00    44.27 r
+  DSP_MAPPING_inst/MVTYPE_DSP[0][1] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00    44.27 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/MVTYPE_DSP[1] (DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64)     0.00    44.27 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U482/ZN (NOR2_X1)     9.71    53.98 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U409/ZN (NAND2_X1)    16.84    70.81 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U397/ZN (NAND2_X1)    16.96    87.78 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U396/ZN (INV_X1)    12.78    100.56 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U395/ZN (NAND2_X1)     6.69   107.25 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U383/ZN (NOR3_X1)    56.25   163.50 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U382/ZN (NAND2_X1)    59.79   223.29 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U340/ZN (OAI22_X1)    12.61   235.89 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U338/Z (OR4_X1)     6.81     242.71 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U546/ZN (NOR2_X1)     3.13   245.84 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U423/Z (MUX2_X1)     7.79    253.62 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/dsp_sc_data_write_wire[55] (DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64)     0.00   253.62 f
+  DSP_MAPPING_inst/dsp_sc_data_write_wire[0][55] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00   253.62 f
+  dsp_sc_data_write_wire[0][55] (out)                     0.00     253.62 f
+  data arrival time                                                253.62
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

@@ -1,0 +1,250 @@
+\chapter{Fault-Tolerance Framework: DMR and TMR}
+\label{ch:framework}
+
+Building on the modular accelerator of Chapter~\ref{ch:architecture}, this
+chapter presents the fault-tolerance framework. Section~\ref{sec:ft-primitives}
+introduces the two reusable redundancy primitives. Section~\ref{sec:ft-wrappers}
+shows how they wrap the functional units. Section~\ref{sec:ft-scenarioB}
+describes per-functional-unit and full-accelerator hardening (Scenario~A), and
+Section~\ref{sec:ft-scenarioA} describes replication-based redundancy
+(Scenario~B). Section~\ref{sec:ft-control} explains how a configuration is
+selected at elaboration time.
+
+\section{Reusable redundancy primitives}
+\label{sec:ft-primitives}
+
+The framework rests on two deliberately tiny, technology-independent VHDL
+entities. Their smallness is a feature: because each operates on a single bit,
+it can be replicated bit-by-bit across an arbitrarily wide datapath, and because
+it is purely structural it imposes no constraints on the module it protects.
+
+\subsection{The DMR comparison cell}
+
+The Dual-Modular-Redundancy cell takes the corresponding output bit from two
+copies of a module and produces a single result bit together with an error flag.
+If the two inputs agree, the result is forwarded and the flag is deasserted; if
+they disagree, the flag is asserted to signal a detected error. The complete
+entity is shown in Listing~\ref{lst:dmr}.
+
+\begin{lstlisting}[language=myvhdl, caption={The single-bit DMR comparison cell.}, label={lst:dmr}]
+entity DMR is
+  port(
+    in1, in2 : in  std_logic;
+    err_flag : out std_logic;
+    result   : out std_logic
+  );
+end entity DMR;
+
+architecture DMR_arch of DMR is
+begin
+  process(in1, in2)
+  begin
+    if in1 = in2 then
+      result   <= in1;
+      err_flag <= '0';  -- no error
+    else
+      result   <= in1;  -- arbitrary choice
+      err_flag <= '1';  -- error detected
+    end if;
+  end process;
+end architecture DMR_arch;
+\end{lstlisting}
+
+When the two copies disagree the cell cannot know which is correct, so it
+forwards one of them (here \texttt{in1}) and relies on the asserted
+\texttt{err\_flag} to trigger a system-level response. The error flags from all
+bits of a functional unit are combined so that any single-bit discrepancy raises
+the unit-level error indication.
+
+\subsection{The TMR majority voter}
+
+The Triple-Modular-Redundancy cell takes the corresponding output bit from three
+copies of a module and outputs the majority value, realising
+Equation~\ref{eq:majority}. The complete entity is shown in
+Listing~\ref{lst:tmr}.
+
+\begin{lstlisting}[language=myvhdl, caption={The single-bit TMR majority voter.}, label={lst:tmr}]
+entity TMR is
+  port(
+    in1, in2, in3 : in  std_logic;
+    result        : out std_logic
+  );
+end entity TMR;
+
+architecture TMR_arch of TMR is
+begin
+  result <= (in1 and in2) or (in2 and in3) or (in1 and in3);
+end architecture TMR_arch;
+\end{lstlisting}
+
+As long as at most one of the three inputs is wrong at any given bit, the
+majority output is correct, so the voter \emph{masks} the fault without any need
+for a recovery action. Unlike DMR, TMR therefore does not produce an error flag:
+correct operation continues transparently.
+
+\section{Wrapping the functional units}
+\label{sec:ft-wrappers}
+
+A redundancy \emph{wrapper} is a VHDL entity that exposes exactly the same port
+interface as the functional unit it protects, so that it is a drop-in
+replacement. Internally, the wrapper instantiates the functional unit two times
+(for DMR) or three times (for TMR), drives all copies with identical inputs, and
+recombines their outputs bit-by-bit using arrays of the primitive cells of
+Section~\ref{sec:ft-primitives}. Figure~\ref{fig:wrappers} illustrates both
+arrangements.
+
+\begin{figure}[htbp]
+\centering
+\begin{subfigure}[t]{0.48\textwidth}
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners, minimum width=16mm, minimum height=7mm, font=\scriptsize, fill=orange!12, align=center},
+  cell/.style={draw, minimum width=9mm, minimum height=7mm, font=\scriptsize, fill=blue!8, align=center},
+  arr/.style={-{Latex[length=1.6mm]}}]
+\node (in) {\scriptsize inputs};
+\node[box, right=6mm of in, yshift=6mm] (a) {FU copy 1};
+\node[box, below=3mm of a] (b) {FU copy 2};
+\node[cell, right=8mm of a, yshift=-7mm] (d) {DMR\\array};
+\node[right=6mm of d, yshift=3mm, font=\scriptsize] (r) {result};
+\node[right=6mm of d, yshift=-4mm, font=\scriptsize] (e) {err\_flag};
+\draw[arr] (in) |- (a.west);
+\draw[arr] (in) |- (b.west);
+\draw[arr] (a.east) -- (d.west);
+\draw[arr] (b.east) -- (d.west);
+\draw[arr] (d.east) -- (r);
+\draw[arr] (d.east) -- (e);
+\end{tikzpicture}
+\caption{DMR wrapper: two copies, bitwise comparison, error flag.}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.48\textwidth}
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners, minimum width=16mm, minimum height=6mm, font=\scriptsize, fill=orange!12, align=center},
+  cell/.style={draw, minimum width=9mm, minimum height=7mm, font=\scriptsize, fill=blue!8, align=center},
+  arr/.style={-{Latex[length=1.6mm]}}]
+\node (in) {\scriptsize inputs};
+\node[box, right=6mm of in, yshift=8mm] (a) {FU copy 1};
+\node[box, below=2mm of a] (b) {FU copy 2};
+\node[box, below=2mm of b] (c) {FU copy 3};
+\node[cell, right=8mm of b] (v) {TMR\\voter};
+\node[right=6mm of v, font=\scriptsize] (r) {result};
+\draw[arr] (in) |- (a.west);
+\draw[arr] (in) |- (b.west);
+\draw[arr] (in) |- (c.west);
+\draw[arr] (a.east) -- (v.west);
+\draw[arr] (b.east) -- (v.west);
+\draw[arr] (c.east) -- (v.west);
+\draw[arr] (v.east) -- (r);
+\end{tikzpicture}
+\caption{TMR wrapper: three copies, bitwise majority vote.}
+\end{subfigure}
+\caption{Redundancy wrappers. Each preserves the protected unit's interface, so
+hardening is transparent to the rest of the accelerator.}
+\label{fig:wrappers}
+\end{figure}
+
+Listing~\ref{lst:adder_dmr} sketches the structure of the adder DMR wrapper. The
+wrapper declares an internal array type that holds the duplicated outputs, binds
+the \texttt{DMR} and \texttt{DSP\_Adders} components, instantiates two adder
+copies, and applies the DMR cell across every output bit in a generate loop. The
+multiplier, shifter, and comparator wrappers follow exactly the same pattern,
+differing only in the width and type of the outputs they recombine.
+
+\begin{lstlisting}[language=myvhdl, caption={Structure of the adder DMR wrapper (abridged).}, label={lst:adder_dmr}]
+architecture DSP_Adders_DMR_arch of DSP_Adders_DMR is
+  type dmr_type is array (1 downto 0)
+       of array_2d_dsp_operands(FU_NUM-1 downto 0);
+  signal dmr_dsp_out_adder_results : dmr_type;
+  component DMR
+    port(in1, in2 : in std_logic; err_flag, result : out std_logic);
+  end component;
+  component DSP_Adders generic(...); port(...); end component;
+begin
+  -- two identical copies of the adder functional unit
+  ADDER_COPY_0 : DSP_Adders generic map(...) port map(...,
+      dsp_out_adder_results => dmr_dsp_out_adder_results(0), ...);
+  ADDER_COPY_1 : DSP_Adders generic map(...) port map(...,
+      dsp_out_adder_results => dmr_dsp_out_adder_results(1), ...);
+  -- bitwise comparison across the whole result vector
+  GEN_DMR : for i in ... generate
+    DMR_i : DMR port map(
+      in1 => dmr_dsp_out_adder_results(0)(...)(i),
+      in2 => dmr_dsp_out_adder_results(1)(...)(i),
+      result => dsp_out_adder_results(...)(i),
+      err_flag => err_flag_vector(i));
+  end generate;
+end architecture;
+\end{lstlisting}
+
+\section{Scenario A: per-functional-unit and full-accelerator hardening}
+\label{sec:ft-scenarioB}
+
+In the single-lane accelerator, redundancy is applied by replacing one or more
+functional units with their hardened wrappers. The top-level design exposes a
+set of Boolean constants --- \texttt{ADDERS\_DMR\_EN}, \texttt{ADDERS\_TMR\_EN},
+\texttt{MULTIPLIERS\_DMR\_EN}, \texttt{MULTIPLIERS\_TMR\_EN},
+\texttt{SHIFTERS\_DMR\_EN}, \texttt{SHIFTERS\_TMR\_EN},
+\texttt{COMPARATORS\_DMR\_EN}, and \texttt{COMPARATORS\_TMR\_EN} --- each of which
+selects whether the corresponding unit is instantiated as plain, DMR-wrapped, or
+TMR-wrapped. This yields the following configurations, all studied
+experimentally:
+
+\begin{itemize}
+  \item \textbf{Baseline} --- no constant set; the accelerator is unhardened and
+        provides the reference area, power, and timing.
+  \item \textbf{Single-FU DMR / TMR} --- exactly one of the four arithmetic
+        units (adder, multiplier, shifter, or comparator) is wrapped, the others
+        left plain. This isolates the cost of protecting each unit individually.
+  \item \textbf{Full DMR / TMR} --- all four arithmetic units are wrapped
+        simultaneously, giving the cost of protecting the entire arithmetic
+        datapath.
+\end{itemize}
+
+Because the four functional units differ greatly in size, single-FU hardening
+spans a wide range of costs: protecting the comparator is nearly free, whereas
+protecting the multiplier is the dominant contributor to any scheme that
+includes it. These differences are quantified in Chapter~\ref{ch:results} and
+form the basis of the design guidelines.
+
+\section{Scenario B: replication-based redundancy}
+\label{sec:ft-scenarioA}
+
+The second way of obtaining redundancy exploits the accelerator's existing
+\emph{performance} replication. With \texttt{replicate\_accl\_en} enabled, three
+complete accelerator lanes operate in parallel. Rather than building fresh
+copies of each functional unit, the redundancy logic is placed in the
+\texttt{DSP\_Mapping} layer, where the results produced by the lanes are already
+gathered:
+
+\begin{itemize}
+  \item \textbf{Replicated baseline} --- three lanes, results simply mapped out,
+        no redundancy logic. This is the throughput-oriented configuration.
+  \item \textbf{Replicated + DMR voting} --- the mapping layer compares lane
+        outputs and raises an error flag on disagreement.
+  \item \textbf{Replicated + TMR voting} --- the mapping layer majority-votes the
+        three lane outputs, masking any single faulty lane.
+\end{itemize}
+
+The mapping unit toggles between these through its own \texttt{DMR\_ENABLED} and
+\texttt{TMR\_ENABLED} constants. The crucial observation --- borne out by the
+results --- is that since the costly datapath copies already exist for
+throughput, the \emph{incremental} cost of adding voting is only the cost of the
+comparators or voters in the mapping layer, which is small relative to the
+replicated datapath.
+
+\section{Selecting a configuration at elaboration}
+\label{sec:ft-control}
+
+A complete experimental configuration is therefore defined by two groups of
+settings: the top-level \texttt{replicate\_accl\_en} generic (Scenario~B versus
+Scenario~A) and, within each scenario, the redundancy-enable constants. Because
+all of these are resolved at \emph{elaboration} time, switching configurations
+requires no change to the functional logic --- only a change of constants --- and
+each configuration elaborates into a distinct, fully synthesisable netlist. The
+synthesis sweep of Chapter~\ref{ch:experiment} automates exactly this: it edits
+the relevant constants, elaborates, and synthesises, sweeping the full
+configuration matrix across all technology nodes. The complete matrix is listed
+in Table~\ref{tab:matrix}.
+
+\input{content/tables/matrix}

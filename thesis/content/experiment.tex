@@ -1,0 +1,127 @@
+\chapter{Experimental Setup}
+\label{ch:experiment}
+
+This chapter describes how the configurations of Chapters~\ref{ch:framework} and
+\ref{ch:ijtag} are turned into quantitative data. Section~\ref{sec:ex-flow}
+describes the synthesis flow and tools. Section~\ref{sec:ex-nodes} describes the
+three technology nodes. Section~\ref{sec:ex-matrix} defines the configuration
+matrix. Section~\ref{sec:ex-metrics} defines the metrics and the normalisation
+used throughout the results. Section~\ref{sec:ex-auto} describes the automation
+that makes the sweep reproducible.
+
+\section{Synthesis flow and tools}
+\label{sec:ex-flow}
+
+All configurations are functionally elaborated from the same VHDL-2008 source
+base and synthesised with Synopsys Design Compiler~\cite{designcompiler}. For each configuration the
+flow reads the technology library and the design packages, analyses and
+elaborates the top-level accelerator with the chosen generics and redundancy
+constants, compiles to the target standard-cell library, and writes a fixed set
+of reports --- area, cell counts, references, resources, power, and timing.
+
+Each configuration is synthesised against the same fixed, deliberately
+aggressive clock constraint at a given node, so that the synthesis effort is
+identical across all configurations. Because the target period is intentionally
+tighter than the design can meet, every configuration reports a (negative) slack;
+slack is therefore \emph{not} a useful discriminator here. Instead, the timing
+figure of merit used throughout is the \emph{critical-path (data-arrival) delay}
+of the longest path, which the tool reports regardless of slack. Since the same
+constraint and effort are applied to every configuration at a node, the
+data-arrival delays are directly comparable, and their ratio to the baseline
+captures exactly how much each redundancy scheme lengthens the critical path. The
+voters and comparators of DMR/TMR are thin combinational layers on the
+functional-unit outputs, so they are expected to add little to the critical path
+--- a hypothesis the results confirm.
+
+\section{Technology nodes}
+\label{sec:ex-nodes}
+
+To test whether the cost of redundancy is stable across process generations, each
+configuration is synthesised at three nodes spanning a wide range of maturity:
+
+\begin{itemize}
+  \item \textbf{IHP 130\,nm} (\texttt{sg13g2})~\cite{ihp} --- a mature, open
+        process-design-kit node, representative of robust, cost-sensitive and
+        radiation-tolerant designs.
+  \item \textbf{NanGate 45\,nm}~\cite{nangate} --- an open, widely used academic
+        standard-cell library representative of a mainstream node.
+  \item \textbf{NanGate 15\,nm}~\cite{nangate} --- an open FinFET-era library representative of
+        an advanced node.
+\end{itemize}
+
+These three points let the study distinguish effects that are intrinsic to the
+\emph{architecture} of the redundancy schemes (and therefore stable across nodes)
+from effects that depend on the \emph{technology}. A practical consequence of
+mixing such different libraries is that their reporting units differ --- dynamic
+power is reported in milliwatts at two nodes and microwatts at another, and the
+advanced library reports timing and power on a different absolute scale. The
+analysis handles this by reading the units from each report and, wherever
+absolute values are compared across nodes, by \emph{normalising to the per-node
+baseline} so that unit and scale differences cancel.
+
+\section{Configuration matrix}
+\label{sec:ex-matrix}
+
+The full sweep is the Cartesian product of the configurations and the technology
+nodes. The configurations comprise the two scenarios introduced in
+Chapter~\ref{ch:framework}:
+
+\begin{itemize}
+  \item \textbf{Scenario~A (single core)} --- baseline; each of the four
+        arithmetic units (adder, multiplier, shifter, comparator) hardened
+        individually with DMR and with TMR; and the full datapath hardened with
+        DMR and with TMR. This is eleven configurations.
+  \item \textbf{Scenario~B (replicated)} --- replicated baseline; replicated with
+        DMR voting; replicated with TMR voting. This is three configurations.
+\end{itemize}
+
+Fourteen configurations at three nodes give \textbf{42 synthesis runs} for the
+redundancy study, complemented by the \textbf{18 instrumented runs} of
+Chapter~\ref{ch:ijtag} (three sensor counts $\times$ three nodes $\times$ two
+accounting modes). The redundancy matrix was already listed in
+Table~\ref{tab:matrix}.
+
+\section{Metrics and normalisation}
+\label{sec:ex-metrics}
+
+From each run the following metrics are extracted:
+
+\begin{itemize}
+  \item \textbf{Area.} Total cell area, decomposed into combinational,
+        buffer/inverter, sequential (non-combinational), and net-interconnect
+        area; plus the number of total, combinational, and sequential cells.
+  \item \textbf{Power.} Switching, internal, and leakage power, and their total,
+        all normalised to milliwatts by reading each report's unit declarations.
+        Power is reported by Design Compiler's hierarchical power analysis with
+        default switching activity, so the absolute values are estimates; the
+        \emph{ratios} between configurations are the meaningful quantity.
+  \item \textbf{Timing.} The critical-path (data-arrival) delay of the longest
+        path, used in preference to slack as discussed in
+        Section~\ref{sec:ex-flow}.
+\end{itemize}
+
+Throughout the results, the headline figure of merit is the \emph{overhead
+factor} --- the metric of a hardened configuration divided by the metric of the
+baseline \emph{at the same node}. Normalising in this way removes both the
+absolute-scale differences between libraries and any common-mode contribution of
+the surrounding core, isolating the cost attributable to redundancy itself.
+
+\section{Automation and reproducibility}
+\label{sec:ex-auto}
+
+Running 42 synthesis jobs by hand, each requiring a precise combination of
+generics and redundancy constants, would be both tedious and unreliable. The
+sweep is therefore fully automated by a driver that, for each (node,
+configuration) pair, edits the relevant source constants, invokes Design
+Compiler, and files the resulting reports into a clearly named directory. The
+two scenarios are handled by the same driver: for Scenario~B it toggles the
+mapping-layer \texttt{DMR\_ENABLED}/\texttt{TMR\_ENABLED} constants with
+replication enabled, and for Scenario~A it toggles the per-unit
+\texttt{*\_DMR\_EN}/\texttt{*\_TMR\_EN} constants with replication disabled. The
+source files it edits are backed up before any change and restored when the
+sweep finishes --- even on error or interruption --- so the working tree is
+always left clean. The data-reduction and plotting scripts described in
+Appendix~\ref{app:tools} then parse every report into a single table and
+generate the figures and tables of the next chapter directly from it, so that
+the entire path from raw reports to thesis figures is reproducible by re-running
+two scripts.

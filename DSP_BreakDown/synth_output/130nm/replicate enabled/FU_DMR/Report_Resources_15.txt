@@ -1,0 +1,5618 @@
+ 
+****************************************
+Report : resources
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3
+Version: U-2022.12
+Date   : Sat Jan 31 19:29:30 2026
+****************************************
+
+
+No resource sharing information to report.
+
+No implementations to report
+ 
+****************************************
+Design : ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+****************************************
+Resource Sharing Report for design
+        ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+        in file ../modules//FU/RTL-Accumulator.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r73      | DW01_add     | width=16   |               | add_139_G3           |
+| r194     | DW01_add     | width=32   |               | add_127              |
+| r198     | DW01_add     | width=16   |               | add_138              |
+| r200     | DW01_add     | width=16   |               | add_139              |
+| r202     | DW01_add     | width=16   |               | add_142              |
+| r204     | DW01_add     | width=32   |               | add_130 add_142_2    |
+| r206     | DW01_add     | width=32   |               | add_127_G2           |
+| r210     | DW01_add     | width=16   |               | add_138_G2           |
+| r212     | DW01_add     | width=16   |               | add_139_G2           |
+| r214     | DW01_add     | width=16   |               | add_142_G2           |
+| r216     | DW01_add     | width=32   |               | add_130_G2           |
+|          |              |            |               | add_142_2_G2         |
+| r218     | DW01_add     | width=32   |               | add_127_G3           |
+| r222     | DW01_add     | width=16   |               | add_138_G3           |
+| r226     | DW01_add     | width=16   |               | add_142_G3           |
+| r228     | DW01_add     | width=32   |               | add_130_G3           |
+|          |              |            |               | add_142_2_G3         |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_139_G3         | DW01_add         | rpl                |                |
+| add_127            | DW01_add         | rpl                |                |
+| add_138            | DW01_add         | rpl                |                |
+| add_139            | DW01_add         | rpl                |                |
+| add_142            | DW01_add         | rpl                |                |
+| r204               | DW01_add         | rpl                |                |
+| add_127_G2         | DW01_add         | rpl                |                |
+| add_138_G2         | DW01_add         | rpl                |                |
+| add_139_G2         | DW01_add         | rpl                |                |
+| add_142_G2         | DW01_add         | rpl                |                |
+| r216               | DW01_add         | rpl                |                |
+| add_127_G3         | DW01_add         | rpl                |                |
+| add_138_G3         | DW01_add         | rpl                |                |
+| add_142_G3         | DW01_add         | rpl                |                |
+| r228               | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Comparators_Unit_SIMD2_SIMD_Width64_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Comparators_Unit_SIMD2_SIMD_Width64_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Comparators_Unit_SIMD2_SIMD_Width64_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64_Data_Width32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_2_root_add_59_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_59_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_0_root_add_59_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_59_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_59_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_0_root_add_59_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_69            | DW02_mult        | csa                |                |
+| mult_70            | DW02_mult        | csa                |                |
+| mult_71            | DW02_mult        | csa                |                |
+| mult_72            | DW02_mult        | csa                |                |
+| mult_69_I2         | DW02_mult        | csa                |                |
+| mult_70_I2         | DW02_mult        | csa                |                |
+| mult_71_I2         | DW02_mult        | csa                |                |
+| mult_72_I2         | DW02_mult        | csa                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_7
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_6
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_5
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_3
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_2
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_1
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_0
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_2_root_add_59_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_59_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_0_root_add_59_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_59_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_59_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_0_root_add_59_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_69            | DW02_mult        | csa                |                |
+| mult_70            | DW02_mult        | csa                |                |
+| mult_71            | DW02_mult        | csa                |                |
+| mult_72            | DW02_mult        | csa                |                |
+| mult_69_I2         | DW02_mult        | csa                |                |
+| mult_70_I2         | DW02_mult        | csa                |                |
+| mult_71_I2         | DW02_mult        | csa                |                |
+| mult_72_I2         | DW02_mult        | csa                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_7_DW02_mult_15
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_6_DW02_mult_14
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_5_DW02_mult_13
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_4_DW02_mult_12
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_3_DW02_mult_11
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_2_DW02_mult_10
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_1_DW02_mult_9
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_0_DW02_mult_8
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0
+****************************************
+Resource Sharing Report for design
+        DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0 in file
+        ../modules//FU/multipliers/multipliers_stg/DSP_Multipliers_stg_2.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r86      | DW01_add     | width=32   |               | add_2_root_add_59_3  |
+| r88      | DW01_add     | width=32   |               | add_1_root_add_59_3  |
+| r90      | DW01_add     | width=32   |               | add_0_root_add_59_3  |
+| r92      | DW01_add     | width=32   |               | add_2_root_add_59_3_I2 |
+| r94      | DW01_add     | width=32   |               | add_1_root_add_59_3_I2 |
+| r96      | DW01_add     | width=32   |               | add_0_root_add_59_3_I2 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_2_root_add_59_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_59_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_0_root_add_59_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_59_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_59_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_0_root_add_59_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64_0
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0
+****************************************
+Resource Sharing Report for design DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0
+        in file
+        ../modules//FU/multipliers/multipliers_stg/DSP_Multipliers_stg_1.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r91      | DW02_mult    | A_width=16 |               | mult_69              |
+|          |              | B_width=16 |               |                      |
+| r93      | DW02_mult    | A_width=16 |               | mult_70              |
+|          |              | B_width=16 |               |                      |
+| r95      | DW02_mult    | A_width=16 |               | mult_71              |
+|          |              | B_width=16 |               |                      |
+| r97      | DW02_mult    | A_width=16 |               | mult_72              |
+|          |              | B_width=16 |               |                      |
+| r99      | DW02_mult    | A_width=16 |               | mult_69_I2           |
+|          |              | B_width=16 |               |                      |
+| r101     | DW02_mult    | A_width=16 |               | mult_70_I2           |
+|          |              | B_width=16 |               |                      |
+| r103     | DW02_mult    | A_width=16 |               | mult_71_I2           |
+|          |              | B_width=16 |               |                      |
+| r105     | DW02_mult    | A_width=16 |               | mult_72_I2           |
+|          |              | B_width=16 |               |                      |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_69            | DW02_mult        | csa                |                |
+| mult_70            | DW02_mult        | csa                |                |
+| mult_71            | DW02_mult        | csa                |                |
+| mult_72            | DW02_mult        | csa                |                |
+| mult_69_I2         | DW02_mult        | csa                |                |
+| mult_70_I2         | DW02_mult        | csa                |                |
+| mult_71_I2         | DW02_mult        | csa                |                |
+| mult_72_I2         | DW02_mult        | csa                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_7_DW02_mult_23
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_6_DW02_mult_22
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_5_DW02_mult_21
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_4_DW02_mult_20
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_3_DW02_mult_19
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_2_DW02_mult_18
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_1_DW02_mult_17
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_0_DW02_mult_16
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_SIMD_Width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Shifters_comb_SIMD2_SIMD_Width64_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Shifters_stg_2_SIMD2_SIMD_Width64_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| srl_57             | DW_rash          | mx2                |                |
+| srl_57_I2          | DW_rash          | mx2                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Shifters_comb_SIMD2_SIMD_Width64_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Shifters_stg_2_SIMD2_SIMD_Width64_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Shifters_stg_1_SIMD2_SIMD_Width64_2
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| srl_57             | DW_rash          | mx2                |                |
+| srl_57_I2          | DW_rash          | mx2                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Shifters_comb_SIMD2_SIMD_Width64_0
+****************************************
+Resource Sharing Report for design DSP_Shifters_comb_SIMD2_SIMD_Width64_0 in
+        file ../modules//FU/shifters_stg/DSP_Shifters_comb.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r217     | DW01_cmp2    | width=5    |               | lt_55_I11            |
+| r1085    | DW01_sub     | width=7    |               | sub_68 sub_68_I2_I1  |
+|          |              |            |               | sub_68_I3_I1         |
+|          |              |            |               | sub_68_I4_I1         |
+|          |              |            |               | sub_68_I5_I1         |
+| r1086    | DW01_cmp2    | width=7    |               | gte_68 gte_68_I2     |
+| r1087    | DW01_cmp2    | width=7    |               | gte_68_I2_I1         |
+|          |              |            |               | gte_68_I2_I2         |
+| r1089    | DW01_cmp2    | width=7    |               | gte_68_I4_I1         |
+|          |              |            |               | gte_68_I4_I2         |
+| r1090    | DW01_cmp2    | width=7    |               | gte_68_I5_I1         |
+|          |              |            |               | gte_68_I5_I2         |
+| r1091    | DW01_cmp2    | width=7    |               | gte_68_I6_I1         |
+|          |              |            |               | gte_68_I6_I2         |
+| r1092    | DW01_cmp2    | width=7    |               | gte_68_I7_I1         |
+|          |              |            |               | gte_68_I7_I2         |
+| r1093    | DW01_cmp2    | width=7    |               | gte_68_I8_I1         |
+|          |              |            |               | gte_68_I8_I2         |
+| r1094    | DW01_cmp2    | width=7    |               | gte_68_I9_I1         |
+|          |              |            |               | gte_68_I9_I2         |
+| r1095    | DW01_cmp2    | width=7    |               | gte_68_I10_I1        |
+|          |              |            |               | gte_68_I10_I2        |
+| r1096    | DW01_cmp2    | width=7    |               | gte_68_I11_I1        |
+|          |              |            |               | gte_68_I11_I2        |
+| r1097    | DW01_cmp2    | width=7    |               | gte_68_I12_I1        |
+|          |              |            |               | gte_68_I12_I2        |
+| r1098    | DW01_cmp2    | width=7    |               | gte_68_I13_I1        |
+|          |              |            |               | gte_68_I13_I2        |
+| r1099    | DW01_cmp2    | width=7    |               | gte_68_I14_I1        |
+|          |              |            |               | gte_68_I14_I2        |
+| r1100    | DW01_cmp2    | width=7    |               | gte_68_I15_I1        |
+|          |              |            |               | gte_68_I15_I2        |
+| r1101    | DW01_cmp2    | width=7    |               | gte_68_I16_I1        |
+|          |              |            |               | gte_68_I16_I2        |
+| r1102    | DW01_cmp2    | width=7    |               | gte_68_I17_I1        |
+|          |              |            |               | gte_68_I17_I2        |
+| r1103    | DW01_cmp2    | width=7    |               | gte_68_I18_I1        |
+|          |              |            |               | gte_68_I18_I2        |
+| r1104    | DW01_cmp2    | width=7    |               | gte_68_I19_I1        |
+|          |              |            |               | gte_68_I19_I2        |
+| r1105    | DW01_cmp2    | width=7    |               | gte_68_I20_I1        |
+|          |              |            |               | gte_68_I20_I2        |
+| r1106    | DW01_cmp2    | width=7    |               | gte_68_I21_I1        |
+|          |              |            |               | gte_68_I21_I2        |
+| r1107    | DW01_cmp2    | width=7    |               | gte_68_I22_I1        |
+|          |              |            |               | gte_68_I22_I2        |
+| r1108    | DW01_cmp2    | width=7    |               | gte_68_I23_I1        |
+|          |              |            |               | gte_68_I23_I2        |
+| r1109    | DW01_cmp2    | width=7    |               | gte_68_I24_I1        |
+|          |              |            |               | gte_68_I24_I2        |
+| r1110    | DW01_cmp2    | width=7    |               | gte_68_I25_I1        |
+|          |              |            |               | gte_68_I25_I2        |
+| r1111    | DW01_cmp2    | width=7    |               | gte_68_I26_I1        |
+|          |              |            |               | gte_68_I26_I2        |
+| r1112    | DW01_cmp2    | width=7    |               | gte_68_I27_I1        |
+|          |              |            |               | gte_68_I27_I2        |
+| r1113    | DW01_cmp2    | width=7    |               | gte_68_I28_I1        |
+|          |              |            |               | gte_68_I28_I2        |
+| r1114    | DW01_cmp2    | width=7    |               | gte_68_I29_I1        |
+|          |              |            |               | gte_68_I29_I2        |
+| r1115    | DW01_cmp2    | width=7    |               | gte_68_I30_I1        |
+|          |              |            |               | gte_68_I30_I2        |
+| r1116    | DW01_cmp2    | width=7    |               | gte_68_I31_I1        |
+|          |              |            |               | gte_68_I31_I2        |
+| r1117    | DW01_cmp2    | width=7    |               | gte_68_I32_I1        |
+|          |              |            |               | gte_68_I32_I2        |
+| r1118    | DW01_sub     | width=6    |               | sub_46 sub_81        |
+|          |              |            |               | sub_81_I2_I1         |
+|          |              |            |               | sub_81_I3_I1         |
+|          |              |            |               | sub_81_I4_I1         |
+| r1119    | DW01_cmp2    | width=6    |               | gte_81 gte_81_I2     |
+|          |              |            |               | gte_81_I3 gte_81_I4  |
+|          |              |            |               | lt_46                |
+| r1120    | DW01_cmp2    | width=6    |               | gte_81_I2_I1         |
+|          |              |            |               | gte_81_I2_I2         |
+|          |              |            |               | gte_81_I2_I3         |
+|          |              |            |               | gte_81_I2_I4         |
+|          |              |            |               | lt_46_I2             |
+| r1121    | DW01_cmp2    | width=6    |               | gte_81_I3_I1         |
+|          |              |            |               | gte_81_I3_I2         |
+|          |              |            |               | gte_81_I3_I3         |
+|          |              |            |               | gte_81_I3_I4         |
+|          |              |            |               | lt_46_I3             |
+| r1122    | DW01_cmp2    | width=7    |               | gte_68_I3_I1         |
+|          |              |            |               | gte_81_I4_I1         |
+|          |              |            |               | gte_81_I4_I2         |
+|          |              |            |               | gte_81_I4_I3         |
+|          |              |            |               | gte_81_I4_I4         |
+| r1123    | DW01_cmp2    | width=6    |               | gte_81_I5_I1         |
+|          |              |            |               | gte_81_I5_I2         |
+|          |              |            |               | gte_81_I5_I3         |
+|          |              |            |               | gte_81_I5_I4         |
+|          |              |            |               | lt_46_I5             |
+| r1124    | DW01_cmp2    | width=6    |               | gte_81_I6_I1         |
+|          |              |            |               | gte_81_I6_I2         |
+|          |              |            |               | gte_81_I6_I3         |
+|          |              |            |               | gte_81_I6_I4         |
+|          |              |            |               | lt_46_I6             |
+| r1125    | DW01_cmp2    | width=6    |               | gte_81_I7_I1         |
+|          |              |            |               | gte_81_I7_I2         |
+|          |              |            |               | gte_81_I7_I3         |
+|          |              |            |               | gte_81_I7_I4         |
+|          |              |            |               | lt_46_I7             |
+| r1126    | DW01_cmp2    | width=6    |               | gte_81_I8_I1         |
+|          |              |            |               | gte_81_I8_I2         |
+|          |              |            |               | gte_81_I8_I3         |
+|          |              |            |               | gte_81_I8_I4         |
+|          |              |            |               | lt_46_I8             |
+| r1127    | DW01_cmp2    | width=6    |               | gte_81_I9_I1         |
+|          |              |            |               | gte_81_I9_I2         |
+|          |              |            |               | gte_81_I9_I3         |
+|          |              |            |               | gte_81_I9_I4         |
+|          |              |            |               | lt_46_I9             |
+| r1128    | DW01_cmp2    | width=6    |               | gte_81_I10_I1        |
+|          |              |            |               | gte_81_I10_I2        |
+|          |              |            |               | gte_81_I10_I3        |
+|          |              |            |               | gte_81_I10_I4        |
+|          |              |            |               | lt_46_I10            |
+| r1129    | DW01_cmp2    | width=6    |               | gte_81_I11_I1        |
+|          |              |            |               | gte_81_I11_I2        |
+|          |              |            |               | gte_81_I11_I3        |
+|          |              |            |               | gte_81_I11_I4        |
+|          |              |            |               | lt_46_I11            |
+| r1130    | DW01_cmp2    | width=6    |               | gte_81_I12_I1        |
+|          |              |            |               | gte_81_I12_I2        |
+|          |              |            |               | gte_81_I12_I3        |
+|          |              |            |               | gte_81_I12_I4        |
+|          |              |            |               | lt_46_I12            |
+| r1131    | DW01_cmp2    | width=6    |               | gte_81_I13_I1        |
+|          |              |            |               | gte_81_I13_I2        |
+|          |              |            |               | gte_81_I13_I3        |
+|          |              |            |               | gte_81_I13_I4        |
+|          |              |            |               | lt_46_I13            |
+| r1132    | DW01_cmp2    | width=6    |               | gte_81_I14_I1        |
+|          |              |            |               | gte_81_I14_I2        |
+|          |              |            |               | gte_81_I14_I3        |
+|          |              |            |               | gte_81_I14_I4        |
+|          |              |            |               | lt_46_I14            |
+| r1133    | DW01_cmp2    | width=6    |               | gte_81_I15_I1        |
+|          |              |            |               | gte_81_I15_I2        |
+|          |              |            |               | gte_81_I15_I3        |
+|          |              |            |               | gte_81_I15_I4        |
+|          |              |            |               | lt_46_I15            |
+| r1134    | DW01_cmp2    | width=6    |               | gte_81_I16_I1        |
+|          |              |            |               | gte_81_I16_I2        |
+|          |              |            |               | gte_81_I16_I3        |
+|          |              |            |               | gte_81_I16_I4        |
+|          |              |            |               | lt_46_I16            |
+| r1135    | DW01_sub     | width=5    |               | sub_55 sub_94        |
+|          |              |            |               | sub_94_I2_I1         |
+|          |              |            |               | sub_94_I3_I1         |
+|          |              |            |               | sub_94_I4_I1         |
+| r1136    | DW01_cmp2    | width=5    |               | gte_94 gte_94_I2     |
+|          |              |            |               | gte_94_I5 lt_55      |
+| r1137    | DW01_cmp2    | width=5    |               | gte_94_I2_I1         |
+|          |              |            |               | gte_94_I2_I2         |
+|          |              |            |               | gte_94_I2_I7         |
+|          |              |            |               | lt_55_I2             |
+| r1138    | DW01_cmp2    | width=5    |               | gte_94_I3_I1         |
+|          |              |            |               | gte_94_I3_I4         |
+|          |              |            |               | gte_94_I3_I7         |
+|          |              |            |               | lt_55_I3             |
+| r1139    | DW01_cmp2    | width=5    |               | gte_94_I4_I1         |
+|          |              |            |               | gte_94_I4_I2         |
+|          |              |            |               | gte_94_I4_I4         |
+|          |              |            |               | gte_94_I4_I7         |
+|          |              |            |               | lt_55_I4             |
+| r1140    | DW01_cmp2    | width=5    |               | gte_94_I5_I1         |
+|          |              |            |               | gte_94_I5_I2         |
+|          |              |            |               | gte_94_I5_I4         |
+|          |              |            |               | gte_94_I5_I7         |
+|          |              |            |               | lt_55_I5             |
+| r1141    | DW01_cmp2    | width=5    |               | gte_94_I6_I1         |
+|          |              |            |               | gte_94_I6_I2         |
+|          |              |            |               | gte_94_I6_I4         |
+|          |              |            |               | gte_94_I6_I6         |
+|          |              |            |               | lt_55_I6             |
+| r1142    | DW01_cmp2    | width=5    |               | gte_94_I7_I1         |
+|          |              |            |               | gte_94_I7_I2         |
+|          |              |            |               | gte_94_I7_I4         |
+|          |              |            |               | gte_94_I7_I6         |
+|          |              |            |               | lt_55_I7             |
+| r1143    | DW01_cmp2    | width=5    |               | gte_94_I8_I1         |
+|          |              |            |               | gte_94_I8_I4         |
+|          |              |            |               | gte_94_I8_I6         |
+|          |              |            |               | lt_55_I8             |
+| r1187    | DW01_cmp2    | width=6    |               | lt_46_I4 lt_55_I12   |
+| r1197    | DW01_cmp2    | width=5    |               | lt_55_I9             |
+| r1203    | DW01_cmp2    | width=5    |               | lt_55_I15            |
+| r1205    | DW01_cmp2    | width=5    |               | lt_55_I13            |
+| r1207    | DW01_cmp2    | width=5    |               | lt_55_I10            |
+| r1217    | DW01_cmp2    | width=5    |               | lt_55_I14            |
+===============================================================================
+
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Shifters_stg_2_SIMD2_SIMD_Width64_0
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0
+****************************************
+Resource Sharing Report for design DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0 in
+        file ../modules//FU/shifters_stg/DSP_Shifters_stg_1.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r65      | DW_rash      | A_width=32 |               | srl_57               |
+|          |              | SH_width=5 |               |                      |
+| r67      | DW_rash      | A_width=32 |               | srl_57_I2            |
+|          |              | SH_width=5 |               |                      |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| srl_57             | DW_rash          | mx2                |                |
+| srl_57_I2          | DW_rash          | mx2                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_SIMD_Width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Adders_Sync_SIMD2_SIMD_Width64_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Adders_stg_2_SIMD2_SIMD_Width64_1
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_2_root_add_60_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_60_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_63_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_60_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_60_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_63_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Adders_stg_1_SIMD2_SIMD_Width64_1
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_1_root_add_66_2                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_67_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_67_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_66_2_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_67_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_67_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Adders_Sync_SIMD2_SIMD_Width64_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Adders_stg_2_SIMD2_SIMD_Width64_2
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_2_root_add_60_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_60_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_63_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_60_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_60_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_63_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Adders_stg_1_SIMD2_SIMD_Width64_2
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_1_root_add_66_2                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_67_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_67_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_66_2_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_67_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_67_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Adders_Sync_SIMD2_SIMD_Width64_0
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DSP_Adders_stg_2_SIMD2_SIMD_Width64_0
+****************************************
+Resource Sharing Report for design DSP_Adders_stg_2_SIMD2_SIMD_Width64_0 in
+        file ../modules//FU/adders_stg/DSP_Adders_stg_2.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r107     | DW01_add     | width=9    |               | add_2_root_add_60_3  |
+| r109     | DW01_add     | width=9    |               | add_1_root_add_60_3  |
+| r111     | DW01_add     | width=9    |               | add_1_root_add_63_3  |
+| r113     | DW01_add     | width=9    |               | add_2_root_add_60_3_I2 |
+| r115     | DW01_add     | width=9    |               | add_1_root_add_60_3_I2 |
+| r117     | DW01_add     | width=9    |               | add_1_root_add_63_3_I2 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_2_root_add_60_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_60_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_63_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_60_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_60_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_63_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Adders_stg_1_SIMD2_SIMD_Width64_0
+****************************************
+Resource Sharing Report for design DSP_Adders_stg_1_SIMD2_SIMD_Width64_0 in
+        file ../modules//FU/adders_stg/DSP_Adders_stg_1.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r100     | DW01_add     | width=9    |               | add_1_root_add_66_2  |
+| r102     | DW01_add     | width=9    |               | add_2_root_add_67_3  |
+| r104     | DW01_add     | width=9    |               | add_1_root_add_67_3  |
+| r106     | DW01_add     | width=9    |               | add_1_root_add_66_2_I2 |
+| r108     | DW01_add     | width=9    |               | add_2_root_add_67_3_I2 |
+| r110     | DW01_add     | width=9    |               | add_1_root_add_67_3_I2 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_1_root_add_66_2                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_67_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_67_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_66_2_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_67_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_67_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_3
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_4
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_5
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_6
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_7
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_8
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_9
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_10
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_11
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_12
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_13
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_14
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_15
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_16
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_17
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_18
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_19
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_20
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_21
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_22
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_23
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_24
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_25
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_26
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_27
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_28
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_29
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_30
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_31
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_32
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_33
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_34
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_35
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_36
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_37
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_38
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_39
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_40
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_41
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_42
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_43
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_44
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_45
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_46
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_47
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_48
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_49
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_50
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_51
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_52
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_53
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_54
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_55
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_56
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_57
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_58
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_59
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_60
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_61
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_62
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_63
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_65
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_66
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_67
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_68
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_69
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_70
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_71
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_72
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_73
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_74
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_75
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_76
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_77
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_78
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_79
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_80
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_81
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_82
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_83
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_84
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_85
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_86
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_87
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_88
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_89
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_90
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_91
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_92
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_93
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_94
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_95
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_96
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_97
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_98
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_99
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_100
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_101
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_102
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_103
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_104
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_105
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_106
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_107
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_108
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_109
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_110
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_111
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_112
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_113
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_114
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_115
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_116
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_117
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_118
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_119
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_120
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_121
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_122
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_123
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_124
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_125
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_126
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_127
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_128
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_129
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_130
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_131
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_132
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_133
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_134
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_135
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_136
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_137
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_138
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_139
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_140
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_141
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_142
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_143
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_144
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_145
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_146
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_147
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_148
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_149
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_150
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_151
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_152
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_153
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_154
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_155
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_156
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_157
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_158
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_159
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_160
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_161
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_162
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_163
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_164
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_165
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_166
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_167
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_168
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_169
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_170
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_171
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_172
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_173
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_174
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_175
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_176
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_177
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_178
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_179
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_180
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_181
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_182
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_183
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_184
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_185
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_186
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_187
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_188
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_189
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_190
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_191
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_192
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_193
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_194
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_195
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_196
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_197
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_198
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_199
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_200
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_201
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_202
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_203
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_204
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_205
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_206
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_207
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_208
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_209
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_210
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_211
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_212
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_213
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_214
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_215
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_216
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_217
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_218
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_219
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_220
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_221
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_222
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_223
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_224
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_225
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_226
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_227
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_228
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_229
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_230
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_231
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_232
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_233
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_234
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_235
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_236
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_237
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_238
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_239
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_240
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_241
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_242
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_243
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_244
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_245
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_246
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_247
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_248
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_249
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_250
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_251
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_252
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_253
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_254
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_255
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_256
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_257
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_258
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_259
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_260
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_261
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_262
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_263
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_264
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_265
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_266
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_267
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_268
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_269
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_270
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_271
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_272
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_273
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_274
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_275
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_276
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_277
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_278
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_279
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_280
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_281
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_282
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_283
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_284
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_285
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_286
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_287
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_288
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_289
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_290
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_291
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_292
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_293
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_294
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_295
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_296
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_297
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_298
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_299
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_300
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_301
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_302
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_303
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_304
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_305
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_306
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_307
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_308
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_309
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_310
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_311
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_312
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_313
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_314
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_315
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_316
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_317
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_318
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_319
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_320
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_321
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_322
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_323
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_324
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_325
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_326
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_327
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_328
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_329
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_330
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_331
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_332
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_333
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_334
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_335
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_336
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_337
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_338
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_339
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_340
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_341
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_342
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_343
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_344
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_345
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_346
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_347
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_348
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_349
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_350
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_351
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_352
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_353
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_354
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_355
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_356
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_357
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_358
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_359
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_360
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_361
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_362
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_363
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_364
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_365
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_366
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_367
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_368
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_369
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_370
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_371
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_372
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_373
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_374
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_375
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_376
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_377
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_378
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_379
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_380
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_381
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_382
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_383
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_384
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_385
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_386
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_387
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_388
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_389
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_390
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_391
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_392
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_393
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_394
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_395
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_396
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_397
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_398
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_399
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_400
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_401
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_402
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_403
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_404
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_405
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_406
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_407
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_408
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_409
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_410
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_411
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_412
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_413
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_414
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_415
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_416
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_417
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_418
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_419
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_420
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_421
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_422
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_423
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_424
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_425
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_426
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_427
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_428
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_429
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_430
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_431
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_432
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_433
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_434
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_435
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_436
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_437
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_438
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_439
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_440
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_441
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_442
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_443
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_444
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_445
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_446
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_447
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_448
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_449
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_450
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_451
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_452
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_453
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_454
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_455
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_456
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_457
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_458
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_459
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_460
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_461
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_462
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_463
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_464
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_465
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_466
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_467
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_468
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DMR_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM3_TPS_CEIL2_TPS_BUF_CEIL1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_FU_enabler_sync_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_FU_enabler_sync_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_FU_enabler_sync_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_FU_Handler_MC_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_FU_Handler_MC_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_FU_Handler_MC_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_pipeline_controller_1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_pipeline_controller_2
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_pipeline_controller_0
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_1
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_1_root_sub_133 | DW01_add         | rpl                |                |
+| add_1_root_sub_134 | DW01_add         | rpl                |                |
+| add_1_root_sub_135 | DW01_add         | rpl                |                |
+| sub_222_I2         | DW01_dec         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_2
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_1_root_sub_133 | DW01_add         | rpl                |                |
+| add_1_root_sub_134 | DW01_add         | rpl                |                |
+| add_1_root_sub_135 | DW01_add         | rpl                |                |
+| sub_222_I2         | DW01_dec         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0
+****************************************
+Resource Sharing Report for design
+        DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0
+        in file ../modules//excpt_cntrl/DSP_Excpt_Cntrl_unit.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r644     | DW01_cmp6    | width=3    |               | eq_152 ne_178_2      |
+| r652     | DW01_cmp2    | width=15   |               | gt_239 gt_260 gt_282 |
+|          |              |            |               | gt_307 gt_329 gt_355 |
+|          |              |            |               | gt_379               |
+| r653     | DW01_cmp2    | width=15   |               | gt_255 gt_277 gt_299 |
+|          |              |            |               | gt_324 gt_347 gt_374 |
+|          |              |            |               | gt_398 gt_432        |
+| r668     | DW01_add     | width=15   |               | add_1_root_sub_133   |
+| r670     | DW01_dec     | width=15   |               | sub_0_root_sub_133   |
+| r672     | DW01_add     | width=15   |               | add_1_root_sub_134   |
+| r674     | DW01_dec     | width=15   |               | sub_0_root_sub_134   |
+| r676     | DW01_add     | width=15   |               | add_1_root_sub_135   |
+| r678     | DW01_dec     | width=15   |               | sub_0_root_sub_135   |
+| r680     | DW01_cmp2    | width=31   |               | lte_213              |
+| r682     | DW01_cmp2    | width=15   |               | lte_gte_218          |
+| r684     | DW01_cmp2    | width=15   |               | lte_gte_220          |
+| r686     | DW01_dec     | width=15   |               | sub_222_I2           |
+| r688     | DW01_cmp2    | width=14   |               | lte_222_I2           |
+| r690     | DW01_inc     | width=2    |               | add_223_I2           |
+| r692     | DW01_inc     | width=2    |               | add_225_I2           |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_1_root_sub_133 | DW01_add         | rpl                |                |
+| add_1_root_sub_134 | DW01_add         | rpl                |                |
+| add_1_root_sub_135 | DW01_add         | rpl                |                |
+| sub_222_I2         | DW01_dec         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_1
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| sub_311            | DW01_sub         | rpl                |                |
+| mult_add_245_aco   | DW02_mult        | csa                |                |
+| mult_add_240_aco   | DW02_mult        | csa                |                |
+| sub_285            | DW01_sub         | rpl                |                |
+| add_245_aco        | DW01_add         | rpl                |                |
+| add_240_aco        | DW01_add         | rpl                |                |
+| r1043              | DW01_sub         | rpl                |                |
+| add_293            | DW01_add         | rpl                |                |
+| add_281            | DW01_add         | rpl                |                |
+| add_296            | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_1_DW02_mult_1_DW02_mult_25
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width31_B_width1
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r64      | DW01_absval  | width=31   |               | A2_1                 |
+| r66      | DW01_absval  | width=1    |               | A2_2                 |
+| r68      | DW01_inc     | width=32   |               | A3                   |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_1_DW02_mult_0_DW02_mult_24
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width31_B_width1
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r64      | DW01_absval  | width=31   |               | A2_1                 |
+| r66      | DW01_absval  | width=1    |               | A2_2                 |
+| r68      | DW01_inc     | width=32   |               | A3                   |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_2
+****************************************
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| sub_311            | DW01_sub         | rpl                |                |
+| mult_add_245_aco   | DW02_mult        | csa                |                |
+| mult_add_240_aco   | DW02_mult        | csa                |                |
+| sub_285            | DW01_sub         | rpl                |                |
+| add_245_aco        | DW01_add         | rpl                |                |
+| add_240_aco        | DW01_add         | rpl                |                |
+| r1043              | DW01_sub         | rpl                |                |
+| add_293            | DW01_add         | rpl                |                |
+| add_281            | DW01_add         | rpl                |                |
+| add_296            | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_2_DW02_mult_1_DW02_mult_27
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width31_B_width1
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r64      | DW01_absval  | width=31   |               | A2_1                 |
+| r66      | DW01_absval  | width=1    |               | A2_2                 |
+| r68      | DW01_inc     | width=32   |               | A3                   |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_2_DW02_mult_0_DW02_mult_26
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width31_B_width1
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r64      | DW01_absval  | width=31   |               | A2_1                 |
+| r66      | DW01_absval  | width=1    |               | A2_2                 |
+| r68      | DW01_inc     | width=32   |               | A3                   |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_0
+****************************************
+Resource Sharing Report for design
+        DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_0
+        in file ../modules//exec/DSP_Exec_Unit.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r325     | DW01_cmp2    | width=32   |               | gte_284 lte_gte_250  |
+| r326     | DW01_add     | width=14   |               | add_281              |
+| r327     | DW01_sub     | width=15   |               | sub_311              |
+| r338     | DW02_mult    | A_width=31 |               | mult_add_245_aco     |
+|          |              | B_width=1  |               |                      |
+| r683     | DW01_cmp2    | width=32   |               | gte_291 gte_301      |
+| r1003    | DW01_add     | width=32   |               | add_293              |
+| r1004    | DW02_mult    | A_width=31 |               | mult_add_240_aco     |
+|          |              | B_width=1  |               |                      |
+| r1005    | DW01_cmp2    | width=32   |               | gte_309              |
+| r1006    | DW01_cmp2    | width=19   |               | lt_316_I19           |
+| r1008    | DW01_cmp2    | width=19   |               | lt_316_I23           |
+| r1009    | DW01_cmp2    | width=19   |               | lt_316_I15           |
+| r1010    | DW01_cmp2    | width=19   |               | lt_316_I8            |
+| r1011    | DW01_cmp2    | width=19   |               | lt_316_I63           |
+| r1012    | DW01_cmp2    | width=19   |               | lt_316_I12           |
+| r1013    | DW01_cmp2    | width=19   |               | lt_316_I38           |
+| r1014    | DW01_cmp2    | width=19   |               | lt_316_I33           |
+| r1015    | DW01_cmp2    | width=19   |               | lt_316_I18           |
+| r1016    | DW01_cmp2    | width=19   |               | lt_316_I56           |
+| r1017    | DW01_cmp2    | width=19   |               | lt_316_I22           |
+| r1018    | DW01_cmp2    | width=19   |               | lt_316_I2            |
+| r1019    | DW01_cmp2    | width=19   |               | lt_316_I6            |
+| r1020    | DW01_cmp2    | width=19   |               | lt_316_I29           |
+| r1021    | DW01_cmp2    | width=19   |               | lt_316_I41           |
+| r1022    | DW01_cmp2    | width=19   |               | lt_316_I13           |
+| r1023    | DW01_cmp2    | width=19   |               | lt_316_I36           |
+| r1024    | DW01_cmp2    | width=19   |               | lt_316_I7            |
+| r1025    | DW01_cmp2    | width=19   |               | lt_316_I53           |
+| r1026    | DW01_cmp2    | width=19   |               | lt_316_I26           |
+| r1027    | DW01_cmp2    | width=19   |               | lt_316_I11           |
+| r1028    | DW01_sub     | width=15   |               | sub_285              |
+| r1029    | DW01_cmp2    | width=19   |               | lt_316_I30           |
+| r1030    | DW01_add     | width=32   |               | add_245_aco          |
+| r1031    | DW01_cmp2    | width=19   |               | lt_316_I55           |
+| r1032    | DW01_cmp2    | width=19   |               | lt_316_I3            |
+| r1033    | DW01_cmp2    | width=19   |               | lt_316_I5            |
+| r1034    | DW01_cmp2    | width=19   |               | lt_316_I64           |
+| r1035    | DW01_cmp2    | width=19   |               | lt_316_I17           |
+| r1036    | DW01_cmp2    | width=19   |               | lt_316_I49           |
+| r1037    | DW01_cmp2    | width=19   |               | lt_316_I60           |
+| r1038    | DW01_cmp2    | width=19   |               | lt_316_I45           |
+| r1039    | DW01_cmp2    | width=19   |               | lt_316_I16           |
+| r1040    | DW01_cmp2    | width=19   |               | lt_316_I58           |
+| r1041    | DW01_cmp2    | width=19   |               | lt_316_I59           |
+| r1042    | DW01_add     | width=32   |               | add_240_aco          |
+| r1043    | DW01_sub     | width=15   |               | sub_251 sub_302      |
+| r1044    | DW01_cmp2    | width=19   |               | lt_316_I52           |
+| r1045    | DW01_cmp2    | width=19   |               | lt_316               |
+| r1046    | DW01_cmp2    | width=19   |               | lt_316_I37           |
+| r1047    | DW01_cmp2    | width=19   |               | lt_316_I27           |
+| r1048    | DW01_cmp2    | width=19   |               | lt_316_I47           |
+| r1049    | DW01_cmp2    | width=19   |               | lt_316_I34           |
+| r1050    | DW01_cmp2    | width=19   |               | lt_316_I4            |
+| r1051    | DW01_cmp2    | width=19   |               | lt_316_I50           |
+| r1052    | DW01_cmp2    | width=19   |               | lt_316_I57           |
+| r1053    | DW01_cmp2    | width=19   |               | lt_316_I51           |
+| r1054    | DW01_cmp2    | width=19   |               | lt_316_I14           |
+| r1055    | DW01_cmp2    | width=19   |               | lt_316_I9            |
+| r1056    | DW01_cmp2    | width=19   |               | lt_316_I20           |
+| r1057    | DW01_cmp2    | width=19   |               | lt_316_I43           |
+| r1058    | DW01_cmp2    | width=19   |               | lt_316_I62           |
+| r1060    | DW01_cmp2    | width=19   |               | lt_316_I32           |
+| r1061    | DW01_cmp2    | width=19   |               | lt_316_I42           |
+| r1062    | DW01_cmp2    | width=19   |               | lt_316_I46           |
+| r1063    | DW01_cmp2    | width=19   |               | lt_316_I44           |
+| r1064    | DW01_cmp2    | width=19   |               | lt_316_I31           |
+| r1065    | DW01_cmp2    | width=19   |               | lt_316_I48           |
+| r1066    | DW01_cmp2    | width=19   |               | lt_316_I25           |
+| r1067    | DW01_cmp2    | width=19   |               | lt_316_I10           |
+| r1068    | DW01_cmp2    | width=19   |               | lt_316_I35           |
+| r1069    | DW01_cmp2    | width=19   |               | lt_316_I21           |
+| r1070    | DW01_add     | width=32   |               | add_296              |
+| r1072    | DW01_cmp2    | width=19   |               | lt_316_I40           |
+| r1073    | DW01_cmp2    | width=19   |               | lt_316_I61           |
+| r1074    | DW01_cmp2    | width=19   |               | lt_316_I28           |
+| r1075    | DW01_cmp2    | width=19   |               | lt_316_I54           |
+| r1076    | DW01_cmp2    | width=19   |               | lt_316_I39           |
+| r1077    | DW01_cmp2    | width=19   |               | lt_316_I24           |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| sub_311            | DW01_sub         | rpl                |                |
+| mult_add_245_aco   | DW02_mult        | csa                |                |
+| mult_add_240_aco   | DW02_mult        | csa                |                |
+| sub_285            | DW01_sub         | rpl                |                |
+| add_245_aco        | DW01_add         | rpl                |                |
+| add_240_aco        | DW01_add         | rpl                |                |
+| r1043              | DW01_sub         | rpl                |                |
+| add_293            | DW01_add         | rpl                |                |
+| add_281            | DW01_add         | rpl                |                |
+| add_296            | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_0_DW02_mult_1_DW02_mult_29
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width31_B_width1
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r64      | DW01_absval  | width=31   |               | A2_1                 |
+| r66      | DW01_absval  | width=1    |               | A2_2                 |
+| r68      | DW01_inc     | width=32   |               | A3                   |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_0_DW02_mult_0_DW02_mult_28
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width31_B_width1
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r64      | DW01_absval  | width=31   |               | A2_1                 |
+| r66      | DW01_absval  | width=1    |               | A2_2                 |
+| r68      | DW01_inc     | width=32   |               | A3                   |
+===============================================================================
+
+1

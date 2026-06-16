@@ -1,0 +1,806 @@
+Loading db file '/home/b.mansour/Desktop/klessydra_git/DSP_BreakDown/synthesis/130nm/db/sg13g2_stdcell_typ_1p20V_25C.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Sat Jan 31 18:40:20 2026
+****************************************
+
+
+Library(s) Used:
+
+    sg13g2_stdcell_typ_1p20V_25C (File: /home/b.mansour/Desktop/klessydra_git/DSP_BreakDown/synthesis/130nm/db/sg13g2_stdcell_typ_1p20V_25C.db)
+
+
+Operating Conditions: sg13g2_stdcell_typ_1p20V_25C   Library: sg13g2_stdcell_typ_1p20V_25C
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1 200k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64 10k sg13g2_stdcell_typ_1p20V_25C
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_pipeline_controller 1k               sg13g2_stdcell_typ_1p20V_25C
+DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_TMR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64 10k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_TMR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64 10k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_TMR_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32 100k sg13g2_stdcell_typ_1p20V_25C
+DSP_Comparators_TMR_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64 5k sg13g2_stdcell_typ_1p20V_25C
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64 2k sg13g2_stdcell_typ_1p20V_25C
+DSP_FU_Handler_MC      0_1k              sg13g2_stdcell_typ_1p20V_25C
+DSP_FU_enabler_sync    0_1k              sg13g2_stdcell_typ_1p20V_25C
+DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_0 5k sg13g2_stdcell_typ_1p20V_25C
+TMR_0                  0_1k              sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_0 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32_0 30k sg13g2_stdcell_typ_1p20V_25C
+DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_0 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_Sync_SIMD2_SIMD_Width64_0 2k  sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0 2k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_2_SIMD2_SIMD_Width64_0 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_comb_SIMD2_SIMD_Width64_0 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0 30k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64_0 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Comparators_Unit_SIMD2_SIMD_Width64_0 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_1 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_2 5k sg13g2_stdcell_typ_1p20V_25C
+TMR_1                  0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_2                  0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_3                  0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_4                  0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_5                  0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_6                  0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_7                  0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_8                  0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_9                  0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_10                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_11                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_12                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_13                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_14                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_15                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_16                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_17                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_18                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_19                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_20                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_21                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_22                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_23                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_24                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_25                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_26                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_27                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_28                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_29                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_30                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_31                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_32                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_33                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_34                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_35                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_36                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_37                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_38                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_39                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_40                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_41                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_42                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_43                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_44                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_45                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_46                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_47                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_48                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_49                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_50                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_51                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_52                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_53                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_54                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_55                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_56                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_57                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_58                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_59                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_60                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_61                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_62                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_63                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_64                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_65                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_66                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_67                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_68                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_69                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_70                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_71                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_72                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_73                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_74                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_75                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_76                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_77                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_78                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_79                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_80                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_81                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_82                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_83                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_84                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_85                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_86                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_87                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_88                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_89                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_90                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_91                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_92                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_93                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_94                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_95                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_96                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_97                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_98                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_99                 0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_100                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_101                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_102                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_103                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_104                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_105                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_106                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_107                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_108                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_109                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_110                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_111                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_112                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_113                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_114                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_115                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_116                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_117                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_118                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_119                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_120                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_121                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_122                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_123                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_124                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_125                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_126                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_127                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_128                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_129                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_130                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_131                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_132                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_133                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_134                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_135                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_136                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_137                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_138                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_139                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_140                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_141                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_142                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_143                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_144                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_145                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_146                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_147                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_148                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_149                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_150                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_151                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_152                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_153                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_154                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_155                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_156                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_157                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_158                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_159                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_160                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_161                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_162                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_163                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_164                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_165                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_166                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_167                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_168                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_169                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_170                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_171                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_172                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_173                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_174                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_175                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_176                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_177                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_178                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_179                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_180                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_181                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_182                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_183                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_184                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_185                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_186                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_187                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_188                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_189                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_190                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_191                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_192                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_193                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_194                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_195                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_196                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_197                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_198                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_199                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_200                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_201                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_202                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_203                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_204                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_205                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_206                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_207                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_208                0_1k              sg13g2_stdcell_typ_1p20V_25C
+TMR_209                0_1k              sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_1 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_2 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32_1 30k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32_2 30k sg13g2_stdcell_typ_1p20V_25C
+DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_1 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_2 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_2 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_2 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_Sync_SIMD2_SIMD_Width64_1 2k  sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_Sync_SIMD2_SIMD_Width64_2 2k  sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1 2k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_2 2k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_2_SIMD2_SIMD_Width64_1 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_2_SIMD2_SIMD_Width64_2 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_comb_SIMD2_SIMD_Width64_1 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_comb_SIMD2_SIMD_Width64_2 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1 30k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2 30k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64_1 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64_2 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Comparators_Unit_SIMD2_SIMD_Width64_1 1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Comparators_Unit_SIMD2_SIMD_Width64_2 1k sg13g2_stdcell_typ_1p20V_25C
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_0 0_5k sg13g2_stdcell_typ_1p20V_25C
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_1 0_5k sg13g2_stdcell_typ_1p20V_25C
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_2 0_5k sg13g2_stdcell_typ_1p20V_25C
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_3 0_5k sg13g2_stdcell_typ_1p20V_25C
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_4 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_0_DW01_add_5 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_1_DW01_add_6 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_2_DW01_add_7 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_3_DW01_add_8 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_4_DW01_add_9 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_5_DW01_add_10 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_0 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW01_add_0_DW01_add_11 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_1 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW01_add_1_DW01_add_12 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_2 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_13 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_3 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW01_add_3_DW01_add_14 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_4 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW01_add_4_DW01_add_15 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_5 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW01_add_5_DW01_add_16 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_6 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW01_add_6_DW01_add_17 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_7 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW01_add_7_DW01_add_18 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_0_DW01_add_19 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_1_DW01_add_20 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_2_DW01_add_21 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_3_DW01_add_22 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_4_DW01_add_23 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_5_DW01_add_24 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_0_DW02_mult_8 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW01_add_0_DW01_add_25 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_1_DW02_mult_9 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW01_add_1_DW01_add_26 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_2_DW02_mult_10 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW01_add_2_DW01_add_27 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_3_DW02_mult_11 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW01_add_3_DW01_add_28 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_4_DW02_mult_12 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW01_add_4_DW01_add_29 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_5_DW02_mult_13 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW01_add_5_DW01_add_30 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_6_DW02_mult_14 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW01_add_6_DW01_add_31 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_7_DW02_mult_15 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW01_add_7_DW01_add_32 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_0_DW01_add_33 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_1_DW01_add_34 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_2_DW01_add_35 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_3_DW01_add_36 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_4_DW01_add_37 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_5_DW01_add_38 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_0_DW02_mult_16 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW01_add_0_DW01_add_39 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_1_DW02_mult_17 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW01_add_1_DW01_add_40 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_2_DW02_mult_18 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_41 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_3_DW02_mult_19 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW01_add_3_DW01_add_42 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_4_DW02_mult_20 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW01_add_4_DW01_add_43 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_5_DW02_mult_21 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW01_add_5_DW01_add_44 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_6_DW02_mult_22 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW01_add_6_DW01_add_45 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_7_DW02_mult_23 5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW01_add_7_DW01_add_46 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1_DW_rash_0 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1_DW_rash_1 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_2_DW_rash_0_DW_rash_2 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_2_DW_rash_1_DW_rash_3 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0_DW_rash_0_DW_rash_4 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0_DW_rash_1_DW_rash_5 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_0_DW01_add_47 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_1_DW01_add_48 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_49 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_3_DW01_add_50 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_4_DW01_add_51 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_5_DW01_add_52 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_0_DW01_add_53 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_1_DW01_add_54 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_55 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_3_DW01_add_56 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_4_DW01_add_57 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_5_DW01_add_58 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_0_DW01_add_59 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_1_DW01_add_60 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_2_DW01_add_61 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_3_DW01_add_62 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_4_DW01_add_63 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_5_DW01_add_64 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_0_DW01_add_65 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_1_DW01_add_66 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_2_DW01_add_67 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_3_DW01_add_68 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_4_DW01_add_69 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_5_DW01_add_70 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_0_DW01_add_71 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_1_DW01_add_72 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_73 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_3_DW01_add_74 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_4_DW01_add_75 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_5_DW01_add_76 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_0_DW01_add_77 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_1_DW01_add_78 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_79 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_3_DW01_add_80 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_4_DW01_add_81 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_5_DW01_add_82 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_0 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_0_DW01_add_83 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_1_DW01_add_84 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_85 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_0_DW01_add_86 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_1_DW01_add_87 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_2_DW01_add_88 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_0_DW01_sub_9 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_3_DW01_add_89 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_90 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_1_DW01_sub_10 0_5k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_0_DW02_mult_24 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1_DW02_mult_25 0_1k sg13g2_stdcell_typ_1p20V_25C
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_2_DW01_sub_11 0_5k sg13g2_stdcell_typ_1p20V_25C
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1    2.226    5.554 8.15e+06    7.787 100.0
+  ACCUM_STG (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64) 3.23e-02    0.109 1.27e+05    0.141   1.8
+    add_127 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_4) 7.45e-04 8.29e-04 2.07e+04 1.59e-03   0.0
+    add_138 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_3) 3.14e-04 3.89e-04 9.97e+03 7.13e-04   0.0
+    add_139 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_2) 3.26e-04 3.93e-04 9.97e+03 7.29e-04   0.0
+    add_142 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_1) 2.82e-04 2.54e-04 1.15e+04 5.47e-04   0.0
+    r108 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_0) 1.10e-03 1.89e-03 2.09e+04 3.01e-03   0.0
+  DSP_COMPARATORS_inst (DSP_Comparators_TMR_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64) 5.15e-02    0.248 1.86e+05    0.299   3.8
+    tmr_dsp_out_cmp_results_inst_0_63 (TMR_1) 7.23e-06 1.15e-05  334.657 1.91e-05   0.0
+    tmr_dsp_out_cmp_results_inst_0_62 (TMR_2)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_61 (TMR_3)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_60 (TMR_4)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_59 (TMR_5)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_58 (TMR_6)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_57 (TMR_7)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_56 (TMR_8) 7.23e-06 1.15e-05  334.657 1.91e-05   0.0
+    tmr_dsp_out_cmp_results_inst_0_55 (TMR_9) 7.14e-06 1.15e-05  334.657 1.90e-05   0.0
+    tmr_dsp_out_cmp_results_inst_0_54 (TMR_10)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_53 (TMR_11)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_52 (TMR_12)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_51 (TMR_13)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_50 (TMR_14)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_49 (TMR_15)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_48 (TMR_16)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_47 (TMR_17)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_46 (TMR_18)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_45 (TMR_19)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_44 (TMR_20)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_43 (TMR_21)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_42 (TMR_22)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_41 (TMR_23)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_40 (TMR_24) 7.23e-06 1.15e-05  334.657 1.91e-05   0.0
+    tmr_dsp_out_cmp_results_inst_0_39 (TMR_25) 7.14e-06 1.15e-05  334.657 1.90e-05   0.0
+    tmr_dsp_out_cmp_results_inst_0_38 (TMR_26)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_37 (TMR_27)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_36 (TMR_28)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_35 (TMR_29)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_34 (TMR_30)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_33 (TMR_31)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_32 (TMR_32)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_31 (TMR_33) 8.10e-06 1.16e-05  334.657 2.00e-05   0.0
+    tmr_dsp_out_cmp_results_inst_0_30 (TMR_34)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_29 (TMR_35)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_28 (TMR_36)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_27 (TMR_37)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_26 (TMR_38)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_25 (TMR_39)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_24 (TMR_40) 8.10e-06 1.16e-05  334.657 2.00e-05   0.0
+    tmr_dsp_out_cmp_results_inst_0_23 (TMR_41) 8.10e-06 1.16e-05  334.657 2.00e-05   0.0
+    tmr_dsp_out_cmp_results_inst_0_22 (TMR_42)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_21 (TMR_43)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_20 (TMR_44)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_19 (TMR_45)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_18 (TMR_46)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_17 (TMR_47)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_16 (TMR_48)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_15 (TMR_49)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_14 (TMR_50)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_13 (TMR_51)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_12 (TMR_52)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_11 (TMR_53)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_10 (TMR_54)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_9 (TMR_55)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_8 (TMR_56) 8.10e-06 1.16e-05  334.657 2.00e-05   0.0
+    tmr_dsp_out_cmp_results_inst_0_7 (TMR_57) 8.10e-06 1.16e-05  334.657 2.00e-05   0.0
+    tmr_dsp_out_cmp_results_inst_0_6 (TMR_58)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_5 (TMR_59)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_4 (TMR_60)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_3 (TMR_61)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_2 (TMR_62)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_1 (TMR_63)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_cmp_results_inst_0_0 (TMR_64)    0.000    0.000  327.555 3.28e-07   0.0
+    dsp_comparators_inst_2 (DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_1) 1.70e-02 8.23e-02 5.50e+04 9.93e-02   1.3
+      DSP_Comparators_Unit_inst_0 (DSP_Comparators_Unit_SIMD2_SIMD_Width64_1) 1.70e-02 8.23e-02 5.50e+04 9.93e-02   1.3
+    dsp_comparators_inst_1 (DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_2) 1.70e-02 8.23e-02 5.50e+04 9.93e-02   1.3
+      DSP_Comparators_Unit_inst_0 (DSP_Comparators_Unit_SIMD2_SIMD_Width64_2) 1.70e-02 8.23e-02 5.50e+04 9.93e-02   1.3
+    dsp_comparators_inst_0 (DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_0) 1.70e-02 8.23e-02 5.50e+04 9.93e-02   1.3
+      DSP_Comparators_Unit_inst_0 (DSP_Comparators_Unit_SIMD2_SIMD_Width64_0) 1.70e-02 8.23e-02 5.50e+04 9.93e-02   1.3
+  DSP_MULTIPLIERS_inst (DSP_Multipliers_TMR_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32)    0.667    1.531 5.56e+06    2.204  28.3
+    TMR_inst_0_63 (TMR_65)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_62 (TMR_66)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_61 (TMR_67)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_60 (TMR_68)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_59 (TMR_69)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_58 (TMR_70)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_57 (TMR_71)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_56 (TMR_72)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_55 (TMR_73)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_54 (TMR_74)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_53 (TMR_75)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_52 (TMR_76)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_51 (TMR_77)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_50 (TMR_78)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_49 (TMR_79)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_48 (TMR_80)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_47 (TMR_81)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_46 (TMR_82)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_45 (TMR_83)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_44 (TMR_84)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_43 (TMR_85)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_42 (TMR_86)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_41 (TMR_87)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_40 (TMR_88)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_39 (TMR_89)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_38 (TMR_90)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_37 (TMR_91)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_36 (TMR_92)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_35 (TMR_93)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_34 (TMR_94)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_33 (TMR_95)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_32 (TMR_96)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_31 (TMR_97)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_30 (TMR_98)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_29 (TMR_99)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_28 (TMR_100)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_27 (TMR_101)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_26 (TMR_102)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_25 (TMR_103)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_24 (TMR_104)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_23 (TMR_105)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_22 (TMR_106)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_21 (TMR_107)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_20 (TMR_108)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_19 (TMR_109)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_18 (TMR_110)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_17 (TMR_111)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_16 (TMR_112)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_15 (TMR_113)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_14 (TMR_114)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_13 (TMR_115)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_12 (TMR_116)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_11 (TMR_117)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_10 (TMR_118)               0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_9 (TMR_119)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_8 (TMR_120)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_7 (TMR_121)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_6 (TMR_122)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_5 (TMR_123)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_4 (TMR_124)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_3 (TMR_125)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_2 (TMR_126)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_1 (TMR_127)                0.000    0.000  327.555 3.28e-07   0.0
+    TMR_inst_0_0 (TMR_128)                0.000    0.000  327.555 3.28e-07   0.0
+    DSP_Multipliers_inst_2 (DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32_1)    0.232    0.510 1.87e+06    0.744   9.6
+      DSP_Multipliers_stg_2_inst_0 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1) 1.68e-02 7.67e-02 1.72e+05 9.37e-02   1.2
+        add_2_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_5_DW01_add_10)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_1_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_4_DW01_add_9)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_0_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_3_DW01_add_8)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_2_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_2_DW01_add_7)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_1_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_1_DW01_add_6)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_0_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_1_DW01_add_0_DW01_add_5)    0.000    0.000 2.07e+04 2.07e-05   0.0
+      DSP_Multipliers_stg_1_comb_inst_0 (DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64_1) 6.24e-05 4.97e-05 1.74e+04 1.29e-04   0.0
+      DSP_Multipliers_stg_1_inst_0 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1)    0.214    0.433 1.68e+06    0.649   8.3
+        mult_69 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_7) 1.97e-02 1.59e-02 1.89e+05 3.58e-02   0.5
+        mult_70 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_6) 1.87e-02 1.52e-02 1.88e+05 3.41e-02   0.4
+        mult_71 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_5) 1.79e-02 1.54e-02 1.86e+05 3.35e-02   0.4
+        mult_72 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_4) 1.69e-02 1.49e-02 1.84e+05 3.20e-02   0.4
+        mult_69_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_3) 1.97e-02 1.60e-02 1.89e+05 3.58e-02   0.5
+        mult_70_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_2) 1.77e-02 1.57e-02 1.84e+05 3.36e-02   0.4
+        mult_71_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_1) 1.73e-02 1.51e-02 1.85e+05 3.27e-02   0.4
+        mult_72_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_0) 1.52e-02 1.45e-02 1.81e+05 2.99e-02   0.4
+    DSP_Multipliers_inst_1 (DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32_2)    0.217    0.510 1.83e+06    0.730   9.4
+      DSP_Multipliers_stg_2_inst_0 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2) 1.68e-02 7.67e-02 1.72e+05 9.37e-02   1.2
+        add_2_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_5_DW01_add_24)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_1_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_4_DW01_add_23)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_0_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_3_DW01_add_22)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_2_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_2_DW01_add_21)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_1_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_1_DW01_add_20)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_0_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_2_DW01_add_0_DW01_add_19)    0.000    0.000 2.07e+04 2.07e-05   0.0
+      DSP_Multipliers_stg_1_comb_inst_0 (DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64_2) 6.24e-05 4.97e-05 1.74e+04 1.29e-04   0.0
+      DSP_Multipliers_stg_1_inst_0 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2)    0.200    0.433 1.64e+06    0.635   8.1
+        mult_69 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_7_DW02_mult_15) 1.67e-02 1.60e-02 1.81e+05 3.29e-02   0.4
+        mult_70 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_6_DW02_mult_14) 1.60e-02 1.53e-02 1.81e+05 3.14e-02   0.4
+        mult_71 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_5_DW02_mult_13) 1.63e-02 1.53e-02 1.81e+05 3.18e-02   0.4
+        mult_72 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_4_DW02_mult_12) 1.57e-02 1.48e-02 1.81e+05 3.07e-02   0.4
+        mult_69_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_3_DW02_mult_11) 1.67e-02 1.61e-02 1.81e+05 3.30e-02   0.4
+        mult_70_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_2_DW02_mult_10) 1.64e-02 1.57e-02 1.81e+05 3.23e-02   0.4
+        mult_71_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_1_DW02_mult_9) 1.58e-02 1.52e-02 1.81e+05 3.12e-02   0.4
+        mult_72_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_2_DW02_mult_0_DW02_mult_8) 1.52e-02 1.45e-02 1.81e+05 2.99e-02   0.4
+    DSP_Multipliers_inst_0 (DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32_0)    0.217    0.510 1.83e+06    0.730   9.4
+      DSP_Multipliers_stg_2_inst_0 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0) 1.68e-02 7.67e-02 1.72e+05 9.37e-02   1.2
+        add_2_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_5_DW01_add_38)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_1_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_4_DW01_add_37)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_0_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_3_DW01_add_36)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_2_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_2_DW01_add_35)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_1_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_1_DW01_add_34)    0.000    0.000 2.07e+04 2.07e-05   0.0
+        add_0_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_0_DW01_add_0_DW01_add_33)    0.000    0.000 2.07e+04 2.07e-05   0.0
+      DSP_Multipliers_stg_1_comb_inst_0 (DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64_0) 6.24e-05 4.97e-05 1.74e+04 1.29e-04   0.0
+      DSP_Multipliers_stg_1_inst_0 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0)    0.200    0.433 1.64e+06    0.635   8.1
+        mult_69 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_7_DW02_mult_23) 1.67e-02 1.60e-02 1.81e+05 3.29e-02   0.4
+        mult_70 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_6_DW02_mult_22) 1.60e-02 1.53e-02 1.81e+05 3.14e-02   0.4
+        mult_71 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_5_DW02_mult_21) 1.63e-02 1.53e-02 1.81e+05 3.18e-02   0.4
+        mult_72 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_4_DW02_mult_20) 1.57e-02 1.48e-02 1.81e+05 3.07e-02   0.4
+        mult_69_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_3_DW02_mult_19) 1.67e-02 1.61e-02 1.81e+05 3.30e-02   0.4
+        mult_70_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_2_DW02_mult_18) 1.64e-02 1.57e-02 1.81e+05 3.23e-02   0.4
+        mult_71_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_1_DW02_mult_17) 1.58e-02 1.52e-02 1.81e+05 3.12e-02   0.4
+        mult_72_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_0_DW02_mult_0_DW02_mult_16) 1.52e-02 1.45e-02 1.81e+05 2.99e-02   0.4
+  DSP_SHIFTERS_inst (DSP_Shifters_TMR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64)    0.181    0.831 7.32e+05    1.012  13.0
+    tmr_dsp_out_shifter_results_inst_0_63 (TMR_129)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_62 (TMR_130)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_61 (TMR_131)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_60 (TMR_132)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_59 (TMR_133)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_58 (TMR_134)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_57 (TMR_135)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_56 (TMR_136)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_55 (TMR_137)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_54 (TMR_138)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_53 (TMR_139)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_52 (TMR_140)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_51 (TMR_141)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_50 (TMR_142)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_49 (TMR_143)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_48 (TMR_144)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_47 (TMR_145)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_46 (TMR_146)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_45 (TMR_147)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_44 (TMR_148)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_43 (TMR_149)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_42 (TMR_150)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_41 (TMR_151)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_40 (TMR_152)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_39 (TMR_153)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_38 (TMR_154)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_37 (TMR_155)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_36 (TMR_156)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_35 (TMR_157)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_34 (TMR_158)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_33 (TMR_159)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_32 (TMR_160)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_31 (TMR_161)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_30 (TMR_162)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_29 (TMR_163)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_28 (TMR_164)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_27 (TMR_165)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_26 (TMR_166)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_25 (TMR_167)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_24 (TMR_168)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_23 (TMR_169)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_22 (TMR_170)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_21 (TMR_171)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_20 (TMR_172)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_19 (TMR_173)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_18 (TMR_174)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_17 (TMR_175)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_16 (TMR_176)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_15 (TMR_177)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_14 (TMR_178)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_13 (TMR_179)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_12 (TMR_180)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_11 (TMR_181)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_10 (TMR_182)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_9 (TMR_183)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_8 (TMR_184)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_7 (TMR_185)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_6 (TMR_186)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_5 (TMR_187)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_4 (TMR_188)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_3 (TMR_189)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_2 (TMR_190)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_1 (TMR_191)    0.000    0.000  327.555 3.28e-07   0.0
+    tmr_dsp_out_shifter_results_inst_0_0 (TMR_192)    0.000    0.000  327.555 3.28e-07   0.0
+    shifters_inst_2 (DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_1) 6.02e-02    0.277 2.37e+05    0.337   4.3
+      DSP_Shifters_comb_inst_0 (DSP_Shifters_comb_SIMD2_SIMD_Width64_1) 8.10e-04 4.25e-04 2.37e+04 1.26e-03   0.0
+      DSP_Shifters_stg_2_inst_0 (DSP_Shifters_stg_2_SIMD2_SIMD_Width64_1) 1.64e-02 7.68e-02 6.40e+04 9.33e-02   1.2
+      DSP_Shifters_stg_1_inst_0 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1) 4.23e-02    0.199 1.49e+05    0.241   3.1
+        srl_57 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1_DW_rash_1) 4.49e-03 7.64e-03 2.60e+04 1.22e-02   0.2
+        srl_57_I2 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1_DW_rash_0) 4.37e-03 7.53e-03 2.59e+04 1.19e-02   0.2
+    shifters_inst_1 (DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_2) 6.02e-02    0.277 2.37e+05    0.337   4.3
+      DSP_Shifters_comb_inst_0 (DSP_Shifters_comb_SIMD2_SIMD_Width64_2) 8.10e-04 4.25e-04 2.37e+04 1.26e-03   0.0
+      DSP_Shifters_stg_2_inst_0 (DSP_Shifters_stg_2_SIMD2_SIMD_Width64_2) 1.64e-02 7.68e-02 6.40e+04 9.33e-02   1.2
+      DSP_Shifters_stg_1_inst_0 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_2) 4.23e-02    0.199 1.49e+05    0.241   3.1
+        srl_57 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_2_DW_rash_1_DW_rash_3) 4.49e-03 7.64e-03 2.60e+04 1.22e-02   0.2
+        srl_57_I2 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_2_DW_rash_0_DW_rash_2) 4.37e-03 7.53e-03 2.59e+04 1.19e-02   0.2
+    shifters_inst_0 (DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_0) 6.01e-02    0.277 2.37e+05    0.337   4.3
+      DSP_Shifters_comb_inst_0 (DSP_Shifters_comb_SIMD2_SIMD_Width64_0) 8.59e-04 4.31e-04 2.38e+04 1.31e-03   0.0
+      DSP_Shifters_stg_2_inst_0 (DSP_Shifters_stg_2_SIMD2_SIMD_Width64_0) 1.64e-02 7.68e-02 6.40e+04 9.33e-02   1.2
+      DSP_Shifters_stg_1_inst_0 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0) 4.23e-02    0.199 1.49e+05    0.241   3.1
+        srl_57 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0_DW_rash_1_DW_rash_5) 4.49e-03 7.64e-03 2.60e+04 1.22e-02   0.2
+        srl_57_I2 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0_DW_rash_0_DW_rash_4) 4.37e-03 7.53e-03 2.59e+04 1.19e-02   0.2
+  DSP_ADDERS_inst (DSP_Adders_TMR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64)    0.212    0.884 6.82e+05    1.097  14.1
+    tmr_MSB_stage_2_inst_0_1_7 (TMR_193) 1.37e-05 6.73e-06  329.903 2.07e-05   0.0
+    tmr_MSB_stage_2_inst_0_1_6 (TMR_194) 1.07e-05 5.23e-06  329.694 1.63e-05   0.0
+    tmr_MSB_stage_2_inst_0_1_5 (TMR_195) 7.03e-06 5.91e-06  330.176 1.33e-05   0.0
+    tmr_MSB_stage_2_inst_0_1_4 (TMR_196) 1.29e-05 6.31e-06  328.752 1.95e-05   0.0
+    tmr_MSB_stage_2_inst_0_1_3 (TMR_197) 1.29e-05 6.37e-06  330.182 1.96e-05   0.0
+    tmr_MSB_stage_2_inst_0_1_2 (TMR_198) 1.22e-05 5.98e-06  329.728 1.85e-05   0.0
+    tmr_MSB_stage_2_inst_0_1_1 (TMR_199) 6.15e-06 5.19e-06  330.663 1.17e-05   0.0
+    tmr_MSB_stage_2_inst_0_1_0 (TMR_200) 1.14e-05 5.62e-06  330.179 1.73e-05   0.0
+    tmr_MSB_stage_2_inst_0_0_7 (TMR_201) 8.34e-06 7.05e-06  330.890 1.57e-05   0.0
+    tmr_MSB_stage_2_inst_0_0_6 (TMR_202) 1.30e-05 6.37e-06  330.270 1.97e-05   0.0
+    tmr_MSB_stage_2_inst_0_0_5 (TMR_203) 1.14e-05 5.62e-06  330.253 1.73e-05   0.0
+    tmr_MSB_stage_2_inst_0_0_4 (TMR_204) 7.03e-06 5.91e-06  330.227 1.33e-05   0.0
+    tmr_MSB_stage_2_inst_0_0_3 (TMR_205) 7.03e-06 5.92e-06  330.432 1.33e-05   0.0
+    tmr_MSB_stage_2_inst_0_0_2 (TMR_206) 1.30e-05 6.39e-06  330.779 1.97e-05   0.0
+    tmr_MSB_stage_2_inst_0_0_1 (TMR_207) 9.87e-06 4.85e-06  329.528 1.51e-05   0.0
+    tmr_MSB_stage_2_inst_0_0_0 (TMR_208) 1.05e-05 8.94e-06  331.690 1.98e-05   0.0
+    tmr_dsp_out_adder_results_inst_0_1 (TMR_209) 1.12e-06 1.10e-06  329.803 2.55e-06   0.0
+    tmr_dsp_out_adder_results_inst_0_0 (TMR_0) 7.48e-07 7.30e-07  329.159 1.81e-06   0.0
+    adders_inst_2 (DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_1) 7.07e-02    0.295 2.26e+05    0.365   4.7
+      DSP_Adders_Sync_inst_0 (DSP_Adders_Sync_SIMD2_SIMD_Width64_1) 6.06e-02    0.272 1.43e+05    0.333   4.3
+      DSP_Adders_stg_2_inst_0 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1) 1.14e-03 1.90e-03 3.81e+04 3.08e-03   0.0
+        add_2_root_add_60_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_5_DW01_add_52) 1.84e-04 1.47e-04 5.47e+03 3.36e-04   0.0
+        add_1_root_add_60_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_4_DW01_add_51) 3.55e-05 9.10e-05 3.05e+03 1.29e-04   0.0
+        add_1_root_add_63_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_3_DW01_add_50) 1.42e-04 1.64e-04 5.49e+03 3.11e-04   0.0
+        add_2_root_add_60_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_49) 1.91e-04 1.54e-04 5.46e+03 3.50e-04   0.0
+        add_1_root_add_60_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_1_DW01_add_48) 3.09e-05 9.30e-05 3.05e+03 1.27e-04   0.0
+        add_1_root_add_63_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_0_DW01_add_47) 1.42e-04 1.66e-04 5.48e+03 3.14e-04   0.0
+      DSP_Adders_stg_1_inst_0 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1) 8.96e-03 2.03e-02 4.42e+04 2.93e-02   0.4
+        add_1_root_add_66_2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_5_DW01_add_58) 1.32e-03 1.73e-03 5.42e+03 3.05e-03   0.0
+        add_2_root_add_67_3 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_4_DW01_add_57) 2.00e-03 1.68e-03 5.42e+03 3.69e-03   0.0
+        add_1_root_add_67_3 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_3_DW01_add_56) 4.38e-04 1.03e-03 3.05e+03 1.47e-03   0.0
+        add_1_root_add_66_2_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_55) 1.32e-03 1.70e-03 5.42e+03 3.03e-03   0.0
+        add_2_root_add_67_3_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_1_DW01_add_54) 2.07e-03 1.72e-03 5.42e+03 3.79e-03   0.0
+        add_1_root_add_67_3_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_0_DW01_add_53) 4.68e-04 1.06e-03 3.05e+03 1.53e-03   0.0
+    adders_inst_1 (DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_2) 7.05e-02    0.294 2.25e+05    0.365   4.7
+      DSP_Adders_Sync_inst_0 (DSP_Adders_Sync_SIMD2_SIMD_Width64_2) 6.06e-02    0.272 1.43e+05    0.333   4.3
+      DSP_Adders_stg_2_inst_0 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_2) 1.14e-03 1.90e-03 3.81e+04 3.08e-03   0.0
+        add_2_root_add_60_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_5_DW01_add_64) 1.84e-04 1.47e-04 5.47e+03 3.36e-04   0.0
+        add_1_root_add_60_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_4_DW01_add_63) 3.55e-05 9.10e-05 3.05e+03 1.29e-04   0.0
+        add_1_root_add_63_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_3_DW01_add_62) 1.42e-04 1.64e-04 5.49e+03 3.11e-04   0.0
+        add_2_root_add_60_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_2_DW01_add_61) 1.91e-04 1.54e-04 5.46e+03 3.50e-04   0.0
+        add_1_root_add_60_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_1_DW01_add_60) 3.09e-05 9.30e-05 3.05e+03 1.27e-04   0.0
+        add_1_root_add_63_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_2_DW01_add_0_DW01_add_59) 1.42e-04 1.66e-04 5.48e+03 3.14e-04   0.0
+      DSP_Adders_stg_1_inst_0 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_2) 8.71e-03 2.01e-02 4.38e+04 2.89e-02   0.4
+        add_1_root_add_66_2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_5_DW01_add_70) 1.32e-03 1.73e-03 5.42e+03 3.06e-03   0.0
+        add_2_root_add_67_3 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_4_DW01_add_69) 2.00e-03 1.68e-03 5.42e+03 3.69e-03   0.0
+        add_1_root_add_67_3 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_3_DW01_add_68) 4.38e-04 1.03e-03 3.05e+03 1.47e-03   0.0
+        add_1_root_add_66_2_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_2_DW01_add_67) 1.32e-03 1.71e-03 5.42e+03 3.03e-03   0.0
+        add_2_root_add_67_3_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_1_DW01_add_66) 2.07e-03 1.72e-03 5.42e+03 3.79e-03   0.0
+        add_1_root_add_67_3_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_2_DW01_add_0_DW01_add_65) 4.68e-04 1.06e-03 3.05e+03 1.53e-03   0.0
+    adders_inst_0 (DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_0) 7.05e-02    0.294 2.25e+05    0.365   4.7
+      DSP_Adders_Sync_inst_0 (DSP_Adders_Sync_SIMD2_SIMD_Width64_0) 6.06e-02    0.272 1.43e+05    0.333   4.3
+      DSP_Adders_stg_2_inst_0 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0) 1.14e-03 1.90e-03 3.81e+04 3.08e-03   0.0
+        add_2_root_add_60_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_5_DW01_add_76) 1.84e-04 1.47e-04 5.47e+03 3.36e-04   0.0
+        add_1_root_add_60_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_4_DW01_add_75) 3.55e-05 9.10e-05 3.05e+03 1.29e-04   0.0
+        add_1_root_add_63_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_3_DW01_add_74) 1.42e-04 1.64e-04 5.49e+03 3.11e-04   0.0
+        add_2_root_add_60_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_73) 1.91e-04 1.54e-04 5.46e+03 3.50e-04   0.0
+        add_1_root_add_60_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_1_DW01_add_72) 3.09e-05 9.30e-05 3.05e+03 1.27e-04   0.0
+        add_1_root_add_63_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_0_DW01_add_71) 1.42e-04 1.66e-04 5.48e+03 3.14e-04   0.0
+      DSP_Adders_stg_1_inst_0 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0) 8.71e-03 2.01e-02 4.38e+04 2.89e-02   0.4
+        add_1_root_add_66_2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_5_DW01_add_82) 1.32e-03 1.73e-03 5.42e+03 3.06e-03   0.0
+        add_2_root_add_67_3 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_4_DW01_add_81) 2.00e-03 1.68e-03 5.42e+03 3.69e-03   0.0
+        add_1_root_add_67_3 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_3_DW01_add_80) 4.38e-04 1.03e-03 3.05e+03 1.47e-03   0.0
+        add_1_root_add_66_2_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_79) 1.32e-03 1.71e-03 5.42e+03 3.03e-03   0.0
+        add_2_root_add_67_3_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_1_DW01_add_78) 2.07e-03 1.72e-03 5.42e+03 3.79e-03   0.0
+        add_1_root_add_67_3_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_0_DW01_add_77) 4.68e-04 1.06e-03 3.05e+03 1.53e-03   0.0
+  DSP_MAPPING_inst (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)    0.180    0.209 2.65e+05    0.390   5.0
+    MAPPING_IN_UNIT_0 (DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64)    0.162    0.198 1.88e+05    0.360   4.6
+    MAPPING_OUT_UNIT_0 (DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64) 1.87e-02 1.15e-02 7.62e+04 3.03e-02   0.4
+  DSP_FU_HANDLER_inst (DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1) 7.63e-03 1.82e-02 5.56e+03 2.58e-02   0.3
+    DSP_FU_enabler_sync_inst_0 (DSP_FU_enabler_sync) 4.40e-04 8.74e-03 2.42e+03 9.19e-03   0.1
+    DSP_FU_Handler_MC_inst_0 (DSP_FU_Handler_MC) 7.19e-03 9.42e-03 3.09e+03 1.66e-02   0.2
+  DSP_PIPELINE_CONTROLLER_inst_0 (DSP_pipeline_controller) 2.34e-02    0.146 6.14e+04    0.170   2.2
+  DSP_EXCPT_CNTRL_UNIT_inst_0 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1)    0.330    0.395 7.58e+04    0.725   9.3
+    add_1_root_sub_133 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_85) 6.37e-02 8.93e-02 1.00e+04    0.153   2.0
+    add_1_root_sub_134 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_1_DW01_add_84) 6.35e-02 8.90e-02 1.00e+04    0.152   2.0
+    add_1_root_sub_135 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_0_DW01_add_83) 6.37e-02 8.93e-02 1.00e+04    0.153   2.0
+    sub_222_I2 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_0) 4.36e-04 6.65e-04 3.52e+03 1.10e-03   0.0
+  DSP_EXEC_UNIT_inst_0 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64)    0.539    1.183 4.51e+05    1.722  22.1
+    sub_311 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_2_DW01_sub_11) 3.55e-03 4.86e-03 9.98e+03 8.42e-03   0.1
+    mult_add_245_aco (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1_DW02_mult_25) 8.28e-04 8.54e-04 5.73e+03 1.69e-03   0.0
+    mult_add_240_aco (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_0_DW02_mult_24) 8.41e-04 8.67e-04 4.99e+03 1.71e-03   0.0
+    sub_285 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_1_DW01_sub_10) 3.51e-03 4.79e-03 9.98e+03 8.31e-03   0.1
+    add_245_aco (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_90) 3.60e-02 5.48e-02 2.09e+04 9.08e-02   1.2
+    add_240_aco (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_3_DW01_add_89) 3.60e-02 5.47e-02 2.09e+04 9.07e-02   1.2
+    r1043 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_0_DW01_sub_9) 3.45e-02 3.88e-02 1.02e+04 7.33e-02   0.9
+    add_293 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_2_DW01_add_88) 3.86e-03 5.75e-03 2.10e+04 9.63e-03   0.1
+    add_281 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_1_DW01_add_87) 2.76e-03 4.01e-03 8.87e+03 6.78e-03   0.1
+    add_296 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_0_DW01_add_86) 4.01e-03 5.83e-03 2.10e+04 9.87e-03   0.1
+1

@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Complete configuration matrix explored in this work. Each configuration is synthesised at all three technology nodes, for a total of 42 synthesis runs.}
+\label{tab:matrix}
+\small
+\begin{tabular}{llp{7.5cm}}
+\toprule
+Scenario & Configuration & Description \\
+\midrule
+A (single core) & Baseline & Unhardened reference accelerator \\
+ & Adder DMR / TMR & Redundancy on the adder functional unit only \\
+ & Multiplier DMR / TMR & Redundancy on the multiplier functional unit only \\
+ & Shifter DMR / TMR & Redundancy on the shifter functional unit only \\
+ & Comparator DMR / TMR & Redundancy on the comparator functional unit only \\
+ & Full DMR / TMR & Redundancy applied to all functional units simultaneously \\
+B (replicated) & Replicated baseline & Three accelerator lanes, no voting \\
+ & Replicated + DMR & Three lanes with duplication-comparison in the mapping unit \\
+ & Replicated + TMR & Three lanes with majority voting in the mapping unit \\
+\bottomrule
+\end{tabular}
+\end{table}

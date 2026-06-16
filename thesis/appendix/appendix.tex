@@ -1,0 +1,90 @@
+\chapter{Tooling and Reproducibility}
+\label{app:tools}
+
+This appendix documents the data-reduction and figure-generation tooling that
+turns the raw Design Compiler reports into the tables and figures of
+Chapter~\ref{ch:results}, so that the results are fully reproducible. The
+complete source --- the modular accelerator, the DMR/TMR wrappers, the IJTAG
+sensor-insertion tool, and the synthesis-sweep and data-reduction scripts ---
+together with the thesis sources is available in the project repository at
+\href{\repourl}{\repourl}.
+
+\section{Directory layout}
+
+The synthesis reports are organised by node and configuration:
+\begin{itemize}
+  \item \texttt{synth\_output/<node>/<config>/Report\_*.txt} --- the per-run
+        area, cells, power, timing, references, and resources reports for the
+        redundancy study (Scenarios A and B).
+  \item \texttt{modules/out/<n>sensor/synthesis\_reports\_*/} --- the area, cells,
+        power, and references reports for the IJTAG-instrumented builds, in
+        \emph{counted} and \emph{black-box} accounting modes.
+\end{itemize}
+
+\section{Data-reduction scripts}
+
+Three Python scripts perform the reduction; all are pure-Python plus
+\texttt{matplotlib}/\texttt{numpy} and write into \texttt{thesis/data/} and
+\texttt{thesis/img/plots/}:
+
+\begin{itemize}
+  \item \texttt{parse\_synth.py} --- parses every redundancy-study report,
+        normalises power units to milliwatts, maps the on-disk configuration
+        names to clean keys, and emits \texttt{synth\_data.csv} and a
+        baseline-normalised \texttt{overhead\_scenarioB.csv}.
+  \item \texttt{parse\_ijtag.py} --- parses the instrumented builds and emits
+        \texttt{ijtag\_data.csv} and the counted-minus-black-box
+        \texttt{ijtag\_cost.csv}.
+  \item \texttt{make\_plots.py} and \texttt{make\_tables.py} --- generate every
+        figure (as vector PDF) and every booktabs table directly from the CSVs.
+\end{itemize}
+
+Re-running the four scripts regenerates all numerical content of the thesis from
+the raw reports. Listing~\ref{lst:power-parse} shows the core of the
+unit-normalisation logic, which reads the power unit from each report header so
+that the milliwatt/microwatt and picowatt/nanowatt differences between libraries
+are reconciled automatically.
+
+\begin{lstlisting}[language=mypython, caption={Power-unit normalisation in \texttt{parse\_synth.py} (excerpt).}, label={lst:power-parse}]
+for ln in lines:
+    m = re.search(r"Dynamic Power Units = 1(\w?)W", ln)
+    if m:
+        u = m.group(1)
+        dyn_scale = {"m":1.0,"u":1e-3,"n":1e-6,"p":1e-9,"":1e3}.get(u, 1.0)
+    m = re.search(r"Leakage Power Units = 1(\w?)W", ln)
+    if m:
+        u = m.group(1)
+        leak_scale = {"m":1.0,"u":1e-3,"n":1e-6,"p":1e-9,"":1e3}.get(u, 1.0)
+# top-of-hierarchy row holds the whole-design power (switch, int, leak, total)
+\end{lstlisting}
+
+\chapter{Configuration Reference}
+\label{app:config}
+
+\section{Redundancy enable constants (Scenario A)}
+
+In the single-core flow the top-level design exposes the Boolean constants
+\texttt{ADDERS\_DMR\_EN}, \texttt{ADDERS\_TMR\_EN}, \texttt{MULTIPLIERS\_DMR\_EN},
+\texttt{MULTIPLIERS\_TMR\_EN}, \texttt{SHIFTERS\_DMR\_EN},
+\texttt{SHIFTERS\_TMR\_EN}, \texttt{COMPARATORS\_DMR\_EN}, and
+\texttt{COMPARATORS\_TMR\_EN}. Setting exactly one DMR/TMR constant true gives a
+single-FU configuration; setting all four DMR (or all four TMR) constants true
+gives full DMR (or full TMR); leaving all false gives the baseline.
+
+\section{Replication constants (Scenario B)}
+
+In the replicated flow, \texttt{replicate\_accl\_en} is enabled
+(\texttt{ACCL\_NUM} = \texttt{FU\_NUM} = 3) and the redundancy lives in the
+mapping layer, toggled by its \texttt{DMR\_ENABLED} and \texttt{TMR\_ENABLED}
+constants: neither set gives the replicated baseline, \texttt{DMR\_ENABLED} gives
+replicated-plus-DMR, and \texttt{TMR\_ENABLED} gives replicated-plus-TMR.
+
+\section{IJTAG sensor configuration}
+
+The IJTAG flow is driven by a single \texttt{config.json} that declares the
+top-level entity, clock, libraries, packages, the activity-sensor type with its
+ICL client-port names, and the sensor instances with their generic maps
+(\texttt{SENSOR\_ID}, \texttt{WINDOW\_WIDTH}), functional port maps, and
+hierarchical paths. The \texttt{configurations} section groups instances into the
+cumulative \texttt{1sensor}/\texttt{2sensor}/\texttt{3sensor} builds used in
+Section~\ref{sec:ij-synth}.
