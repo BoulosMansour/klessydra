@@ -6,7 +6,9 @@
 # DO NOT run this directly — the original synthesis.tcl is kept untouched.
 # Placeholders:
 #   __ENABLE_REPLICATE__     -> true | false
-#   __SYNTHESIS_TECHNOLOGY__ -> 15 | 45 | 130
+#   __SYNTHESIS_TECHNOLOGY__ -> 15 | 45 | 130   (informational)
+#   __SYNTHESIS_CORNER__     -> corner name (e.g. typical, fast, slow, ...)
+#   __SYNTHESIS_PATH__       -> path to the .db library for this technology+corner
 #   __CLOCK_PERIOD__         -> clock period (ps for 15nm, ns for 45/130nm)
 #   __NCORES__               -> integer core count
 #   __REPORT_DIR__           -> absolute path to this iteration's output directory
@@ -15,19 +17,16 @@
 # add desired design parameters
 set ENABLE_REPLICATE __ENABLE_REPLICATE__
 set SYNTHESIS_TECHNOLOGY __SYNTHESIS_TECHNOLOGY__
-# available synthesis technologies 15, 45, 130
+set SYNTHESIS_CORNER "__SYNTHESIS_CORNER__"
+# available synthesis technologies 15, 45, 130 -- the specific library .db for the
+# chosen technology AND PVT corner is selected by run_synthesis_sweep.py and
+# substituted below.
 
 set GPGPU_GENERIC_ROOT "../"
 set MODULES_ROOT "../modules/"
 set PACKAGES_ROOT "../packages/"
 
-if [expr {$SYNTHESIS_TECHNOLOGY eq 15}] {
-	set SYNTHESIS_PATH "../synthesis/15nm/CCS/NanGate_15nm_OCL_typical_conditional_ccs.db"
-} elseif [expr {$SYNTHESIS_TECHNOLOGY eq 45}] {
-	set SYNTHESIS_PATH "../synthesis/45nm/NangateOpenCellLibrary_typical_ccs.db"
-} elseif [expr {$SYNTHESIS_TECHNOLOGY eq 130}] {
-	set SYNTHESIS_PATH "../synthesis/130nm/db/sg13g2_stdcell_typ_1p20V_25C.db"
-}
+set SYNTHESIS_PATH "__SYNTHESIS_PATH__"
 
 set NCORES __NCORES__
 

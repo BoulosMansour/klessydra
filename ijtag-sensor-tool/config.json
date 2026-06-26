@@ -22,18 +22,24 @@
   "synthesis": {
     "clockPort": "clk_i",
     "technologies": {
-      "15nm": {
-        "libraryPath": "../DSP_BreakDown/synthesis/15nm/CCS/NanGate_15nm_OCL_typical_conditional_ccs.db",
-        "clockPeriod": "2000"
-      },
-      "45nm": {
-        "libraryPath": "../DSP_BreakDown/synthesis/45nm/NangateOpenCellLibrary_typical_ccs.db",
-        "clockPeriod": "2"
-      },
-      "130nm": {
-        "libraryPath": "../DSP_BreakDown/synthesis/130nm/db/sg13g2_stdcell_typ_1p20V_25C.db",
-        "clockPeriod": "2"
-      }
+      "15nm_typical":   { "libraryPath": "../DSP_BreakDown/synthesis/15nm/CCS/NanGate_15nm_OCL_typical_conditional_ccs.db",   "clockPeriod": "2000" },
+      "15nm_fast":      { "libraryPath": "../DSP_BreakDown/synthesis/15nm/CCS/NanGate_15nm_OCL_fast_conditional_ccs.db",      "clockPeriod": "2000" },
+      "15nm_slow":      { "libraryPath": "../DSP_BreakDown/synthesis/15nm/CCS/NanGate_15nm_OCL_slow_conditional_ccs.db",      "clockPeriod": "2000" },
+      "15nm_low_temp":  { "libraryPath": "../DSP_BreakDown/synthesis/15nm/CCS/NanGate_15nm_OCL_low_temp_conditional_ccs.db",  "clockPeriod": "2000" },
+      "15nm_worst_low": { "libraryPath": "../DSP_BreakDown/synthesis/15nm/CCS/NanGate_15nm_OCL_worst_low_conditional_ccs.db", "clockPeriod": "2000" },
+
+      "45nm_typical":   { "libraryPath": "../DSP_BreakDown/synthesis/45nm/NangateOpenCellLibrary_typical_ccs.db",   "clockPeriod": "2" },
+      "45nm_fast":      { "libraryPath": "../DSP_BreakDown/synthesis/45nm/NangateOpenCellLibrary_fast_ccs.db",      "clockPeriod": "2" },
+      "45nm_slow":      { "libraryPath": "../DSP_BreakDown/synthesis/45nm/NangateOpenCellLibrary_slow_ccs.db",      "clockPeriod": "2" },
+      "45nm_low_temp":  { "libraryPath": "../DSP_BreakDown/synthesis/45nm/NangateOpenCellLibrary_low_temp_ccs.db",  "clockPeriod": "2" },
+      "45nm_worst_low": { "libraryPath": "../DSP_BreakDown/synthesis/45nm/NangateOpenCellLibrary_worst_low_ccs.db", "clockPeriod": "2" },
+
+      "130nm_typ_1p20V_25C":   { "libraryPath": "../DSP_BreakDown/synthesis/130nm/db/sg13g2_stdcell_typ_1p20V_25C.db",   "clockPeriod": "2" },
+      "130nm_typ_1p50V_25C":   { "libraryPath": "../DSP_BreakDown/synthesis/130nm/db/sg13g2_stdcell_typ_1p50V_25C.db",   "clockPeriod": "2" },
+      "130nm_fast_1p32V_m40C": { "libraryPath": "../DSP_BreakDown/synthesis/130nm/db/sg13g2_stdcell_fast_1p32V_m40C.db", "clockPeriod": "2" },
+      "130nm_fast_1p65V_m40C": { "libraryPath": "../DSP_BreakDown/synthesis/130nm/db/sg13g2_stdcell_fast_1p65V_m40C.db", "clockPeriod": "2" },
+      "130nm_slow_1p08V_125C": { "libraryPath": "../DSP_BreakDown/synthesis/130nm/db/sg13g2_stdcell_slow_1p08V_125C.db", "clockPeriod": "2" },
+      "130nm_slow_1p35V_125C": { "libraryPath": "../DSP_BreakDown/synthesis/130nm/db/sg13g2_stdcell_slow_1p35V_125C.db", "clockPeriod": "2" }
     },
     "generics": {
       "THREAD_POOL_SIZE": 3,

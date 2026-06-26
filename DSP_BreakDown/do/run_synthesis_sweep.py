@@ -32,9 +32,13 @@ The sweep is specific to this design and covers two scenarios:
 The two source files are backed up before any edits and restored when the
 sweep finishes (even on error / Ctrl-C), so the working tree is left clean.
 
+The sweep is the cartesian product technologies x PVT corners x configurations;
+results are grouped under  synthesis_runs/tech_<N>nm/<corner>/<scenario_cfg>/ .
+
 Usage:
-    python run_synthesis_sweep.py [--scenario {a,b,all}] [--ncores N]
-                                  [--dc-shell CMD] [--dry-run]
+    python run_synthesis_sweep.py [--scenario {a,b,all}] [--tech 15 45 130|all]
+                                  [--corner typical fast slow ...|primary|all]
+                                  [--ncores N] [--dc-shell CMD] [--dry-run]
 """
 
 import argparse
@@ -81,6 +85,38 @@ TECHNOLOGIES = {
     "15":  "2000",
     "45":  "2",
     "130": "2",
+}
+
+# Per-technology PVT corners to sweep -> path to the library .db (relative to the
+# do/ directory, where dc_shell runs). CCS (composite-current-source) libraries
+# are used consistently because they are the highest-accuracy delay model and are
+# available for all three nodes; the same operating points also exist as ECSM /
+# NLDM variants in synthesis/ and can be added here if a delay-model comparison
+# is ever needed. The FIRST corner of each list is the "primary" corner used for
+# the single-corner figures in the thesis.
+CORNERS = {
+    "15": [
+        ("typical",   "../synthesis/15nm/CCS/NanGate_15nm_OCL_typical_conditional_ccs.db"),
+        ("fast",      "../synthesis/15nm/CCS/NanGate_15nm_OCL_fast_conditional_ccs.db"),
+        ("slow",      "../synthesis/15nm/CCS/NanGate_15nm_OCL_slow_conditional_ccs.db"),
+        ("low_temp",  "../synthesis/15nm/CCS/NanGate_15nm_OCL_low_temp_conditional_ccs.db"),
+        ("worst_low", "../synthesis/15nm/CCS/NanGate_15nm_OCL_worst_low_conditional_ccs.db"),
+    ],
+    "45": [
+        ("typical",   "../synthesis/45nm/NangateOpenCellLibrary_typical_ccs.db"),
+        ("fast",      "../synthesis/45nm/NangateOpenCellLibrary_fast_ccs.db"),
+        ("slow",      "../synthesis/45nm/NangateOpenCellLibrary_slow_ccs.db"),
+        ("low_temp",  "../synthesis/45nm/NangateOpenCellLibrary_low_temp_ccs.db"),
+        ("worst_low", "../synthesis/45nm/NangateOpenCellLibrary_worst_low_ccs.db"),
+    ],
+    "130": [
+        ("typ_1p20V_25C",   "../synthesis/130nm/db/sg13g2_stdcell_typ_1p20V_25C.db"),
+        ("typ_1p50V_25C",   "../synthesis/130nm/db/sg13g2_stdcell_typ_1p50V_25C.db"),
+        ("fast_1p32V_m40C", "../synthesis/130nm/db/sg13g2_stdcell_fast_1p32V_m40C.db"),
+        ("fast_1p65V_m40C", "../synthesis/130nm/db/sg13g2_stdcell_fast_1p65V_m40C.db"),
+        ("slow_1p08V_125C", "../synthesis/130nm/db/sg13g2_stdcell_slow_1p08V_125C.db"),
+        ("slow_1p35V_125C", "../synthesis/130nm/db/sg13g2_stdcell_slow_1p35V_125C.db"),
+    ],
 }
 
 # Junk that Design Compiler scatters into the working (do/) directory. Only
@@ -221,11 +257,13 @@ def build_iterations(scenario):
 # --------------------------------------------------------------------------- #
 # TCL generation + dc_shell invocation                                        #
 # --------------------------------------------------------------------------- #
-def generate_iteration_tcl(template_text, enable_replicate, technology, clock_period,
-                           report_dir, ncores, dst_path):
+def generate_iteration_tcl(template_text, enable_replicate, technology, corner,
+                           synthesis_path, clock_period, report_dir, ncores, dst_path):
     text = template_text
     text = text.replace("__ENABLE_REPLICATE__", "true" if enable_replicate else "false")
     text = text.replace("__SYNTHESIS_TECHNOLOGY__", str(technology))
+    text = text.replace("__SYNTHESIS_CORNER__", str(corner))
+    text = text.replace("__SYNTHESIS_PATH__", synthesis_path)
     text = text.replace("__CLOCK_PERIOD__", str(clock_period))
     text = text.replace("__NCORES__", str(ncores))
     # dc_shell wants forward slashes even on Windows-authored paths
@@ -266,6 +304,10 @@ def main():
     parser.add_argument("--tech", choices=list(TECHNOLOGIES.keys()) + ["all"], nargs="+",
                         default=["all"],
                         help="synthesis technologies to sweep (15, 45, 130, or all). Default: all")
+    parser.add_argument("--corner", nargs="+", default=["all"],
+                        help="PVT corners to sweep per technology (e.g. typical fast slow), "
+                             "'primary' for only the first corner of each tech, or 'all'. "
+                             "Default: all")
     parser.add_argument("--ncores", type=int, default=1, help="value for NCORES in the TCL")
     parser.add_argument("--dc-shell", default="dc_shell", help="dc_shell executable name/path")
     parser.add_argument("--dry-run", action="store_true",
@@ -288,17 +330,29 @@ def main():
 
     config_iterations = build_iterations(args.scenario)
 
-    # Full sweep = technologies x configurations. Each entry carries the
-    # technology and its clock period plus a tech-prefixed result path.
+    # Full sweep = technologies x corners x configurations. Each entry carries the
+    # technology, its PVT corner + library path, and the clock period, plus a
+    # tech/corner-prefixed result path:  tech_<N>nm/<corner>/<scenario_cfg>/ .
     iterations = []
     for tech in technologies:
-        for cfg in config_iterations:
-            iterations.append({
-                **cfg,
-                "technology": tech,
-                "clock_period": TECHNOLOGIES[tech],
-                "name": f"tech_{tech}nm/{cfg['name']}",
-            })
+        corner_list = CORNERS[tech]
+        if "primary" in args.corner:
+            corner_list = corner_list[:1]
+        elif "all" not in args.corner:
+            corner_list = [c for c in corner_list if c[0] in args.corner]
+            if not corner_list:
+                print(f"[warn] no matching corners for tech {tech}nm in {args.corner}; "
+                      f"available: {[c[0] for c in CORNERS[tech]]}")
+        for corner_name, corner_db in corner_list:
+            for cfg in config_iterations:
+                iterations.append({
+                    **cfg,
+                    "technology": tech,
+                    "corner": corner_name,
+                    "synthesis_path": corner_db,
+                    "clock_period": TECHNOLOGIES[tech],
+                    "name": f"tech_{tech}nm/{corner_name}/{cfg['name']}",
+                })
 
     os.makedirs(RESULTS_ROOT, exist_ok=True)
 
@@ -314,7 +368,7 @@ def main():
     summary = []
     start_ts = datetime.now()
     print(f"=== Synthesis sweep started {start_ts:%Y-%m-%d %H:%M:%S} ===")
-    print(f"    scenario={args.scenario}  tech={technologies}  "
+    print(f"    scenario={args.scenario}  tech={technologies}  corner={args.corner}  "
           f"iterations={len(iterations)}  dc_shell='{args.dc_shell}'"
           + ("  [DRY-RUN]" if args.dry_run else ""))
 
@@ -331,11 +385,12 @@ def main():
             # 2. Generate the per-iteration TCL.
             tcl_path = os.path.join(report_dir, "synthesis.tcl")
             generate_iteration_tcl(template_text, it["enable_replicate"],
-                                   it["technology"], it["clock_period"],
-                                   report_dir, args.ncores, tcl_path)
+                                   it["technology"], it["corner"], it["synthesis_path"],
+                                   it["clock_period"], report_dir, args.ncores, tcl_path)
 
             print(f"\n[{idx}/{len(iterations)}] {it['name']}")
-            print(f"    tech={it['technology']}nm (period={it['clock_period']})  "
+            print(f"    tech={it['technology']}nm corner={it['corner']} "
+                  f"(period={it['clock_period']})  "
                   f"ENABLE_REPLICATE={it['enable_replicate']}  "
                   f"mapping(DMR={dmr},TMR={tmr})  top={it['top'] or 'all false'}")
             print(f"    -> {report_dir}")
