@@ -1,0 +1,146 @@
+Loading db file '/home/b.mansour/Desktop/klessydra_git/DSP_BreakDown/synthesis/45nm/NangateOpenCellLibrary_worst_low_ccs.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Mon Jun 29 22:55:22 2026
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/b.mansour/Desktop/klessydra_git/DSP_BreakDown/synthesis/45nm/NangateOpenCellLibrary_worst_low_ccs.db)
+
+
+Operating Conditions: worst_low   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1 5K_hvratio_1_1 NangateOpenCellLibrary
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1  416.341 3.23e+03 1.27e+05 3.77e+03 100.0
+  ACCUM_STG (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)    5.726  137.653 4.76e+03  148.138   3.9
+    add_127 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_6)    1.097    0.952 1.21e+03    3.255   0.1
+    add_130 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_4)    0.164    0.339  563.712    1.067   0.0
+    add_138 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_3)    0.143    0.271  180.045    0.594   0.0
+    add_139 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_2)    0.144    0.274  180.030    0.598   0.0
+    add_142 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_1)    0.158    0.184  258.345    0.601   0.0
+    add_142_2 (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_0)    0.144    0.260  487.717    0.891   0.0
+  DSP_COMPARATORS_inst (DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64)    1.204  163.504 2.16e+03  166.866   4.4
+    DSP_Comparators_Unit_inst_0 (DSP_Comparators_Unit_SIMD2_SIMD_Width64)    1.204  163.504 2.16e+03  166.866   4.4
+  DSP_MULTIPLIERS_inst (DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32)  110.395  891.689 5.75e+04 1.06e+03  28.1
+    DSP_Multipliers_stg_2_inst_0 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64)    0.464  153.714 4.12e+03  158.294   4.2
+      add_0_root_add_0_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_0_DW01_add_46) 1.28e-02 3.09e-02  345.308    0.389   0.0
+      add_2_root_add_0_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_1_DW01_add_47) 2.56e-02 3.03e-02  345.319    0.401   0.0
+      add_1_root_add_0_root_add_59_3 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_2_DW01_add_48)    0.000    0.000  345.154    0.345   0.0
+      add_0_root_add_0_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_3_DW01_add_49) 1.28e-02 3.12e-02  364.144    0.408   0.0
+      add_2_root_add_0_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_4_DW01_add_50) 2.52e-02 2.94e-02  345.314    0.400   0.0
+      add_1_root_add_0_root_add_59_3_I2 (DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_5_DW01_add_51)    0.000    0.000  345.154    0.345   0.0
+    DSP_Multipliers_stg_1_comb_inst_0 (DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64)    0.118 8.22e-02  920.068    1.121   0.0
+    DSP_Multipliers_stg_1_inst_0 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64)  109.791  737.873 5.24e+04  900.111  23.9
+      mult_72 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_0_DW02_mult_2)   13.857   12.662 5.58e+03   32.100   0.9
+      mult_71 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_1_DW02_mult_3)   13.616   12.565 5.57e+03   31.752   0.8
+      mult_70 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_2_DW02_mult_4)   13.630   12.683 5.61e+03   31.924   0.8
+      mult_69 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_3_DW02_mult_5)   13.366   12.291 5.58e+03   31.239   0.8
+      mult_72_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_4_DW02_mult_6)   13.767   12.574 5.73e+03   32.067   0.9
+      mult_71_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_5_DW02_mult_7)   13.559   12.564 5.69e+03   31.817   0.8
+      mult_70_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6_DW02_mult_8)   13.884   12.863 5.79e+03   32.534   0.9
+      mult_69_I2 (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_7_DW02_mult_9)   13.464   12.594 5.69e+03   31.743   0.8
+  DSP_SHIFTERS_inst (DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64)   13.830  456.248 1.01e+04  480.166  12.7
+    DSP_Shifters_comb_inst_0 (DSP_Shifters_comb_SIMD2_SIMD_Width64)    1.120    0.390 1.29e+03    2.803   0.1
+    DSP_Shifters_stg_2_inst_0 (DSP_Shifters_stg_2_SIMD2_SIMD_Width64)    0.112  161.626 2.15e+03  163.890   4.3
+    DSP_Shifters_stg_1_inst_0 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64)   12.599  294.231 6.64e+03  313.473   8.3
+      srl_57 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_DW_rash_1)    5.491    2.913 1.53e+03    9.930   0.3
+      srl_57_I2 (DSP_Shifters_stg_1_SIMD2_SIMD_Width64_DW_rash_0)    5.720    2.977 1.53e+03   10.230   0.3
+  DSP_ADDERS_inst (DSP_Adders_DMR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64)   64.608  624.458 1.44e+04  703.514  18.7
+    dmr_MSB_stage_2_inst_0_1_7 (DMR_1)    0.000    0.000    6.042 6.04e-03   0.0
+    dmr_MSB_stage_2_inst_0_1_6 (DMR_2)    0.000    0.000    5.971 5.97e-03   0.0
+    dmr_MSB_stage_2_inst_0_1_5 (DMR_3)    0.000    0.000    6.091 6.09e-03   0.0
+    dmr_MSB_stage_2_inst_0_1_4 (DMR_4)    0.000    0.000    5.974 5.97e-03   0.0
+    dmr_MSB_stage_2_inst_0_1_3 (DMR_5)    0.000    0.000    6.037 6.04e-03   0.0
+    dmr_MSB_stage_2_inst_0_1_2 (DMR_6)    0.000    0.000    6.000 6.00e-03   0.0
+    dmr_MSB_stage_2_inst_0_1_1 (DMR_7)    0.000    0.000    6.064 6.06e-03   0.0
+    dmr_MSB_stage_2_inst_0_1_0 (DMR_8)    0.000    0.000    6.042 6.04e-03   0.0
+    dmr_MSB_stage_2_inst_0_0_7 (DMR_9)    0.000 2.59e-03    6.153 8.74e-03   0.0
+    dmr_MSB_stage_2_inst_0_0_6 (DMR_10)    0.000    0.000    6.154 6.15e-03   0.0
+    dmr_MSB_stage_2_inst_0_0_5 (DMR_11)    0.000    0.000    6.159 6.16e-03   0.0
+    dmr_MSB_stage_2_inst_0_0_4 (DMR_12)    0.000    0.000    6.120 6.12e-03   0.0
+    dmr_MSB_stage_2_inst_0_0_3 (DMR_13)    0.000 2.58e-03    6.181 8.76e-03   0.0
+    dmr_MSB_stage_2_inst_0_0_2 (DMR_14)    0.000    0.000    6.098 6.10e-03   0.0
+    dmr_MSB_stage_2_inst_0_0_1 (DMR_15)    0.000    0.000    6.106 6.11e-03   0.0
+    dmr_MSB_stage_2_inst_0_0_0 (DMR_16)    0.000    0.000    6.208 6.21e-03   0.0
+    dmr_dsp_out_adder_results_inst_0_1 (DMR_17)    0.000    0.000    7.011 7.01e-03   0.0
+    dmr_dsp_out_adder_results_inst_0_0 (DMR_0)    0.000    0.000    6.971 6.97e-03   0.0
+    adders_inst_1 (DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_1)   32.135  312.101 7.16e+03  351.399   9.3
+      DSP_Adders_Sync_inst_0 (DSP_Adders_Sync_SIMD2_SIMD_Width64_1)   24.703  296.250 5.26e+03  326.214   8.7
+      DSP_Adders_stg_2_inst_0 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1)    3.199    5.968  960.623   10.127   0.3
+        add_0_root_add_1_root_add_60_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_20)    0.293    0.752  118.135    1.164   0.0
+        add_0_root_add_1_root_add_60_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_4_DW01_add_24)    0.288    0.739  118.142    1.145   0.0
+        add_1_root_add_63_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_1_DW01_add_7)    0.256    0.663  114.981    1.034   0.0
+        add_1_root_add_63_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_1_DW01_add_0_DW01_add_6)    0.260    0.673  115.623    1.049   0.0
+      DSP_Adders_stg_1_inst_0 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1)    4.234    9.883  941.456   15.058   0.4
+        add_0_root_add_1_root_add_67_3 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_2_DW01_add_38)    0.476    1.185   99.847    1.760   0.0
+        add_0_root_add_1_root_add_67_3_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_4_DW01_add_42)    0.473    1.176   99.801    1.749   0.0
+        add_1_root_add_66_2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_1_DW01_add_9)    0.419    1.051   95.407    1.566   0.0
+        add_1_root_add_66_2_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_1_DW01_add_0_DW01_add_8)    0.421    1.049   95.475    1.565   0.0
+    adders_inst_0 (DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_0)   32.473  312.352 7.17e+03  351.999   9.3
+      DSP_Adders_Sync_inst_0 (DSP_Adders_Sync_SIMD2_SIMD_Width64_0)   25.040  296.502 5.27e+03  326.814   8.7
+      DSP_Adders_stg_2_inst_0 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0)    3.199    5.968  960.623   10.127   0.3
+        add_0_root_add_1_root_add_60_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_22)    0.293    0.752  118.135    1.164   0.0
+        add_0_root_add_1_root_add_60_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_4_DW01_add_26)    0.288    0.739  118.142    1.145   0.0
+        add_1_root_add_63_3 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_1_DW01_add_11)    0.256    0.663  114.981    1.034   0.0
+        add_1_root_add_63_3_I2 (DSP_Adders_stg_2_SIMD2_SIMD_Width64_0_DW01_add_0_DW01_add_10)    0.260    0.673  115.623    1.049   0.0
+      DSP_Adders_stg_1_inst_0 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0)    4.234    9.883  941.456   15.058   0.4
+        add_0_root_add_1_root_add_67_3 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_2_DW01_add_40)    0.476    1.185   99.847    1.760   0.0
+        add_0_root_add_1_root_add_67_3_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_4_DW01_add_44)    0.473    1.176   99.801    1.749   0.0
+        add_1_root_add_66_2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_1_DW01_add_13)    0.419    1.051   95.407    1.566   0.0
+        add_1_root_add_66_2_I2 (DSP_Adders_stg_1_SIMD2_SIMD_Width64_0_DW01_add_0_DW01_add_12)    0.421    1.049   95.475    1.565   0.0
+  DSP_MAPPING_inst (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)   74.283   33.870 1.59e+04  124.026   3.3
+    MAPPING_IN_UNIT_0 (DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64)   61.698   26.491 1.22e+04  100.350   2.7
+    MAPPING_OUT_UNIT_0 (DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64)   12.365    7.282 3.70e+03   23.345   0.6
+  DSP_FU_HANDLER_inst (DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1)    1.724   13.865  264.001   15.853   0.4
+    DSP_FU_enabler_sync_inst_0 (DSP_FU_enabler_sync)    0.158   12.810   89.979   13.059   0.3
+    DSP_FU_Handler_MC_inst_0 (DSP_FU_Handler_MC)    1.566    1.055  174.022    2.794   0.1
+  DSP_PIPELINE_CONTROLLER_inst_0 (DSP_pipeline_controller)    9.017  206.551 2.45e+03  218.016   5.8
+  DSP_EXCPT_CNTRL_UNIT_inst_0 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1)   53.449   37.683 3.74e+03   94.870   2.5
+    add_0_root_sub_0_root_sub_135 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_19)    6.041    5.470  238.798   11.750   0.3
+    sub_1_root_sub_0_root_sub_135 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_3)    2.263    1.817  207.306    4.287   0.1
+    add_0_root_sub_0_root_sub_134 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_1_DW01_add_18)    6.054    5.499  238.679   11.792   0.3
+    sub_1_root_sub_0_root_sub_134 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_2)    2.300    1.841  207.348    4.349   0.1
+    add_0_root_sub_0_root_sub_133 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_0_DW01_add_17)    6.099    5.525  238.518   11.862   0.3
+    sub_1_root_sub_0_root_sub_133 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_1)    2.301    1.842  207.461    4.350   0.1
+    sub_222_I2 (DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_0)    0.714    0.610  183.470    1.507   0.0
+  DSP_EXEC_UNIT_inst_0 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64)   80.720  661.038 1.58e+04  757.597  20.1
+    add_245_aco (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_3_DW01_add_28)    1.969    4.632  475.638    7.077   0.2
+    mult_add_245_aco (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_0)    1.270    0.451  188.675    1.910   0.1
+    add_240_aco (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_29)    1.836    4.447  434.320    6.717   0.2
+    mult_add_240_aco (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1)    1.242    0.463  188.782    1.894   0.1
+    sub_251 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_3_DW01_sub_6)    1.373    3.054  329.617    4.757   0.1
+    add_281 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_2_DW01_add_16)    0.408    0.922  191.285    1.521   0.0
+    sub_285 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_2_DW01_sub_5)    0.666    1.294  344.449    2.304   0.1
+    add_293 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_1_DW01_add_15)    0.724    1.772  592.100    3.088   0.1
+    add_296 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_0_DW01_add_14)    0.741    1.820  619.929    3.181   0.1
+    sub_302 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_1_DW01_sub_4)    0.674    1.253  339.920    2.267   0.1
+    sub_311 (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_0_DW01_sub_3)    0.657    1.252  337.061    2.246   0.1
+1

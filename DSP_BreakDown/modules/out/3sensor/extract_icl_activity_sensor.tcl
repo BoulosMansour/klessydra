@@ -1,6 +1,6 @@
 set_context dft -rtl -design_id activity_sensor_icl
 
-set_tsdb_output_directory /home/b.mansour/Desktop/klessydra_git/DSP_BreakDown_test_ijtag/modules/out/3sensor/icl_tsdb
+set_tsdb_output_directory /home/b.mansour/Desktop/klessydra_git/DSP_BreakDown/modules/out/3sensor/icl_tsdb
 
 set_tool_options -allow_vhdl_2008 on
 
@@ -22,7 +22,7 @@ check_design_rules
 
 extract_icl
 
-file mkdir /home/b.mansour/Desktop/klessydra_git/DSP_BreakDown_test_ijtag/modules/out/3sensor/icl
-write_icl /home/b.mansour/Desktop/klessydra_git/DSP_BreakDown_test_ijtag/modules/out/3sensor/icl/activity_sensor.icl -replace
+file mkdir /home/b.mansour/Desktop/klessydra_git/DSP_BreakDown/modules/out/3sensor/icl
+write_icl /home/b.mansour/Desktop/klessydra_git/DSP_BreakDown/modules/out/3sensor/icl/activity_sensor.icl -replace
 
-puts "ICL extraction for activity_sensor completed: /home/b.mansour/Desktop/klessydra_git/DSP_BreakDown_test_ijtag/modules/out/3sensor/icl/activity_sensor.icl"
+puts "ICL extraction for activity_sensor completed: /home/b.mansour/Desktop/klessydra_git/DSP_BreakDown/modules/out/3sensor/icl/activity_sensor.icl"

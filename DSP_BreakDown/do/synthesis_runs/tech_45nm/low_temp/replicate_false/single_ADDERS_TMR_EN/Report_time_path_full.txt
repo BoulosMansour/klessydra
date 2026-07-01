@@ -1,0 +1,101 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Mon Jun 29 22:21:15 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: low_temp   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[0]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: ACCUM_STG/accum_partial_results_stg_1_reg[0][31]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1 5K_hvratio_1_1 NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[0]/CK (DFF_X1)      0.00 #     0.00 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[0]/Q (DFF_X1)       0.05       0.05 f
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP[0] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64)     0.00     0.05 f
+  DSP_MAPPING_inst/MVTYPE_DSP[0][0] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.05 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/MVTYPE_DSP[0] (DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64)     0.00     0.05 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U114/ZN (INV_X1)     0.03       0.08 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1771/ZN (NOR2_X1)     0.02     0.11 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1764/ZN (OR2_X1)     0.04      0.14 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1679/ZN (NAND2_X1)     0.03     0.18 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U94/ZN (NAND2_X1)     0.03      0.20 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1769/ZN (NOR2_X1)     0.03     0.23 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1673/ZN (NAND2_X1)     0.03     0.26 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1520/ZN (OAI21_X1)     0.04     0.29 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1736/ZN (AOI221_X1)     0.04     0.33 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1699/ZN (INV_X1)     0.03      0.36 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/dsp_in_accum_operands[0] (DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64)     0.00     0.36 r
+  DSP_MAPPING_inst/dsp_in_accum_operands[0][0] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.36 r
+  ACCUM_STG/dsp_in_accum_operands[0][0] (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.36 r
+  ACCUM_STG/add_127/A[0] (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_5)     0.00     0.36 r
+  ACCUM_STG/add_127/U4/ZN (AND2_X1)                       0.03       0.39 r
+  ACCUM_STG/add_127/U1_1/CO (FA_X1)                       0.05       0.44 r
+  ACCUM_STG/add_127/U1_2/CO (FA_X1)                       0.05       0.49 r
+  ACCUM_STG/add_127/U1_3/CO (FA_X1)                       0.05       0.54 r
+  ACCUM_STG/add_127/U1_4/CO (FA_X1)                       0.05       0.59 r
+  ACCUM_STG/add_127/U1_5/CO (FA_X1)                       0.05       0.64 r
+  ACCUM_STG/add_127/U1_6/CO (FA_X1)                       0.05       0.69 r
+  ACCUM_STG/add_127/U1_7/CO (FA_X1)                       0.05       0.74 r
+  ACCUM_STG/add_127/U1_8/CO (FA_X1)                       0.05       0.79 r
+  ACCUM_STG/add_127/U1_9/CO (FA_X1)                       0.05       0.84 r
+  ACCUM_STG/add_127/U1_10/CO (FA_X1)                      0.05       0.89 r
+  ACCUM_STG/add_127/U1_11/CO (FA_X1)                      0.05       0.94 r
+  ACCUM_STG/add_127/U1_12/CO (FA_X1)                      0.05       0.99 r
+  ACCUM_STG/add_127/U1_13/CO (FA_X1)                      0.05       1.04 r
+  ACCUM_STG/add_127/U1_14/CO (FA_X1)                      0.05       1.09 r
+  ACCUM_STG/add_127/U1_15/CO (FA_X1)                      0.05       1.14 r
+  ACCUM_STG/add_127/U1_16/CO (FA_X1)                      0.05       1.19 r
+  ACCUM_STG/add_127/U1_17/CO (FA_X1)                      0.05       1.24 r
+  ACCUM_STG/add_127/U1_18/CO (FA_X1)                      0.05       1.28 r
+  ACCUM_STG/add_127/U1_19/CO (FA_X1)                      0.05       1.33 r
+  ACCUM_STG/add_127/U1_20/CO (FA_X1)                      0.05       1.38 r
+  ACCUM_STG/add_127/U1_21/CO (FA_X1)                      0.05       1.43 r
+  ACCUM_STG/add_127/U1_22/CO (FA_X1)                      0.05       1.48 r
+  ACCUM_STG/add_127/U1_23/CO (FA_X1)                      0.05       1.53 r
+  ACCUM_STG/add_127/U1_24/CO (FA_X1)                      0.05       1.58 r
+  ACCUM_STG/add_127/U1_25/CO (FA_X1)                      0.05       1.63 r
+  ACCUM_STG/add_127/U1_26/CO (FA_X1)                      0.05       1.68 r
+  ACCUM_STG/add_127/U1_27/CO (FA_X1)                      0.05       1.73 r
+  ACCUM_STG/add_127/U1_28/CO (FA_X1)                      0.05       1.78 r
+  ACCUM_STG/add_127/U1_29/CO (FA_X1)                      0.05       1.83 r
+  ACCUM_STG/add_127/U1_30/CO (FA_X1)                      0.05       1.88 r
+  ACCUM_STG/add_127/U2/Z (XOR2_X1)                        0.04       1.92 r
+  ACCUM_STG/add_127/SUM[31] (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_5)     0.00     1.92 r
+  ACCUM_STG/U173/ZN (AOI22_X1)                            0.03       1.95 f
+  ACCUM_STG/U171/ZN (NAND2_X1)                            0.02       1.97 r
+  ACCUM_STG/accum_partial_results_stg_1_reg[0][31]/D (DFF_X1)     0.01     1.98 r
+  data arrival time                                                  1.98
+
+  clock clk_i (rise edge)                                 2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  ACCUM_STG/accum_partial_results_stg_1_reg[0][31]/CK (DFF_X1)     0.00     2.00 r
+  library setup time                                     -0.02       1.98
+  data required time                                                 1.98
+  --------------------------------------------------------------------------
+  data required time                                                 1.98
+  data arrival time                                                 -1.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

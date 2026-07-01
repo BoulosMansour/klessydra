@@ -1,0 +1,82 @@
+Warning: Design 'RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : cell
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3
+Version: U-2022.12
+Date   : Wed Jul  1 09:27:28 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    d - dont_touch
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+ACCUM_STG                 ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+                                                          925.138955
+                                                                    h, n, p
+DSP_ADDERS_inst           DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          1454.358518
+                                                                    h, n, p, u
+DSP_COMPARATORS_inst      DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          407.715833
+                                                                    h, n, p
+DSP_EXCPT_CNTRL_UNIT_inst_0
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_1
+                                                          181.862405
+                                                                    h, p
+DSP_EXCPT_CNTRL_UNIT_inst_1
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_2
+                                                          181.862405
+                                                                    h, p
+DSP_EXCPT_CNTRL_UNIT_inst_2
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0
+                                                          181.862405
+                                                                    h, p
+DSP_EXEC_UNIT_inst_0      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_1
+                                                          1052.246011
+                                                                    h, n, p
+DSP_EXEC_UNIT_inst_1      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_2
+                                                          1052.246011
+                                                                    h, n, p
+DSP_EXEC_UNIT_inst_2      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_0
+                                                          1052.246011
+                                                                    h, n, p
+DSP_FU_HANDLER_inst       DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM3_TPS_CEIL2_TPS_BUF_CEIL1
+                                                          46.399488 h, n, p
+DSP_MAPPING_inst          DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+                                                          2120.122393
+                                                                    h, p
+DSP_MULTIPLIERS_inst      DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64_Data_Width32
+                                                          11057.135888
+                                                                    h, n, p
+DSP_PIPELINE_CONTROLLER_inst_0
+                          DSP_pipeline_controller_1       145.637373
+                                                                    h, n
+DSP_PIPELINE_CONTROLLER_inst_1
+                          DSP_pipeline_controller_2       145.637373
+                                                                    h, n
+DSP_PIPELINE_CONTROLLER_inst_2
+                          DSP_pipeline_controller_0       145.637373
+                                                                    h, n
+DSP_SHIFTERS_inst         DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          1685.864439
+                                                                    h, n, p
+RTL_DSP_TOP_rtl1_3sensor_tessent_sib_sri_inst
+                          RTL_DSP_TOP_rtl1_3sensor_tessent_sib_1
+                                                          7.618560  h, n
+RTL_DSP_TOP_rtl1_3sensor_tessent_sib_sri_local_inst
+                          RTL_DSP_TOP_rtl1_3sensor_tessent_sib_2
+                                                          7.618560  h, n
+act_sensor_top            activity_sensor_SENSOR_ID0_WINDOW_WIDTH8
+                                                          0.000000  d, h, n, p, u
+reset_inverter_ijtag      sg13g2_inv_1                    0.000000  b
+--------------------------------------------------------------------------------
+Total 20 cells                                            21851.209999
+1

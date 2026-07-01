@@ -1,0 +1,294 @@
+ 
+****************************************
+Report : cell
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3
+Version: U-2022.12
+Date   : Tue Jun 30 14:48:59 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+ACCUM_STG                 ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+                                                          41423.998746
+                                                                    h, n, p
+DSP_ADDERS_inst           DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          55584.824004
+                                                                    h, n, p
+DSP_COMPARATORS_inst      DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          14885.904679
+                                                                    h, n, p
+DSP_EXCPT_CNTRL_UNIT_inst_0
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_1
+                                                          6008.914726
+                                                                    h, p
+DSP_EXCPT_CNTRL_UNIT_inst_1
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_2
+                                                          6014.357926
+                                                                    h, p
+DSP_EXCPT_CNTRL_UNIT_inst_2
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0
+                                                          5983.513125
+                                                                    h, p
+DSP_EXEC_UNIT_inst_0      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_1
+                                                          39068.529824
+                                                                    h, n, p
+DSP_EXEC_UNIT_inst_1      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_2
+                                                          39059.457826
+                                                                    h, n, p
+DSP_EXEC_UNIT_inst_2      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_0
+                                                          38903.419423
+                                                                    h, n, p
+DSP_FU_HANDLER_inst       DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM3_TPS_CEIL2_TPS_BUF_CEIL1
+                                                          1580.002195
+                                                                    h, n, p
+DSP_MAPPING_inst          DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+                                                          76142.127327
+                                                                    h, p
+DSP_MULTIPLIERS_inst      DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64_Data_Width32
+                                                          623336.427509
+                                                                    h, n, p
+DSP_PIPELINE_CONTROLLER_inst_0
+                          DSP_pipeline_controller_1       5376.520809
+                                                                    h, n
+DSP_PIPELINE_CONTROLLER_inst_1
+                          DSP_pipeline_controller_2       5381.964009
+                                                                    h, n
+DSP_PIPELINE_CONTROLLER_inst_2
+                          DSP_pipeline_controller_0       5365.634410
+                                                                    h, n
+DSP_SHIFTERS_inst         DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          61500.561734
+                                                                    h, n, p
+U1                        sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U2                        sg13g2_inv_2    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U3                        sg13g2_buf_2    sg13g2_stdcell_slow_1p35V_125C
+                                                          9.072000  
+U4                        sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U5                        sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U6                        sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U7                        sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U8                        sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U9                        sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U10                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U11                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U12                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U13                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U14                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U15                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U16                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U17                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U18                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U19                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U20                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U21                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U22                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U23                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U24                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U25                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U26                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U27                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U28                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U29                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U30                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U31                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U32                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U33                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U34                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U35                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U36                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U37                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U38                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U39                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U40                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U41                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U42                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U43                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U44                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U45                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U46                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U47                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U48                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U49                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U50                       sg13g2_buf_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U51                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U52                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U53                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U54                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U55                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U56                       sg13g2_inv_2    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U57                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U58                       sg13g2_inv_2    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U59                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U60                       sg13g2_inv_2    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U61                       sg13g2_inv_2    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U62                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U63                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U64                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U65                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U66                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U67                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U68                       sg13g2_buf_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U69                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U70                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U71                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U72                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U73                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U74                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U75                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U76                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U77                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U78                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U79                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U80                       sg13g2_inv_8    sg13g2_stdcell_slow_1p35V_125C
+                                                          18.143999 
+U81                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U82                       sg13g2_buf_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U83                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U84                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U85                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U86                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U87                       sg13g2_inv_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          10.886400 
+U88                       sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U89                       sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U90                       sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U91                       sg13g2_buf_4    sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U92                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U93                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U94                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U95                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U96                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U97                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_slow_1p35V_125C
+                                                          14.515200 
+U98                       sg13g2_inv_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          5.443200  
+U99                       sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U100                      sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U101                      sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U102                      sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U103                      sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U104                      sg13g2_buf_1    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+U105                      sg13g2_tielo    sg13g2_stdcell_slow_1p35V_125C
+                                                          7.257600  
+--------------------------------------------------------------------------------
+Total 121 cells                                           1026719.313459
+1

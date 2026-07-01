@@ -1,0 +1,95 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Mon Jun 29 23:23:00 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: worst_low   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: ACCUM_STG/dsp_out_accum_results_reg[0][0]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: ACCUM_STG/dsp_out_accum_results_reg[0][31]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1 5K_hvratio_1_1 NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ACCUM_STG/dsp_out_accum_results_reg[0][0]/CK (DFF_X1)     0.00 #     0.00 r
+  ACCUM_STG/dsp_out_accum_results_reg[0][0]/Q (DFF_X1)     0.09      0.09 f
+  ACCUM_STG/add_130/B[0] (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_4)     0.00     0.09 f
+  ACCUM_STG/add_130/U1_0/CO (FA_X1)                       0.10       0.19 f
+  ACCUM_STG/add_130/U42/ZN (NAND2_X1)                     0.03       0.22 r
+  ACCUM_STG/add_130/U44/ZN (NAND3_X1)                     0.04       0.26 f
+  ACCUM_STG/add_130/U1_2/CO (FA_X1)                       0.09       0.34 f
+  ACCUM_STG/add_130/U33/ZN (NAND2_X1)                     0.03       0.38 r
+  ACCUM_STG/add_130/U35/ZN (NAND3_X1)                     0.04       0.42 f
+  ACCUM_STG/add_130/U1_4/CO (FA_X1)                       0.09       0.51 f
+  ACCUM_STG/add_130/U12/ZN (NAND2_X1)                     0.04       0.54 r
+  ACCUM_STG/add_130/U14/ZN (NAND3_X1)                     0.04       0.58 f
+  ACCUM_STG/add_130/U1_6/CO (FA_X1)                       0.08       0.66 f
+  ACCUM_STG/add_130/U1_7/CO (FA_X1)                       0.08       0.74 f
+  ACCUM_STG/add_130/U1_8/CO (FA_X1)                       0.08       0.83 f
+  ACCUM_STG/add_130/U1_9/CO (FA_X1)                       0.08       0.91 f
+  ACCUM_STG/add_130/U1_10/CO (FA_X1)                      0.08       0.99 f
+  ACCUM_STG/add_130/U1_11/CO (FA_X1)                      0.08       1.08 f
+  ACCUM_STG/add_130/U1_12/CO (FA_X1)                      0.09       1.16 f
+  ACCUM_STG/add_130/U67/ZN (NAND2_X1)                     0.03       1.20 r
+  ACCUM_STG/add_130/U69/ZN (NAND3_X1)                     0.04       1.23 f
+  ACCUM_STG/add_130/U1_14/CO (FA_X1)                      0.09       1.32 f
+  ACCUM_STG/add_130/U27/ZN (NAND2_X1)                     0.03       1.36 r
+  ACCUM_STG/add_130/U29/ZN (NAND3_X1)                     0.04       1.39 f
+  ACCUM_STG/add_130/U1_16/CO (FA_X1)                      0.09       1.48 f
+  ACCUM_STG/add_130/U6/ZN (NAND2_X1)                      0.03       1.52 r
+  ACCUM_STG/add_130/U8/ZN (NAND3_X1)                      0.04       1.55 f
+  ACCUM_STG/add_130/U1_18/CO (FA_X1)                      0.08       1.64 f
+  ACCUM_STG/add_130/U1_19/CO (FA_X1)                      0.08       1.72 f
+  ACCUM_STG/add_130/U1_20/CO (FA_X1)                      0.08       1.80 f
+  ACCUM_STG/add_130/U1_21/CO (FA_X1)                      0.08       1.88 f
+  ACCUM_STG/add_130/U1_22/CO (FA_X1)                      0.09       1.97 f
+  ACCUM_STG/add_130/U61/ZN (NAND2_X1)                     0.03       2.01 r
+  ACCUM_STG/add_130/U63/ZN (NAND3_X1)                     0.04       2.04 f
+  ACCUM_STG/add_130/U1_24/CO (FA_X1)                      0.09       2.13 f
+  ACCUM_STG/add_130/U21/ZN (NAND2_X1)                     0.03       2.16 r
+  ACCUM_STG/add_130/U23/ZN (NAND3_X1)                     0.04       2.20 f
+  ACCUM_STG/add_130/U1_26/CO (FA_X1)                      0.08       2.29 f
+  ACCUM_STG/add_130/U1_27/CO (FA_X1)                      0.08       2.37 f
+  ACCUM_STG/add_130/U1_28/CO (FA_X1)                      0.09       2.46 f
+  ACCUM_STG/add_130/U48/ZN (NAND2_X1)                     0.04       2.49 r
+  ACCUM_STG/add_130/U37/ZN (NAND3_X1)                     0.04       2.54 f
+  ACCUM_STG/add_130/U55/ZN (NAND2_X1)                     0.03       2.57 r
+  ACCUM_STG/add_130/U57/ZN (NAND3_X1)                     0.04       2.61 f
+  ACCUM_STG/add_130/U1_31/S (FA_X1)                       0.09       2.70 f
+  ACCUM_STG/add_130/SUM[31] (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_4)     0.00     2.70 f
+  ACCUM_STG/U34/ZN (AOI222_X1)                            0.08       2.78 r
+  ACCUM_STG/U33/ZN (INV_X1)                               0.03       2.81 f
+  ACCUM_STG/dsp_out_accum_results_reg[0][31]/D (DFF_X1)     0.01     2.82 f
+  data arrival time                                                  2.82
+
+  clock clk_i (rise edge)                                 2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  ACCUM_STG/dsp_out_accum_results_reg[0][31]/CK (DFF_X1)     0.00     2.00 r
+  library setup time                                     -0.03       1.97
+  data required time                                                 1.97
+  --------------------------------------------------------------------------
+  data required time                                                 1.97
+  data arrival time                                                 -2.82
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.85
+
+
+1

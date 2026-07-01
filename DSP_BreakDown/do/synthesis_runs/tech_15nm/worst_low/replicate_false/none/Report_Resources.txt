@@ -1,0 +1,943 @@
+ 
+****************************************
+Report : resources
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Mon Jun 29 18:56:41 2026
+****************************************
+
+
+No resource sharing information to report.
+
+No implementations to report
+ 
+****************************************
+Design : ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64
+****************************************
+Resource Sharing Report for design
+        ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64
+        in file ../modules//FU/RTL-Accumulator.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r86      | DW01_add     | width=32   |               | add_127              |
+| r88      | DW01_add     | width=32   |               | add_130              |
+| r90      | DW01_add     | width=16   |               | add_138              |
+| r92      | DW01_add     | width=16   |               | add_139              |
+| r94      | DW01_add     | width=16   |               | add_142              |
+| r96      | DW01_add     | width=32   |               | add_142_2            |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_127            | DW01_add         | rpl                |                |
+| add_130            | DW01_add         | rpl                |                |
+| add_138            | DW01_add         | rpl                |                |
+| add_139            | DW01_add         | rpl                |                |
+| add_142            | DW01_add         | rpl                |                |
+| add_142_2          | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Comparators_Unit_SIMD2_SIMD_Width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64
+****************************************
+Resource Sharing Report for design
+        DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64 in file
+        ../modules//FU/multipliers/multipliers_stg/DSP_Multipliers_stg_2.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r199     | DW01_add     | width=32   |               | add_1_root_add_0_root_add_59_3 |
+| r201     | DW01_add     | width=32   |               | add_2_root_add_0_root_add_59_3 |
+| r203     | DW01_add     | width=32   |               | add_0_root_add_0_root_add_59_3 |
+| r318     | DW01_add     | width=32   |               | add_1_root_add_0_root_add_59_3_I2 |
+| r320     | DW01_add     | width=32   |               | add_2_root_add_0_root_add_59_3_I2 |
+| r322     | DW01_add     | width=32   |               | add_0_root_add_0_root_add_59_3_I2 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_0_root_add_0_root_add_59_3        |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_0_root_add_59_3        |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_0_root_add_59_3        |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_0_root_add_0_root_add_59_3_I2     |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_2_root_add_0_root_add_59_3_I2     |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_0_root_add_59_3_I2     |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64
+****************************************
+Resource Sharing Report for design DSP_Multipliers_stg_1_SIMD2_SIMD_Width64 in
+        file
+        ../modules//FU/multipliers/multipliers_stg/DSP_Multipliers_stg_1.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r206     | DW02_mult    | A_width=16 |               | mult_69              |
+|          |              | B_width=16 |               |                      |
+| r208     | DW02_mult    | A_width=16 |               | mult_70              |
+|          |              | B_width=16 |               |                      |
+| r210     | DW02_mult    | A_width=16 |               | mult_71              |
+|          |              | B_width=16 |               |                      |
+| r212     | DW02_mult    | A_width=16 |               | mult_72              |
+|          |              | B_width=16 |               |                      |
+| r329     | DW02_mult    | A_width=16 |               | mult_69_I2           |
+|          |              | B_width=16 |               |                      |
+| r331     | DW02_mult    | A_width=16 |               | mult_70_I2           |
+|          |              | B_width=16 |               |                      |
+| r333     | DW02_mult    | A_width=16 |               | mult_71_I2           |
+|          |              | B_width=16 |               |                      |
+| r335     | DW02_mult    | A_width=16 |               | mult_72_I2           |
+|          |              | B_width=16 |               |                      |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| mult_72            | DW02_mult        | csa                |                |
+| mult_71            | DW02_mult        | csa                |                |
+| mult_70            | DW02_mult        | csa                |                |
+| mult_69            | DW02_mult        | csa                |                |
+| mult_72_I2         | DW02_mult        | csa                |                |
+| mult_71_I2         | DW02_mult        | csa                |                |
+| mult_70_I2         | DW02_mult        | csa                |                |
+| mult_69_I2         | DW02_mult        | csa                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_0_DW02_mult_2
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_1_DW02_mult_3
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_2_DW02_mult_4
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_3_DW02_mult_5
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_4_DW02_mult_6
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_5_DW02_mult_7
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6_DW02_mult_8
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_7_DW02_mult_9
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width16_B_width16
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r58      | DW01_add     | width=30   |               | FS_1                 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| FS_1               | DW01_add         | cla                | cla            |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DSP_Shifters_comb_SIMD2_SIMD_Width64
+****************************************
+Resource Sharing Report for design DSP_Shifters_comb_SIMD2_SIMD_Width64 in file
+        ../modules//FU/shifters_stg/DSP_Shifters_comb.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r650     | DW01_sub     | width=6    |               | sub_46 sub_81        |
+|          |              |            |               | sub_81_I2_I1         |
+|          |              |            |               | sub_81_I3_I1         |
+|          |              |            |               | sub_81_I4_I1         |
+| r651     | DW01_cmp2    | width=6    |               | gte_81 gte_81_I2     |
+|          |              |            |               | gte_81_I3 gte_81_I4  |
+|          |              |            |               | lt_46                |
+| r652     | DW01_cmp2    | width=6    |               | gte_81_I2_I1         |
+|          |              |            |               | gte_81_I2_I2         |
+|          |              |            |               | gte_81_I2_I3         |
+|          |              |            |               | gte_81_I2_I4         |
+|          |              |            |               | lt_46_I2             |
+| r653     | DW01_cmp2    | width=6    |               | gte_81_I3_I1         |
+|          |              |            |               | gte_81_I3_I2         |
+|          |              |            |               | gte_81_I3_I3         |
+|          |              |            |               | gte_81_I3_I4         |
+|          |              |            |               | lt_46_I3             |
+| r654     | DW01_cmp2    | width=6    |               | gte_81_I4_I1         |
+|          |              |            |               | gte_81_I4_I2         |
+|          |              |            |               | gte_81_I4_I3         |
+|          |              |            |               | gte_81_I4_I4         |
+|          |              |            |               | lt_46_I4             |
+| r655     | DW01_cmp2    | width=6    |               | gte_81_I5_I1         |
+|          |              |            |               | gte_81_I5_I2         |
+|          |              |            |               | gte_81_I5_I3         |
+|          |              |            |               | gte_81_I5_I4         |
+|          |              |            |               | lt_46_I5             |
+| r656     | DW01_cmp2    | width=6    |               | gte_81_I6_I1         |
+|          |              |            |               | gte_81_I6_I2         |
+|          |              |            |               | gte_81_I6_I3         |
+|          |              |            |               | gte_81_I6_I4         |
+|          |              |            |               | lt_46_I6             |
+| r657     | DW01_cmp2    | width=6    |               | gte_81_I7_I1         |
+|          |              |            |               | gte_81_I7_I2         |
+|          |              |            |               | gte_81_I7_I3         |
+|          |              |            |               | gte_81_I7_I4         |
+|          |              |            |               | lt_46_I7             |
+| r658     | DW01_cmp2    | width=6    |               | gte_81_I8_I1         |
+|          |              |            |               | gte_81_I8_I2         |
+|          |              |            |               | gte_81_I8_I3         |
+|          |              |            |               | gte_81_I8_I4         |
+|          |              |            |               | lt_46_I8             |
+| r659     | DW01_cmp2    | width=6    |               | gte_81_I9_I1         |
+|          |              |            |               | gte_81_I9_I2         |
+|          |              |            |               | gte_81_I9_I3         |
+|          |              |            |               | gte_81_I9_I4         |
+|          |              |            |               | lt_46_I9             |
+| r660     | DW01_cmp2    | width=6    |               | gte_81_I10_I1        |
+|          |              |            |               | gte_81_I10_I2        |
+|          |              |            |               | gte_81_I10_I3        |
+|          |              |            |               | gte_81_I10_I4        |
+|          |              |            |               | lt_46_I10            |
+| r661     | DW01_cmp2    | width=6    |               | gte_81_I11_I1        |
+|          |              |            |               | gte_81_I11_I2        |
+|          |              |            |               | gte_81_I11_I3        |
+|          |              |            |               | gte_81_I11_I4        |
+|          |              |            |               | lt_46_I11            |
+| r662     | DW01_cmp2    | width=6    |               | gte_81_I12_I1        |
+|          |              |            |               | gte_81_I12_I2        |
+|          |              |            |               | gte_81_I12_I3        |
+|          |              |            |               | gte_81_I12_I4        |
+|          |              |            |               | lt_46_I12            |
+| r663     | DW01_cmp2    | width=6    |               | gte_81_I13_I1        |
+|          |              |            |               | gte_81_I13_I2        |
+|          |              |            |               | gte_81_I13_I3        |
+|          |              |            |               | gte_81_I13_I4        |
+|          |              |            |               | lt_46_I13            |
+| r664     | DW01_cmp2    | width=6    |               | gte_81_I14_I1        |
+|          |              |            |               | gte_81_I14_I2        |
+|          |              |            |               | gte_81_I14_I3        |
+|          |              |            |               | gte_81_I14_I4        |
+|          |              |            |               | lt_46_I14            |
+| r665     | DW01_cmp2    | width=6    |               | gte_81_I15_I1        |
+|          |              |            |               | gte_81_I15_I2        |
+|          |              |            |               | gte_81_I15_I3        |
+|          |              |            |               | gte_81_I15_I4        |
+|          |              |            |               | lt_46_I15            |
+| r666     | DW01_cmp2    | width=6    |               | gte_81_I16_I1        |
+|          |              |            |               | gte_81_I16_I2        |
+|          |              |            |               | gte_81_I16_I3        |
+|          |              |            |               | gte_81_I16_I4        |
+|          |              |            |               | lt_46_I16            |
+| r667     | DW01_sub     | width=5    |               | sub_55 sub_94        |
+|          |              |            |               | sub_94_I2_I1         |
+|          |              |            |               | sub_94_I3_I1         |
+|          |              |            |               | sub_94_I4_I1         |
+| r668     | DW01_cmp2    | width=5    |               | gte_94 gte_94_I2     |
+|          |              |            |               | gte_94_I5 lt_55      |
+| r669     | DW01_cmp2    | width=5    |               | gte_94_I2_I1         |
+|          |              |            |               | gte_94_I2_I2         |
+|          |              |            |               | gte_94_I2_I7         |
+|          |              |            |               | lt_55_I2             |
+| r670     | DW01_cmp2    | width=5    |               | gte_94_I3_I1         |
+|          |              |            |               | gte_94_I3_I4         |
+|          |              |            |               | gte_94_I3_I7         |
+|          |              |            |               | lt_55_I3             |
+| r671     | DW01_cmp2    | width=5    |               | gte_94_I4_I1         |
+|          |              |            |               | gte_94_I4_I2         |
+|          |              |            |               | gte_94_I4_I4         |
+|          |              |            |               | gte_94_I4_I7         |
+|          |              |            |               | lt_55_I4             |
+| r672     | DW01_cmp2    | width=5    |               | gte_94_I5_I1         |
+|          |              |            |               | gte_94_I5_I2         |
+|          |              |            |               | gte_94_I5_I4         |
+|          |              |            |               | gte_94_I5_I7         |
+|          |              |            |               | lt_55_I5             |
+| r673     | DW01_cmp2    | width=5    |               | gte_94_I6_I1         |
+|          |              |            |               | gte_94_I6_I2         |
+|          |              |            |               | gte_94_I6_I4         |
+|          |              |            |               | gte_94_I6_I6         |
+|          |              |            |               | lt_55_I6             |
+| r674     | DW01_cmp2    | width=5    |               | gte_94_I7_I1         |
+|          |              |            |               | gte_94_I7_I2         |
+|          |              |            |               | gte_94_I7_I4         |
+|          |              |            |               | gte_94_I7_I6         |
+|          |              |            |               | lt_55_I7             |
+| r675     | DW01_cmp2    | width=5    |               | gte_94_I8_I1         |
+|          |              |            |               | gte_94_I8_I4         |
+|          |              |            |               | gte_94_I8_I6         |
+|          |              |            |               | lt_55_I8             |
+| r683     | DW01_sub     | width=7    |               | sub_68 sub_68_I2_I1  |
+|          |              |            |               | sub_68_I3_I1         |
+|          |              |            |               | sub_68_I4_I1         |
+|          |              |            |               | sub_68_I5_I1         |
+| r684     | DW01_cmp2    | width=7    |               | gte_68 gte_68_I2     |
+| r685     | DW01_cmp2    | width=7    |               | gte_68_I2_I1         |
+|          |              |            |               | gte_68_I2_I2         |
+| r687     | DW01_cmp2    | width=7    |               | gte_68_I4_I1         |
+|          |              |            |               | gte_68_I4_I2         |
+| r688     | DW01_cmp2    | width=7    |               | gte_68_I5_I1         |
+|          |              |            |               | gte_68_I5_I2         |
+| r689     | DW01_cmp2    | width=7    |               | gte_68_I6_I1         |
+|          |              |            |               | gte_68_I6_I2         |
+| r690     | DW01_cmp2    | width=7    |               | gte_68_I7_I1         |
+|          |              |            |               | gte_68_I7_I2         |
+| r691     | DW01_cmp2    | width=7    |               | gte_68_I8_I1         |
+|          |              |            |               | gte_68_I8_I2         |
+| r692     | DW01_cmp2    | width=7    |               | gte_68_I9_I1         |
+|          |              |            |               | gte_68_I9_I2         |
+| r693     | DW01_cmp2    | width=7    |               | gte_68_I10_I1        |
+|          |              |            |               | gte_68_I10_I2        |
+| r694     | DW01_cmp2    | width=7    |               | gte_68_I11_I1        |
+|          |              |            |               | gte_68_I11_I2        |
+| r695     | DW01_cmp2    | width=7    |               | gte_68_I12_I1        |
+|          |              |            |               | gte_68_I12_I2        |
+| r696     | DW01_cmp2    | width=7    |               | gte_68_I13_I1        |
+|          |              |            |               | gte_68_I13_I2        |
+| r697     | DW01_cmp2    | width=7    |               | gte_68_I14_I1        |
+|          |              |            |               | gte_68_I14_I2        |
+| r698     | DW01_cmp2    | width=7    |               | gte_68_I15_I1        |
+|          |              |            |               | gte_68_I15_I2        |
+| r699     | DW01_cmp2    | width=7    |               | gte_68_I16_I1        |
+|          |              |            |               | gte_68_I16_I2        |
+| r700     | DW01_cmp2    | width=7    |               | gte_68_I17_I1        |
+|          |              |            |               | gte_68_I17_I2        |
+| r701     | DW01_cmp2    | width=7    |               | gte_68_I18_I1        |
+|          |              |            |               | gte_68_I18_I2        |
+| r702     | DW01_cmp2    | width=7    |               | gte_68_I19_I1        |
+|          |              |            |               | gte_68_I19_I2        |
+| r703     | DW01_cmp2    | width=7    |               | gte_68_I20_I1        |
+|          |              |            |               | gte_68_I20_I2        |
+| r704     | DW01_cmp2    | width=7    |               | gte_68_I21_I1        |
+|          |              |            |               | gte_68_I21_I2        |
+| r705     | DW01_cmp2    | width=7    |               | gte_68_I22_I1        |
+|          |              |            |               | gte_68_I22_I2        |
+| r706     | DW01_cmp2    | width=7    |               | gte_68_I23_I1        |
+|          |              |            |               | gte_68_I23_I2        |
+| r707     | DW01_cmp2    | width=7    |               | gte_68_I24_I1        |
+|          |              |            |               | gte_68_I24_I2        |
+| r708     | DW01_cmp2    | width=7    |               | gte_68_I25_I1        |
+|          |              |            |               | gte_68_I25_I2        |
+| r709     | DW01_cmp2    | width=7    |               | gte_68_I26_I1        |
+|          |              |            |               | gte_68_I26_I2        |
+| r710     | DW01_cmp2    | width=7    |               | gte_68_I27_I1        |
+|          |              |            |               | gte_68_I27_I2        |
+| r711     | DW01_cmp2    | width=7    |               | gte_68_I28_I1        |
+|          |              |            |               | gte_68_I28_I2        |
+| r712     | DW01_cmp2    | width=7    |               | gte_68_I29_I1        |
+|          |              |            |               | gte_68_I29_I2        |
+| r713     | DW01_cmp2    | width=7    |               | gte_68_I30_I1        |
+|          |              |            |               | gte_68_I30_I2        |
+| r714     | DW01_cmp2    | width=7    |               | gte_68_I31_I1        |
+|          |              |            |               | gte_68_I31_I2        |
+| r715     | DW01_cmp2    | width=7    |               | gte_68_I32_I1        |
+|          |              |            |               | gte_68_I32_I2        |
+| r725     | DW01_cmp2    | width=5    |               | lt_55_I9             |
+| r727     | DW01_cmp2    | width=5    |               | lt_55_I10            |
+| r729     | DW01_cmp2    | width=5    |               | lt_55_I11            |
+| r731     | DW01_cmp2    | width=5    |               | lt_55_I12            |
+| r733     | DW01_cmp2    | width=5    |               | lt_55_I13            |
+| r735     | DW01_cmp2    | width=5    |               | lt_55_I14            |
+| r737     | DW01_cmp2    | width=5    |               | lt_55_I15            |
+| r739     | DW01_cmp2    | width=7    |               | gte_68_I3_I1         |
+===============================================================================
+
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Shifters_stg_2_SIMD2_SIMD_Width64
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DSP_Shifters_stg_1_SIMD2_SIMD_Width64
+****************************************
+Resource Sharing Report for design DSP_Shifters_stg_1_SIMD2_SIMD_Width64 in
+        file ../modules//FU/shifters_stg/DSP_Shifters_stg_1.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r61      | DW_rash      | A_width=32 |               | srl_57               |
+|          |              | SH_width=5 |               |                      |
+| r63      | DW_rash      | A_width=32 |               | srl_57_I2            |
+|          |              | SH_width=5 |               |                      |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| srl_57             | DW_rash          | mx2                |                |
+| srl_57_I2          | DW_rash          | mx2                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Adders_Sync_SIMD2_SIMD_Width64
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DSP_Adders_stg_2_SIMD2_SIMD_Width64
+****************************************
+Resource Sharing Report for design DSP_Adders_stg_2_SIMD2_SIMD_Width64 in file
+        ../modules//FU/adders_stg/DSP_Adders_stg_2.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r99      | DW01_add     | width=9    |               | add_1_root_add_63_3  |
+| r105     | DW01_add     | width=9    |               | add_1_root_add_63_3_I2 |
+| r214     | DW01_add     | width=9    |               | add_1_root_add_1_root_add_60_3 |
+| r216     | DW01_add     | width=9    |               | add_0_root_add_1_root_add_60_3 |
+| r325     | DW01_add     | width=9    |               | add_1_root_add_1_root_add_60_3_I2 |
+| r327     | DW01_add     | width=9    |               | add_0_root_add_1_root_add_60_3_I2 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_0_root_add_1_root_add_60_3        |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_0_root_add_1_root_add_60_3_I2     |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_63_3                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_63_3_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Adders_stg_1_SIMD2_SIMD_Width64
+****************************************
+Resource Sharing Report for design DSP_Adders_stg_1_SIMD2_SIMD_Width64 in file
+        ../modules//FU/adders_stg/DSP_Adders_stg_1.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r88      | DW01_add     | width=9    |               | add_1_root_add_66_2  |
+| r94      | DW01_add     | width=9    |               | add_1_root_add_66_2_I2 |
+| r207     | DW01_add     | width=9    |               | add_1_root_add_1_root_add_67_3_I2 |
+| r209     | DW01_add     | width=9    |               | add_0_root_add_1_root_add_67_3_I2 |
+| r318     | DW01_add     | width=9    |               | add_1_root_add_1_root_add_67_3 |
+| r320     | DW01_add     | width=9    |               | add_0_root_add_1_root_add_67_3 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_0_root_add_1_root_add_67_3        |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_0_root_add_1_root_add_67_3_I2     |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_66_2                   |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_66_2_I2                |                    |                |
+|                    | DW01_add         | rpl                |                |
+===============================================================================
+
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_FU_enabler_sync
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_FU_Handler_MC
+****************************************
+
+No implementations to report
+
+No resource sharing information to report.
+ 
+****************************************
+Design : DSP_pipeline_controller
+****************************************
+
+No implementations to report
+ 
+****************************************
+Design : DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1
+****************************************
+Resource Sharing Report for design
+        DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1
+        in file ../modules//excpt_cntrl/DSP_Excpt_Cntrl_unit.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r584     | DW01_cmp6    | width=3    |               | eq_152 ne_178_2      |
+| r592     | DW01_cmp2    | width=15   |               | gt_239 gt_260 gt_282 |
+|          |              |            |               | gt_307 gt_329 gt_355 |
+|          |              |            |               | gt_379               |
+| r593     | DW01_cmp2    | width=15   |               | gt_255 gt_277 gt_299 |
+|          |              |            |               | gt_324 gt_347 gt_374 |
+|          |              |            |               | gt_398 gt_432        |
+| r620     | DW01_cmp2    | width=31   |               | lte_213              |
+| r622     | DW01_cmp2    | width=15   |               | lte_gte_218          |
+| r624     | DW01_cmp2    | width=15   |               | lte_gte_220          |
+| r626     | DW01_dec     | width=15   |               | sub_222_I2           |
+| r628     | DW01_cmp2    | width=14   |               | lte_222_I2           |
+| r630     | DW01_inc     | width=2    |               | add_223_I2           |
+| r632     | DW01_inc     | width=2    |               | add_225_I2           |
+| r740     | DW01_dec     | width=15   |               | sub_1_root_sub_0_root_sub_135 |
+| r742     | DW01_add     | width=15   |               | add_0_root_sub_0_root_sub_135 |
+| r850     | DW01_dec     | width=15   |               | sub_1_root_sub_0_root_sub_134 |
+| r852     | DW01_add     | width=15   |               | add_0_root_sub_0_root_sub_134 |
+| r960     | DW01_dec     | width=15   |               | sub_1_root_sub_0_root_sub_133 |
+| r962     | DW01_add     | width=15   |               | add_0_root_sub_0_root_sub_133 |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_0_root_sub_0_root_sub_135         |                    |                |
+|                    | DW01_add         | rpl                |                |
+| sub_1_root_sub_0_root_sub_135         |                    |                |
+|                    | DW01_dec         | rpl                |                |
+| add_0_root_sub_0_root_sub_134         |                    |                |
+|                    | DW01_add         | rpl                |                |
+| sub_1_root_sub_0_root_sub_134         |                    |                |
+|                    | DW01_dec         | rpl                |                |
+| add_0_root_sub_0_root_sub_133         |                    |                |
+|                    | DW01_add         | rpl                |                |
+| sub_1_root_sub_0_root_sub_133         |                    |                |
+|                    | DW01_dec         | rpl                |                |
+| sub_222_I2         | DW01_dec         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64
+****************************************
+Resource Sharing Report for design
+        DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64
+        in file ../modules//exec/DSP_Exec_Unit.vhd
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r523     | DW01_cmp2    | width=32   |               | gte_291 gte_301      |
+| r678     | DW01_cmp2    | width=31   |               | lte_gte_250          |
+| r680     | DW01_sub     | width=15   |               | sub_251              |
+| r682     | DW01_add     | width=14   |               | add_281              |
+| r684     | DW01_cmp2    | width=32   |               | gte_284              |
+| r686     | DW01_sub     | width=15   |               | sub_285              |
+| r688     | DW01_add     | width=32   |               | add_293              |
+| r690     | DW01_add     | width=32   |               | add_296              |
+| r692     | DW01_sub     | width=15   |               | sub_302              |
+| r694     | DW01_cmp2    | width=32   |               | gte_309              |
+| r696     | DW01_sub     | width=15   |               | sub_311              |
+| r698     | DW01_cmp2    | width=19   |               | lt_316               |
+| r700     | DW01_cmp2    | width=19   |               | lt_316_I2            |
+| r702     | DW01_cmp2    | width=19   |               | lt_316_I3            |
+| r704     | DW01_cmp2    | width=19   |               | lt_316_I4            |
+| r706     | DW01_cmp2    | width=19   |               | lt_316_I5            |
+| r708     | DW01_cmp2    | width=19   |               | lt_316_I6            |
+| r710     | DW01_cmp2    | width=19   |               | lt_316_I7            |
+| r712     | DW01_cmp2    | width=19   |               | lt_316_I8            |
+| r714     | DW01_cmp2    | width=19   |               | lt_316_I9            |
+| r716     | DW01_cmp2    | width=19   |               | lt_316_I10           |
+| r718     | DW01_cmp2    | width=19   |               | lt_316_I11           |
+| r720     | DW01_cmp2    | width=19   |               | lt_316_I12           |
+| r722     | DW01_cmp2    | width=19   |               | lt_316_I13           |
+| r724     | DW01_cmp2    | width=19   |               | lt_316_I14           |
+| r726     | DW01_cmp2    | width=19   |               | lt_316_I15           |
+| r728     | DW01_cmp2    | width=19   |               | lt_316_I16           |
+| r730     | DW01_cmp2    | width=19   |               | lt_316_I17           |
+| r732     | DW01_cmp2    | width=19   |               | lt_316_I18           |
+| r734     | DW01_cmp2    | width=19   |               | lt_316_I19           |
+| r736     | DW01_cmp2    | width=19   |               | lt_316_I20           |
+| r738     | DW01_cmp2    | width=19   |               | lt_316_I21           |
+| r740     | DW01_cmp2    | width=19   |               | lt_316_I22           |
+| r742     | DW01_cmp2    | width=19   |               | lt_316_I23           |
+| r744     | DW01_cmp2    | width=19   |               | lt_316_I24           |
+| r746     | DW01_cmp2    | width=19   |               | lt_316_I25           |
+| r748     | DW01_cmp2    | width=19   |               | lt_316_I26           |
+| r750     | DW01_cmp2    | width=19   |               | lt_316_I27           |
+| r752     | DW01_cmp2    | width=19   |               | lt_316_I28           |
+| r754     | DW01_cmp2    | width=19   |               | lt_316_I29           |
+| r756     | DW01_cmp2    | width=19   |               | lt_316_I30           |
+| r758     | DW01_cmp2    | width=19   |               | lt_316_I31           |
+| r760     | DW01_cmp2    | width=19   |               | lt_316_I32           |
+| r762     | DW01_cmp2    | width=19   |               | lt_316_I33           |
+| r764     | DW01_cmp2    | width=19   |               | lt_316_I34           |
+| r766     | DW01_cmp2    | width=19   |               | lt_316_I35           |
+| r768     | DW01_cmp2    | width=19   |               | lt_316_I36           |
+| r770     | DW01_cmp2    | width=19   |               | lt_316_I37           |
+| r772     | DW01_cmp2    | width=19   |               | lt_316_I38           |
+| r774     | DW01_cmp2    | width=19   |               | lt_316_I39           |
+| r776     | DW01_cmp2    | width=19   |               | lt_316_I40           |
+| r778     | DW01_cmp2    | width=19   |               | lt_316_I41           |
+| r780     | DW01_cmp2    | width=19   |               | lt_316_I42           |
+| r782     | DW01_cmp2    | width=19   |               | lt_316_I43           |
+| r784     | DW01_cmp2    | width=19   |               | lt_316_I44           |
+| r786     | DW01_cmp2    | width=19   |               | lt_316_I45           |
+| r788     | DW01_cmp2    | width=19   |               | lt_316_I46           |
+| r790     | DW01_cmp2    | width=19   |               | lt_316_I47           |
+| r792     | DW01_cmp2    | width=19   |               | lt_316_I48           |
+| r794     | DW01_cmp2    | width=19   |               | lt_316_I49           |
+| r796     | DW01_cmp2    | width=19   |               | lt_316_I50           |
+| r798     | DW01_cmp2    | width=19   |               | lt_316_I51           |
+| r800     | DW01_cmp2    | width=19   |               | lt_316_I52           |
+| r802     | DW01_cmp2    | width=19   |               | lt_316_I53           |
+| r804     | DW01_cmp2    | width=19   |               | lt_316_I54           |
+| r806     | DW01_cmp2    | width=19   |               | lt_316_I55           |
+| r808     | DW01_cmp2    | width=19   |               | lt_316_I56           |
+| r810     | DW01_cmp2    | width=19   |               | lt_316_I57           |
+| r812     | DW01_cmp2    | width=19   |               | lt_316_I58           |
+| r814     | DW01_cmp2    | width=19   |               | lt_316_I59           |
+| r816     | DW01_cmp2    | width=19   |               | lt_316_I60           |
+| r818     | DW01_cmp2    | width=19   |               | lt_316_I61           |
+| r820     | DW01_cmp2    | width=19   |               | lt_316_I62           |
+| r822     | DW01_cmp2    | width=19   |               | lt_316_I63           |
+| r824     | DW01_cmp2    | width=19   |               | lt_316_I64           |
+| r934     | DW02_mult    | A_width=31 |               | mult_add_245_aco     |
+|          |              | B_width=1  |               |                      |
+| r936     | DW01_add     | width=32   |               | add_245_aco          |
+| r1042    | DW02_mult    | A_width=31 |               | mult_add_240_aco     |
+|          |              | B_width=1  |               |                      |
+| r1044    | DW01_add     | width=32   |               | add_240_aco          |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_245_aco        | DW01_add         | rpl                |                |
+| mult_add_245_aco   | DW02_mult        | csa                |                |
+| add_240_aco        | DW01_add         | rpl                |                |
+| mult_add_240_aco   | DW02_mult        | csa                |                |
+| sub_251            | DW01_sub         | rpl                |                |
+| add_281            | DW01_add         | rpl                |                |
+| sub_285            | DW01_sub         | rpl                |                |
+| add_293            | DW01_add         | rpl                |                |
+| add_296            | DW01_add         | rpl                |                |
+| sub_302            | DW01_sub         | rpl                |                |
+| sub_311            | DW01_sub         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_0
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width31_B_width1
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r64      | DW01_absval  | width=31   |               | A2_1                 |
+| r66      | DW01_absval  | width=1    |               | A2_2                 |
+| r68      | DW01_inc     | width=32   |               | A3                   |
+===============================================================================
+
+ 
+****************************************
+Design : DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1
+****************************************
+
+Resource Sharing Report for design DW02_mult_A_width31_B_width1
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r64      | DW01_absval  | width=31   |               | A2_1                 |
+| r66      | DW01_absval  | width=1    |               | A2_2                 |
+| r68      | DW01_inc     | width=32   |               | A3                   |
+===============================================================================
+
+1

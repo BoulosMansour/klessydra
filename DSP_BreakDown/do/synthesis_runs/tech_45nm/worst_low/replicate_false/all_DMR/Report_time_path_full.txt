@@ -1,0 +1,97 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Mon Jun 29 23:16:50 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: worst_low   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DSP_EXEC_UNIT_inst_0/decoded_instruction_DSP_lat_reg[13]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: DSP_EXEC_UNIT_inst_0/RS1_Data_IE_lat_reg[31]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1 5K_hvratio_1_1 NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DSP_EXEC_UNIT_inst_0/decoded_instruction_DSP_lat_reg[13]/CK (DFF_X1)     0.00 #     0.00 r
+  DSP_EXEC_UNIT_inst_0/decoded_instruction_DSP_lat_reg[13]/Q (DFF_X1)     0.08     0.08 f
+  DSP_EXEC_UNIT_inst_0/decoded_instruction_DSP_lat[13] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64)     0.00     0.08 f
+  DSP_MAPPING_inst/decoded_instruction_DSP_lat[0][13] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.08 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/decoded_instruction_DSP_lat[13] (DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64)     0.00     0.08 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U81/ZN (NOR3_X1)     0.06      0.14 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U628/ZN (AOI211_X1)     0.03     0.18 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U26/ZN (OAI221_X1)     0.05     0.22 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U614/ZN (INV_X1)     0.03      0.26 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/SIMD_RD_BYTES_wire[2] (DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64)     0.00     0.26 f
+  DSP_MAPPING_inst/SIMD_RD_BYTES_wire[0][2] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.26 f
+  DSP_EXEC_UNIT_inst_0/SIMD_RD_BYTES_wire[2] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64)     0.00     0.26 f
+  DSP_EXEC_UNIT_inst_0/mult_add_240_aco/A[2] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1)     0.00     0.26 f
+  DSP_EXEC_UNIT_inst_0/mult_add_240_aco/U3/ZN (AND2_X1)     0.04     0.30 f
+  DSP_EXEC_UNIT_inst_0/mult_add_240_aco/PRODUCT[2] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1)     0.00     0.30 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/B[2] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_29)     0.00     0.30 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U5/ZN (NAND2_X1)       0.03       0.32 r
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U7/ZN (NAND3_X1)       0.04       0.36 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_3/CO (FA_X1)        0.08       0.44 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_4/CO (FA_X1)        0.08       0.52 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_5/CO (FA_X1)        0.08       0.61 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_6/CO (FA_X1)        0.08       0.69 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_7/CO (FA_X1)        0.08       0.77 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_8/CO (FA_X1)        0.08       0.85 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_9/CO (FA_X1)        0.08       0.94 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_10/CO (FA_X1)       0.08       1.02 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_11/CO (FA_X1)       0.08       1.10 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_12/CO (FA_X1)       0.08       1.18 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_13/CO (FA_X1)       0.08       1.26 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_14/CO (FA_X1)       0.08       1.35 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_15/CO (FA_X1)       0.08       1.43 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_16/CO (FA_X1)       0.08       1.51 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_17/CO (FA_X1)       0.08       1.59 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_18/CO (FA_X1)       0.08       1.68 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_19/CO (FA_X1)       0.08       1.76 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_20/CO (FA_X1)       0.08       1.84 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_21/CO (FA_X1)       0.08       1.92 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_22/CO (FA_X1)       0.08       2.00 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_23/CO (FA_X1)       0.08       2.09 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_24/CO (FA_X1)       0.08       2.17 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_25/CO (FA_X1)       0.08       2.25 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_26/CO (FA_X1)       0.08       2.33 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_27/CO (FA_X1)       0.08       2.42 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_28/CO (FA_X1)       0.08       2.50 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_29/CO (FA_X1)       0.08       2.58 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_30/CO (FA_X1)       0.08       2.66 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_31/S (FA_X1)        0.09       2.75 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/SUM[31] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_29)     0.00     2.75 f
+  DSP_EXEC_UNIT_inst_0/U292/ZN (AOI222_X1)                0.07       2.83 r
+  DSP_EXEC_UNIT_inst_0/U291/ZN (INV_X1)                   0.03       2.85 f
+  DSP_EXEC_UNIT_inst_0/RS1_Data_IE_lat_reg[31]/D (DFF_X1)     0.01     2.86 f
+  data arrival time                                                  2.86
+
+  clock clk_i (rise edge)                                 2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  DSP_EXEC_UNIT_inst_0/RS1_Data_IE_lat_reg[31]/CK (DFF_X1)     0.00     2.00 r
+  library setup time                                     -0.03       1.97
+  data required time                                                 1.97
+  --------------------------------------------------------------------------
+  data required time                                                 1.97
+  data arrival time                                                 -2.86
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.90
+
+
+1

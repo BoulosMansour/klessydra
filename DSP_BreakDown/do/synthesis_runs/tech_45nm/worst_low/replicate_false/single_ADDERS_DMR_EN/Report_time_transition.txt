@@ -1,0 +1,156 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Mon Jun 29 22:55:19 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: worst_low   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DSP_EXEC_UNIT_inst_0/decoded_instruction_DSP_lat_reg[7]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: DSP_EXEC_UNIT_inst_0/RS1_Data_IE_lat_reg[30]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1 5K_hvratio_1_1 NangateOpenCellLibrary
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  DSP_EXEC_UNIT_inst_0/decoded_instruction_DSP_lat_reg[7]/CK (DFF_X1)     0.00     0.00 #     0.00 r
+  DSP_EXEC_UNIT_inst_0/decoded_instruction_DSP_lat_reg[7]/Q (DFF_X1)     0.01     0.08     0.08 f
+  DSP_EXEC_UNIT_inst_0/decoded_instruction_DSP_lat[7] (net)     3     0.00     0.08 f
+  DSP_EXEC_UNIT_inst_0/decoded_instruction_DSP_lat[7] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64)     0.00     0.08 f
+  decoded_instruction_DSP_lat[0][7] (net)                           0.00       0.08 f
+  DSP_MAPPING_inst/decoded_instruction_DSP_lat[0][7] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.08 f
+  DSP_MAPPING_inst/decoded_instruction_DSP_lat[0][7] (net)          0.00       0.08 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/decoded_instruction_DSP_lat[7] (DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64)     0.00     0.08 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/decoded_instruction_DSP_lat[7] (net)     0.00     0.08 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U106/ZN (NOR3_X1)     0.03     0.06      0.14 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n380 (net)     2              0.00       0.14 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U656/ZN (AOI211_X1)     0.01     0.04     0.18 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/n448 (net)     1              0.00       0.18 f
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/U9/ZN (OAI221_X1)     0.03     0.06      0.24 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/SIMD_RD_BYTES_wire[3] (net)     3     0.00     0.24 r
+  DSP_MAPPING_inst/MAPPING_OUT_UNIT_0/SIMD_RD_BYTES_wire[3] (DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64)     0.00     0.24 r
+  DSP_MAPPING_inst/SIMD_RD_BYTES_wire[0][3] (net)                   0.00       0.24 r
+  DSP_MAPPING_inst/SIMD_RD_BYTES_wire[0][3] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.24 r
+  SIMD_RD_BYTES_wire[0][3] (net)                                    0.00       0.24 r
+  U18/ZN (INV_X1)                                         0.02      0.05       0.29 f
+  n17 (net)                                     5                   0.00       0.29 f
+  DSP_EXEC_UNIT_inst_0/SIMD_RD_BYTES_wire[2] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64)     0.00     0.29 f
+  DSP_EXEC_UNIT_inst_0/SIMD_RD_BYTES_wire[2] (net)                  0.00       0.29 f
+  DSP_EXEC_UNIT_inst_0/mult_add_240_aco/A[2] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1)     0.00     0.29 f
+  DSP_EXEC_UNIT_inst_0/mult_add_240_aco/A[2] (net)                  0.00       0.29 f
+  DSP_EXEC_UNIT_inst_0/mult_add_240_aco/U35/ZN (AND2_X1)     0.01     0.05     0.33 f
+  DSP_EXEC_UNIT_inst_0/mult_add_240_aco/PRODUCT[2] (net)     2      0.00       0.33 f
+  DSP_EXEC_UNIT_inst_0/mult_add_240_aco/PRODUCT[2] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1)     0.00     0.33 f
+  DSP_EXEC_UNIT_inst_0/N2208 (net)                                  0.00       0.33 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/B[2] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_29)     0.00     0.33 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/B[2] (net)                       0.00       0.33 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U6/ZN (NAND2_X1)       0.01      0.03       0.36 r
+  DSP_EXEC_UNIT_inst_0/add_240_aco/n4 (net)     1                   0.00       0.36 r
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U8/ZN (NAND3_X1)       0.01      0.04       0.40 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[3] (net)     1             0.00       0.40 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_3/CO (FA_X1)        0.01      0.08       0.48 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[4] (net)     1             0.00       0.48 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_4/CO (FA_X1)        0.01      0.08       0.56 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[5] (net)     1             0.00       0.56 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_5/CO (FA_X1)        0.01      0.08       0.65 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[6] (net)     1             0.00       0.65 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_6/CO (FA_X1)        0.01      0.08       0.73 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[7] (net)     1             0.00       0.73 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_7/CO (FA_X1)        0.01      0.08       0.81 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[8] (net)     1             0.00       0.81 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_8/CO (FA_X1)        0.01      0.08       0.89 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[9] (net)     1             0.00       0.89 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_9/CO (FA_X1)        0.01      0.08       0.97 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[10] (net)     1            0.00       0.97 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_10/CO (FA_X1)       0.01      0.08       1.06 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[11] (net)     1            0.00       1.06 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_11/CO (FA_X1)       0.01      0.08       1.14 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[12] (net)     1            0.00       1.14 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_12/CO (FA_X1)       0.01      0.08       1.22 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[13] (net)     1            0.00       1.22 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_13/CO (FA_X1)       0.01      0.08       1.30 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[14] (net)     1            0.00       1.30 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_14/CO (FA_X1)       0.01      0.08       1.38 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[15] (net)     1            0.00       1.38 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_15/CO (FA_X1)       0.01      0.08       1.47 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[16] (net)     1            0.00       1.47 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_16/CO (FA_X1)       0.01      0.08       1.55 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[17] (net)     1            0.00       1.55 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_17/CO (FA_X1)       0.01      0.08       1.63 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[18] (net)     1            0.00       1.63 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_18/CO (FA_X1)       0.01      0.08       1.71 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[19] (net)     1            0.00       1.71 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_19/CO (FA_X1)       0.01      0.08       1.80 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[20] (net)     1            0.00       1.80 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_20/CO (FA_X1)       0.01      0.08       1.88 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[21] (net)     1            0.00       1.88 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_21/CO (FA_X1)       0.01      0.08       1.96 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[22] (net)     1            0.00       1.96 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_22/CO (FA_X1)       0.01      0.08       2.04 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[23] (net)     1            0.00       2.04 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_23/CO (FA_X1)       0.01      0.08       2.12 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[24] (net)     1            0.00       2.12 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_24/CO (FA_X1)       0.01      0.08       2.21 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[25] (net)     1            0.00       2.21 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_25/CO (FA_X1)       0.01      0.08       2.29 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[26] (net)     1            0.00       2.29 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_26/CO (FA_X1)       0.01      0.08       2.37 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[27] (net)     1            0.00       2.37 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_27/CO (FA_X1)       0.01      0.08       2.45 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[28] (net)     1            0.00       2.45 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_28/CO (FA_X1)       0.01      0.08       2.54 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[29] (net)     1            0.00       2.54 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_29/CO (FA_X1)       0.01      0.08       2.62 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/carry[30] (net)     1            0.00       2.62 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/U1_30/S (FA_X1)        0.01      0.09       2.71 f    mo 
+  DSP_EXEC_UNIT_inst_0/add_240_aco/SUM[30] (net)     1              0.00       2.71 f
+  DSP_EXEC_UNIT_inst_0/add_240_aco/SUM[30] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_29)     0.00     2.71 f
+  DSP_EXEC_UNIT_inst_0/N1523 (net)                                  0.00       2.71 f
+  DSP_EXEC_UNIT_inst_0/U299/ZN (AOI222_X1)                0.03      0.07       2.78 r
+  DSP_EXEC_UNIT_inst_0/n270 (net)               1                   0.00       2.78 r
+  DSP_EXEC_UNIT_inst_0/U298/ZN (INV_X1)                   0.01      0.03       2.81 f
+  DSP_EXEC_UNIT_inst_0/n554 (net)               1                   0.00       2.81 f
+  DSP_EXEC_UNIT_inst_0/RS1_Data_IE_lat_reg[30]/D (DFF_X1)     0.01     0.01     2.82 f
+  data arrival time                                                            2.82
+
+  clock clk_i (rise edge)                                           2.00       2.00
+  clock network delay (ideal)                                       0.00       2.00
+  DSP_EXEC_UNIT_inst_0/RS1_Data_IE_lat_reg[30]/CK (DFF_X1)          0.00       2.00 r
+  library setup time                                               -0.03       1.97
+  data required time                                                           1.97
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           1.97
+  data arrival time                                                           -2.82
+  ---------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.85
+
+
+1

@@ -1,0 +1,105 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3
+Version: U-2022.12
+Date   : Mon Jun 29 17:26:51 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: fast   Library: NanGate_15nm_OCL
+Wire Load Model Mode: top
+
+  Startpoint: DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[0]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/dsp_mul_a_reg[63]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[0]/CLK (DFFSNQ_X1)     0.00 #     0.00 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[0]/Q (DFFSNQ_X1)    24.89     24.89 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP[0] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_1)     0.00    24.89 r
+  DSP_MAPPING_inst/MVTYPE_DSP[0][0] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64)     0.00    24.89 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/MVTYPE_DSP[0] (DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64_2)     0.00    24.89 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U524/ZN (INV_X1)     5.21    30.10 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U187/ZN (NOR2_X1)    10.71    40.81 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U1882/Z (OR2_X1)     7.10    47.91 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U180/ZN (NAND2_X1)     4.18    52.09 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U77/ZN (INV_X1)     4.76    56.85 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U20/ZN (NAND2_X1)    12.58    69.42 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U19/Z (BUF_X2)    13.91    83.33 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U6/ZN (INV_X1)    21.14   104.47 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U565/ZN (AOI21_X1)     4.27   108.74 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U564/ZN (OAI21_X1)     4.21   112.94 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U563/ZN (AOI22_X1)     4.05   116.99 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/U561/ZN (NAND2_X1)     4.77   121.76 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_DMR_2_0/dsp_in_mul_operands[1][63] (DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64_2)     0.00   121.76 r
+  DSP_MAPPING_inst/TMR_dsp_in_mul_operands_inst_0_1_63/in2 (TMR_128)     0.00   121.76 r
+  DSP_MAPPING_inst/TMR_dsp_in_mul_operands_inst_0_1_63/U4/ZN (OAI21_X1)     3.66   125.42 f
+  DSP_MAPPING_inst/TMR_dsp_in_mul_operands_inst_0_1_63/U1/ZN (OAI21_X1)     3.86   129.27 r
+  DSP_MAPPING_inst/TMR_dsp_in_mul_operands_inst_0_1_63/result (TMR_128)     0.00   129.27 r
+  DSP_MAPPING_inst/dsp_in_mul_operands[0][1][63] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64)     0.00   129.27 r
+  DSP_MULTIPLIERS_inst/dsp_in_mul_operands[0][1][63] (DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64_Data_Width32)     0.00   129.27 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/dsp_in_mul_operands[1][63] (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1)     0.00   129.27 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/B[15] (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_7_DW02_mult_29)     0.00   129.27 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/U63/ZN (INV_X1)    11.44   140.71 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/U376/ZN (NOR2_X1)     8.27   148.99 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/U2/ZN (INV_X1)     2.61   151.60 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/U48/ZN (NOR2_X1)     3.86   155.46 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S3_2_14/S (FA_X1)    13.90   169.36 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_3_13/S (FA_X1)    13.68   183.04 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_4_12/S (FA_X1)    13.39   196.43 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_5_11/S (FA_X1)    13.68   210.11 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_6_10/S (FA_X1)    13.39   223.50 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_7_9/S (FA_X1)    13.68   237.18 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_8_8/S (FA_X1)    13.39   250.57 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_9_7/S (FA_X1)    13.68   264.25 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_10_6/S (FA_X1)    13.39   277.64 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_11_5/S (FA_X1)    13.68   291.32 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_12_4/S (FA_X1)    13.39   304.71 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_13_3/S (FA_X1)    13.68   318.39 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S2_14_2/S (FA_X1)    13.39   331.78 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/S4_1/S (FA_X1)    14.94   346.72 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/U3/Z (AND2_X1)     5.72   352.44 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/B[15] (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW01_add_7_DW01_add_97)     0.00   352.44 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U95/ZN (NAND2_X1)     3.57   356.01 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U89/ZN (NOR2_X1)     4.44   360.45 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U64/ZN (NAND4_X1)     4.40   364.85 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U63/ZN (NAND2_X1)     4.76   369.61 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U57/ZN (NAND2_X1)     4.03   373.65 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U39/ZN (NOR4_X1)     4.77   378.41 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U38/ZN (NOR2_X1)     4.36   382.77 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U33/ZN (NOR2_X1)     4.40   387.17 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U7/ZN (NAND4_X1)     4.50   391.67 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U6/Z (AND2_X1)     6.13   397.80 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U4/ZN (OAI21_X1)     4.00   401.79 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/U3/Z (XOR2_X1)     5.14   406.93 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/FS_1/SUM[29] (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW01_add_7_DW01_add_97)     0.00   406.93 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_69_I2/PRODUCT[31] (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_1_DW02_mult_7_DW02_mult_29)     0.00   406.93 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/U300/ZN (AOI22_X1)     3.86   410.79 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/U299/ZN (INV_X1)     2.28   413.07 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/dsp_mul_a_reg[63]/D (DFFSNQ_X1)     0.00   413.07 r
+  data arrival time                                                413.07
+
+  clock clk_i (rise edge)                              2000.00    2000.00
+  clock network delay (ideal)                             0.00    2000.00
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/dsp_mul_a_reg[63]/CLK (DFFSNQ_X1)     0.00  2000.00 r
+  library setup time                                     -7.87    1992.13
+  data required time                                              1992.13
+  --------------------------------------------------------------------------
+  data required time                                              1992.13
+  data arrival time                                               -413.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                     1579.06
+
+
+1

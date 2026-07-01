@@ -1,0 +1,51 @@
+ 
+****************************************
+Report : cell
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Mon Jun 29 17:12:20 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+ACCUM_STG                 ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64
+                                                          308.379652
+                                                                    h, n, p
+DSP_ADDERS_inst           DSP_Adders_TMR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64
+                                                          1472.495606
+                                                                    h, n, p
+DSP_COMPARATORS_inst      DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64
+                                                          135.905278
+                                                                    h, n, p
+DSP_EXCPT_CNTRL_UNIT_inst_0
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1
+                                                          182.108165
+                                                                    h, p
+DSP_EXEC_UNIT_inst_0      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64
+                                                          1051.754491
+                                                                    h, n, p
+DSP_FU_HANDLER_inst       DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1
+                                                          15.384576 h, n, p
+DSP_MAPPING_inst          DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64
+                                                          706.953224
+                                                                    h, p
+DSP_MULTIPLIERS_inst      DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32
+                                                          3657.056346
+                                                                    h, n, p
+DSP_PIPELINE_CONTROLLER_inst_0
+                          DSP_pipeline_controller         145.784829
+                                                                    h, n
+DSP_SHIFTERS_inst         DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64
+                                                          561.954813
+                                                                    h, n, p
+--------------------------------------------------------------------------------
+Total 10 cells                                            8237.776980
+1

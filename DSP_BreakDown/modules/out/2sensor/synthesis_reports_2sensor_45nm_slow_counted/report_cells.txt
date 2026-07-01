@@ -1,0 +1,141 @@
+Warning: Design 'RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : cell
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3
+Version: U-2022.12
+Date   : Wed Jul  1 03:02:42 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    d - dont_touch
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+ACCUM_STG                 ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+                                                          4349.365951
+                                                                    h, n, p
+DSP_ADDERS_inst           DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          5248.977936
+                                                                    b, h, n, p, u
+DSP_COMPARATORS_inst      DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          1477.629976
+                                                                    h, n, p
+DSP_EXCPT_CNTRL_UNIT_inst_0
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_1
+                                                          655.158005
+                                                                    h, p
+DSP_EXCPT_CNTRL_UNIT_inst_1
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_2
+                                                          654.094005
+                                                                    h, p
+DSP_EXCPT_CNTRL_UNIT_inst_2
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0
+                                                          654.094005
+                                                                    h, p
+DSP_EXEC_UNIT_inst_0      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_1
+                                                          4286.589943
+                                                                    h, n, p
+DSP_EXEC_UNIT_inst_1      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_2
+                                                          4297.229941
+                                                                    h, n, p
+DSP_EXEC_UNIT_inst_2      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_0
+                                                          4297.229941
+                                                                    h, n, p
+DSP_FU_HANDLER_inst       DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM3_TPS_CEIL2_TPS_BUF_CEIL1
+                                                          176.358003
+                                                                    h, n, p
+DSP_MAPPING_inst          DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+                                                          7578.074028
+                                                                    h, p
+DSP_MULTIPLIERS_inst      DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64_Data_Width32
+                                                          44684.541814
+                                                                    h, n, p
+DSP_PIPELINE_CONTROLLER_inst_0
+                          DSP_pipeline_controller_1       560.195991
+                                                                    h, n
+DSP_PIPELINE_CONTROLLER_inst_1
+                          DSP_pipeline_controller_2       559.663991
+                                                                    h, n
+DSP_PIPELINE_CONTROLLER_inst_2
+                          DSP_pipeline_controller_0       557.003991
+                                                                    h, n
+DSP_SHIFTERS_inst         DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          6116.935906
+                                                                    h, n, p
+RTL_DSP_TOP_rtl1_2sensor_tessent_sib_sri_inst
+                          RTL_DSP_TOP_rtl1_2sensor_tessent_sib_1
+                                                          28.196000 h, n
+RTL_DSP_TOP_rtl1_2sensor_tessent_sib_sri_local_inst
+                          RTL_DSP_TOP_rtl1_2sensor_tessent_sib_2
+                                                          28.196000 h, n
+U1                        CLKBUF_X1       NangateOpenCellLibrary
+                                                          0.798000  
+U2                        CLKBUF_X1       NangateOpenCellLibrary
+                                                          0.798000  
+U3                        CLKBUF_X1       NangateOpenCellLibrary
+                                                          0.798000  
+U4                        CLKBUF_X1       NangateOpenCellLibrary
+                                                          0.798000  
+U5                        CLKBUF_X1       NangateOpenCellLibrary
+                                                          0.798000  
+U6                        INV_X2          NangateOpenCellLibrary
+                                                          0.798000  
+U7                        INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U8                        INV_X2          NangateOpenCellLibrary
+                                                          0.798000  
+U9                        INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U10                       CLKBUF_X3       NangateOpenCellLibrary
+                                                          1.330000  
+U11                       CLKBUF_X1       NangateOpenCellLibrary
+                                                          0.798000  
+U12                       CLKBUF_X1       NangateOpenCellLibrary
+                                                          0.798000  
+U13                       BUF_X4          NangateOpenCellLibrary
+                                                          1.862000  
+U14                       INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U15                       INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U16                       INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U17                       INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U18                       INV_X2          NangateOpenCellLibrary
+                                                          0.798000  
+U19                       INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U20                       INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U21                       INV_X2          NangateOpenCellLibrary
+                                                          0.798000  
+U22                       INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U23                       INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U24                       INV_X2          NangateOpenCellLibrary
+                                                          0.798000  
+U25                       CLKBUF_X1       NangateOpenCellLibrary
+                                                          0.798000  
+U26                       CLKBUF_X1       NangateOpenCellLibrary
+                                                          0.798000  
+U27                       CLKBUF_X1       NangateOpenCellLibrary
+                                                          0.798000  
+U28                       INV_X1          NangateOpenCellLibrary
+                                                          0.532000  
+U29                       INV_X4          NangateOpenCellLibrary
+                                                          1.330000  
+act_sensor_top            activity_sensor_SENSOR_ID0_WINDOW_WIDTH8
+                                                          0.000000  d, h, n, p, u
+reset_inverter_ijtag      sg13g2_inv_1                    0.000000  b
+--------------------------------------------------------------------------------
+Total 49 cells                                            86231.879428
+1

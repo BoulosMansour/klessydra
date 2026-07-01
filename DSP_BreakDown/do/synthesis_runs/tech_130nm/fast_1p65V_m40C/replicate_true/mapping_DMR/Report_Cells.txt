@@ -1,0 +1,273 @@
+ 
+****************************************
+Report : cell
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3
+Version: U-2022.12
+Date   : Tue Jun 30 08:05:49 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+ACCUM_STG                 ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+                                                          40158.870552
+                                                                    h, n, p
+DSP_ADDERS_inst           DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          55318.183202
+                                                                    h, n, p
+DSP_COMPARATORS_inst      DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          14687.001111
+                                                                    h, n, p
+DSP_EXCPT_CNTRL_UNIT_inst_0
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_1
+                                                          6019.952317
+                                                                    h, p
+DSP_EXCPT_CNTRL_UNIT_inst_1
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_2
+                                                          6023.581117
+                                                                    h, p
+DSP_EXCPT_CNTRL_UNIT_inst_2
+                          DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_0
+                                                          6034.467517
+                                                                    h, p
+DSP_EXEC_UNIT_inst_0      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_1
+                                                          39360.648252
+                                                                    h, n, p
+DSP_EXEC_UNIT_inst_1      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_2
+                                                          39206.424250
+                                                                    h, n, p
+DSP_EXEC_UNIT_inst_2      DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_0
+                                                          39347.947434
+                                                                    h, n, p
+DSP_FU_HANDLER_inst       DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM3_TPS_CEIL2_TPS_BUF_CEIL1
+                                                          1581.816596
+                                                                    h, n, p
+DSP_MAPPING_inst          DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64
+                                                          84123.975247
+                                                                    h, p
+DSP_MULTIPLIERS_inst      DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM3_FU_NUM3_SIMD_Width64_Data_Width32
+                                                          567924.463861
+                                                                    h, n, p
+DSP_PIPELINE_CONTROLLER_inst_0
+                          DSP_pipeline_controller_1       5372.892011
+                                                                    h, n
+DSP_PIPELINE_CONTROLLER_inst_1
+                          DSP_pipeline_controller_2       5356.562413
+                                                                    h, n
+DSP_PIPELINE_CONTROLLER_inst_2
+                          DSP_pipeline_controller_0       5356.562413
+                                                                    h, n
+DSP_SHIFTERS_inst         DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_SIMD_Width64
+                                                          60038.949601
+                                                                    h, n, p
+U1                        sg13g2_tielo    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U2                        sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U3                        sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U4                        sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U5                        sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U6                        sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U7                        sg13g2_buf_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U8                        sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U9                        sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U10                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U11                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U12                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U13                       sg13g2_inv_2    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U14                       sg13g2_buf_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U15                       sg13g2_buf_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U16                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U17                       sg13g2_inv_2    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U18                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U19                       sg13g2_inv_2    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U20                       sg13g2_inv_2    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U21                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U22                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U23                       sg13g2_inv_8    sg13g2_stdcell_fast_1p65V_m40C
+                                                          18.143999 
+U24                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U25                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U26                       sg13g2_inv_8    sg13g2_stdcell_fast_1p65V_m40C
+                                                          18.143999 
+U27                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U28                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U29                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U30                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U31                       sg13g2_inv_8    sg13g2_stdcell_fast_1p65V_m40C
+                                                          18.143999 
+U32                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U33                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U34                       sg13g2_inv_8    sg13g2_stdcell_fast_1p65V_m40C
+                                                          18.143999 
+U35                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U36                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U37                       sg13g2_inv_8    sg13g2_stdcell_fast_1p65V_m40C
+                                                          18.143999 
+U38                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U39                       sg13g2_buf_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U40                       sg13g2_buf_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U41                       sg13g2_buf_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U42                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U43                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U44                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U45                       sg13g2_buf_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U46                       sg13g2_buf_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U47                       sg13g2_buf_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U48                       sg13g2_buf_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U49                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U50                       sg13g2_inv_2    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U51                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U52                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U53                       sg13g2_buf_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U54                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U55                       sg13g2_inv_8    sg13g2_stdcell_fast_1p65V_m40C
+                                                          18.143999 
+U56                       sg13g2_buf_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U57                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U58                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U59                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U60                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U61                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U62                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U63                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U64                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U65                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U66                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U67                       sg13g2_inv_8    sg13g2_stdcell_fast_1p65V_m40C
+                                                          18.143999 
+U68                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U69                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U70                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U71                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U72                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U73                       sg13g2_inv_8    sg13g2_stdcell_fast_1p65V_m40C
+                                                          18.143999 
+U74                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U75                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U76                       sg13g2_inv_4    sg13g2_stdcell_fast_1p65V_m40C
+                                                          10.886400 
+U77                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U78                       sg13g2_inv_8    sg13g2_stdcell_fast_1p65V_m40C
+                                                          18.143999 
+U79                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U80                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U81                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U82                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U83                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U84                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U85                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U86                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U87                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U88                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U89                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U90                       sg13g2_inv_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          5.443200  
+U91                       sg13g2_dlygate4sd1_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U92                       sg13g2_dlygate4sd2_1
+                                          sg13g2_stdcell_fast_1p65V_m40C
+                                                          14.515200 
+U93                       sg13g2_buf_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+U94                       sg13g2_buf_1    sg13g2_stdcell_fast_1p65V_m40C
+                                                          7.257600  
+--------------------------------------------------------------------------------
+Total 110 cells                                           976815.869085
+1

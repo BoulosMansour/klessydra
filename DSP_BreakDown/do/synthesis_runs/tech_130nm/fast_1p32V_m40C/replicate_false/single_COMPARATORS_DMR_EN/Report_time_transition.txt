@@ -1,0 +1,214 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Tue Jun 30 06:07:21 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: sg13g2_stdcell_fast_1p32V_m40C   Library: sg13g2_stdcell_fast_1p32V_m40C
+Wire Load Model Mode: enclosed
+
+  Startpoint: DSP_PIPELINE_CONTROLLER_inst_0/state_DSP_reg[1]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/dsp_mul_b_reg[61]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1 100k sg13g2_stdcell_fast_1p32V_m40C
+  DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64 5k sg13g2_stdcell_fast_1p32V_m40C
+  DSP_Multipliers_stg_1_SIMD2_SIMD_Width64 30k sg13g2_stdcell_fast_1p32V_m40C
+  DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6_DW02_mult_8 5k sg13g2_stdcell_fast_1p32V_m40C
+  DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_13 0_5k sg13g2_stdcell_fast_1p32V_m40C
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  DSP_PIPELINE_CONTROLLER_inst_0/state_DSP_reg[1]/CLK (sg13g2_dfrbp_1)     0.00     0.00 #     0.00 r
+  DSP_PIPELINE_CONTROLLER_inst_0/state_DSP_reg[1]/Q (sg13g2_dfrbp_1)     0.08     0.17     0.17 r
+  DSP_PIPELINE_CONTROLLER_inst_0/state_DSP[1] (net)     8           0.00       0.17 r
+  DSP_PIPELINE_CONTROLLER_inst_0/state_DSP[1] (DSP_pipeline_controller)     0.00     0.17 r
+  state_DSP[0][1] (net)                                             0.00       0.17 r
+  DSP_MAPPING_inst/state_DSP[0][1] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.17 r
+  DSP_MAPPING_inst/state_DSP[0][1] (net)                            0.00       0.17 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/state_DSP[1] (DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64)     0.00     0.17 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/state_DSP[1] (net)             0.00       0.17 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U683/Y (sg13g2_nand3_1)     0.06     0.08     0.26 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n461 (net)     2               0.00       0.26 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U275/Y (sg13g2_inv_1)     0.03     0.03     0.29 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n133 (net)     1               0.00       0.29 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U276/Y (sg13g2_nand2_2)     0.04     0.04     0.33 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n574 (net)     1               0.00       0.33 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U222/Y (sg13g2_inv_4)     0.03     0.03     0.36 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n175 (net)     8               0.00       0.36 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U247/X (sg13g2_and3_1)     0.05     0.09     0.45 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n116 (net)     1               0.00       0.45 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U19/Y (sg13g2_inv_4)     0.03     0.03     0.48 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n188 (net)     4               0.00       0.48 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U340/Y (sg13g2_inv_4)     0.02     0.02     0.51 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n200 (net)     7               0.00       0.51 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1099/Y (sg13g2_nand3_1)     0.04     0.05     0.56 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n883 (net)     1               0.00       0.56 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U358/Y (sg13g2_nand3b_1)     0.04     0.05     0.61 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/dsp_in_mul_operands[1][58] (net)     1     0.00     0.61 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/dsp_in_mul_operands[1][58] (DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64)     0.00     0.61 r
+  DSP_MAPPING_inst/dsp_in_mul_operands[0][1][58] (net)              0.00       0.61 r
+  DSP_MAPPING_inst/dsp_in_mul_operands[0][1][58] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.61 r
+  dsp_in_mul_operands[0][1][58] (net)                               0.00       0.61 r
+  DSP_MULTIPLIERS_inst/dsp_in_mul_operands[0][1][58] (DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32)     0.00     0.61 r
+  DSP_MULTIPLIERS_inst/dsp_in_mul_operands[0][1][58] (net)          0.00       0.61 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/dsp_in_mul_operands[1][58] (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64)     0.00     0.61 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/dsp_in_mul_operands[1][58] (net)     0.00     0.61 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/U28/X (sg13g2_buf_8)     0.03     0.06     0.67 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/n143 (net)     2     0.00     0.67 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/B[10] (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6_DW02_mult_8)     0.00     0.67 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/B[10] (net)     0.00     0.67 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U83/Y (sg13g2_inv_8)     0.01     0.02     0.69 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n571 (net)     5     0.00     0.69 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U598/Y (sg13g2_inv_2)     0.04     0.04     0.73 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n569 (net)     8     0.00     0.73 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U394/Y (sg13g2_inv_1)     0.03     0.04     0.76 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n162 (net)     3     0.00     0.76 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1484/Y (sg13g2_o21ai_1)     0.07     0.04     0.80 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1142 (net)     2     0.00     0.80 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1485/Y (sg13g2_nand3b_1)     0.05     0.06     0.87 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1031 (net)     1     0.00     0.87 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1486/Y (sg13g2_nand2_1)     0.03     0.03     0.90 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1036 (net)     2     0.00     0.90 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U997/Y (sg13g2_nand2b_1)     0.03     0.05     0.95 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1152 (net)     2     0.00     0.95 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1549/Y (sg13g2_nand2_1)     0.04     0.04     1.00 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1155 (net)     1     0.00     1.00 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1550/Y (sg13g2_xnor2_1)     0.05     0.08     1.08 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1239 (net)     2     0.00     1.08 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U472/Y (sg13g2_inv_1)     0.02     0.03     1.11 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n188 (net)     1     0.00     1.11 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U469/Y (sg13g2_nand2_1)     0.02     0.03     1.14 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n189 (net)     1     0.00     1.14 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U470/Y (sg13g2_nand2_1)     0.03     0.03     1.17 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1163 (net)     2     0.00     1.17 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U845/Y (sg13g2_nand2b_1)     0.03     0.05     1.22 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1243 (net)     2     0.00     1.22 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1602/Y (sg13g2_nand2_1)     0.04     0.04     1.26 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1246 (net)     1     0.00     1.26 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1603/Y (sg13g2_xnor2_1)     0.05     0.08     1.34 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1366 (net)     2     0.00     1.34 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1604/Y (sg13g2_o21ai_1)     0.07     0.08     1.42 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1254 (net)     2     0.00     1.42 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U278/Y (sg13g2_nand2b_1)     0.04     0.07     1.50 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n105 (net)     2     0.00     1.50 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U279/Y (sg13g2_inv_2)     0.02     0.02     1.52 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n125 (net)     2     0.00     1.52 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U643/Y (sg13g2_o21ai_1)     0.06     0.06     1.58 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n299 (net)     1     0.00     1.58 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1004/Y (sg13g2_nand2b_1)     0.04     0.05     1.63 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1331 (net)     2     0.00     1.63 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1642/Y (sg13g2_nand2_1)     0.03     0.04     1.67 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1334 (net)     2     0.00     1.67 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U85/Y (sg13g2_inv_1)     0.02     0.03     1.69 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n56 (net)     1     0.00     1.69 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U112/Y (sg13g2_nand2_2)     0.02     0.02     1.71 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n59 (net)     1     0.00     1.71 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U113/Y (sg13g2_nand2_2)     0.03     0.03     1.75 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1398 (net)     2     0.00     1.75 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1673/Y (sg13g2_o21ai_1)     0.07     0.07     1.82 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1380 (net)     2     0.00     1.82 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U857/Y (sg13g2_nand2b_1)     0.04     0.07     1.89 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1459 (net)     2     0.00     1.89 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1724/Y (sg13g2_nand2_1)     0.04     0.04     1.94 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1460 (net)     1     0.00     1.94 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U69/Y (sg13g2_xnor2_1)     0.05     0.07     2.01 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1564 (net)     2     0.00     2.01 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1725/Y (sg13g2_o21ai_1)     0.05     0.03     2.04 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1462 (net)     1     0.00     2.04 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U422/Y (sg13g2_nand2_1)     0.05     0.05     2.10 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1468 (net)     3     0.00     2.10 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U928/Y (sg13g2_nand2b_1)     0.04     0.07     2.17 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1570 (net)     1     0.00     2.17 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U105/Y (sg13g2_inv_2)     0.02     0.02     2.19 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1469 (net)     2     0.00     2.19 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1728/Y (sg13g2_o21ai_1)     0.03     0.04     2.23 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1475 (net)     1     0.00     2.23 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U109/Y (sg13g2_nor2b_1)     0.05     0.05     2.28 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n303 (net)     2     0.00     2.28 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U610/Y (sg13g2_inv_1)     0.02     0.03     2.31 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1492 (net)     1     0.00     2.31 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U635/Y (sg13g2_nand2_2)     0.02     0.02     2.34 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1494 (net)     1     0.00     2.34 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1742/Y (sg13g2_xnor2_1)     0.10     0.08     2.42 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1584 (net)     3     0.00     2.42 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U1798/Y (sg13g2_o21ai_1)     0.05     0.07     2.48 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n1579 (net)     1     0.00     2.48 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U309/Y (sg13g2_xnor2_1)     0.04     0.07     2.56 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n440 (net)     1     0.00     2.56 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U940/Y (sg13g2_xnor2_1)     0.06     0.08     2.64 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/n2043 (net)     2     0.00     2.64 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/U820/X (sg13g2_xor2_1)     0.05     0.08     2.72 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/A1[17] (net)     1     0.00     2.72 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/A[17] (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_13)     0.00     2.72 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/A[17] (net)     0.00     2.72 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/U37/Y (sg13g2_inv_2)     0.03     0.03     2.75 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/n11 (net)     1     0.00     2.75 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/U38/Y (sg13g2_inv_4)     0.02     0.02     2.77 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/n12 (net)     5     0.00     2.77 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/U77/Y (sg13g2_nor2_1)     0.03     0.04     2.81 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/n92 (net)     1     0.00     2.81 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/U127/Y (sg13g2_nor2_1)     0.02     0.03     2.84 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/n87 (net)     1     0.00     2.84 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/U126/Y (sg13g2_o21ai_1)     0.05     0.06     2.89 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/n86 (net)     1     0.00     2.89 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/U69/Y (sg13g2_nor3_1)     0.03     0.04     2.93 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/n85 (net)     1     0.00     2.93 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/U48/Y (sg13g2_a21oi_2)     0.05     0.05     2.99 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/n60 (net)     2     0.00     2.99 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/U60/Y (sg13g2_nand2_2)     0.03     0.04     3.03 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/n33 (net)     2     0.00     3.03 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/U108/Y (sg13g2_a21oi_1)     0.05     0.05     3.08 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/n47 (net)     1     0.00     3.08 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/U103/Y (sg13g2_xnor2_1)     0.05     0.07     3.15 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/SUM[27] (net)     1     0.00     3.15 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/FS_1/SUM[27] (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_13)     0.00     3.15 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/PRODUCT[29] (net)     0.00     3.15 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/mult_70_I2/PRODUCT[29] (DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6_DW02_mult_8)     0.00     3.15 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/N258 (net)      0.00       3.15 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/U483/Y (sg13g2_a22oi_1)     0.04     0.04     3.19 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/n263 (net)     1     0.00     3.19 f
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/U484/Y (sg13g2_inv_1)     0.02     0.02     3.21 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/n459 (net)     1     0.00     3.21 r
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/dsp_mul_b_reg[61]/D (sg13g2_dfrbp_1)     0.02     0.00     3.21 r
+  data arrival time                                                            3.21
+
+  clock clk_i (rise edge)                                           2.00       2.00
+  clock network delay (ideal)                                       0.00       2.00
+  DSP_MULTIPLIERS_inst/DSP_Multipliers_stg_1_inst_0/dsp_mul_b_reg[61]/CLK (sg13g2_dfrbp_1)     0.00     2.00 r
+  library setup time                                               -0.07       1.93
+  data required time                                                           1.93
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           1.93
+  data arrival time                                                           -3.21
+  ---------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -1.28
+
+
+1

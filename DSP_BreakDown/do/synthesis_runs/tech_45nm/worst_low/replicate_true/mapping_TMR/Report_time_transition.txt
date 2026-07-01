@@ -1,0 +1,150 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3
+Version: U-2022.12
+Date   : Mon Jun 29 22:47:51 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: worst_low   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: ACCUM_STG/accum_partial_results_stg_1_reg[1][0]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: ACCUM_STG/dsp_out_accum_results_reg[1][31]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en1_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM3_FU_NUM3 5K_hvratio_1_1 NangateOpenCellLibrary
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  ACCUM_STG/accum_partial_results_stg_1_reg[1][0]/CK (DFF_X1)     0.00     0.00 #     0.00 r
+  ACCUM_STG/accum_partial_results_stg_1_reg[1][0]/QN (DFF_X1)     0.01     0.07     0.07 r
+  ACCUM_STG/n344 (net)                          2                   0.00       0.07 r
+  ACCUM_STG/U32/ZN (INV_X1)                               0.01      0.03       0.10 f
+  ACCUM_STG/n30 (net)                           1                   0.00       0.10 f
+  ACCUM_STG/add_130_G2/A[0] (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64_DW01_add_10)     0.00     0.10 f
+  ACCUM_STG/add_130_G2/A[0] (net)                                   0.00       0.10 f
+  ACCUM_STG/add_130_G2/U1_0/CO (FA_X1)                    0.01      0.09       0.19 f    mo 
+  ACCUM_STG/add_130_G2/carry[1] (net)           3                   0.00       0.19 f
+  ACCUM_STG/add_130_G2/U26/ZN (NAND2_X1)                  0.01      0.03       0.22 r
+  ACCUM_STG/add_130_G2/n19 (net)                1                   0.00       0.22 r
+  ACCUM_STG/add_130_G2/U28/ZN (NAND3_X1)                  0.01      0.04       0.26 f
+  ACCUM_STG/add_130_G2/carry[2] (net)           1                   0.00       0.26 f
+  ACCUM_STG/add_130_G2/U1_2/CO (FA_X1)                    0.02      0.09       0.35 f    mo 
+  ACCUM_STG/add_130_G2/carry[3] (net)           3                   0.00       0.35 f
+  ACCUM_STG/add_130_G2/U13/ZN (NAND2_X1)                  0.01      0.03       0.38 r
+  ACCUM_STG/add_130_G2/n10 (net)                1                   0.00       0.38 r
+  ACCUM_STG/add_130_G2/U15/ZN (NAND3_X1)                  0.01      0.04       0.42 f
+  ACCUM_STG/add_130_G2/carry[4] (net)           1                   0.00       0.42 f
+  ACCUM_STG/add_130_G2/U1_4/CO (FA_X1)                    0.01      0.08       0.50 f    mo 
+  ACCUM_STG/add_130_G2/carry[5] (net)           1                   0.00       0.50 f
+  ACCUM_STG/add_130_G2/U1_5/CO (FA_X1)                    0.01      0.08       0.59 f    mo 
+  ACCUM_STG/add_130_G2/carry[6] (net)           1                   0.00       0.59 f
+  ACCUM_STG/add_130_G2/U1_6/CO (FA_X1)                    0.01      0.08       0.67 f    mo 
+  ACCUM_STG/add_130_G2/carry[7] (net)           1                   0.00       0.67 f
+  ACCUM_STG/add_130_G2/U1_7/CO (FA_X1)                    0.01      0.08       0.75 f    mo 
+  ACCUM_STG/add_130_G2/carry[8] (net)           1                   0.00       0.75 f
+  ACCUM_STG/add_130_G2/U1_8/CO (FA_X1)                    0.01      0.08       0.83 f    mo 
+  ACCUM_STG/add_130_G2/carry[9] (net)           1                   0.00       0.83 f
+  ACCUM_STG/add_130_G2/U1_9/CO (FA_X1)                    0.01      0.08       0.92 f    mo 
+  ACCUM_STG/add_130_G2/carry[10] (net)          1                   0.00       0.92 f
+  ACCUM_STG/add_130_G2/U1_10/CO (FA_X1)                   0.01      0.08       1.00 f    mo 
+  ACCUM_STG/add_130_G2/carry[11] (net)          1                   0.00       1.00 f
+  ACCUM_STG/add_130_G2/U1_11/CO (FA_X1)                   0.02      0.09       1.09 f    mo 
+  ACCUM_STG/add_130_G2/carry[12] (net)          3                   0.00       1.09 f
+  ACCUM_STG/add_130_G2/U19/ZN (NAND2_X1)                  0.01      0.03       1.12 r
+  ACCUM_STG/add_130_G2/n14 (net)                1                   0.00       1.12 r
+  ACCUM_STG/add_130_G2/U21/ZN (NAND3_X1)                  0.01      0.04       1.16 f
+  ACCUM_STG/add_130_G2/carry[13] (net)          1                   0.00       1.16 f
+  ACCUM_STG/add_130_G2/U1_13/CO (FA_X1)                   0.02      0.09       1.25 f    mo 
+  ACCUM_STG/add_130_G2/carry[14] (net)          3                   0.00       1.25 f
+  ACCUM_STG/add_130_G2/U46/ZN (NAND2_X1)                  0.01      0.03       1.28 r
+  ACCUM_STG/add_130_G2/n33 (net)                1                   0.00       1.28 r
+  ACCUM_STG/add_130_G2/U48/ZN (NAND3_X1)                  0.01      0.04       1.32 f
+  ACCUM_STG/add_130_G2/carry[15] (net)          1                   0.00       1.32 f
+  ACCUM_STG/add_130_G2/U1_15/CO (FA_X1)                   0.01      0.08       1.40 f    mo 
+  ACCUM_STG/add_130_G2/carry[16] (net)          1                   0.00       1.40 f
+  ACCUM_STG/add_130_G2/U1_16/CO (FA_X1)                   0.01      0.08       1.48 f    mo 
+  ACCUM_STG/add_130_G2/carry[17] (net)          1                   0.00       1.48 f
+  ACCUM_STG/add_130_G2/U1_17/CO (FA_X1)                   0.01      0.08       1.57 f    mo 
+  ACCUM_STG/add_130_G2/carry[18] (net)          1                   0.00       1.57 f
+  ACCUM_STG/add_130_G2/U1_18/CO (FA_X1)                   0.01      0.08       1.65 f    mo 
+  ACCUM_STG/add_130_G2/carry[19] (net)          1                   0.00       1.65 f
+  ACCUM_STG/add_130_G2/U1_19/CO (FA_X1)                   0.01      0.08       1.73 f    mo 
+  ACCUM_STG/add_130_G2/carry[20] (net)          1                   0.00       1.73 f
+  ACCUM_STG/add_130_G2/U1_20/CO (FA_X1)                   0.01      0.08       1.82 f    mo 
+  ACCUM_STG/add_130_G2/carry[21] (net)          1                   0.00       1.82 f
+  ACCUM_STG/add_130_G2/U1_21/CO (FA_X1)                   0.01      0.08       1.90 f    mo 
+  ACCUM_STG/add_130_G2/carry[22] (net)          1                   0.00       1.90 f
+  ACCUM_STG/add_130_G2/U1_22/CO (FA_X1)                   0.01      0.08       1.98 f    mo 
+  ACCUM_STG/add_130_G2/carry[23] (net)          1                   0.00       1.98 f
+  ACCUM_STG/add_130_G2/U1_23/CO (FA_X1)                   0.02      0.09       2.07 f    mo 
+  ACCUM_STG/add_130_G2/carry[24] (net)          3                   0.00       2.07 f
+  ACCUM_STG/add_130_G2/U40/ZN (NAND2_X1)                  0.01      0.03       2.10 r
+  ACCUM_STG/add_130_G2/n29 (net)                1                   0.00       2.10 r
+  ACCUM_STG/add_130_G2/U42/ZN (NAND3_X1)                  0.01      0.04       2.14 f
+  ACCUM_STG/add_130_G2/carry[25] (net)          1                   0.00       2.14 f
+  ACCUM_STG/add_130_G2/U1_25/CO (FA_X1)                   0.02      0.09       2.23 f    mo 
+  ACCUM_STG/add_130_G2/carry[26] (net)          3                   0.00       2.23 f
+  ACCUM_STG/add_130_G2/U32/ZN (NAND2_X1)                  0.01      0.04       2.27 r
+  ACCUM_STG/add_130_G2/n23 (net)                1                   0.00       2.27 r
+  ACCUM_STG/add_130_G2/U34/ZN (NAND3_X1)                  0.01      0.04       2.30 f
+  ACCUM_STG/add_130_G2/carry[27] (net)          1                   0.00       2.30 f
+  ACCUM_STG/add_130_G2/U1_27/CO (FA_X1)                   0.02      0.09       2.39 f    mo 
+  ACCUM_STG/add_130_G2/carry[28] (net)          3                   0.00       2.39 f
+  ACCUM_STG/add_130_G2/U7/ZN (NAND2_X1)                   0.01      0.03       2.42 r
+  ACCUM_STG/add_130_G2/n6 (net)                 1                   0.00       2.42 r
+  ACCUM_STG/add_130_G2/U9/ZN (NAND3_X1)                   0.01      0.04       2.46 f
+  ACCUM_STG/add_130_G2/carry[29] (net)          1                   0.00       2.46 f
+  ACCUM_STG/add_130_G2/U1_29/CO (FA_X1)                   0.01      0.08       2.55 f    mo 
+  ACCUM_STG/add_130_G2/carry[30] (net)          1                   0.00       2.55 f
+  ACCUM_STG/add_130_G2/U1_30/CO (FA_X1)                   0.01      0.08       2.63 f    mo 
+  ACCUM_STG/add_130_G2/carry[31] (net)          1                   0.00       2.63 f
+  ACCUM_STG/add_130_G2/U1_31/S (FA_X1)                    0.01      0.09       2.72 f    mo 
+  ACCUM_STG/add_130_G2/SUM[31] (net)            1                   0.00       2.72 f
+  ACCUM_STG/add_130_G2/SUM[31] (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM3_FU_NUM3_Data_Width32_SIMD_Width64_DW01_add_10)     0.00     2.72 f
+  ACCUM_STG/N518 (net)                                              0.00       2.72 f
+  ACCUM_STG/U112/ZN (AOI222_X1)                           0.03      0.08       2.80 r
+  ACCUM_STG/n112 (net)                          1                   0.00       2.80 r
+  ACCUM_STG/U111/ZN (INV_X1)                              0.01      0.03       2.83 f
+  ACCUM_STG/n440 (net)                          1                   0.00       2.83 f
+  ACCUM_STG/dsp_out_accum_results_reg[1][31]/D (DFF_X1)     0.01     0.01      2.84 f
+  data arrival time                                                            2.84
+
+  clock clk_i (rise edge)                                           2.00       2.00
+  clock network delay (ideal)                                       0.00       2.00
+  ACCUM_STG/dsp_out_accum_results_reg[1][31]/CK (DFF_X1)            0.00       2.00 r
+  library setup time                                               -0.03       1.97
+  data required time                                                           1.97
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           1.97
+  data arrival time                                                           -2.84
+  ---------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.87
+
+
+1

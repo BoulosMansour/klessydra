@@ -1,0 +1,160 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Mon Jun 29 20:32:56 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: fast   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[1]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: ACCUM_STG/accum_partial_results_stg_1_reg[0][31]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1 5K_hvratio_1_1 NangateOpenCellLibrary
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[1]/CK (DFF_X1)      0.00      0.00 #     0.00 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP_reg[1]/Q (DFF_X1)       0.01      0.06       0.06 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP[1] (net)      5                   0.00       0.06 r
+  DSP_EXEC_UNIT_inst_0/MVTYPE_DSP[1] (DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64)     0.00     0.06 r
+  MVTYPE_DSP[0][1] (net)                                            0.00       0.06 r
+  DSP_MAPPING_inst/MVTYPE_DSP[0][1] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.06 r
+  DSP_MAPPING_inst/MVTYPE_DSP[0][1] (net)                           0.00       0.06 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/MVTYPE_DSP[1] (DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64)     0.00     0.06 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/MVTYPE_DSP[1] (net)            0.00       0.06 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U112/Z (XOR2_X1)     0.03      0.08       0.14 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n1007 (net)     5              0.00       0.14 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1184/ZN (NAND2_X1)     0.01     0.04     0.18 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n111 (net)     2               0.00       0.18 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U115/ZN (NAND3_X1)     0.02     0.04      0.21 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n110 (net)     4               0.00       0.21 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U126/ZN (OR2_X1)     0.01      0.03       0.24 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n45 (net)     1                0.00       0.24 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U129/ZN (OAI21_X1)     0.01     0.03      0.28 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n50 (net)     2                0.00       0.28 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U375/ZN (AOI221_X1)     0.03     0.04     0.32 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/n1142 (net)     1              0.00       0.32 r
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/U1331/ZN (INV_X1)     0.01     0.03       0.34 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/dsp_in_accum_operands[1] (net)     2     0.00     0.34 f
+  DSP_MAPPING_inst/MAPPING_IN_UNIT_0/dsp_in_accum_operands[1] (DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64)     0.00     0.34 f
+  DSP_MAPPING_inst/dsp_in_accum_operands[0][1] (net)                0.00       0.34 f
+  DSP_MAPPING_inst/dsp_in_accum_operands[0][1] (DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.34 f
+  dsp_in_accum_operands[0][1] (net)                                 0.00       0.34 f
+  ACCUM_STG/dsp_in_accum_operands[0][1] (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64)     0.00     0.34 f
+  ACCUM_STG/dsp_in_accum_operands[0][1] (net)                       0.00       0.34 f
+  ACCUM_STG/add_127/A[1] (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_5)     0.00     0.34 f
+  ACCUM_STG/add_127/A[1] (net)                                      0.00       0.34 f
+  ACCUM_STG/add_127/U1_1/CO (FA_X1)                       0.01      0.07       0.42 f    mo 
+  ACCUM_STG/add_127/carry[2] (net)              1                   0.00       0.42 f
+  ACCUM_STG/add_127/U1_2/CO (FA_X1)                       0.01      0.06       0.48 f    mo 
+  ACCUM_STG/add_127/carry[3] (net)              1                   0.00       0.48 f
+  ACCUM_STG/add_127/U1_3/CO (FA_X1)                       0.01      0.06       0.54 f    mo 
+  ACCUM_STG/add_127/carry[4] (net)              1                   0.00       0.54 f
+  ACCUM_STG/add_127/U1_4/CO (FA_X1)                       0.01      0.06       0.60 f    mo 
+  ACCUM_STG/add_127/carry[5] (net)              1                   0.00       0.60 f
+  ACCUM_STG/add_127/U1_5/CO (FA_X1)                       0.01      0.06       0.66 f    mo 
+  ACCUM_STG/add_127/carry[6] (net)              1                   0.00       0.66 f
+  ACCUM_STG/add_127/U1_6/CO (FA_X1)                       0.01      0.06       0.72 f    mo 
+  ACCUM_STG/add_127/carry[7] (net)              1                   0.00       0.72 f
+  ACCUM_STG/add_127/U1_7/CO (FA_X1)                       0.01      0.06       0.78 f    mo 
+  ACCUM_STG/add_127/carry[8] (net)              1                   0.00       0.78 f
+  ACCUM_STG/add_127/U1_8/CO (FA_X1)                       0.01      0.06       0.84 f    mo 
+  ACCUM_STG/add_127/carry[9] (net)              1                   0.00       0.84 f
+  ACCUM_STG/add_127/U1_9/CO (FA_X1)                       0.01      0.06       0.90 f    mo 
+  ACCUM_STG/add_127/carry[10] (net)             1                   0.00       0.90 f
+  ACCUM_STG/add_127/U1_10/CO (FA_X1)                      0.01      0.06       0.96 f    mo 
+  ACCUM_STG/add_127/carry[11] (net)             1                   0.00       0.96 f
+  ACCUM_STG/add_127/U1_11/CO (FA_X1)                      0.01      0.06       1.02 f    mo 
+  ACCUM_STG/add_127/carry[12] (net)             1                   0.00       1.02 f
+  ACCUM_STG/add_127/U1_12/CO (FA_X1)                      0.01      0.06       1.08 f    mo 
+  ACCUM_STG/add_127/carry[13] (net)             1                   0.00       1.08 f
+  ACCUM_STG/add_127/U1_13/CO (FA_X1)                      0.01      0.06       1.14 f    mo 
+  ACCUM_STG/add_127/carry[14] (net)             1                   0.00       1.14 f
+  ACCUM_STG/add_127/U1_14/CO (FA_X1)                      0.01      0.06       1.20 f    mo 
+  ACCUM_STG/add_127/carry[15] (net)             1                   0.00       1.20 f
+  ACCUM_STG/add_127/U1_15/CO (FA_X1)                      0.01      0.06       1.26 f    mo 
+  ACCUM_STG/add_127/carry[16] (net)             1                   0.00       1.26 f
+  ACCUM_STG/add_127/U1_16/CO (FA_X1)                      0.01      0.06       1.32 f    mo 
+  ACCUM_STG/add_127/carry[17] (net)             1                   0.00       1.32 f
+  ACCUM_STG/add_127/U1_17/CO (FA_X1)                      0.01      0.06       1.37 f    mo 
+  ACCUM_STG/add_127/carry[18] (net)             1                   0.00       1.37 f
+  ACCUM_STG/add_127/U1_18/CO (FA_X1)                      0.01      0.06       1.43 f    mo 
+  ACCUM_STG/add_127/carry[19] (net)             1                   0.00       1.43 f
+  ACCUM_STG/add_127/U1_19/CO (FA_X1)                      0.01      0.06       1.49 f    mo 
+  ACCUM_STG/add_127/carry[20] (net)             1                   0.00       1.49 f
+  ACCUM_STG/add_127/U1_20/CO (FA_X1)                      0.01      0.06       1.55 f    mo 
+  ACCUM_STG/add_127/carry[21] (net)             1                   0.00       1.55 f
+  ACCUM_STG/add_127/U1_21/CO (FA_X1)                      0.01      0.06       1.61 f    mo 
+  ACCUM_STG/add_127/carry[22] (net)             1                   0.00       1.61 f
+  ACCUM_STG/add_127/U1_22/CO (FA_X1)                      0.01      0.06       1.67 f    mo 
+  ACCUM_STG/add_127/carry[23] (net)             1                   0.00       1.67 f
+  ACCUM_STG/add_127/U1_23/CO (FA_X1)                      0.01      0.06       1.73 f    mo 
+  ACCUM_STG/add_127/carry[24] (net)             1                   0.00       1.73 f
+  ACCUM_STG/add_127/U1_24/CO (FA_X1)                      0.01      0.06       1.79 f    mo 
+  ACCUM_STG/add_127/carry[25] (net)             1                   0.00       1.79 f
+  ACCUM_STG/add_127/U1_25/CO (FA_X1)                      0.01      0.06       1.85 f    mo 
+  ACCUM_STG/add_127/carry[26] (net)             1                   0.00       1.85 f
+  ACCUM_STG/add_127/U1_26/CO (FA_X1)                      0.01      0.06       1.91 f    mo 
+  ACCUM_STG/add_127/carry[27] (net)             1                   0.00       1.91 f
+  ACCUM_STG/add_127/U1_27/CO (FA_X1)                      0.01      0.06       1.97 f    mo 
+  ACCUM_STG/add_127/carry[28] (net)             1                   0.00       1.97 f
+  ACCUM_STG/add_127/U1_28/CO (FA_X1)                      0.01      0.06       2.04 f    mo 
+  ACCUM_STG/add_127/carry[29] (net)             3                   0.00       2.04 f
+  ACCUM_STG/add_127/U8/ZN (NAND2_X1)                      0.01      0.03       2.07 r
+  ACCUM_STG/add_127/n6 (net)                    1                   0.00       2.07 r
+  ACCUM_STG/add_127/U10/ZN (NAND3_X1)                     0.01      0.03       2.10 f
+  ACCUM_STG/add_127/carry[30] (net)             1                   0.00       2.10 f
+  ACCUM_STG/add_127/U1_30/CO (FA_X1)                      0.01      0.06       2.16 f    mo 
+  ACCUM_STG/add_127/carry[31] (net)             1                   0.00       2.16 f
+  ACCUM_STG/add_127/U3/ZN (XNOR2_X1)                      0.01      0.04       2.20 f
+  ACCUM_STG/add_127/SUM[31] (net)               1                   0.00       2.20 f
+  ACCUM_STG/add_127/SUM[31] (ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_5)     0.00     2.20 f
+  ACCUM_STG/N67 (net)                                               0.00       2.20 f
+  ACCUM_STG/U6/ZN (AOI22_X1)                              0.01      0.03       2.23 r
+  ACCUM_STG/n56 (net)                           1                   0.00       2.23 r
+  ACCUM_STG/U22/ZN (NAND2_X1)                             0.01      0.02       2.26 f
+  ACCUM_STG/n159 (net)                          1                   0.00       2.26 f
+  ACCUM_STG/accum_partial_results_stg_1_reg[0][31]/D (DFF_X1)     0.01     0.01     2.27 f
+  data arrival time                                                            2.27
+
+  clock clk_i (rise edge)                                           2.00       2.00
+  clock network delay (ideal)                                       0.00       2.00
+  ACCUM_STG/accum_partial_results_stg_1_reg[0][31]/CK (DFF_X1)      0.00       2.00 r
+  library setup time                                               -0.02       1.98
+  data required time                                                           1.98
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           1.98
+  data arrival time                                                           -2.27
+  ---------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.29
+
+
+1

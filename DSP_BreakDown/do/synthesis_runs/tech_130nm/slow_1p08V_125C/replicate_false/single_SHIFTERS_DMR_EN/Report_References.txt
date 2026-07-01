@@ -1,0 +1,2762 @@
+ 
+****************************************
+Report : reference
+Design : RTL_DSP_TOP_THREAD_POOL_SIZE3_accl_en1_replicate_accl_en0_multithreaded_accl_en0_SPM_NUM4_Addr_Width14_SIMD2_TPS_CEIL2_TPS_BUF_CEIL1_SPM_ADDR_WID3_SIMD_BITS1_Data_Width32_SIMD_Width64_ACCL_NUM1_FU_NUM1
+Version: U-2022.12
+Date   : Tue Jun 30 12:48:52 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64 13939.165583       1 13939.165583 h, n
+DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64 18649.234576       1 18649.234576 h, n
+DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64  4929.271227       1  4929.271227 h, n
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1  5950.853927       1  5950.853927 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64 39052.162420       1 39052.162420 h, n
+DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1   531.505798       1   531.505798 h, n
+DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64 26021.633097       1 26021.633097 h
+DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32 227706.780023       1 227706.780023 h, n
+DSP_Shifters_DMR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64 41882.097262       1 41882.097262 h, n
+DSP_pipeline_controller        5378.335210       1   5378.335210  h, n
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       1    23.587200
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       7    38.102401
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       4    29.030399
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400       4    43.545601
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       3    54.431997
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 20 references                                 384354.930318
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_0  1308.182369       1  1308.182369 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_1   898.090180       1   898.090180 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_2   823.699780       1   823.699780 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_3   823.699780       1   823.699780 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_6  2585.444333       1  2585.444333 h
+ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_7  2676.164330       1  2676.164330 h
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      64   694.310425
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      33   239.500794
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400      63  2971.987221 n
+sg13g2_dfrbp_2     sg13g2_stdcell_slow_1p08V_125C    54.431999       1    54.431999 n
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      17    92.534402
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       3    21.772799
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       1    16.329599
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      65   589.679971
+sg13g2_or3_1       sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 24 references                                 13939.165583
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      27   146.966403
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       4    29.030399
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       3    21.772799
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       2    32.659199
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      22   199.583990
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      29   420.940790
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      18   261.273594
+-----------------------------------------------------------------------------
+Total 20 references                                  1308.182369
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       4    50.803200
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      18    97.977602
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       4    29.030399
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      15   136.079993
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      22   319.334393
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       9   130.636797
+-----------------------------------------------------------------------------
+Total 13 references                                   898.090180
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      19   103.420802
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      19   172.367991
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      23   333.849592
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       8   116.121597
+-----------------------------------------------------------------------------
+Total 9 references                                    823.699780
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      19   103.420802
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      19   172.367991
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      23   333.849592
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       8   116.121597
+-----------------------------------------------------------------------------
+Total 9 references                                    823.699780
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      10    90.719995
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       2    21.697201
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      20   181.439991
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      50   272.160006
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      67   486.259189
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      66   479.001589
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      14   127.007994
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       1    16.329599
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      13   117.935994
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      24   217.727989
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      34   493.516788
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 16 references                                  2585.444333
+
+****************************************
+Design: ACCUMULATOR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64_DW01_add_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       2    21.697201
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      19   172.367991
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      62   337.478407
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      66   479.001589
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      58   420.940790
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      14   127.007994
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      13   117.935994
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      32   290.303986
+sg13g2_or2_2       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      32   464.486389
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       3    43.545599
+-----------------------------------------------------------------------------
+Total 15 references                                  2676.164330
+
+****************************************
+Design: DSP_Adders_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Adders_Sync_SIMD2_SIMD_Width64 12168.349121       1 12168.349121 h, n
+DSP_Adders_stg_1_SIMD2_SIMD_Width64  3409.181929       1  3409.181929 h, n
+DSP_Adders_stg_2_SIMD2_SIMD_Width64  3059.002727       1  3059.002727 h, n
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       1     5.443200
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 5 references                                  18649.234576
+
+****************************************
+Design: DSP_Adders_Sync_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      22   238.669209
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      34   246.758394
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400     182  8585.740860 n
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      28   152.409603
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999     160  2903.039856
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 8 references                                  12168.349121
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_8   442.713589       1   442.713589 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_9   442.713589       1   442.713589 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_30   420.902990       1   420.902990 h
+DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_32   420.902990       1   420.902990 h
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       5    36.287999
+sg13g2_dlhrq_1     sg13g2_stdcell_slow_1p08V_125C    27.216000      40  1088.639984 n
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       6    32.659201
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       6    43.545599
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200       8   116.121597
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      10   145.151997
+-----------------------------------------------------------------------------
+Total 21 references                                  3409.181929
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      12    65.318401
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      11   159.667196
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+-----------------------------------------------------------------------------
+Total 5 references                                    442.713589
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      12    65.318401
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      11   159.667196
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+-----------------------------------------------------------------------------
+Total 5 references                                    442.713589
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_30 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       9    48.988801
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      12   174.182396
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       4    58.060799
+-----------------------------------------------------------------------------
+Total 9 references                                    420.902990
+
+****************************************
+Design: DSP_Adders_stg_1_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       9    48.988801
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      12   174.182396
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       4    58.060799
+-----------------------------------------------------------------------------
+Total 9 references                                    420.902990
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_6   442.713589       1   442.713589 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_7   442.713589       1   442.713589 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_13   420.902990       1   420.902990 h
+DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_15   420.902990       1   420.902990 h
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      27   244.943988
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       4    29.030399
+sg13g2_dlhrq_1     sg13g2_stdcell_slow_1p08V_125C    27.216000      18   489.887993 n
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       8    43.545601
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       6    43.545599
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200       8   116.121597
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      10   145.151997
+-----------------------------------------------------------------------------
+Total 24 references                                  3059.002727
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_0_DW01_add_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      12    65.318401
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      11   159.667196
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+-----------------------------------------------------------------------------
+Total 5 references                                    442.713589
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_1_DW01_add_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      12    65.318401
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      11   159.667196
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+-----------------------------------------------------------------------------
+Total 5 references                                    442.713589
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_2_DW01_add_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       9    48.988801
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      12   174.182396
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       4    58.060799
+-----------------------------------------------------------------------------
+Total 9 references                                    420.902990
+
+****************************************
+Design: DSP_Adders_stg_2_SIMD2_SIMD_Width64_DW01_add_4_DW01_add_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       9    48.988801
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      12   174.182396
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       4    58.060799
+-----------------------------------------------------------------------------
+Total 9 references                                    420.902990
+
+****************************************
+Design: DSP_Comparators_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Comparators_Unit_SIMD2_SIMD_Width64  4929.271227       1  4929.271227 h, n
+-----------------------------------------------------------------------------
+Total 1 references                                   4929.271227
+
+****************************************
+Design: DSP_Comparators_Unit_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      60   650.916023
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       7    63.503997
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400      64  3019.161621 n
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      92   500.774410
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       3    21.772799
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999       2    36.287998
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      33   239.500794
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       4    29.030399
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       1    16.329599
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      19   172.367991
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 17 references                                  4929.271227
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_0_DW01_add_17   384.614994       1   384.614994 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_1_DW01_add_18   384.614994       1   384.614994 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_19   384.614994       1   384.614994 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_0   301.190396       1   301.190396 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_1   321.148798       1   321.148798 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_2   321.148798       1   321.148798 h
+DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_3   321.148798       1   321.148798 h
+sg13g2_a21o_2      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      55   596.673021
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      22   199.583990
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       3    38.102400
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      18   130.636797
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      83   451.785609
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      59   428.198390
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      17   154.223992
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       5    63.504000
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400      12   130.636803
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      15   108.863997
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      32   290.303986
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      16   145.151993
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400      10   108.864002
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      22   199.583990
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_or2_2       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_or3_1       sg13g2_stdcell_slow_1p08V_125C    12.700800       3    38.102400
+sg13g2_or4_1       sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200       3    43.545599
+-----------------------------------------------------------------------------
+Total 35 references                                  5950.853927
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_0_DW01_add_17 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      11   139.708799
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      13    70.761601
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 9 references                                    384.614994
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_1_DW01_add_18 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      11   139.708799
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      13    70.761601
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 9 references                                    384.614994
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_add_2_DW01_add_19 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      11   139.708799
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      13    70.761601
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 9 references                                    384.614994
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       8   101.606400
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       9    48.988801
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       3    21.772799
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      10    72.575998
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 7 references                                    301.190396
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      12   152.409599
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      12    65.318401
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      12    87.091198
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+-----------------------------------------------------------------------------
+Total 5 references                                    321.148798
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      12   152.409599
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      12    65.318401
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      12    87.091198
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+-----------------------------------------------------------------------------
+Total 5 references                                    321.148798
+
+****************************************
+Design: DSP_Excpt_Cntrl_unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_NUM4_SIMD2_SPM_ADDR_WID3_SIMD_BITS1_DW01_dec_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      12   152.409599
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      12    65.318401
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      12    87.091198
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+-----------------------------------------------------------------------------
+Total 5 references                                    321.148798
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_0_DW01_add_10  1730.899758       1  1730.899758 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_1_DW01_add_11  1694.611758       1  1694.611758 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_2_DW01_add_12   713.021383       1   713.021383 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_3_DW01_add_20  1707.312558       1  1707.312558 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_21  1701.869358       1  1701.869358 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_0_DW01_sub_6   791.040584       1   791.040584 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_1_DW01_sub_7   791.040584       1   791.040584 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_2_DW01_sub_8   807.370184       1   807.370184 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_3_DW01_sub_9   791.040584       1   791.040584 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_0   324.777585       1   324.777585 h
+DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1   324.777585       1   324.777585 h
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      16   145.151993
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600     161  1746.624662
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200      48   696.729584
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       3    38.102400
+sg13g2_and3_2      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      85   616.895986
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400     346 16322.342514 n
+sg13g2_dfrbp_2     sg13g2_stdcell_slow_1p08V_125C    54.431999      14   762.047989 n
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       4    58.060799
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     193  1050.537621
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600      30   217.727995
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400      17   185.068804
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999     109  1977.695902
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      82   595.123186
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       4    43.545601
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200       3    43.545599
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       6    65.318401
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      26   188.697596
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400      11   119.750402
+sg13g2_nor4_2      sg13g2_stdcell_slow_1p08V_125C    21.772800       1    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     256  2322.431885
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_or4_1       sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 44 references                                 39052.162420
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_0_DW01_add_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      13   117.935994
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      47   255.830405
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      43   390.095981
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      47   682.214384
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      15   217.727995
+-----------------------------------------------------------------------------
+Total 10 references                                  1730.899758
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_1_DW01_add_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      13   117.935994
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      43   234.057605
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      43   390.095981
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      47   682.214384
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      15   217.727995
+-----------------------------------------------------------------------------
+Total 9 references                                   1694.611758
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_2_DW01_add_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      16    87.091202
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      16   145.151993
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      20   290.303993
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       7   101.606398
+-----------------------------------------------------------------------------
+Total 9 references                                    713.021383
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_3_DW01_add_20 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      43   234.057605
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      43   390.095981
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      47   682.214384
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      15   217.727995
+-----------------------------------------------------------------------------
+Total 11 references                                  1707.312558
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_add_4_DW01_add_21 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      13   117.935994
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      43   234.057605
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      43   390.095981
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      47   682.214384
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      15   217.727995
+-----------------------------------------------------------------------------
+Total 10 references                                  1701.869358
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_0_DW01_sub_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       6    76.204800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      20   108.864002
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      22   319.334393
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       6    87.091198
+-----------------------------------------------------------------------------
+Total 9 references                                    791.040584
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_1_DW01_sub_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       6    76.204800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      20   108.864002
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      20   290.303993
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       8   116.121597
+-----------------------------------------------------------------------------
+Total 9 references                                    791.040584
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_2_DW01_sub_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       6    76.204800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       3    43.545599
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      20   108.864002
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      22   319.334393
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       6    87.091198
+-----------------------------------------------------------------------------
+Total 10 references                                   807.370184
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW01_sub_3_DW01_sub_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       6    76.204800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      20   108.864002
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      22   319.334393
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       6    87.091198
+-----------------------------------------------------------------------------
+Total 9 references                                    791.040584
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      31   281.231986
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       6    43.545599
+-----------------------------------------------------------------------------
+Total 2 references                                    324.777585
+
+****************************************
+Design: DSP_Exec_Unit_THREAD_POOL_SIZE3_Addr_Width14_SPM_ADDR_WID3_SIMD_Width64_DW02_mult_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      31   281.231986
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       6    43.545599
+-----------------------------------------------------------------------------
+Total 2 references                                    324.777585
+
+****************************************
+Design: DSP_FU_Handler_multithreaded_accl_en0_THREAD_POOL_SIZE3_ACCL_NUM1_TPS_CEIL2_TPS_BUF_CEIL1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_FU_Handler_MC               288.376197       1    288.376197  h
+DSP_FU_enabler_sync             235.872002       1    235.872002  h, n
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 3 references                                    531.505798
+
+****************************************
+Design: DSP_FU_Handler_MC 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       3    32.545801
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       9    48.988801
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       5    36.287999
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_or4_1       sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 12 references                                   288.376197
+
+****************************************
+Design: DSP_FU_enabler_sync 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400       5   235.872002 n
+-----------------------------------------------------------------------------
+Total 1 references                                    235.872002
+
+****************************************
+Design: DSP_Mapping_THREAD_POOL_SIZE3_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64 19205.839638       1 19205.839638 h
+DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64  6772.247859       1  6772.247859 h
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       2    10.886400
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 7 references                                  26021.633097
+
+****************************************
+Design: DSP_Mapping_IN_Unit_Multicore_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      11   139.708799
+sg13g2_a21o_2      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     110   997.919950
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       4    58.060799
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600     325  3525.795126
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200      48   696.729584
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      61   553.391973
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      18   195.955204
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      15   190.511999
+sg13g2_and3_2      sg13g2_stdcell_slow_1p08V_125C    12.700800       7    88.905600
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       8   116.121597
+sg13g2_and4_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       1    16.329599
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      85   616.895986
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000      22   199.583990
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       4    58.060799
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       3    70.761600
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     533  2901.225659
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600      76   551.577587
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400      43   468.115210
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       2    36.287998
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999      40   725.759964
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600     307  2228.083148
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400      63   685.843214
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200      12   174.182396
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      93   843.695958
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400      24   261.273605
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      81   587.865586
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       6    65.318401
+sg13g2_nor2b_2     sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      39   353.807982
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       5    81.647997
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400       4    43.545601
+sg13g2_nor4_2      sg13g2_stdcell_slow_1p08V_125C    21.772800       2    43.545601
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     149  1351.727933
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_or2_2       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_or3_1       sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+-----------------------------------------------------------------------------
+Total 41 references                                 19205.839638
+
+****************************************
+Design: DSP_Mapping_Multicore_Out_Mapper_SIMD2_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      33   299.375985
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      72   781.099228
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200      32   464.486389
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      37   335.663983
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      60   435.455990
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       3    43.545599
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     105   571.536012
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       7    50.803199
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400       4    43.545601
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       1    18.143999
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999      64  1161.215942
+sg13g2_mux2_2      sg13g2_stdcell_slow_1p08V_125C    19.958401       1    19.958401
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      44   319.334393
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400      16   174.182404
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      67   486.259189
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400      24   261.273605
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     106   961.631952
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_or3_1       sg13g2_stdcell_slow_1p08V_125C    12.700800       3    38.102400
+sg13g2_or4_1       sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 31 references                                  6772.247859
+
+****************************************
+Design: DSP_Multipliers_SIMD2_multithreaded_accl_en0_ACCL_NUM1_FU_NUM1_SIMD_Width64_Data_Width32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64 208459.852074       1 208459.852074 h, n
+DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64  1747.267121       1  1747.267121 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64 17485.145628       1 17485.145628 h, n
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 5 references                                  227706.780023
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_0_DW02_mult_2 24069.073920       1 24069.073920 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_1_DW02_mult_3 23664.198141       1 23664.198141 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_2_DW02_mult_4 24087.104537       1 24087.104537 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_3_DW02_mult_5 23597.481138       1 23597.481138 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_4_DW02_mult_6 24458.980911       1 24458.980911 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_5_DW02_mult_7 23649.531730       1 23649.531730 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6_DW02_mult_8 23671.569115       1 23671.569115 h
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_7_DW02_mult_9 23976.388339       1 23976.388339 h
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600     151  1638.138659
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      32   290.303986
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      35   254.015994
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       3    70.761600
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400     256 12076.646484 n
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     171   930.787219
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999     105  1905.119905
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 20 references                                 208459.852074
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_0_DW02_mult_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_11  1417.046371       1  1417.046371 h
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       6    76.204800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      18   163.295992
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       6    87.091198
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      20   216.972008
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200      10   145.151997
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000     101   916.271955
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      10   108.864002
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      10   127.007999
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       7   101.606398
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      31   224.985595
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000      13   117.935994
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       4    58.060799
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       4    94.348801
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     480  2612.736053
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600     178  1291.852770
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400      24   261.273605
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       7   127.007994
+sg13g2_inv_16      sg13g2_stdcell_slow_1p08V_125C    34.473598       2    68.947197
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600     415  3011.903930
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400     125  1360.800028
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000      62   562.463972
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200      12   174.182396
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      57   517.103974
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       6    76.204800
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400      14   152.409603
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      42   304.819193
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      12   130.636803
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_nor2b_2     sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      14   127.007994
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599      10   163.295994
+sg13g2_nor4_2      sg13g2_stdcell_slow_1p08V_125C    21.772800       1    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     279  2531.087874
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      38   344.735983
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200     354  5138.380680
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      80  1161.215973
+-----------------------------------------------------------------------------
+Total 38 references                                 24069.073920
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      30   163.296003
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       6    43.545599
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      26   188.697596
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       4    43.545601
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      33   239.500794
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       6    65.318401
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nor2b_2     sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      10    90.719995
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      14   203.212795
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 24 references                                  1417.046371
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_1_DW02_mult_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_15  1250.121574       1  1250.121574 h
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      11   139.708799
+sg13g2_a21o_2      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      23   208.655990
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       9   130.636797
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      27   292.912210
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200      11   159.667196
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      93   843.695958
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      13   141.523203
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      16   203.212799
+sg13g2_and3_2      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      35   254.015994
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000      21   190.511991
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       7   165.110401
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     491  2672.611255
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600     150  1088.639975
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400      26   283.046406
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       1    18.143999
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600     389  2823.206334
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400     116  1262.822426
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000      60   544.319973
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200       8   116.121597
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      73   662.255967
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       9   114.307199
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       8    87.091202
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      43   312.076793
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       9    97.977602
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nor2b_2     sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      13   117.935994
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       8   130.636795
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     279  2531.087874
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      25   226.799989
+sg13g2_or2_2       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_or3_1       sg13g2_stdcell_slow_1p08V_125C    12.700800       5    63.504000
+sg13g2_or4_1       sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200     336  4877.107086
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200     102  1480.550365
+-----------------------------------------------------------------------------
+Total 43 references                                 23664.198141
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      30   163.296003
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       4    29.030399
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      21   152.409596
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       4    43.545601
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      34   246.758394
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       5    54.432001
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       2    32.659199
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      10    90.719995
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      14   203.212795
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 17 references                                  1250.121574
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_2_DW02_mult_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_14  1471.478372       1  1471.478372 h
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       7    88.905600
+sg13g2_a21o_2      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      48   435.455978
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      23   249.517809
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200       8   116.121597
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      93   843.695958
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       7    76.204802
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      15   190.511999
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      35   254.015994
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       6    87.091198
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       7   165.110401
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     483  2629.065654
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600     154  1117.670374
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400      26   283.046406
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       6   108.863995
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600     418  3033.676729
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400     134  1458.777630
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000      57   517.103974
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200      19   275.788794
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      74   671.327967
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800      11   139.708799
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400      12   130.636803
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      45   326.591992
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      11   119.750402
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      22   199.583990
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599      10   163.295994
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_nor4_2      sg13g2_stdcell_slow_1p08V_125C    21.772800       1    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     240  2177.279892
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      29   263.087987
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200     329  4775.500689
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200     101  1466.035166
+-----------------------------------------------------------------------------
+Total 38 references                                 24087.104537
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_14 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      30   163.296003
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       8    58.060799
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      26   188.697596
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       3    32.659201
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      30   217.727995
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      10   108.864002
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      10    90.719995
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      14   203.212795
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 22 references                                  1471.478372
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_3_DW02_mult_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_10  1306.367976       1  1306.367976 h
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      11   139.708799
+sg13g2_a21o_2      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      25   226.799989
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       4    58.060799
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      16   173.577606
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200      12   174.182396
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      88   798.335960
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      14   152.409603
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      11   139.708799
+sg13g2_and3_2      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      24   174.182396
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000      16   145.151993
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       7   165.110401
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     449  2443.996850
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600     138  1001.548777
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400      30   326.592007
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       2    36.287998
+sg13g2_inv_16      sg13g2_stdcell_slow_1p08V_125C    34.473598       1    34.473598
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600     409  2968.358331
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400     113  1230.163225
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000      61   553.391973
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200      18   261.273594
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      77   698.543965
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       5    63.504000
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400      14   152.409603
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      35   254.015994
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      10   108.864002
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor2b_2     sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       5    81.647997
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400       4    43.545601
+sg13g2_nor4_2      sg13g2_stdcell_slow_1p08V_125C    21.772800       2    43.545601
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     267  2422.223880
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      20   181.439991
+sg13g2_or4_1       sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200     361  5239.987078
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200     105  1524.095964
+-----------------------------------------------------------------------------
+Total 43 references                                 23597.481138
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      37   201.398404
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       7    50.803199
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      22   159.667196
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       3    32.659201
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      37   268.531194
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       4    43.545601
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       1    16.329599
+sg13g2_nor4_2      sg13g2_stdcell_slow_1p08V_125C    21.772800       1    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      10    90.719995
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      13   188.697596
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+-----------------------------------------------------------------------------
+Total 20 references                                  1306.367976
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_4_DW02_mult_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_9  1342.655973       1  1342.655973 h
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       6    76.204800
+sg13g2_a21o_2      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      33   299.375985
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      25   271.215010
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200      12   174.182396
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      83   752.975963
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       9    97.977602
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      12   152.409599
+sg13g2_and3_2      sg13g2_stdcell_slow_1p08V_125C    12.700800       3    38.102400
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      29   210.470395
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       4    58.060799
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       1    23.587200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     479  2607.292853
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600     177  1284.595170
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400      33   359.251207
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       3    54.431997
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600     444  3222.374325
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400     108  1175.731224
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000      57   517.103974
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200      14   203.212795
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     101   916.271955
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       9   114.307199
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400      12   130.636803
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      41   297.561593
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      10   108.864002
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_nor2b_2     sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      18   163.295992
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599      13   212.284792
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_nor4_2      sg13g2_stdcell_slow_1p08V_125C    21.772800       1    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     263  2385.935882
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      19   172.367991
+sg13g2_or3_1       sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200     349  5065.804682
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200     110  1596.671963
+-----------------------------------------------------------------------------
+Total 41 references                                 24458.980911
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       3    43.545599
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       3    21.772799
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      28   152.409603
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       5    36.287999
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      18   130.636797
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       5    54.432001
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      35   254.015994
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       7    76.204802
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       2    32.659199
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      13   188.697596
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+-----------------------------------------------------------------------------
+Total 21 references                                  1342.655973
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_5_DW02_mult_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_13  1371.686377       1  1371.686377 h
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       7    88.905600
+sg13g2_a21o_2      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      25   226.799989
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       6    87.091198
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      31   336.306612
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200       7   101.606398
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      87   789.263961
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       7    76.204802
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       9   114.307199
+sg13g2_and3_2      sg13g2_stdcell_slow_1p08V_125C    12.700800       2    25.401600
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      29   210.470395
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000      23   208.655990
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       2    47.174400
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     464  2525.644852
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600     140  1016.063976
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400      23   250.387205
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       2    36.287998
+sg13g2_inv_16      sg13g2_stdcell_slow_1p08V_125C    34.473598       1    34.473598
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600     433  3142.540727
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400     106  1153.958424
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000      62   562.463972
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200      12   174.182396
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      87   789.263961
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800      11   139.708799
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400      21   228.614405
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      34   246.758394
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       8    87.091202
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_nor2b_2     sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       5    81.647997
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     270  2449.439878
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      27   244.943988
+sg13g2_or3_1       sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200     355  5152.895880
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      98  1422.489567
+-----------------------------------------------------------------------------
+Total 40 references                                 23649.531730
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       8   116.121597
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      32   174.182404
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       4    29.030399
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      20   145.151997
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       5    54.432001
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      35   254.015994
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       5    54.432001
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       1    16.329599
+sg13g2_nor4_2      sg13g2_stdcell_slow_1p08V_125C    21.772800       1    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      14   203.212795
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 21 references                                  1371.686377
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_6_DW02_mult_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_34  1230.125375       1  1230.125375 h
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       3    38.102400
+sg13g2_a21o_2      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      33   299.375985
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       7   101.606398
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      23   249.517809
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200      12   174.182396
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      82   743.903963
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      10   108.864002
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      10   127.007999
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      27   195.955195
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000      10    90.719995
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       3    43.545599
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       4    94.348801
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     456  2482.099251
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600     158  1146.700773
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400      33   359.251207
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       8   145.151993
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600     432  3135.283127
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400     106  1153.958424
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000      60   544.319973
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200      22   319.334393
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      86   780.191961
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       6    76.204800
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       7    76.204802
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      42   304.819193
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      12   130.636803
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nor2b_2     sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      22   199.583990
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       9   146.966394
+sg13g2_nor4_1      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor4_2      sg13g2_stdcell_slow_1p08V_125C    21.772800       2    43.545601
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     287  2603.663871
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      25   226.799989
+sg13g2_or2_2       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_or3_1       sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200     319  4630.348692
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200     106  1538.611164
+-----------------------------------------------------------------------------
+Total 41 references                                 23671.569115
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_34 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       3    43.545599
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      29   157.852803
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       5    36.287999
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      23   166.924796
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       5    54.432001
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      25   181.439996
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nor4_2      sg13g2_stdcell_slow_1p08V_125C    21.772800       1    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      14   203.212795
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 19 references                                  1230.125375
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW02_mult_7_DW02_mult_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_8  1266.451174       1  1266.451174 h
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       9   114.307199
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      28   254.015987
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      24   260.366409
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200       7   101.606398
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      96   870.911957
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       9    97.977602
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      11   139.708799
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_and4_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       1    16.329599
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      28   203.212795
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000      18   163.295992
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       4    94.348801
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200     478  2601.849653
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600     145  1052.351975
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400      37   402.796808
+sg13g2_inv_8       sg13g2_stdcell_slow_1p08V_125C    18.143999       5    90.719995
+sg13g2_inv_16      sg13g2_stdcell_slow_1p08V_125C    34.473598       2    68.947197
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600     452  3280.435123
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400     150  1632.960033
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000      55   498.959975
+sg13g2_nand2b_2    sg13g2_stdcell_slow_1p08V_125C    14.515200      14   203.212795
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      71   644.111968
+sg13g2_nand3b_1    sg13g2_stdcell_slow_1p08V_125C    12.700800       5    63.504000
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       8    87.091202
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      32   232.243195
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400      12   130.636803
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_nor2b_2     sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      12   108.863995
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       6    97.977596
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000     271  2458.511878
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      38   344.735983
+sg13g2_or2_2       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_or3_1       sg13g2_stdcell_slow_1p08V_125C    12.700800       3    38.102400
+sg13g2_or4_1       sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200     339  4920.652685
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      87  1262.822371
+-----------------------------------------------------------------------------
+Total 41 references                                 23976.388339
+
+****************************************
+Design: DSP_Multipliers_stg_1_SIMD2_SIMD_Width64_DW01_add_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_a21oi_2     sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      31   168.739203
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       3    21.772799
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      22   159.667196
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       4    43.545601
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      39   283.046393
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor3_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       2    32.659199
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      13   188.697596
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+-----------------------------------------------------------------------------
+Total 19 references                                  1266.451174
+
+****************************************
+Design: DSP_Multipliers_stg_1_comb_SIMD2_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000     161  1460.591928
+sg13g2_and4_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      27   195.955195
+sg13g2_buf_4       sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       4    21.772800
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 9 references                                   1747.267121
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_12  2220.787744       1  2220.787744 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_13  2220.787744       1  2220.787744 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_18  2135.548747       1  2135.548747 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_19  2135.548747       1  2135.548747 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_20  2246.189342       1  2246.189342 h
+DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_21  2246.189342       1  2246.189342 h
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       2    21.697201
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       8    58.060799
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400      64  3019.161621 n
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       2    10.886400
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999      62  1124.927944
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 16 references                                 17485.145628
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      39   212.284804
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      64   464.486389
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      57   413.683190
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      16   145.151993
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      23   208.655990
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      26   377.395191
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       9   130.636797
+-----------------------------------------------------------------------------
+Total 16 references                                  2220.787744
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      39   212.284804
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      64   464.486389
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      57   413.683190
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      16   145.151993
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      23   208.655990
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      26   377.395191
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       9   130.636797
+-----------------------------------------------------------------------------
+Total 16 references                                  2220.787744
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_18 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       7    63.503997
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      50   272.160006
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      60   435.455990
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      45   326.591992
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      19   172.367991
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      26   235.871988
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      28   406.425591
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       7   101.606398
+-----------------------------------------------------------------------------
+Total 14 references                                  2135.548747
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_19 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       7    63.503997
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      50   272.160006
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      60   435.455990
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      45   326.591992
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      19   172.367991
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      26   235.871988
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      28   406.425591
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       7   101.606398
+-----------------------------------------------------------------------------
+Total 14 references                                  2135.548747
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_20 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      45   244.944005
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      59   428.198390
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      54   391.910391
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      17   154.223992
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      19   172.367991
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      21   304.819193
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      14   203.212795
+-----------------------------------------------------------------------------
+Total 14 references                                  2246.189342
+
+****************************************
+Design: DSP_Multipliers_stg_2_SIMD2_Data_Width32_SIMD_Width64_DW01_add_21 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       1    10.848600
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       9    81.647996
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      45   244.944005
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      59   428.198390
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      54   391.910391
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      17   154.223992
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000      19   172.367991
+sg13g2_xnor2_1     sg13g2_stdcell_slow_1p08V_125C    14.515200      21   304.819193
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200      14   203.212795
+-----------------------------------------------------------------------------
+Total 14 references                                  2246.189342
+
+****************************************
+Design: DSP_Shifters_DMR_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DMR_0                            14.515200       1     14.515200  h
+DMR_1                            14.515200       1     14.515200  h
+DMR_2                            14.515200       1     14.515200  h
+DMR_3                            14.515200       1     14.515200  h
+DMR_4                            14.515200       1     14.515200  h
+DMR_5                            14.515200       1     14.515200  h
+DMR_6                            14.515200       1     14.515200  h
+DMR_7                            14.515200       1     14.515200  h
+DMR_8                            14.515200       1     14.515200  h
+DMR_9                            14.515200       1     14.515200  h
+DMR_10                           14.515200       1     14.515200  h
+DMR_11                           14.515200       1     14.515200  h
+DMR_12                           14.515200       1     14.515200  h
+DMR_13                           14.515200       1     14.515200  h
+DMR_14                           14.515200       1     14.515200  h
+DMR_15                           14.515200       1     14.515200  h
+DMR_16                           14.515200       1     14.515200  h
+DMR_17                           14.515200       1     14.515200  h
+DMR_18                           14.515200       1     14.515200  h
+DMR_19                           14.515200       1     14.515200  h
+DMR_20                           14.515200       1     14.515200  h
+DMR_21                           14.515200       1     14.515200  h
+DMR_22                           14.515200       1     14.515200  h
+DMR_23                           14.515200       1     14.515200  h
+DMR_24                           14.515200       1     14.515200  h
+DMR_25                           14.515200       1     14.515200  h
+DMR_26                           14.515200       1     14.515200  h
+DMR_27                           14.515200       1     14.515200  h
+DMR_28                           14.515200       1     14.515200  h
+DMR_29                           14.515200       1     14.515200  h
+DMR_30                           14.515200       1     14.515200  h
+DMR_31                           14.515200       1     14.515200  h
+DMR_32                           14.515200       1     14.515200  h
+DMR_33                           14.515200       1     14.515200  h
+DMR_34                           14.515200       1     14.515200  h
+DMR_35                           14.515200       1     14.515200  h
+DMR_36                           14.515200       1     14.515200  h
+DMR_37                           14.515200       1     14.515200  h
+DMR_38                           14.515200       1     14.515200  h
+DMR_39                           14.515200       1     14.515200  h
+DMR_40                           14.515200       1     14.515200  h
+DMR_41                           14.515200       1     14.515200  h
+DMR_42                           14.515200       1     14.515200  h
+DMR_43                           14.515200       1     14.515200  h
+DMR_44                           14.515200       1     14.515200  h
+DMR_45                           14.515200       1     14.515200  h
+DMR_46                           14.515200       1     14.515200  h
+DMR_47                           14.515200       1     14.515200  h
+DMR_48                           14.515200       1     14.515200  h
+DMR_49                           14.515200       1     14.515200  h
+DMR_50                           14.515200       1     14.515200  h
+DMR_51                           14.515200       1     14.515200  h
+DMR_52                           14.515200       1     14.515200  h
+DMR_53                           14.515200       1     14.515200  h
+DMR_54                           14.515200       1     14.515200  h
+DMR_55                           14.515200       1     14.515200  h
+DMR_56                           14.515200       1     14.515200  h
+DMR_57                           14.515200       1     14.515200  h
+DMR_58                           14.515200       1     14.515200  h
+DMR_59                           14.515200       1     14.515200  h
+DMR_60                           14.515200       1     14.515200  h
+DMR_61                           14.515200       1     14.515200  h
+DMR_62                           14.515200       1     14.515200  h
+DMR_63                           14.515200       1     14.515200  h
+DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_0 20416.687044       1 20416.687044 h, n
+DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_1 20511.035840       1 20511.035840 h, n
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       2    10.886400
+-----------------------------------------------------------------------------
+Total 68 references                                 41882.097262
+
+****************************************
+Design: DMR_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_4 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_5 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_6 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_7 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_8 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_9 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_10 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_11 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_12 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_13 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_14 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_15 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_16 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_17 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_18 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_19 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_20 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_21 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_22 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_23 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_24 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_25 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_26 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_27 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_28 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_29 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_30 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_31 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_32 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_33 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_34 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_35 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_36 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_37 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_38 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_39 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_40 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_41 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_42 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_43 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_44 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_45 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_46 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_47 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_48 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_49 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_50 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_51 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_52 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_53 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_54 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_55 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_56 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_57 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_58 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_59 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_60 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_61 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_62 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DMR_63 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_xor2_1      sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+-----------------------------------------------------------------------------
+Total 1 references                                     14.515200
+
+****************************************
+Design: DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Shifters_comb_SIMD2_SIMD_Width64_0  1904.817543       1  1904.817543 h
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0 13003.351155       1 13003.351155 h, n
+DSP_Shifters_stg_2_SIMD2_SIMD_Width64_0  5448.643147       1  5448.643147 h, n
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       4    29.030399
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       1    23.587200
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 6 references                                  20416.687044
+
+****************************************
+Design: DSP_Shifters_comb_SIMD2_SIMD_Width64_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       8    86.788803
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      71   644.111968
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      52   283.046406
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      39   283.046393
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       8    58.060799
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      41   371.951982
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 16 references                                  1904.817543
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0_DW_rash_0_DW_rash_2  2378.489405       1  2378.489405 h
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0_DW_rash_1_DW_rash_3  2374.860604       1  2374.860604 h
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       2    21.697201
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      20   145.151997
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400     128  6038.323242 n
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       3    43.545599
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       9    48.988801
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       3    21.772799
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999      64  1161.215942
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       5    36.287999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      67   607.823970
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 19 references                                 13003.351155
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0_DW_rash_0_DW_rash_2 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600     101  1095.708639
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      20   145.151997
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      19   103.420802
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600      10    72.575998
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400       2    21.772800
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999       1    18.143999
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      46   333.849592
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      15   108.863997
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      10    90.719995
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+-----------------------------------------------------------------------------
+Total 18 references                                  2378.489405
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64_0_DW_rash_1_DW_rash_3 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600     101  1095.708639
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      18   130.636797
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       1    23.587200
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      17    92.534402
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600      11    79.833598
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999       1    18.143999
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      46   333.849592
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      14   101.606398
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      10    90.719995
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+-----------------------------------------------------------------------------
+Total 19 references                                  2374.860604
+
+****************************************
+Design: DSP_Shifters_stg_2_SIMD2_SIMD_Width64_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      64   812.851196
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_and4_2      sg13g2_stdcell_slow_1p08V_125C    16.329599       1    16.329599
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      11    79.833598
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400      64  3019.161621 n
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      10    54.432001
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999      64  1161.215942
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       3    21.772799
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_nor2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      17   154.223992
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 15 references                                  5448.643147
+
+****************************************
+Design: DSP_Shifters_multithreaded_accl_en0_SIMD2_ACCL_NUM1_FU_NUM1_SIMD_Width64_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Shifters_comb_SIMD2_SIMD_Width64_1  1904.817543       1  1904.817543 h
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1 13006.979955       1 13006.979955 h, n
+DSP_Shifters_stg_2_SIMD2_SIMD_Width64_1  5457.715145       1  5457.715145 h, n
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       5    36.287999
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000       6    54.431997
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400       4    43.545601
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 7 references                                  20511.035840
+
+****************************************
+Design: DSP_Shifters_comb_SIMD2_SIMD_Width64_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       8    86.788803
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000      71   644.111968
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      52   283.046406
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      39   283.046393
+sg13g2_nand2b_1    sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       8    58.060799
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      41   371.951982
+sg13g2_or2_1       sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 15 references                                  1904.817543
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1_DW_rash_0  2371.231804       1  2371.231804 h
+DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1_DW_rash_1  2371.231805       1  2371.231805 h
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600       2    21.697201
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      18   130.636797
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400     128  6038.323242 n
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200       9    48.988801
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       3    21.772799
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999      64  1161.215942
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       5    36.287999
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      67   607.823970
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_tielo       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 19 references                                 13006.979955
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1_DW_rash_0 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600     101  1095.708639
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      19   137.894397
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       2    29.030399
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      17    92.534402
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600      11    79.833598
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999       1    18.143999
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      46   333.849592
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      15   108.863997
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      10    90.719995
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+-----------------------------------------------------------------------------
+Total 18 references                                  2371.231804
+
+****************************************
+Design: DSP_Shifters_stg_1_SIMD2_SIMD_Width64_1_DW_rash_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600     101  1095.708639
+sg13g2_a221oi_1    sg13g2_stdcell_slow_1p08V_125C    14.515200       5    72.575998
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       4    36.287998
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      20   145.151997
+sg13g2_buf_2       sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+sg13g2_buf_8       sg13g2_stdcell_slow_1p08V_125C    23.587200       1    23.587200
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      18    97.977602
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       9    65.318398
+sg13g2_inv_4       sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999       1    18.143999
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600      46   333.849592
+sg13g2_nand2_2     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      11    99.791995
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600      14   101.606398
+sg13g2_nor2b_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      10    90.719995
+sg13g2_nor3_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       5    45.359998
+-----------------------------------------------------------------------------
+Total 19 references                                  2371.231805
+
+****************************************
+Design: DSP_Shifters_stg_2_SIMD2_SIMD_Width64_1 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a21o_1      sg13g2_stdcell_slow_1p08V_125C    12.700800      64   812.851196
+sg13g2_a21oi_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       8    72.575996
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_and2_2      sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600      11    79.833598
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400      64  3019.161621 n
+sg13g2_dlygate4sd1_1 sg13g2_stdcell_slow_1p08V_125C    14.515200       1    14.515200
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      10    54.432001
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999      64  1161.215942
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       3    21.772799
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       1     9.072000
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000      17   154.223992
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 15 references                                  5457.715145
+
+****************************************
+Design: DSP_pipeline_controller 
+****************************************
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+sg13g2_a22oi_1     sg13g2_stdcell_slow_1p08V_125C    10.848600      36   390.549614
+sg13g2_and2_1      sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_and3_1      sg13g2_stdcell_slow_1p08V_125C    12.700800       1    12.700800
+sg13g2_buf_1       sg13g2_stdcell_slow_1p08V_125C     7.257600       9    65.318398
+sg13g2_dfrbp_1     sg13g2_stdcell_slow_1p08V_125C    47.174400      82  3868.300827 n
+sg13g2_dfrbp_2     sg13g2_stdcell_slow_1p08V_125C    54.431999       1    54.431999 n
+sg13g2_inv_1       sg13g2_stdcell_slow_1p08V_125C     5.443200      48   261.273605
+sg13g2_inv_2       sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_mux2_1      sg13g2_stdcell_slow_1p08V_125C    18.143999      33   598.751970
+sg13g2_nand2_1     sg13g2_stdcell_slow_1p08V_125C     7.257600       2    14.515200
+sg13g2_nand3_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       2    18.143999
+sg13g2_nand4_1     sg13g2_stdcell_slow_1p08V_125C    10.886400       1    10.886400
+sg13g2_nor2_1      sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+sg13g2_o21ai_1     sg13g2_stdcell_slow_1p08V_125C     9.072000       3    27.215999
+sg13g2_tiehi       sg13g2_stdcell_slow_1p08V_125C     7.257600       1     7.257600
+-----------------------------------------------------------------------------
+Total 15 references                                  5378.335210
+1
